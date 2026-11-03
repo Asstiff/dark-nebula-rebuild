@@ -16,6 +16,6 @@ The script exports IL2CPP/ARM64, packages the Gradle release variant and copies 
 
 Current Android identifiers: Episode One `com.codex.darknebula.episode1.test`; Episode Two `com.darknebula.reference.tall`. Episode Two retains its existing test identifier so `adb install -r` preserves the current device saves. Desktop labels are `Dark Nebula Episode One` and `Dark Nebula Episode Two`.
 
-Optional Episode Two test intent `--ez portalReview true` runs a controlled portal capture, firing preceding native trigger handlers and moving the player to the portal approach. It is a diagnostic fixture, not a complete level playthrough. Normal launch is manual gameplay.
+Optional Episode Two test intent `--ez portalReview true` runs a controlled portal capture, firing preceding native trigger handlers and moving the player to the portal approach. It is a diagnostic fixture, not a complete level playthrough. An additional `--ez scanReview true` fixture captures both forest scans. Normal launch is manual gameplay.
 
 The repository excludes local editor state, APKs, source installation archives and user saves. Embedded credentials in the recovered localization utility have been removed; restoration uses local packaged content.

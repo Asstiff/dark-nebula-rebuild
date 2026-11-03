@@ -318,9 +318,22 @@ public class AnimatedEntity : Entity
         {
             var first = curveAnimation.nodes[0];
             if (!authoredScanStart.HasValue) authoredScanStart = first.position.y;
-            float extra = Mathf.Max(0f, World.VisibleHalfSize.y - 240f);
-            first.position = new Vector2(first.position.x, authoredScanStart.Value - extra);
+            first.position = new Vector2(first.position.x, authoredScanStart.Value);
             SetPosition(first.position);
+            Camera camera = World.cameraFollow.GetComponent<Camera>();
+            if (camera.aspect < LegacyScreenFit.ReferenceAspect - .001f && Sprite != null)
+            {
+                Bounds bounds = Sprite.GetComponent<Renderer>().bounds;
+                float depth = camera.WorldToViewportPoint(bounds.center).z;
+                float screenTop = camera.ViewportToWorldPoint(new Vector3(.5f, 1f, depth)).z;
+                // The trailing edge begins just outside the actual top edge.
+                // Transform the offset back into the scrolling layer's space.
+                float extra = Mathf.Max(0f, screenTop - bounds.min.z + 1f);
+                Vector3 offset = Vector3.forward * extra;
+                if (transform.parent != null) offset = transform.parent.InverseTransformVector(offset);
+                first.position = new Vector2(first.position.x, first.position.y - offset.z);
+                SetPosition(first.position);
+            }
         }
 		playAnimation();
 		if (IsFrozen)

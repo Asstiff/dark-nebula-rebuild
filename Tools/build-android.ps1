@@ -16,8 +16,9 @@ $project = Join-Path $repo $projectName
 $builds = Join-Path $repo 'Builds'
 New-Item -ItemType Directory -Force -Path $builds | Out-Null
 $log = Join-Path $builds "episode$Episode-unity.log"
-& $UnityEditor -batchmode -quit -buildTarget Android -projectPath $project -executeMethod $method -exportGradle -logFile $log
-if ($LASTEXITCODE -ne 0 -or -not ([IO.File]::ReadAllText($log).Contains('CODEX_BUILD_RESULT Succeeded errors=0'))) { throw "Unity export failed. See $log" }
+$unityProcess = Start-Process -FilePath $UnityEditor -ArgumentList @('-batchmode','-quit','-buildTarget','Android','-projectPath',$project,'-executeMethod',$method,'-exportGradle','-logFile',$log) -WindowStyle Hidden -PassThru
+$unityProcess.WaitForExit()
+if ($unityProcess.ExitCode -ne 0 -or -not ([IO.File]::ReadAllText($log).Contains('CODEX_BUILD_RESULT Succeeded errors=0'))) { throw "Unity export failed. See $log" }
 $export = Join-Path $repo "android-final-exports/episode$Episode"
 $editorDir = Split-Path -Parent $UnityEditor
 $gradle = Join-Path $editorDir 'Data/PlaybackEngines/AndroidPlayer/Tools/gradle/lib/gradle-launcher-9.1.0.jar'

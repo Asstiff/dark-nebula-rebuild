@@ -48,10 +48,17 @@ public class ScanReviewSampler:MonoBehaviour {
   World.cameraFollow.enabled=true;World.cameraFollow.UseCameraManager=true;Time.timeScale=1;
   yield return new WaitForSeconds(.5f);
   trigger.SendMessage("OnTriggerEnter",vessel.GetComponent<Collider>());
+  var scan=UnityEngine.Object.FindObjectsByType<AnimatedEntity>().First(e=>e.activateEventFlag==flag && e.GetParameterString("image")=="entity_shockwave");
+  var camera=World.cameraFollow.GetComponent<Camera>();
+  var renderer=scan.GetComponentInChildren<Renderer>();
+  var report=new System.Text.StringBuilder();
+  Action record=()=>report.AppendLine(Time.time+","+camera.WorldToViewportPoint(renderer.bounds.center).y+","+camera.WorldToViewportPoint(renderer.bounds.center+Vector3.forward*renderer.bounds.extents.z).y+","+camera.WorldToViewportPoint(renderer.bounds.center-Vector3.forward*renderer.bounds.extents.z).y);
+  report.AppendLine("time,center,top,bottom");record();
   for(int i=0;i<8;i++){
-   yield return new WaitForSeconds(.4f);
+   yield return new WaitForSeconds(.4f);record();
    ScreenCapture.CaptureScreenshot(Path.Combine(folder,"scan-"+flag+"-"+i+".png"));
   }
+  File.WriteAllText(Path.Combine(folder,"scan-"+flag+"-motion.csv"),report.ToString());
   Time.timeScale=0;Destroy(gameObject);
  }
 }
