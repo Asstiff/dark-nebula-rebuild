@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Screens/MainMenu.unity
+  - enabled: 1
+    path: Assets/Scenes/Screens/StubLoader.unity
+  - enabled: 1
+    path: Assets/Scenes/Screens/EndOfGame.unity
+  - enabled: 1
+    path: Assets/Scenes/Screens/EpisodeTwo.unity
+  - enabled: 1
+    path: Assets/Scenes/Screens/Leaderboard.unity
+  - enabled: 1
+    path: Assets/Scenes/Screens/LevelSelect.unity
+  - enabled: 1
+    path: Assets/Scenes/Screens/LevelComplete.unity
+  - enabled: 1
+    path: Assets/Scenes/Screens/LoadLevel.unity
+  - enabled: 1
+    path: Assets/Scenes/Screens/PostComplete.unity
+  - enabled: 1
+    path: Assets/Scenes/Screens/StubLoader.unity
+  - enabled: 1
+    path: Assets/Scenes/Screens/YouAreGood.unity
+  - enabled: 1
+    path: Assets/Scenes/Screens/Credits.unity
+  - enabled: 1
+    path: Assets/Scenes/Levels/level2-1.unity
+  - enabled: 1
+    path: Assets/Scenes/Levels/level2-2.unity
+  - enabled: 1
+    path: Assets/Scenes/Levels/level2-3.unity
+  - enabled: 1
+    path: Assets/Scenes/Levels/level2-5.unity
+  - enabled: 1
+    path: Assets/Scenes/Levels/level2-4.unity
+  - enabled: 1
+    path: Assets/Scenes/Levels/level2-6.unity
+  - enabled: 1
+    path: Assets/Scenes/Levels/level2-7.unity
+  - enabled: 1
+    path: Assets/Scenes/Levels/level2-8.unity
+  - enabled: 1
+    path: Assets/Scenes/Levels/level2-9.unity
+  - enabled: 1
+    path: Assets/Scenes/Levels/level2-10.unity
+  - enabled: 1
+    path: Assets/Scenes/Levels/level2-11.unity
+  - enabled: 1
+    path: Assets/Scenes/Levels/level2-12.unity
+  - enabled: 1
+    path: Assets/Scenes/Levels/level2-13.unity
+  - enabled: 1
+    path: Assets/Scenes/Levels/level2-14.unity
+  - enabled: 1
+    path: Assets/Scenes/Levels/level2-15.unity
+  - enabled: 1
+    path: Assets/Scenes/Levels/level2-16.unity
+  - enabled: 1
+    path: Assets/Scenes/Levels/level2-17.unity
+  - enabled: 1
+    path: Assets/Scenes/Levels/level2-18.unity
+  - enabled: 1
+    path: Assets/Scenes/Levels/level2-19.unity
+  - enabled: 1
+    path: Assets/Scenes/Levels/level2-20.unity
+  - enabled: 1
+    path: Assets/Scenes/Levels/level2b-21.unity
+  - enabled: 1
+    path: Assets/Scenes/Levels/level2b-22.unity
+  - enabled: 1
+    path: Assets/Scenes/Levels/level2b-23.unity
+  - enabled: 1
+    path: Assets/Scenes/Levels/level2b-24.unity
+  - enabled: 1
+    path: Assets/Scenes/Levels/level2b-25.unity
+  - enabled: 1
+    path: Assets/Scenes/Levels/level2b-26.unity
+  - enabled: 1
+    path: Assets/Scenes/Levels/level2b-27.unity
+  - enabled: 1
+    path: Assets/Scenes/Levels/level2b-28.unity
+  - enabled: 1
+    path: Assets/Scenes/Levels/level2b-29.unity
+  - enabled: 1
+    path: Assets/Scenes/Levels/level2b-30.unity
+  - enabled: 1
+    path: Assets/Scenes/Levels/level2b-31.unity
+  - enabled: 1
+    path: Assets/Scenes/Levels/level2b-32.unity

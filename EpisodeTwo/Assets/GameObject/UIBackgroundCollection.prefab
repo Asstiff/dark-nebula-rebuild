@@ -1,0 +1,142 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &147589
+GameObject:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_Component:
+  - 4: {fileID: 479954}
+  - 114: {fileID: 11409266}
+  m_Layer: 0
+  m_Name: UIBackgroundCollection
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &479954
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 147589}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+--- !u!114 &11409266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 147589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60f28a10f064b0573af11a2e931d98da, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  version: 3
+  materialIdsValid: 1
+  spriteDefinitions:
+  - name: UI_Background
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 432, y: 576, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 432, y: 576, z: 0}
+    texelSize: {x: 0.5625, y: 0.5625}
+    positions:
+    - {x: -216, y: -288, z: 0}
+    - {x: 216, y: -288, z: 0}
+    - {x: -216, y: 288, z: 0}
+    - {x: 216, y: 288, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 9.765625E-07, y: 9.765625E-07}
+    - {x: 0.74999905, y: 9.765625E-07}
+    - {x: 9.765625E-07, y: 0.99999905}
+    - {x: 0.74999905, y: 0.99999905}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 59e8196f1c11beb408255092e11924dc, type: 2}
+    materialId: 0
+    sourceTextureGUID: 0ddbc025fb21d4a998ba78dd76b96012
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 1
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: UI_Solid
+    boundsData:
+    - {x: 9, y: -9, z: 0}
+    - {x: 18, y: 18, z: 0}
+    untrimmedBoundsData:
+    - {x: 9, y: -9, z: 0}
+    - {x: 18, y: 18, z: 0}
+    texelSize: {x: 0.5625, y: 0.5625}
+    positions:
+    - {x: 0, y: -18, z: 0}
+    - {x: 18, y: -18, z: 0}
+    - {x: 0, y: 0, z: 0}
+    - {x: 18, y: 0, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.75000095, y: 9.765625E-07}
+    - {x: 0.78124905, y: 9.765625E-07}
+    - {x: 0.75000095, y: 0.031249024}
+    - {x: 0.78124905, y: 0.031249024}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 59e8196f1c11beb408255092e11924dc, type: 2}
+    materialId: 0
+    sourceTextureGUID: c99bd16e2aac64dbebcb60779bde29dd
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 1
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  premultipliedAlpha: 0
+  material: {fileID: 0}
+  materials:
+  - {fileID: 2100000, guid: 59e8196f1c11beb408255092e11924dc, type: 2}
+  textures:
+  - {fileID: 2800000, guid: 17f5c64f0caa45b438c70d745897d68e, type: 3}
+  allowMultipleAtlases: 0
+  spriteCollectionGUID: 63eca2339f7f94cc2b0bc956998e7770
+  spriteCollectionName: UIBackgroundCollection
+  invOrthoSize: 0.0055555557
+  halfTargetHeight: 320
+  buildKey: 1301768990
+  dataGuid: 78aee6e34d51b4bc2bc6ddc275c92229
+--- !u!1001 &100100000
+Prefab:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 147589}
+  m_IsPrefabParent: 1
+  m_IsExploded: 0

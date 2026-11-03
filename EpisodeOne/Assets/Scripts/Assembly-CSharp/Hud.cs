@@ -1,0 +1,415 @@
+using FLD;
+using UnityEngine;
+
+public class Hud : MonoBehaviour
+{
+	private enum State
+	{
+		Playing = 1,
+		Pause = 2
+	}
+
+	private const float right = 0.89f;
+
+	private const float left = 0.04f;
+
+	private const float top = 0.97f;
+
+	public GameObject GfxTextLives;
+
+	public GameObject GfxTextOrbs;
+
+	public GameObject GfxIconLifeOrb;
+
+	public GameObject GfxIconLives;
+
+	public GameObject GfxTextTime;
+
+	private tk2dTextMesh _textLives;
+
+	private tk2dTextMesh _textOrbs;
+
+	private tk2dTextMesh _textTime;
+
+	private float lifeOrbScale = 1f;
+
+	private State state = State.Pause;
+
+	private TextMessage _message;
+
+	private ShieldMessage _shieldMessage;
+
+	private ShieldMessageDown _shieldMessageDown;
+
+	private IngameOptionScreen _optionScreen;
+
+	public static CalibrateScreen _calibrateScreen;
+
+	private static PauseScreen _pauseScreen;
+
+	private static GameOverScreen _gameOverScreen;
+
+	private static ConfirmScreen _confirmScreen;
+
+	public static RemoveAdsScreen _removeAdsScreen;
+
+	private Vector3 orbDiff;
+
+	private Vector3 lifeDiff;
+
+	private float _screenShrinkPercent;
+
+	private bool hasCalibratedThisTouch;
+
+	private float _lastCalibration;
+
+	public static Hud Instance;
+
+	private void OnDisable()
+	{
+		_textLives = null;
+		_textOrbs = null;
+		GfxTextLives = null;
+		GfxTextOrbs = null;
+		GfxIconLifeOrb = null;
+		GfxIconLives = null;
+		GfxTextTime = null;
+		_message = null;
+	}
+
+	private void Awake()
+	{
+		Instance = this;
+		orbDiff = GfxIconLifeOrb.transform.localPosition - GfxTextOrbs.transform.localPosition;
+		lifeDiff = GfxIconLives.transform.localPosition - GfxTextLives.transform.localPosition;
+		_textLives = GfxTextLives.GetComponent<tk2dTextMesh>();
+		_textOrbs = GfxTextOrbs.GetComponent<tk2dTextMesh>();
+		_textTime = GfxTextTime.GetComponent<tk2dTextMesh>();
+		_pauseScreen = GetComponentInChildren<PauseScreen>();
+		_pauseScreen.gameObject.SetActive(false);
+		_pauseScreen.EventResumeGame += onResumeGame;
+		_pauseScreen.EventLaunchOptions += onLaunchOptions;
+		_optionScreen = GetComponentInChildren<IngameOptionScreen>();
+		_optionScreen.gameObject.SetActive(false);
+		_optionScreen.EventGoBack += onCloseIngameOptions;
+		_optionScreen.EventLaunchCalibrateControls += onLaunchCalibrateScreen;
+		_calibrateScreen = GetComponentInChildren<CalibrateScreen>();
+		_calibrateScreen.gameObject.SetActive(false);
+		_calibrateScreen.EventGoBack += onCloseCalibrateScreen;
+		_confirmScreen = GetComponentInChildren<ConfirmScreen>();
+		_confirmScreen.gameObject.SetActive(false);
+		_removeAdsScreen = GetComponentInChildren<RemoveAdsScreen>();
+		_removeAdsScreen.gameObject.SetActive(false);
+		_gameOverScreen = GetComponentInChildren<GameOverScreen>();
+		_gameOverScreen.gameObject.SetActive(false);
+		_gameOverScreen.EventResume += onResumeGame;
+		_gameOverScreen.EventMainMenu += () =>
+		{
+			World.LoadLevel("MainMenu", 0.5f);
+		};
+		_gameOverScreen.EventContinue += () =>
+		{
+			LoadLevelScreen.LevelToLoad = World.levelNum;
+			string levelName = "BoosterSelection";
+			if (LoadLevelScreen.LevelToLoad >= 23)
+			{
+				levelName = "LoadLevel";
+			}
+			World.LoadLevel(levelName, 0.5f);
+		};
+		_pauseScreen.confirmScreen = _confirmScreen;
+		if (World.isInMatrixMode)
+		{
+			GfxIconLifeOrb.GetComponent<Renderer>().enabled = false;
+			GfxIconLives.SetActive(false);
+			GfxTextLives.GetComponent<Renderer>().enabled = false;
+			GfxTextOrbs.GetComponent<Renderer>().enabled = false;
+			GfxTextTime.GetComponent<Renderer>().enabled = false;
+		}
+		FixAspect();
+	}
+
+	public static void disablePauseMenu()
+	{
+		if (_pauseScreen != null)
+		{
+			_pauseScreen.gameObject.SetActive(false);
+		}
+	}
+
+	private void OnApplicationPause(bool pPaused)
+	{
+		if (pPaused && state != State.Pause)
+		{
+			Pause();
+		}
+	}
+
+	private void OnApplicationFocus(bool pFocus)
+	{
+		Debug.Log("OnApplicationFocus " + pFocus);
+		if (!pFocus && state != State.Pause)
+		{
+			Pause();
+		}
+	}
+
+	private void FixAspect()
+	{
+		Camera camera=GetComponentInChildren<Camera>();
+		UnifiedHudLayout.Apply(camera,GfxIconLifeOrb,GfxTextOrbs,GfxIconLives,GfxTextLives,GfxTextTime);
+	}
+
+    private Rect _lastLayoutSafe;
+    private int _layoutWidth, _layoutHeight;
+    private float _layoutOrtho=-1f,_layoutAspect=-1f;
+    private void LateUpdate()
+    {
+        Camera camera=GetComponentInChildren<Camera>();
+        if(camera==null)return;
+        Rect safe=LegacyScreenFit.ContentRect();
+        if(safe!=_lastLayoutSafe || Screen.width!=_layoutWidth || Screen.height!=_layoutHeight || !Mathf.Approximately(_layoutOrtho,camera.orthographicSize) || !Mathf.Approximately(_layoutAspect,camera.aspect))
+        {
+            _lastLayoutSafe=safe;_layoutWidth=Screen.width;_layoutHeight=Screen.height;
+            _layoutOrtho=camera.orthographicSize;_layoutAspect=camera.aspect;
+            FixAspect();
+        }
+    }
+
+	public void ShowHudIcons()
+	{
+		GfxIconLifeOrb.GetComponent<Renderer>().enabled = true;
+		GfxIconLives.SetActive(true);
+		GfxTextLives.GetComponent<Renderer>().enabled = true;
+		GfxTextOrbs.GetComponent<Renderer>().enabled = true;
+		GfxTextTime.GetComponent<Renderer>().enabled = true;
+	}
+
+	private void onLaunchCalibrateScreen()
+	{
+		_optionScreen.SetEnabled(false);
+		_calibrateScreen.gameObject.SetActive(true);
+		_calibrateScreen.Show();
+	}
+
+	private void onCloseCalibrateScreen()
+	{
+		_calibrateScreen.gameObject.SetActive(false);
+		_optionScreen.SetEnabled(true);
+	}
+
+	private void onLaunchOptions()
+	{
+		_optionScreen.gameObject.SetActive(true);
+	}
+
+	private void onCloseIngameOptions()
+	{
+		_optionScreen.gameObject.SetActive(false);
+		_pauseScreen.SetEnabled(true);
+	}
+
+	private void Start()
+	{
+		FixAspect();
+	}
+
+	private void Update()
+	{
+		if (state == State.Playing)
+		{
+			if (Input.touchCount > 1)
+			{
+				if (_lastCalibration + 4f < Time.time)
+				{
+					_lastCalibration = Time.time;
+					World.hud.ShowMessage("CALIBRATED!".Localize());
+					UserSettings.Instance.Calibrate();
+				}
+				hasCalibratedThisTouch = true;
+			}
+			else if (Input.GetMouseButtonUp(0))
+			{
+				if (!hasCalibratedThisTouch && IsMouseWithinMargin(40f))
+				{
+					Pause();
+				}
+			}
+			else
+			{
+				hasCalibratedThisTouch = false;
+			}
+			if (Input.GetKeyUp(KeyCode.Menu) || Input.GetKeyUp(KeyCode.Escape))
+			{
+				Pause();
+			}
+			if (lifeOrbScale > 1f)
+			{
+				lifeOrbScale -= 0.075f * Time.deltaTime * 30f;
+			}
+			else
+			{
+				lifeOrbScale = 1f;
+			}
+			GfxIconLifeOrb.transform.localScale = Vector3.one * lifeOrbScale;
+		}
+		if (World.vessel.Lives > 1)
+		{
+			GfxIconLives.GetComponent<Renderer>().enabled = true;
+		}
+		else if (Mathf.FloorToInt(Time.realtimeSinceStartup * 2f) % 2 == 0)
+		{
+			GfxIconLives.GetComponent<Renderer>().enabled = true;
+		}
+		else
+		{
+			GfxIconLives.GetComponent<Renderer>().enabled = false;
+		}
+		_textTime.text = LevelCompleteSection.ToTimeString(World.SecondsPlayedLevel);
+		_textTime.Commit();
+	}
+
+	private bool IsMouseWithinMargin(float margin)
+	{
+		Camera camera = GetComponentInChildren<Camera>();
+		if (camera == null) return false;
+		Vector3 point = camera.ScreenToViewportPoint(Input.mousePosition);
+		if (point.x < 0f || point.x > 1f || point.y < 0f || point.y > 1f) return false;
+		float num = point.x * 320f;
+		float num2 = point.y * Constants.VirtualScreenHeight;
+		if (num < margin)
+		{
+			return false;
+		}
+		if (num2 < margin)
+		{
+			return false;
+		}
+		if (num2 > (float)Constants.VirtualScreenHeight - margin)
+		{
+			return false;
+		}
+		if (num > 320f - margin)
+		{
+			return false;
+		}
+		return true;
+	}
+
+	public void Pause()
+	{
+		Time.timeScale = 0f;
+		DarkNebulaAdsManager.Instance.ShowAd("InGameMenu");
+		state = State.Pause;
+		if (!(_pauseScreen == null))
+		{
+			_pauseScreen.gameObject.SetActive(true);
+			Audio.PauseMusic(1.5f);
+		}
+	}
+
+	public void onResumeGame()
+	{
+		_pauseScreen.gameObject.SetActive(false);
+		state = State.Playing;
+		Time.timeScale = 1f;
+		World.ResumeMusic();
+	}
+
+	public void AddOrb()
+	{
+		lifeOrbScale = 2.2f;
+		UpdateOrbs();
+	}
+
+	public void UpdateLives()
+	{
+		if (!(_textLives == null))
+		{
+			_textLives.text = "X" + (World.vessel.Lives - 1);
+			_textLives.Commit();
+		}
+	}
+
+	public void UpdateOrbs()
+	{
+		if (!(_textOrbs == null))
+		{
+			_textOrbs.text = "CELLS".Localize(World.vessel.OrbsCollectedOnThisLevel.ToString(), World.OrbsOnLevel.ToString());
+			_textOrbs.Commit();
+		}
+	}
+
+	public void ShowMessage(string message, bool red = false)
+	{
+		destroyMessage();
+		_message = ObjectPool.instance.GetObjectForType<TextMessage>();
+		_message.transform.parent = base.transform;
+		_message.transform.localScale = Vector3.one * (1f - _screenShrinkPercent * 0.3f);
+		_message.SetMessage(message.ToUpper(), red);
+	}
+
+	public void Reset()
+	{
+		destroyShieldMessage();
+	}
+
+	private void destroyMessage()
+	{
+		if (!(_message == null))
+		{
+			ObjectPool.instance.PoolObject(_message);
+			_message = null;
+		}
+	}
+
+	private void destroyShieldMessage()
+	{
+		if (_shieldMessageDown != null)
+		{
+			ObjectPool.instance.PoolObject(_shieldMessageDown);
+			_shieldMessageDown = null;
+		}
+		if (_shieldMessage != null)
+		{
+			ObjectPool.instance.PoolObject(_shieldMessage);
+			_shieldMessage = null;
+		}
+	}
+
+	public void ShowShieldDownMessage()
+	{
+		destroyShieldMessage();
+		_shieldMessageDown = ObjectPool.instance.GetObjectForType<ShieldMessageDown>();
+		_shieldMessageDown.transform.parent = base.transform;
+		_shieldMessageDown.transform.localPosition = new Vector3(0f, (float)(-Constants.VirtualScreenHeight) * 0.5f + 100f, 0f);
+		_shieldMessageDown.SetStringID("SHIELD DOWN");
+	}
+
+	public void ShowShieldRestored()
+	{
+		ShowShieldUpMessage("SHIELD RESTORED");
+	}
+
+	public void ShowShieldFound()
+	{
+		ShowShieldUpMessage("SHIELD FOUND");
+	}
+
+	private void ShowShieldUpMessage(string stringID)
+	{
+		destroyShieldMessage();
+		_shieldMessage = ObjectPool.instance.GetObjectForType<ShieldMessage>();
+		_shieldMessage.transform.parent = base.transform;
+		_shieldMessage.transform.localPosition = new Vector3(0f, (float)(-Constants.VirtualScreenHeight) * 0.5f + 100f, 0f);
+		_shieldMessage.SetStringID(stringID);
+		_shieldMessage.Play();
+	}
+
+	public static void ShowGameOverScreen()
+	{
+		Instance.Pause();
+		_pauseScreen.gameObject.SetActive(false);
+		_gameOverScreen.Show();
+	}
+}

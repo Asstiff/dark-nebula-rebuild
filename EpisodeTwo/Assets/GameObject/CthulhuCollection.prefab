@@ -1,0 +1,1030 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &147589
+GameObject:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_Component:
+  - 4: {fileID: 479954}
+  - 114: {fileID: 11409266}
+  m_Layer: 0
+  m_Name: CthulhuCollection
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &479954
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 147589}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+--- !u!114 &11409266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 147589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60f28a10f064b0573af11a2e931d98da, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  version: 3
+  materialIdsValid: 1
+  spriteDefinitions:
+  - name: cthulhu-head/0
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 256, y: 256, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 256, y: 256, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -128, y: -128, z: 0}
+    - {x: 128, y: -128, z: 0}
+    - {x: -128, y: 128, z: 0}
+    - {x: 128, y: 128, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 9.765625E-07, y: 9.765625E-07}
+    - {x: 0.49999902, y: 9.765625E-07}
+    - {x: 9.765625E-07, y: 0.49999902}
+    - {x: 0.49999902, y: 0.49999902}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: b7219bf3df7d7594f9c8db2cf86ad7e9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 6dd5950bde897fc489d59ef37a6f6d9a
+    extractRegion: 1
+    regionX: 0
+    regionY: 512
+    regionW: 512
+    regionH: 512
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: cthulhu-head/1
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 256, y: 256, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 256, y: 256, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -128, y: -128, z: 0}
+    - {x: 128, y: -128, z: 0}
+    - {x: -128, y: 128, z: 0}
+    - {x: 128, y: 128, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 9.765625E-07, y: 0.50000095}
+    - {x: 0.49999902, y: 0.50000095}
+    - {x: 9.765625E-07, y: 0.99999905}
+    - {x: 0.49999902, y: 0.99999905}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: b7219bf3df7d7594f9c8db2cf86ad7e9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 6dd5950bde897fc489d59ef37a6f6d9a
+    extractRegion: 1
+    regionX: 0
+    regionY: 0
+    regionW: 512
+    regionH: 512
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: cthulhu-arms/0
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 128, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 128, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -64, z: 0}
+    - {x: 32, y: -64, z: 0}
+    - {x: -32, y: 64, z: 0}
+    - {x: 32, y: 64, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.50000095, y: 9.765625E-07}
+    - {x: 0.50000095, y: 0.124999024}
+    - {x: 0.74999905, y: 9.765625E-07}
+    - {x: 0.74999905, y: 0.124999024}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: b7219bf3df7d7594f9c8db2cf86ad7e9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 572cd1b5b73f3734dab4dfbb76caa63c
+    extractRegion: 1
+    regionX: 0
+    regionY: 256
+    regionW: 128
+    regionH: 256
+    flipped: 1
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: cthulhu-arms/1
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 128, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 128, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -64, z: 0}
+    - {x: 32, y: -64, z: 0}
+    - {x: -32, y: 64, z: 0}
+    - {x: 32, y: 64, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.75000095, y: 9.765625E-07}
+    - {x: 0.75000095, y: 0.124999024}
+    - {x: 0.99999905, y: 9.765625E-07}
+    - {x: 0.99999905, y: 0.124999024}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: b7219bf3df7d7594f9c8db2cf86ad7e9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 572cd1b5b73f3734dab4dfbb76caa63c
+    extractRegion: 1
+    regionX: 128
+    regionY: 256
+    regionW: 128
+    regionH: 256
+    flipped: 1
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: cthulhu-arms/2
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 128, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 128, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -64, z: 0}
+    - {x: 32, y: -64, z: 0}
+    - {x: -32, y: 64, z: 0}
+    - {x: 32, y: 64, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.50000095, y: 0.12500098}
+    - {x: 0.50000095, y: 0.24999902}
+    - {x: 0.74999905, y: 0.12500098}
+    - {x: 0.74999905, y: 0.24999902}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: b7219bf3df7d7594f9c8db2cf86ad7e9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 572cd1b5b73f3734dab4dfbb76caa63c
+    extractRegion: 1
+    regionX: 256
+    regionY: 256
+    regionW: 128
+    regionH: 256
+    flipped: 1
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: cthulhu-arms/3
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 128, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 128, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -64, z: 0}
+    - {x: 32, y: -64, z: 0}
+    - {x: -32, y: 64, z: 0}
+    - {x: 32, y: 64, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.75000095, y: 0.12500098}
+    - {x: 0.75000095, y: 0.24999902}
+    - {x: 0.99999905, y: 0.12500098}
+    - {x: 0.99999905, y: 0.24999902}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: b7219bf3df7d7594f9c8db2cf86ad7e9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 572cd1b5b73f3734dab4dfbb76caa63c
+    extractRegion: 1
+    regionX: 384
+    regionY: 256
+    regionW: 128
+    regionH: 256
+    flipped: 1
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: cthulhu-arms/4
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 128, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 128, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -64, z: 0}
+    - {x: 32, y: -64, z: 0}
+    - {x: -32, y: 64, z: 0}
+    - {x: 32, y: 64, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.50000095, y: 0.25000098}
+    - {x: 0.50000095, y: 0.37499902}
+    - {x: 0.74999905, y: 0.25000098}
+    - {x: 0.74999905, y: 0.37499902}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: b7219bf3df7d7594f9c8db2cf86ad7e9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 572cd1b5b73f3734dab4dfbb76caa63c
+    extractRegion: 1
+    regionX: 0
+    regionY: 0
+    regionW: 128
+    regionH: 256
+    flipped: 1
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: cthulhu-arms/5
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 128, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 128, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -64, z: 0}
+    - {x: 32, y: -64, z: 0}
+    - {x: -32, y: 64, z: 0}
+    - {x: 32, y: 64, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.75000095, y: 0.25000098}
+    - {x: 0.75000095, y: 0.37499902}
+    - {x: 0.99999905, y: 0.25000098}
+    - {x: 0.99999905, y: 0.37499902}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: b7219bf3df7d7594f9c8db2cf86ad7e9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 572cd1b5b73f3734dab4dfbb76caa63c
+    extractRegion: 1
+    regionX: 128
+    regionY: 0
+    regionW: 128
+    regionH: 256
+    flipped: 1
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: cthulhu-arms/6
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 128, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 128, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -64, z: 0}
+    - {x: 32, y: -64, z: 0}
+    - {x: -32, y: 64, z: 0}
+    - {x: 32, y: 64, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.50000095, y: 0.37500098}
+    - {x: 0.50000095, y: 0.49999902}
+    - {x: 0.74999905, y: 0.37500098}
+    - {x: 0.74999905, y: 0.49999902}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: b7219bf3df7d7594f9c8db2cf86ad7e9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 572cd1b5b73f3734dab4dfbb76caa63c
+    extractRegion: 1
+    regionX: 256
+    regionY: 0
+    regionW: 128
+    regionH: 256
+    flipped: 1
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: cthulhu-arms/7
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 128, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 128, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -64, z: 0}
+    - {x: 32, y: -64, z: 0}
+    - {x: -32, y: 64, z: 0}
+    - {x: 32, y: 64, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.75000095, y: 0.37500098}
+    - {x: 0.75000095, y: 0.49999902}
+    - {x: 0.99999905, y: 0.37500098}
+    - {x: 0.99999905, y: 0.49999902}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: b7219bf3df7d7594f9c8db2cf86ad7e9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 572cd1b5b73f3734dab4dfbb76caa63c
+    extractRegion: 1
+    regionX: 384
+    regionY: 0
+    regionW: 128
+    regionH: 256
+    flipped: 1
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: cthulhu-lights/0
+    boundsData:
+    - {x: -3, y: -3.5, z: 0}
+    - {x: 58, y: 57, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 26, y: -32, z: 0}
+    - {x: -32, y: 25, z: 0}
+    - {x: 26, y: 25, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.75000095, y: 0.6210947}
+    - {x: 0.8632803, y: 0.6210947}
+    - {x: 0.75000095, y: 0.7324209}
+    - {x: 0.8632803, y: 0.7324209}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: b7219bf3df7d7594f9c8db2cf86ad7e9, type: 2}
+    materialId: 0
+    sourceTextureGUID: a46097825f0ec5944aa800069bd2380a
+    extractRegion: 1
+    regionX: 0
+    regionY: 384
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: cthulhu-lights/1
+    boundsData:
+    - {x: -3, y: -3.5, z: 0}
+    - {x: 58, y: 57, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 26, y: -32, z: 0}
+    - {x: -32, y: 25, z: 0}
+    - {x: 26, y: 25, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.8632822, y: 0.6210947}
+    - {x: 0.97656155, y: 0.6210947}
+    - {x: 0.8632822, y: 0.7324209}
+    - {x: 0.97656155, y: 0.7324209}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: b7219bf3df7d7594f9c8db2cf86ad7e9, type: 2}
+    materialId: 0
+    sourceTextureGUID: a46097825f0ec5944aa800069bd2380a
+    extractRegion: 1
+    regionX: 128
+    regionY: 384
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: cthulhu-lights/2
+    boundsData:
+    - {x: -3, y: -3.5, z: 0}
+    - {x: 58, y: 57, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 26, y: -32, z: 0}
+    - {x: -32, y: 25, z: 0}
+    - {x: 26, y: 25, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.75000095, y: 0.7324228}
+    - {x: 0.8632803, y: 0.7324228}
+    - {x: 0.75000095, y: 0.84374905}
+    - {x: 0.8632803, y: 0.84374905}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: b7219bf3df7d7594f9c8db2cf86ad7e9, type: 2}
+    materialId: 0
+    sourceTextureGUID: a46097825f0ec5944aa800069bd2380a
+    extractRegion: 1
+    regionX: 256
+    regionY: 384
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: cthulhu-lights/3
+    boundsData:
+    - {x: -3, y: -5.5, z: 0}
+    - {x: 58, y: 53, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 26, y: -32, z: 0}
+    - {x: -32, y: 21, z: 0}
+    - {x: 26, y: 21, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.8632822, y: 0.7324228}
+    - {x: 0.97656155, y: 0.7324228}
+    - {x: 0.8632822, y: 0.83593655}
+    - {x: 0.97656155, y: 0.83593655}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: b7219bf3df7d7594f9c8db2cf86ad7e9, type: 2}
+    materialId: 0
+    sourceTextureGUID: a46097825f0ec5944aa800069bd2380a
+    extractRegion: 1
+    regionX: 384
+    regionY: 384
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: cthulhu-lights/4
+    boundsData:
+    - {x: 0, y: -1, z: 0}
+    - {x: 64, y: 62, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 30, z: 0}
+    - {x: 32, y: 30, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.62500095, y: 0.50000095}
+    - {x: 0.74999905, y: 0.50000095}
+    - {x: 0.62500095, y: 0.6210928}
+    - {x: 0.74999905, y: 0.6210928}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: b7219bf3df7d7594f9c8db2cf86ad7e9, type: 2}
+    materialId: 0
+    sourceTextureGUID: a46097825f0ec5944aa800069bd2380a
+    extractRegion: 1
+    regionX: 0
+    regionY: 256
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: cthulhu-lights/5
+    boundsData:
+    - {x: 0, y: -1, z: 0}
+    - {x: 64, y: 62, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 30, z: 0}
+    - {x: 32, y: 30, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.75000095, y: 0.50000095}
+    - {x: 0.87499905, y: 0.50000095}
+    - {x: 0.75000095, y: 0.6210928}
+    - {x: 0.87499905, y: 0.6210928}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: b7219bf3df7d7594f9c8db2cf86ad7e9, type: 2}
+    materialId: 0
+    sourceTextureGUID: a46097825f0ec5944aa800069bd2380a
+    extractRegion: 1
+    regionX: 128
+    regionY: 256
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: cthulhu-lights/6
+    boundsData:
+    - {x: 0, y: -1, z: 0}
+    - {x: 64, y: 62, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 30, z: 0}
+    - {x: 32, y: 30, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.87500095, y: 0.50000095}
+    - {x: 0.99999905, y: 0.50000095}
+    - {x: 0.87500095, y: 0.6210928}
+    - {x: 0.99999905, y: 0.6210928}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: b7219bf3df7d7594f9c8db2cf86ad7e9, type: 2}
+    materialId: 0
+    sourceTextureGUID: a46097825f0ec5944aa800069bd2380a
+    extractRegion: 1
+    regionX: 256
+    regionY: 256
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: cthulhu-lights/7
+    boundsData:
+    - {x: 0, y: -1, z: 0}
+    - {x: 64, y: 62, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 30, z: 0}
+    - {x: 32, y: 30, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.62500095, y: 0.6210947}
+    - {x: 0.74999905, y: 0.6210947}
+    - {x: 0.62500095, y: 0.74218655}
+    - {x: 0.74999905, y: 0.74218655}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: b7219bf3df7d7594f9c8db2cf86ad7e9, type: 2}
+    materialId: 0
+    sourceTextureGUID: a46097825f0ec5944aa800069bd2380a
+    extractRegion: 1
+    regionX: 384
+    regionY: 256
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: cthulhu-lights/8
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.50000095, y: 0.50000095}
+    - {x: 0.62499905, y: 0.50000095}
+    - {x: 0.50000095, y: 0.62499905}
+    - {x: 0.62499905, y: 0.62499905}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: b7219bf3df7d7594f9c8db2cf86ad7e9, type: 2}
+    materialId: 0
+    sourceTextureGUID: a46097825f0ec5944aa800069bd2380a
+    extractRegion: 1
+    regionX: 0
+    regionY: 128
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: cthulhu-lights/9
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.50000095, y: 0.62500095}
+    - {x: 0.62499905, y: 0.62500095}
+    - {x: 0.50000095, y: 0.74999905}
+    - {x: 0.62499905, y: 0.74999905}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: b7219bf3df7d7594f9c8db2cf86ad7e9, type: 2}
+    materialId: 0
+    sourceTextureGUID: a46097825f0ec5944aa800069bd2380a
+    extractRegion: 1
+    regionX: 128
+    regionY: 128
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: cthulhu-lights/10
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.50000095, y: 0.75000095}
+    - {x: 0.62499905, y: 0.75000095}
+    - {x: 0.50000095, y: 0.87499905}
+    - {x: 0.62499905, y: 0.87499905}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: b7219bf3df7d7594f9c8db2cf86ad7e9, type: 2}
+    materialId: 0
+    sourceTextureGUID: a46097825f0ec5944aa800069bd2380a
+    extractRegion: 1
+    regionX: 256
+    regionY: 128
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: cthulhu-lights/11
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.50000095, y: 0.87500095}
+    - {x: 0.62499905, y: 0.87500095}
+    - {x: 0.50000095, y: 0.99999905}
+    - {x: 0.62499905, y: 0.99999905}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: b7219bf3df7d7594f9c8db2cf86ad7e9, type: 2}
+    materialId: 0
+    sourceTextureGUID: a46097825f0ec5944aa800069bd2380a
+    extractRegion: 1
+    regionX: 384
+    regionY: 128
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: cthulhu-lights/12
+    boundsData:
+    - {x: 5.75, y: 0, z: 0}
+    - {x: 48.5, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -18.5, y: -32, z: 0}
+    - {x: 30, y: -32, z: 0}
+    - {x: -18.5, y: 32, z: 0}
+    - {x: 30, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.62500095, y: 0.74218845}
+    - {x: 0.62500095, y: 0.8369131}
+    - {x: 0.74999905, y: 0.74218845}
+    - {x: 0.74999905, y: 0.8369131}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: b7219bf3df7d7594f9c8db2cf86ad7e9, type: 2}
+    materialId: 0
+    sourceTextureGUID: a46097825f0ec5944aa800069bd2380a
+    extractRegion: 1
+    regionX: 0
+    regionY: 0
+    regionW: 128
+    regionH: 128
+    flipped: 1
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: cthulhu-lights/13
+    boundsData:
+    - {x: -7.75, y: 0, z: 0}
+    - {x: 48.5, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 16.5, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 16.5, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.62500095, y: 0.836915}
+    - {x: 0.62500095, y: 0.9316397}
+    - {x: 0.74999905, y: 0.836915}
+    - {x: 0.74999905, y: 0.9316397}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: b7219bf3df7d7594f9c8db2cf86ad7e9, type: 2}
+    materialId: 0
+    sourceTextureGUID: a46097825f0ec5944aa800069bd2380a
+    extractRegion: 1
+    regionX: 128
+    regionY: 0
+    regionW: 128
+    regionH: 128
+    flipped: 1
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: cthulhu-lights/14
+    boundsData:
+    - {x: -0.5, y: -31.5, z: 0}
+    - {x: 19, y: 1, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -10, y: -32, z: 0}
+    - {x: 9, y: -32, z: 0}
+    - {x: -10, y: -31, z: 0}
+    - {x: 9, y: -31, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.97656345, y: 0.6777353}
+    - {x: 0.97656345, y: 0.7148428}
+    - {x: 0.9785147, y: 0.6777353}
+    - {x: 0.9785147, y: 0.7148428}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: b7219bf3df7d7594f9c8db2cf86ad7e9, type: 2}
+    materialId: 0
+    sourceTextureGUID: a46097825f0ec5944aa800069bd2380a
+    extractRegion: 1
+    regionX: 256
+    regionY: 0
+    regionW: 128
+    regionH: 128
+    flipped: 1
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: cthulhu-lights/15
+    boundsData:
+    - {x: -0.5, y: -31.5, z: 0}
+    - {x: 29, y: 1, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -15, y: -32, z: 0}
+    - {x: 14, y: -32, z: 0}
+    - {x: -15, y: -31, z: 0}
+    - {x: 14, y: -31, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.97656345, y: 0.6210947}
+    - {x: 0.97656345, y: 0.6777334}
+    - {x: 0.9785147, y: 0.6210947}
+    - {x: 0.9785147, y: 0.6777334}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: b7219bf3df7d7594f9c8db2cf86ad7e9, type: 2}
+    materialId: 0
+    sourceTextureGUID: a46097825f0ec5944aa800069bd2380a
+    extractRegion: 1
+    regionX: 384
+    regionY: 0
+    regionW: 128
+    regionH: 128
+    flipped: 1
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  premultipliedAlpha: 0
+  material: {fileID: 0}
+  materials:
+  - {fileID: 2100000, guid: b7219bf3df7d7594f9c8db2cf86ad7e9, type: 2}
+  textures:
+  - {fileID: 2800000, guid: 583599ebb26ea7d44b0f366e10c1bdb6, type: 3}
+  allowMultipleAtlases: 0
+  spriteCollectionGUID: f762c0e723dc762458527bd4c9738f82
+  spriteCollectionName: CthulhuCollection
+  invOrthoSize: 0.00625
+  halfTargetHeight: 320
+  buildKey: 2026771372
+  dataGuid: 757a545c176f4834093857942f133a64
+--- !u!1001 &100100000
+Prefab:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 147589}
+  m_IsPrefabParent: 1
+  m_IsExploded: 0

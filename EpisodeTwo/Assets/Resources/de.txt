@@ -1,0 +1,320 @@
+"NEW GAME" = "NEUES SPIEL";
+"ARE YOU SURE?" = "BIST DU SICHER?";
+"ALL PROGRESS" = "ALLE FORTSCHRITTE";
+"WILL BE LOST!" = "GEHEN VERLOREN!";
+"YES" = "JA";
+"NO" = "NEIN";
+
+
+/*----------------------------------------------------*/
+
+
+"CONTINUE GAME" = "SPIEL FORTSETZEN";
+"SELECT LEVEL" = "WÄHLE LEVEL";
+"START LEVEL" = "STARTE LEVEL";
+"ASCENSION" = "EINSTIEG";
+"SPEED ZONE A" = "SPEED ZONE A";
+"LEAP OF FAITH" = "GLAUBENSFRAGE";
+"THE GRINDHOUSE" = "MÜHLENHAUS";
+"KINETICS" = "KINETICS";
+"SPEED ZONE B" = "SPEED ZONE B";
+"CROSSFIRE" = "KREUZFEUER";
+"THE ABYSS" = "DER ABGRUND";
+"NEMESIS" = "NEMESIS";
+"THE MAINFRAME" = "DER MAINFRAME";
+"THE CORE" = "DER KERN";
+
+"LOADING" = "LADE";
+"INSTRUCTIONS" = "ANWEISUNGEN";
+"TILT FORWARD" = "NACH VORN KIPPEN";
+"TO MOVE" = "ZUM FORTBEWEGEN";
+"FOR EXTRA LIFE" = "FÜR ZUSATZLEBEN";
+
+
+/*----------------------------------------------------*/
+
+
+"OPTIONS" = "OPTIONEN";
+
+"CALIBRATE CONTROLS" = "STRG. KALIBRIEREN";
+"CALIBRATE" = "KALIBRIEREN";
+"HOLD THE DEVICE IN THE" = "HALTE DAS GERÄT IN";
+"DESIRED PLAYING POSITION" = "DER EMPF. SPIELSTELLUNG";
+"AND PRESS THE CALIBRATE" = "UND DRÜCKE DIE";
+"BUTTON." = "KALIBRIERTASTE.";
+"YOU CAN RECALIBRATE" = "DU KANNST JEDERZEIT";
+"AT ANY TIME DURING THE GAME" = "WÄHREND DES SPIELS NEU";
+"BY PRESSING THE SCREEN" = "KALIBRIEREN, DRÜCKE DAZU";
+"WITH TWO FINGERS." = "ZWEI FINGER AUF DISPLAY.";
+
+"VIBRATION" = "VIBRATION";
+"SOUND EFFECTS" = "SOUNDEFFEKTE";
+"DISABLED" = "AUS";
+"ENABLED" = "EIN";
+
+"POST SCORES" = "PUNKTE ÜBERMITTELN";
+"ALWAYS" = "IMMER";
+"NEVER" = "NIE";
+
+"DIFFICULTY" = "SCHWIERIGKEITSGRAD";
+"NORMAL" = "NORMAL";
+"EXPERT" = "EXPERTE";
+"THE GAME IS MUCH HARDER WITH" = "BEI EXPERTE IST DAS SPIEL";
+"THE EXPERT SETTINGS, AND YOUR" ="VIEL SCHWERER UND IHR"; 
+"SHIELD IS DISABLED" = "SCHUTZSCHILD IST DEAKTIVIERT";
+
+"GO BACK" = "ZURÜCK";
+
+
+/*----------------------------------------------------*/
+
+
+"LEADERBOARDS" = "FÜHRUNGSTABELLEN";
+"LEVEL" = "LEVEL";
+"LEVEL %d" = "LEVEL %d";
+
+"LEADERBOARD" = "FÜHRUNGSTABELLE";
+"LOCAL" = "LOKAL";
+"FRIENDS" = "FREUNDE";
+"GLOBAL" = "GLOBAL";
+
+"TIME PERIOD" = "ZEITFENSTER";
+"TODAY" = "HEUTE";
+"THIS WEEK" = "DIESE WOCHE";
+"ALL TIME" = "UNBEGRENZT";
+
+
+/*----------------------------------------------------*/
+
+
+
+"CREDITS" = "CREDITS";
+"ART & DESIGN" = "ENTWICKLUNG & GESTALTUNG";
+"PROGRAMMING" = "PROGRAMMIERUNG";
+"MUSIC & SOUND" = "MUSIK & SOUND";
+"MUSIC" = "MUSIK";
+
+
+/*----------------------------------------------------*/
+
+
+"ORBS COLLECTED" = "GESAMMELTE ORBS";
+"PLAYER" = "SPIELER";
+"%d LIFE LOST" = "%d LEBEN VERL.";
+"%d LIVES LEFT" = "NOCH %d LEBEN";
+"%d LIVES LOST" = "%d LEBEN VERL.";
+"%d SHIELD LOST" = "%d SCHILD VERL.";
+"%d SHIELDS LOST" = "%d SCHILDER VERL";
+"NO SHIELD LOST" = "KEIN SCHILD VER";
+"YOUR TIME" = "DAUER";
+"YOUR BEST TIME" = "IHRE BESTE ZEIT";
+
+"LEADERBOARD NAME" = "FÜHRUNGSTABELLENNAME";
+"Player" = "Spieler";
+"(CLICK TO CHANGE)" = "(ZUM ÄNDERN ANKLICKEN)";
+
+"BRONZE STAR!" = "BRONZENER STERN";
+"SILVER STAR!" = "SILBERNER STERN";
+"GOLD STAR!" = "GOLDENER STERN!";
+"EXPERT BRONZE STAR!" = "EXPERTE STERN BRONZE!";
+"EXPERT SILVER STAR!" = "EXPERTE STERN SILBER!";
+"EXPERT GOLD STAR!" = "EXPERTE STERN GOLD!";
+
+"CONTINUE" = "FORTSETZEN";
+
+"Submit results?" = "Ergebnisse übermitteln?";
+"SUBMIT_ALERT_ID" = "Möchtest du, dass Dark Nebula deine Ergebnisse nach Abschluss eines jeden Levels automatisch an die Ergebnistabelle übermittelt? Du kannst diese Einstellung zu jeder Zeit im Menü Optionen ändern.";
+"No" = "Nein";
+"Yes" = "Ja";
+
+"Connection error" = "Verbindungsfehler";
+"SAVE_LB_ERROR_ID" ="Bei der Übertragung deiner Ergebnisse an die Ergebnistabelle ist ein Problem aufgetreten.";
+"Try again" = "Wiederh.";
+"Continue" = "Forts.";
+
+"LOAD_LB_ERROR_ID" = "Es konnte keine Verbindung zur Ergebnistabelle hergestellt werden. Bitte stelle sicher, dass eine Internetverbindung besteht und versuche es später noch einmal.";
+"Ok" = "Ok";
+
+"POST ON FACEBOOK" = "ZU FACEBOOK SENDEN";
+"TRY AGAIN" = "WIEDERHOLEN";
+"MAIN MENU" = "HAUPTMENÜ";
+"NEXT LEVEL" = "NÄCHSTER LEVEL";
+
+
+/*----------------------------------------------------*/
+
+
+"EXPERT MODE!" = "EXPERTENMODUS!";
+"CALIBRATED!" = "KALIBRIERT!";
+"EXTRA LIFE!" = "ZUSATZLEBEN";
+"ENTERING" = "EINTRITT";
+"FIREWALL %d DOWN!" = "FIREWALL %d AUS!";
+"SPEED ZONE!" = "SPEED ZONE!";
+"SHIELD DOWN" = "SCHILD ZERSTÖRT";
+"SHIELD FOUND" = "SCHILD GEFUNDEN";
+"SHIELD RESTORED" = "SCHILD ERNEUERT";
+"Excellent!" = "AUSGEZEICHNET!";
+"Outstanding!" = "HERAUSRAGEND!";
+"Perfect!" = "PERFEKT!";
+"Superb!" = "SUPER!";
+"Level complete" = "LEVEL BEENDET";
+
+
+/*----------------------------------------------------*/
+
+
+"YOU ARE REALLY GOOD!" = "DU BIST WIRKLICH GUT!";
+"BUT ARE YOU GOOD ENOUGH" = "ABER BIST DU GUT GENUG";
+"TO RECEIVE GOLD STARS" = "UM IN ALLEN LEVELS EINEN";
+"ON ALL THE LEVELS?" = "GOLDENEN STERN ZU HOLEN?";
+
+
+/*----------------------------------------------------*/
+
+
+"YOU HAVE RECEIVED" = "DU HAST IN ALLEN LEVELS";
+"GOLD STARS ON ALL LEVELS!" = "GOLD ERREICHT!";
+"YOU ARE THE TRUE MASTER" = "DU BIST EIN ECHTER";
+"OF DARK NEBULA!" = "MEISTER DES DARK NEBULA!";
+
+
+/*----------------------------------------------------*/
+
+
+"EXIT TO MAIN MENU?" = "ZUM HAUPTMENÜ?";
+
+
+/*----------------------------------------------------*/
+
+
+"GAME PAUSED" = "SPIEL ANGEHALTEN";
+"RESUME GAME" = "SPIEL FORTSETZEN";
+"GAME OPTIONS" = "SPIELOPTIONEN";
+"RESTART LEVEL" = "NEUSTART LEVEL";
+
+"RESTART LEVEL?" = "NEUSTART LEVEL?";
+
+
+/*----------------------------------------------------*/
+
+
+"GAME OVER" = "SPIELENDE";
+
+
+/*----------------------------------------------------*/
+
+
+"TO BE CONTINUED ..." = "FORTSETZUNG FOLGT...";
+
+
+/*----------------------------------------------------*/
+
+
+"YOU HAVE RECEIVED EXPERT" = "DU HAST IN ALLEN LEVELS";
+"GOLD STARS ON ALL LEVELS V2" = "STERNE IN GOLD ERREICHT!";
+"THE TRUE MASTERS ENVY" = "DIE WIRKLICHEN MEISTER";
+"YOUR SKILLS!" = "BENEIDEN DICH!";
+
+
+/*----------------------------------------------------*/
+
+
+"BUY NOW" = "HOL ES DIR JETZT";
+
+
+/*----------------------------------------------------*/
+
+"CONGRATULATIONS!" = "GLÜCKWUNSCH!";
+"YOU HAVE COMPLETED THE LITE" = "DU HAST DIE LITE-VERSION";
+"VERSION OF DARK NEBULA!" = "VON DARK NEBULA BEENDET!";
+"THE FULL GAME IS ROUGHLY" = "DIE VOLLVERSION DAUERT";
+"AN HOUR LONG, WITH TEN" = "GUT 1 STUNDE, MIT ZEHN";
+"ACTION-PACKED LEVELS THAT" = "ACTIONGELADENEN LEVELS,";
+"WILL HAVE YOU BOUNCING," = "DIE DICH SPRINGEND,";
+"SLIDING, SPINNING AND" = "RUTSCHEND,ROTIEREND UND";
+"SWERVING ALL THE WAY TO THE" = "SCHLEUDERND ZUM ZIEL";
+"FINISH LINE." = "FÜHREN WERDEN.";
+
+/*----------------------------------------------------*/ 
+
+"VIEW TRAILER" = "TRAILER ANSEHEN";
+"BUY EP2" = "HOL ES DIR JETZT";
+"EPISODE TWO" = "EPISODE ZWEI";
+
+"QUIT?" = "BEENDEN?";
+"LOGOUT FACEBOOK" = "LOGOUT FACEBOOK";
+"CONNECT TO FACEBOOK" = "CONNECT TO FACEBOOK";
+
+"UNLOCK ALL LEVELS" = "ALLE LEVEL ENTSPERREN";
+
+
+/*-------  Below is changed in EP2  ------------*/
+
+"ROUGH LANDING" = "HARTE LANDUNG";
+"THE FACTORY" = "DIE FABRIK";
+"CONTACT" = "KONTAKT";
+"PLATFORMS" = "PLATFORMEN";
+"SHARP EDGES" = "SCHARFE KANTEN";
+"SHOWDOWN" = "SHOWDOWN";
+"PLEXUS GATEWAY" = "PLEXUS GATEWAY";
+"DARK CORNERS" = "DUNKLE ECKEN";
+"NARROW PATHS" = "SCHMALE PFADE";
+"STEPSTONES" = "	STEPSTONES";
+"CRITTERS" = "KREATUREN";
+"HEART OF DARKNESS" = "HERZ DES DUNKELS";
+"SECOND GATEWAY" = "ZWEITES GATEWAY";
+"BATTLEGROUND" = "KAMPFARENA";
+"LEAPFROG" = "BOCKSPRINGEN";
+"SERPENTS" = "SCHLANGEN";
+"SLINGSHOT" = "SCHLEUDER";
+"DUST" = "STAUB";
+"ENDGAME" = "ENDSPIEL";
+"UNITY" = "UNITY";
+"LEVEL 21" = "STRANDED";
+"LEVEL 22" = "BLADE ARRAY";
+"LEVEL 23" = "CLOSE QUARTERS";
+"LEVEL 24" = "THIRD GATEWAY";
+"LEVEL 25" = "DARK STREAM";
+"LEVEL 26" = "SURGE";
+"LEVEL 27" = "PINNED";
+"LEVEL 28" = "FOURTH GATEWAY";
+"LEVEL 29" = "TIMEOUT";
+"LEVEL 30" = "BULLET TIME";
+"LEVEL 31" = "THE NEST";
+"LEVEL 32" = "THE HIVE";
+
+"ORIGINAL" = "ORIGINAL";
+"EXTENDED" = "EXTENDED";
+
+"CALIBRATE CONTROLS_INSTRUCTIONS1" = "WENN DU IN EINEM";
+"CALIBRATE CONTROLS_INSTRUCTIONS2" = "ANDEREN WINKEL SPIELEN";
+"CALIBRATE CONTROLS_INSTRUCTIONS3" = "WILLST,WÄHLE EINFACH";
+"CALIBRATE CONTROLS_INSTRUCTIONS4" = "STRG.KALIBRIEREN AUS";
+"CALIBRATE CONTROLS_INSTRUCTIONS5" = "DEM MENÜ OPTIONEN";
+
+"CONNECT SPHERO" = "CONNECT SPHERO";
+"DISCONNECT SPHERO" = "DISCONNECT SPHERO";
+"Need to pair a Sphero" = "Need to pair a Sphero";
+"TAP A SPHERO TO CONNECT" = "TAP A SPHERO TO CONNECT";
+"Already connected" = "Already connected";
+"CONNECTING to " = "CONNECTING TO ";
+"Failed to connect" = "Failed to connect";
+"Connection Failed" = "Connection Failed";
+"Connection Success" = "Connection Success";
+"Bluetooth Not Enabled" = "Bluetooth Not Enabled";
+"Sphero Instructions" = "PLAY WITH THE WHITE LIGHT\nUP AND THE BLUE LIGHT\nTOWARD YOU";
+
+/*----- Ads --------*/
+"CONTINUE?"="CONTINUE?";
+"GET 3 LIVES!"="GET 3 LIVES!";
+"GAIN LIVES"="YOU MAY EARN THREE\nMORE LIVES AND\nCONTINUE, IF YOU\nWATCH A QUICK VIDEO!";
+"REMOVE ADS?" = "NO MORE ADS!"
+"REMOVE ADS" = "REMOVE ADS"
+"REMOVE ADS TEXT"="SUPPORT THE\nDEVELOPERS AND\nREMOVE ALL ADS!"
+"CONNECTING TO STORE" = "CONNECTING TO\nTHE STORE"
+"THANK YOU!"="THANK YOU FOR\nSUPPORTING US\nADS ARE REMOVED!"
+"PLAY" = "PLAY"
+"no internet"="Connection error"
+"no internet body"="Unable to connect with the server. Check your internet connection and try again."
+"LOADING HINT"="THIS GAME SHOWS ADS\nTO KEEP IT FREE\nTAP REMOVE ADS\nTO SUPPORT US!"
+"LOADING HINT PAID"="THANK YOU FOR\nSUPPORTING US!"

@@ -1,0 +1,77 @@
+using System.Collections.Generic;
+using UnityEngine;
+
+// Keep the authored panel/background in place and fit its controls into the
+// same safe rectangle in both episodes, including transient loading panels.
+public class MenuContentFit : MonoBehaviour
+{
+    public Camera Camera;
+    readonly List<Transform> children=new List<Transform>();
+    readonly List<Vector3> scales=new List<Vector3>(),positions=new List<Vector3>();
+    bool initialized;
+    float lastSize=-1f,lastAspect=-1f;
+    Rect lastSafe;
+    int settleUntil;
+    void OnEnable(){lastSize=-1f;settleUntil=Time.frameCount+15;}
+
+    bool IsControl(Renderer r)
+    {
+        if(!r.enabled || r is ParticleSystemRenderer)return false;
+        if(r.GetComponentInParent<SimpleButton>()!=null)return true;
+        if(r.GetComponentInParent<tk2dTextMesh>()!=null)return true;
+        if(r.name=="Logo" || r.name=="Title" || r.name=="Body" || r.name.StartsWith("Text"))return true;
+        foreach(MonoBehaviour component in r.GetComponentsInParent<MonoBehaviour>())
+            if(component!=null && (component.GetType().Name=="DynamicFont" || component.GetType().Name=="SimpleText"))return true;
+        return false;
+    }
+    Rect BoundsOnScreen()
+    {
+        Vector2 min=new Vector2(float.PositiveInfinity,float.PositiveInfinity),max=new Vector2(float.NegativeInfinity,float.NegativeInfinity);
+        foreach(Renderer r in GetComponentsInChildren<Renderer>())
+        {
+            if(!IsControl(r))continue;
+            Bounds b=r.bounds;
+            for(int x=-1;x<=1;x+=2)for(int y=-1;y<=1;y+=2)for(int z=-1;z<=1;z+=2)
+            {
+                Vector3 p=Camera.WorldToScreenPoint(b.center+Vector3.Scale(b.extents,new Vector3(x,y,z)));
+                min=Vector2.Min(min,p);max=Vector2.Max(max,p);
+            }
+        }
+        return float.IsInfinity(min.x)?new Rect():Rect.MinMaxRect(min.x,min.y,max.x,max.y);
+    }
+    void LateUpdate()
+    {
+        if(Camera==null)return;
+        Rect safe=LegacyScreenFit.ContentRect();
+        if(initialized && Mathf.Approximately(lastSize,Camera.orthographicSize) && Mathf.Approximately(lastAspect,Camera.aspect) && lastSafe==safe && Time.frameCount>settleUntil)return;
+        if(!initialized)
+        {
+            foreach(Transform child in transform)
+            {
+                if(child.name=="Background" || child.name=="Header" || child.name=="Footer" || child.GetComponent<Camera>()!=null)continue;
+                children.Add(child);scales.Add(child.localScale);positions.Add(child.localPosition);
+            }
+            initialized=true;
+        }
+        for(int i=0;i<children.Count;i++){children[i].localScale=scales[i];children[i].localPosition=positions[i];}
+        Rect view=Camera.pixelRect;
+        float margin=Screen.width*0.015f;
+        safe=Rect.MinMaxRect(Mathf.Max(safe.xMin,view.xMin)+margin,Mathf.Max(safe.yMin,view.yMin)+margin,Mathf.Min(safe.xMax,view.xMax)-margin,Mathf.Min(safe.yMax,view.yMax)-margin);
+        Rect bounds=BoundsOnScreen();
+        if(bounds.width>0 && bounds.height>0)
+        {
+            float factor=Mathf.Min(1f,safe.width/bounds.width,safe.height/bounds.height);
+            for(int i=0;i<children.Count;i++)
+            {
+                children[i].localScale=scales[i]*factor;
+                Vector3 p=positions[i];p.x*=factor;p.y*=factor;children[i].localPosition=p;
+            }
+            bounds=BoundsOnScreen();
+            float dx=bounds.xMin<safe.xMin?safe.xMin-bounds.xMin:bounds.xMax>safe.xMax?safe.xMax-bounds.xMax:0;
+            float dy=bounds.yMin<safe.yMin?safe.yMin-bounds.yMin:bounds.yMax>safe.yMax?safe.yMax-bounds.yMax:0;
+            Vector3 offset=transform.InverseTransformVector((Camera.transform.right*dx+Camera.transform.up*dy)*(2f*Camera.orthographicSize/Camera.pixelHeight));
+            foreach(Transform child in children)child.localPosition+=offset;
+        }
+        lastSize=Camera.orthographicSize;lastAspect=Camera.aspect;lastSafe=LegacyScreenFit.ContentRect();
+    }
+}

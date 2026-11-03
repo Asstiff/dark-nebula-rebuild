@@ -1,0 +1,105 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &147589
+GameObject:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_Component:
+  - 4: {fileID: 479954}
+  - 114: {fileID: 11409266}
+  m_Layer: 0
+  m_Name: LightConeCollection
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &479954
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 147589}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+--- !u!114 &11409266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 147589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60f28a10f064b0573af11a2e931d98da, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  version: 3
+  materialIdsValid: 1
+  spriteDefinitions:
+  - name: entity_lightcone
+    boundsData:
+    - {x: 1, y: 9, z: 0}
+    - {x: 116, y: 236, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 128, y: 256, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -57, y: -109, z: 0}
+    - {x: 59, y: -109, z: 0}
+    - {x: -57, y: 127, z: 0}
+    - {x: 59, y: 127, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.015632812, y: 0.007816406}
+    - {x: 0.9218672, y: 0.007816406}
+    - {x: 0.015632812, y: 0.92968357}
+    - {x: 0.9218672, y: 0.92968357}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: f12eb18e34c5ef34f8aa473136ff5065, type: 2}
+    materialId: 0
+    sourceTextureGUID: f556c189702e10145a1cb0674db4e666
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 1
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  premultipliedAlpha: 0
+  material: {fileID: 0}
+  materials:
+  - {fileID: 2100000, guid: f12eb18e34c5ef34f8aa473136ff5065, type: 2}
+  textures:
+  - {fileID: 2800000, guid: ac2825eec565839418e96a42452f2fed, type: 3}
+  allowMultipleAtlases: 0
+  spriteCollectionGUID: ff99c68c005506d4b9df9e684771afb9
+  spriteCollectionName: LightConeCollection
+  invOrthoSize: 0.003125
+  halfTargetHeight: 320
+  buildKey: 603482652
+  dataGuid: 9ac62dfad007f674e8e55e75c372dc09
+--- !u!1001 &100100000
+Prefab:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 147589}
+  m_IsPrefabParent: 1
+  m_IsExploded: 0

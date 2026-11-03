@@ -1,0 +1,586 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &147589
+GameObject:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_Component:
+  - 4: {fileID: 479954}
+  - 114: {fileID: 11409266}
+  m_Layer: 0
+  m_Name: MurtyCollection
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &479954
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 147589}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+--- !u!114 &11409266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 147589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60f28a10f064b0573af11a2e931d98da, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  version: 3
+  materialIdsValid: 1
+  spriteDefinitions:
+  - name: murtyhellicaster_warning
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 128, y: 128, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 128, y: 128, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -64, y: -64, z: 0}
+    - {x: 64, y: -64, z: 0}
+    - {x: -64, y: 64, z: 0}
+    - {x: 64, y: 64, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.49218947, y: 0.003908203}
+    - {x: 0.74218553, y: 0.003908203}
+    - {x: 0.49218947, y: 0.25390428}
+    - {x: 0.74218553, y: 0.25390428}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: ff104e08f43556f46bbae07f3c59597c, type: 2}
+    materialId: 0
+    sourceTextureGUID: beb4b88776ae44c47b5aabb12d67000a
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 1
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: murty_arm1
+    boundsData:
+    - {x: 13, y: 0, z: 0}
+    - {x: 102, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 128, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -38, y: -32, z: 0}
+    - {x: 64, y: -32, z: 0}
+    - {x: -38, y: 32, z: 0}
+    - {x: 64, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.46093947, y: 0.63867384}
+    - {x: 0.6601543, y: 0.63867384}
+    - {x: 0.46093947, y: 0.7636699}
+    - {x: 0.6601543, y: 0.7636699}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: ff104e08f43556f46bbae07f3c59597c, type: 2}
+    materialId: 0
+    sourceTextureGUID: ca6fb79dd2a9e304bb5dc427502c667b
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 1
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: murty_knife
+    boundsData:
+    - {x: 0.5, y: 0, z: 0}
+    - {x: 53, y: 112, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 128, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -26, y: -56, z: 0}
+    - {x: 27, y: -56, z: 0}
+    - {x: -26, y: 56, z: 0}
+    - {x: 27, y: 56, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.24218945, y: 0.7050801}
+    - {x: 0.34570116, y: 0.7050801}
+    - {x: 0.24218945, y: 0.92382616}
+    - {x: 0.34570116, y: 0.92382616}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: ff104e08f43556f46bbae07f3c59597c, type: 2}
+    materialId: 0
+    sourceTextureGUID: 50768fd6611cd6a41a6de8e9a3a72761
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 1
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: murty_3
+    boundsData:
+    - {x: -1.5, y: -0.5, z: 0}
+    - {x: 125, y: 121, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 128, y: 128, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -64, y: -61, z: 0}
+    - {x: 61, y: -61, z: 0}
+    - {x: -64, y: 60, z: 0}
+    - {x: 61, y: 60, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.49218947, y: 0.26172072}
+    - {x: 0.73632616, y: 0.26172072}
+    - {x: 0.49218947, y: 0.4980449}
+    - {x: 0.73632616, y: 0.4980449}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: ff104e08f43556f46bbae07f3c59597c, type: 2}
+    materialId: 0
+    sourceTextureGUID: 9436210592f83fd4d8a978ff539d282d
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 1
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: murty_2
+    boundsData:
+    - {x: -1.5, y: 1.5, z: 0}
+    - {x: 125, y: 125, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 128, y: 128, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -64, y: -61, z: 0}
+    - {x: 61, y: -61, z: 0}
+    - {x: -64, y: 64, z: 0}
+    - {x: 61, y: 64, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.75000197, y: 0.2597676}
+    - {x: 0.99413866, y: 0.2597676}
+    - {x: 0.75000197, y: 0.5039043}
+    - {x: 0.99413866, y: 0.5039043}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: ff104e08f43556f46bbae07f3c59597c, type: 2}
+    materialId: 0
+    sourceTextureGUID: 25b217a8696377f47baceac451e59384
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 1
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: murty_1
+    boundsData:
+    - {x: 3.5, y: 5, z: 0}
+    - {x: 113, y: 118, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 128, y: 128, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -53, y: -54, z: 0}
+    - {x: 60, y: -54, z: 0}
+    - {x: -53, y: 64, z: 0}
+    - {x: 60, y: 64, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.003908203, y: 0.48828322}
+    - {x: 0.003908203, y: 0.7089824}
+    - {x: 0.23437305, y: 0.48828322}
+    - {x: 0.23437305, y: 0.7089824}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: ff104e08f43556f46bbae07f3c59597c, type: 2}
+    materialId: 0
+    sourceTextureGUID: 5a23568266ac579459394b33dcbe1145
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 1
+    complexGeometry: 0
+    colliderType: 1
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: murty_eye
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.003908203, y: 0.71679884}
+    - {x: 0.1289043, y: 0.71679884}
+    - {x: 0.003908203, y: 0.8417949}
+    - {x: 0.1289043, y: 0.8417949}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: ff104e08f43556f46bbae07f3c59597c, type: 2}
+    materialId: 0
+    sourceTextureGUID: bb4358f21178f544a9febbcc373a9d9a
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 1
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: murty_arm0
+    boundsData:
+    - {x: 10, y: -6.5, z: 0}
+    - {x: 108, y: 51, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 128, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -44, y: -32, z: 0}
+    - {x: 64, y: -32, z: 0}
+    - {x: -44, y: 19, z: 0}
+    - {x: 64, y: 19, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.3535176, y: 0.7050801}
+    - {x: 0.3535176, y: 0.91601366}
+    - {x: 0.45312303, y: 0.7050801}
+    - {x: 0.45312303, y: 0.91601366}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: ff104e08f43556f46bbae07f3c59597c, type: 2}
+    materialId: 0
+    sourceTextureGUID: 68f77d6bdaf5c50499bdfd8d8b4b8ad1
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 1
+    complexGeometry: 0
+    colliderType: 1
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: murty_spikes_small
+    boundsData:
+    - {x: -0.5, y: 0.5, z: 0}
+    - {x: 63, y: 63, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -32, y: -31, z: 0}
+    - {x: 31, y: -31, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 31, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.003908203, y: 0.84961134}
+    - {x: 0.12695117, y: 0.84961134}
+    - {x: 0.003908203, y: 0.9726543}
+    - {x: 0.12695117, y: 0.9726543}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: ff104e08f43556f46bbae07f3c59597c, type: 2}
+    materialId: 0
+    sourceTextureGUID: 509b1a094fad1394092e8073f7e981d8
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 1
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: murty_0
+    boundsData:
+    - {x: 0.5, y: 0, z: 0}
+    - {x: 107, y: 108, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 128, y: 128, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -53, y: -54, z: 0}
+    - {x: 54, y: -54, z: 0}
+    - {x: -53, y: 54, z: 0}
+    - {x: 54, y: 54, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.24218945, y: 0.48828322}
+    - {x: 0.24218945, y: 0.69726366}
+    - {x: 0.45312303, y: 0.48828322}
+    - {x: 0.45312303, y: 0.69726366}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: ff104e08f43556f46bbae07f3c59597c, type: 2}
+    materialId: 0
+    sourceTextureGUID: 87806198d393ba94988d6b999fc04714
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 1
+    complexGeometry: 0
+    colliderType: 1
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: murty_ring1
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 120, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 128, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -60, y: -32, z: 0}
+    - {x: 60, y: -32, z: 0}
+    - {x: -60, y: 32, z: 0}
+    - {x: 60, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.46093947, y: 0.50586134}
+    - {x: 0.69531053, y: 0.50586134}
+    - {x: 0.46093947, y: 0.6308574}
+    - {x: 0.69531053, y: 0.6308574}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: ff104e08f43556f46bbae07f3c59597c, type: 2}
+    materialId: 0
+    sourceTextureGUID: 7d44ee6726c577747bccbef8e6fe0a38
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 1
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: murty_ring0
+    boundsData:
+    - {x: 0, y: 0.5, z: 0}
+    - {x: 120, y: 63, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 128, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -60, y: -31, z: 0}
+    - {x: 60, y: -31, z: 0}
+    - {x: -60, y: 32, z: 0}
+    - {x: 60, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.70312697, y: 0.5117207}
+    - {x: 0.93749803, y: 0.5117207}
+    - {x: 0.70312697, y: 0.63476366}
+    - {x: 0.93749803, y: 0.63476366}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: ff104e08f43556f46bbae07f3c59597c, type: 2}
+    materialId: 0
+    sourceTextureGUID: a0353c3422283954581df863075f500d
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 1
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: murty_spikes
+    boundsData:
+    - {x: 0.5, y: 0, z: 0}
+    - {x: 127, y: 126, z: 0}
+    untrimmedBoundsData:
+    - {x: 0.5, y: 0, z: 0}
+    - {x: 127, y: 126, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -63, y: -63, z: 0}
+    - {x: 64, y: -63, z: 0}
+    - {x: -63, y: 63, z: 0}
+    - {x: 64, y: 63, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.75000197, y: 0.003908203}
+    - {x: 0.75000197, y: 0.25195116}
+    - {x: 0.9960918, y: 0.003908203}
+    - {x: 0.9960918, y: 0.25195116}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: ff104e08f43556f46bbae07f3c59597c, type: 2}
+    materialId: 0
+    sourceTextureGUID: 40d6df3b32afef74da8c879633058872
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 1
+    complexGeometry: 0
+    colliderType: 1
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: murty_broken
+    boundsData:
+    - {x: 5, y: 6, z: 0}
+    - {x: 246, y: 244, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 256, y: 256, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -118, y: -116, z: 0}
+    - {x: 128, y: -116, z: 0}
+    - {x: -118, y: 128, z: 0}
+    - {x: 128, y: 128, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.003908203, y: 0.003908203}
+    - {x: 0.48437303, y: 0.003908203}
+    - {x: 0.003908203, y: 0.48046678}
+    - {x: 0.48437303, y: 0.48046678}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: ff104e08f43556f46bbae07f3c59597c, type: 2}
+    materialId: 0
+    sourceTextureGUID: 8e79111c8fb2dc64f864fd102791938f
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 1
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  premultipliedAlpha: 0
+  material: {fileID: 0}
+  materials:
+  - {fileID: 2100000, guid: ff104e08f43556f46bbae07f3c59597c, type: 2}
+  textures:
+  - {fileID: 2800000, guid: d8a7782e55054d043b0dc76425cd9de5, type: 3}
+  allowMultipleAtlases: 0
+  spriteCollectionGUID: a5f2c01a85ad7c14a899607d6faf1a3f
+  spriteCollectionName: MurtyCollection
+  invOrthoSize: 0.003125
+  halfTargetHeight: 320
+  buildKey: 1796761589
+  dataGuid: ed503ab229a701446b861deccce3c569
+--- !u!1001 &100100000
+Prefab:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 147589}
+  m_IsPrefabParent: 1
+  m_IsExploded: 0

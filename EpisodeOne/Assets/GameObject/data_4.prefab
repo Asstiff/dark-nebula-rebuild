@@ -1,0 +1,122 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &147589
+GameObject:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_Component:
+  - 4: {fileID: 479954}
+  - 114: {fileID: 11409266}
+  m_Layer: 0
+  m_Name: data
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &479954
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 147589}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &11409266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 147589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60f28a10f064b0573af11a2e931d98da, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  version: 3
+  materialIdsValid: 1
+  needMaterialInstance: 0
+  spriteDefinitions:
+  - name: LeaderboardOverlay
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 290, y: 180, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 290, y: 180, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -145, y: -90, z: 0}
+    - {x: 145, y: -90, z: 0}
+    - {x: -145, y: 90, z: 0}
+    - {x: 145, y: 90, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 3.90625E-06, y: 1.953125E-06}
+    - {x: 3.90625E-06, y: 0.5664043}
+    - {x: 0.70312107, y: 1.953125E-06}
+    - {x: 0.70312107, y: 0.5664043}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 5607d837bbb2ec343b7b0c0bf61ee5cb, type: 2}
+    materialId: 0
+    sourceTextureGUID: dd46fb60e43d26b409ea4a1cb33d24d3
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 1
+    complexGeometry: 0
+    physicsEngine: 0
+    colliderType: 1
+    customColliders: []
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+    polygonCollider2D: []
+    edgeCollider2D: []
+    attachPoints: []
+  premultipliedAlpha: 1
+  material: {fileID: 0}
+  materials:
+  - {fileID: 2100000, guid: 5607d837bbb2ec343b7b0c0bf61ee5cb, type: 2}
+  textures:
+  - {fileID: 2800000, guid: d33a3f0989810664c87a85f9bc8a787f, type: 3}
+  pngTextures: []
+  materialPngTextureId: 00000000
+  textureFilterMode: 1
+  textureMipMaps: 0
+  allowMultipleAtlases: 0
+  spriteCollectionGUID: 8e77c106548226d449d901f710111e9a
+  spriteCollectionName: LeaderboardCollection
+  assetName:
+  loadable: 0
+  invOrthoSize: 0.003125
+  halfTargetHeight: 320
+  buildKey: 974921793
+  dataGuid: bcef7079e4262fc4090d03f05b59b242
+  managedSpriteCollection: 0
+  hasPlatformData: 0
+  spriteCollectionPlatforms: []
+  spriteCollectionPlatformGUIDs: []
+--- !u!1001 &100100000
+Prefab:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 147589}
+  m_IsPrefabParent: 1
+  m_IsExploded: 0

@@ -1,0 +1,277 @@
+# Generic
+SUBTITLE=الجزء الأول
+ARE YOU SURE?=هل انت متأكد؟
+YES=تأكيد
+NO=إلغاء
+
+# IAP Shop
+NO INTERNET=لا يوجد اتصال بالانترنت
+SHOP=المتجر
+HC_SMALL={0} X
+HC_LARGE={0} X
+PROCESSING PURCHASE=جاري تنفيذ عملية الشراء
+PURCHASE FAILED=فشل في الشراء\n\nتحقق من الاتصال بالانترنت
+HC_SMALL_DESCRIPTION=  
+HC_LARGE_DESCRIPTION=%20 أكثر
+I_WANT_IT_ALL_DESCRIPTION=وفر %50 واحصل على جميع السفن والترقيات
+I_WANT_IT_ALL=أريد كل شيء!
+RESTORING PURCHASES=جاري استعادة المشتريات
+
+# Booster Selection
+BOOSTER DETAILS=تفاصيل الترقية
+BOOSTER SELECTION=اختر ترقية
+BOOSTER HEADER=ترقية المرحلة
+BOOSTER SELECTION SUBTIBLE=قم بالترقية لتحسين نتيجتك!\n\nترقيات المرحلة دائمة٬ وكل مرحلة يجب ان تتم ترقيتها على حدة.
+SPEED=سرعة
+SHIELD=درع الحماية
+MAGNET=مغناطيس
+SPEED_DESCRIPTION=زيادة في السرعة\n\nنصيحة: هذه الترقية سوف تحسن من نتيجتك بشكل ملحوظ!
+SHIELD_DESCRIPTION=الدرع يحميك من الخسارة عند التأذي. يستخدم مرة واحدة. \n\nنصيحة: من الممكن العثور على دروع اضافية خلال اللعب!
+MAGNET_DESCRIPTION=المغناطيس يجذب خلايا الوقت من مسافة بعيدة.\n\nنصيحة:  هذه الترقية سوف توفر عليك الوقت اللازم لجمع الخلايا بنفسك!
+ON=تشغيل
+OFF=إيقاف
+UNLOCK=فتح
+BUY=شراء
+PURCHASE HEADER=فتح الترقية
+PURCHASE=شراء
+CANCEL=إلغاء
+HC NEEDED=رصيدك من الجواهر لا يكفي
+HC NEEDED TEXT=يجب عليك شراء المزيد من الجواهر لاتمام العملية. هل ترغب بالذهاب الى المتجر؟
+
+# Booster In-game
+HC PICKUP=جوهرة
+HC PICKUP LARGE=حصلت على جوهرة
+
+# Level Complete
+PENALTY TEXT=+ غرامة خصم {0} ثانية
+PENALTY TEXT SMALL=+{0} ثانية
+TIME TO NEXT={0} من
+EXCELLENT=أحسنت!
+CELLS={1}\\{0}
+
+# Avatar Shop
+AVATAR HEADER=تغيير المركبة
+CYBORG_AVATAR_DESCRIPTION=سايبورغ
+DEFAULT_AVATAR_DESCRIPTION=الأصلي
+HALCYON_AVATAR_DESCRIPTION=هاليكون
+PALRINGO_AVATAR_DESCRIPTION=بالرينغو
+TROJAN_AVATAR_DESCRIPTION=تروجان
+CYBORG_AVATAR=سايبورغ
+DEFAULT_AVATAR=الأصلي
+HALCYON_AVATAR=هاليكون
+PALRINGO_AVATAR=بالرينغو
+TROJAN_AVATAR=تروجان
+EQUIP VESSEL BUTTON=استعمال المركبة
+CHANGE AVATAR BUTTON=تغيير الشكل
+
+# Menu
+CONTINUE GAME=متابعة اللعبة
+PLAY GAME=بدء اللعبة
+SELECT LEVEL=اختر المرحلة
+START LEVEL=بدء المرحلة
+UNLOCK LEVEL=فتح المرحلة
+ASCENSION=الصعود
+SPEED ZONE A=منطقة السرعة A
+LEAP OF FAITH=قفزة الايمان
+THE GRINDHOUSE=المطحنة
+KINETICS=القوة الحركية
+SPEED ZONE B=منطقة السرعة B
+CROSSFIRE=الجبهة
+THE ABYSS=الهاوية
+NEMESIS=الانتقام
+THE MAINFRAME=الجهاز المركزي
+THE CORE=المركز
+LEVEL 12=طريق البريزما
+LEVEL 13=طريق النقاء
+LEVEL 14=البوابة
+LEVEL 15=منطقة السرعة C
+LEVEL 16=الدوامة
+LEVEL 17=التيار الساحب
+LEVEL 18=المفرمة
+LEVEL 19=منطقة السرعة D
+LEVEL 20=حقل البلازما
+LEVEL 21=ضغط عالي
+LEVEL 22=عين العاصفة
+LEVEL 23=اللب
+ORIGINAL=عادية
+EXTENDED=طويلة
+LOADING=جاري التحميل
+INSTRUCTIONS=تعليمات
+TILT FORWARD=قم يإمالة الجهاز الى الأمام للتحريك
+FOR EXTRA LIFE=لروح إضافية
+COLLECT ALL HINT=اجمعها كلها لتجنب خسارة الوقت
+QUIT?=خروج؟
+QUIT=خروج
+PLAY=بدء اللعب
+
+# Options
+OPTIONS=خيارات
+RESTORE PURCHASES=استعادة المشتريات
+CALIBRATE CONTROLS=معايرة التحكم
+CALIBRATE=معايرة
+CALIBRATED!=تمت المعايرة!
+CALIBRATE TEXT=ضع الجهاز في الوضعية المرغوبة للعب وانقر زر المعايرة.\n\nيمكنك اعادة المعايرة بأي وقت خلال اللعب من خلال الضغط على الشاشة بأصبعين.
+VIBRATION=اهتزاز
+SOUND EFFECTS=المؤثرات الصوتية
+DISABLED=تعطيل
+ENABLED=تمكين
+POST SCORES=نشر النتائج
+ALWAYS=ًدائما
+NEVER=ابداً
+DIFFICULTY=الصعوبة
+NORMAL=عادي
+EXPERT=محترف
+GO BACK=رجوع
+
+# Leaderboard
+LEADERBOARDS=ترتيب النتائج
+TOTAL TIME=الوقت الكلي
+ALL TIME=جميع الأوقات
+LEVEL=مرحلة
+LEVEL_NR=المرحلة {0}
+LEADERBOARD=ترتيب النتائج
+LOCAL=المحلي
+FRIENDS=الأصدقاء
+GLOBAL=العالمي
+VIEW TYPE=اللاعبين
+TIME PERIOD=الوقت
+DAILY=يومي
+TODAY=اليوم
+WEEKLY=هذا الأسبوع
+ALLTIME=الترتيب العام
+CONTACTS=ترتيب الأصدقاء
+NO TOTAL SCORE INFO=قم بإنهاء جميع المراحل في هذه الصعوبة لتتمكن من مشاهدة نتيجتك هنا
+CORE LEVEL INFO=لا توجد نتيجة في المراحل الأساسية
+
+# Credits
+CREDITS=فريق العمل
+ART & DESIGN=التصميم والرسومات
+PROGRAMMING=البرمجة
+MUSIC & SOUND=الصوت والموسيقى
+MUSIC=الموسيقى
+
+# In-game
+CELLS COLLECTED=الخلايا التي حصلت عليها
+PLAYER=اللاعب
+LIFE LOST={0} روح فقدت
+LIFE LEFT={0} روح متبقية
+LIVES LEFT={0} روح متبقية
+LIVES LOST={0} روح فقدت
+SHIELD LOST={0} درع حماية فقد
+YOUR TIME=الوقت
+YOUR BEST TIME=أفضل وقت
+LEADERBOARD NAME=الاسم في ترتيب النتائج
+Player=لاعب
+BRONZE STAR!=نجمة برونزية!
+SILVER STAR!=نجمة فضية!
+GOLD STAR!=نجمة ذهبية!
+EXPERT BRONZE STAR!=نجمة المحترف البرونزية!
+EXPERT SILVER STAR!=نجمة المحترف الفضية!
+EXPERT GOLD STAR!=نجمة المحترف الذهبية!
+CONTINUE=متابعة
+No=لا
+Yes=نعم
+Connection error=خطأ في الاتصال
+OK=موافق
+TRY AGAIN=محاولة مرة أخرى
+MAIN MENU=القائمة الرئيسية
+NEXT LEVEL=المرحلة التالية
+EXPERT MODE!=وضعية المحترف!
+ENTERING=دخول
+FIREWALL DOWN!=تحطم {0} من جدار الحماية!
+SPEED ZONE!=منطقة سرعة!
+SHIELD DOWN=درع الحماية تعطل
+SHIELD FOUND=تم العثور على درع حماية
+SHIELD RESTORED=تم استعادة درع الحماية
+Excellent!=أحسنت!
+Outstanding!=رائع!
+Perfect!=مذهل!
+Superb!=خارق!
+Level complete=إنتهت المرحلة
+EXIT TO MAIN MENU?=الخروج للقائمة الرئيسية؟
+GAME PAUSED=اللعبة متوقفة
+RESUME GAME=متابعة اللعب
+GAME OPTIONS=خيارات اللعبة
+RESTART LEVEL=إعادة المرحلة
+RESTART LEVEL?=إعادة المرحلة؟
+GAME OVER=انتهت اللعبة
+TO BE CONTINUED ...=يتبع...
+
+# End of game
+END GAME CONGRATULATIONS=أحسنت! الوقت الكلي هو
+END GAME CONNECTED=لقد تم فتح ترتيب النتائج للوقت الكلي\n\nقم بإعادة لعب المراحل لتحسين وقتك
+END GAME NOT CONNECTED=لقد تم فتح ترتيب النتائج للوقت الكلي\n\nقارن نتائجك مع أصدقائك في بالرينغو
+
+# End of chapter 1
+END OF CHAPTER ONE HEADER=نهاية الجزء الأول
+END OF CHAPTER ONE TEXT=أحسنت!\n\n لقت أنهيت الجزء الأول\n\nويستمر التحدي
+CONNECT SPHERO=ربط مع سفيرو
+DISCONNECT SPHERO=فك الربط مع سفيرو
+Need to pair a Sphero=بحاجة للاقتران مع سفيرو
+TAP A SPHERO TO CONNECT=انقر سفيرو للربط
+Already connected=لقد قمت بالربط سابقاً
+connecting to sphero device=جاري الربط مع {0}
+Failed to connect=فشل في عملية الربط
+Connection Failed=عملية الربط فشلت
+Connection Success=عملية الربط تمت بنجاح
+Bluetooth Not Enabled=البلوتوث غير عامل
+Sphero Instructions=العب باستخدام الضوء الأبيض\nللأعلى والأزرق\nباتجاهك
+
+# Palringo
+PALRINGO CONNECT=الربط بحساب بالرينغو
+PALRINGO CONNECT LONG=تفاعل مع أصدقائك في مجتمع بالرينغو
+PALRINGO OPEN LONG= تحدث عن دارك نيبيول في مجتمع بالرينغو!
+PALRINGO DISCONNECT HEADER=مهم!
+PALRINGO DISCONNECT PROMPT=فك الربط بحساب بالرينغو سيحذف أي تقدم أنجزته في اللعبة أثناء الربط.\n قم بإعادة الربط بحساب بالرينغو على هذا الجهاز لاستعادة التقدم المحرز في لعبتك. 
+PALRINGO DISCONNECT CONFIRM=فك الربط 
+DISCONNECT PALRINGO=فك الربط ببالرينغو
+ACHIEVEMENT UNLOCKED=لقد حصلت على وسام
+ACHIEVEMENT.GOLDSTARS.0=احصل على نجمتك الذهبية الأولى
+ACHIEVEMENT.GOLDSTARS.1=احصل على 4 نجوم ذهبية
+ACHIEVEMENT.GOLDSTARS.2=احصل على 7 نجوم ذهبية
+ACHIEVEMENT.GOLDSTARS.3=احصل على 10 نجوم ذهبية
+ACHIEVEMENT.GOLDSTARS.4=احصل على 13 نجمة ذهبية
+ACHIEVEMENT.GOLDSTARS.5=احصل على 16 نجمة ذهبية
+ACHIEVEMENT.GOLDSTARS.6=احصل على 19 نجمة ذهبية
+ACHIEVEMENT.GOLDSTARS.7=احصل على 22 نجمة ذهبية
+ACHIEVEMENT.GOLDSTARS.8=احصل على 25 نجمة ذهبية
+ACHIEVEMENT.GOLDSTARS.9=احصل على 28 نجمة ذهبية
+ACHIEVEMENT.GOLDSTARS.10=احصل على 31 نجمة ذهبية
+ACHIEVEMENT.GOLDSTARS.11=احصل على 34 نجمة ذهبية
+ACHIEVEMENT.GOLDSTARS.12=احصل على 37 نجمة ذهبية
+ACHIEVEMENT.GOLDSTARS.13=احصل على 40 نجمة ذهبية
+ACHIEVEMENT.GOLDSTARS.14=احصل على 44 نجمة ذهبية
+PALRINGO LEADERBOARD ADVERTISEMENT=قارن نتائجك بغيرك من اللاعبين بمجتمع بالرينغو!
+CONNECT=الربط ببالرينغو
+
+# Content gating
+GATE LOCK HEADER=البوابة مغلقة
+GATE LOCK EXPLANATION=افتح المراحل {0} - {1}
+GATE LOCK EXPLANATION 2=واحصل على
+REWARD AMOUNT={0} X
+GATE IAP BUTTON=شراء
+GATE PALRINGO BUTTON=الربط بحساب بالرينغو
+UNLOCK ALTERNATIVE=أو 
+GATE UNLOCKED EXPLANATION=لديك كل ما تحتاجه لعبور هذه البوابة٬ استلم مكافأتك وتابع العبور.
+GATE UNLOCK BUTTON=متابعة
+COLLECT UNLOCK REWARD BUTTON=استلام المكافأة
+FOR FREE=مجاناً
+REACH_LEVEL_EXPLANATION=أحصل على المستوى {0} في بالرينغو
+REWARD=مكافأة
+
+# Palringo Login
+PALRINGO LOGIN EXPLANATION=الرجاء تسجيل الدخول بحساب بالرينغو بالاسفل
+PALRINGO LOGIN GET PALRINGO=لا يوجد حساب حالي؟
+E-MAIL ADDRESS=البريد الالكتروني
+PASSWORD=كلمة المرور
+LOG IN=تسجيل الدخول
+GET PALRINGO=تحميل بالرينغو
+PALRINGO FAILED AUTHORIZE=فشل في تسجيل الدخول. الرجاء المحاولة مرة أخرى
+PALRINGO LOGIN SUCCESS=تم تسجيل الدخول بنجاح!\n\nيمكنك الآن التمتع بمزايا الربط مع بالرينغو٬ مثل ترتيب النتائج والأوسمة وغيرها.
+
+# Loading hints
+LOADING.HINT.ACHIEVEMENTS=انضم لمجتمع بالرينغو واحصل على الأوسمة أثناء اللعب!
+LOADING.HINT.CONNECT=انضم لمجتمع بالرينغو وكن على اتصال مع لاعبين من جميع أنحاء العالم!
+LOADING.HINT.STUFF=انضم لمجتمع بالرينغو للحصول على مكافآت ومحتوى اضافي مجاناً!
+LOADING.HINT.LEADERBOARDS=انضم لمجتمع بالرينغو وقارن أفضل وقت لك بغيرك من اللاعبين!
+LOADING.HINT.CALIBRATE=يمكنك اعادة المعايرة بأي وقت خلال اللعب من خلال الضغط على الشاشة بأصبعين.

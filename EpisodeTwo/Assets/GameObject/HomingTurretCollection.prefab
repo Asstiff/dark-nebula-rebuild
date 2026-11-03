@@ -1,0 +1,847 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &147589
+GameObject:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_Component:
+  - 4: {fileID: 479954}
+  - 114: {fileID: 11409266}
+  m_Layer: 0
+  m_Name: HomingTurretCollection
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &479954
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 147589}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+--- !u!114 &11409266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 147589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60f28a10f064b0573af11a2e931d98da, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  version: 3
+  materialIdsValid: 1
+  spriteDefinitions:
+  - name: homingturret/0
+    boundsData:
+    - {x: 0, y: -1.5, z: 0}
+    - {x: 124, y: 123, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 128, y: 128, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -62, y: -63, z: 0}
+    - {x: 62, y: -63, z: 0}
+    - {x: -62, y: 60, z: 0}
+    - {x: 62, y: 60, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.25781447, y: 0.003908203}
+    - {x: 0.49999803, y: 0.003908203}
+    - {x: 0.25781447, y: 0.24413867}
+    - {x: 0.49999803, y: 0.24413867}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 5858fdaf2d99429458f8584115f3add4, type: 2}
+    materialId: 0
+    sourceTextureGUID: 37168b5c0eada0d49be020cc5a3e6f4f
+    extractRegion: 1
+    regionX: 0
+    regionY: 256
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: homingturret/1
+    boundsData:
+    - {x: -1, y: 0.5, z: 0}
+    - {x: 126, y: 127, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 128, y: 128, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -64, y: -63, z: 0}
+    - {x: 62, y: -63, z: 0}
+    - {x: -64, y: 64, z: 0}
+    - {x: 62, y: 64, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.26172072, y: 0.26172072}
+    - {x: 0.50781053, y: 0.26172072}
+    - {x: 0.26172072, y: 0.50976366}
+    - {x: 0.50781053, y: 0.50976366}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 56dcda775ef985147ba6f713c3631253, type: 2}
+    materialId: 0
+    sourceTextureGUID: 37168b5c0eada0d49be020cc5a3e6f4f
+    extractRegion: 1
+    regionX: 128
+    regionY: 256
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: homingturret/2
+    boundsData:
+    - {x: -1, y: 0.5, z: 0}
+    - {x: 126, y: 127, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 128, y: 128, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -64, y: -63, z: 0}
+    - {x: 62, y: -63, z: 0}
+    - {x: -64, y: 64, z: 0}
+    - {x: 62, y: 64, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.26172072, y: 0.5175801}
+    - {x: 0.26172072, y: 0.7636699}
+    - {x: 0.50976366, y: 0.5175801}
+    - {x: 0.50976366, y: 0.7636699}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 56dcda775ef985147ba6f713c3631253, type: 2}
+    materialId: 0
+    sourceTextureGUID: 37168b5c0eada0d49be020cc5a3e6f4f
+    extractRegion: 1
+    regionX: 256
+    regionY: 256
+    regionW: 128
+    regionH: 128
+    flipped: 1
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: homingturret/3
+    boundsData:
+    - {x: -1, y: 0.5, z: 0}
+    - {x: 126, y: 127, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 128, y: 128, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -64, y: -63, z: 0}
+    - {x: 62, y: -63, z: 0}
+    - {x: -64, y: 64, z: 0}
+    - {x: 62, y: 64, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.51562697, y: 0.003908203}
+    - {x: 0.7617168, y: 0.003908203}
+    - {x: 0.51562697, y: 0.25195116}
+    - {x: 0.7617168, y: 0.25195116}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 56dcda775ef985147ba6f713c3631253, type: 2}
+    materialId: 0
+    sourceTextureGUID: 37168b5c0eada0d49be020cc5a3e6f4f
+    extractRegion: 1
+    regionX: 384
+    regionY: 256
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: homingturret/4
+    boundsData:
+    - {x: -1, y: 0.5, z: 0}
+    - {x: 126, y: 127, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 128, y: 128, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -64, y: -63, z: 0}
+    - {x: 62, y: -63, z: 0}
+    - {x: -64, y: 64, z: 0}
+    - {x: 62, y: 64, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.51562697, y: 0.2597676}
+    - {x: 0.51562697, y: 0.5058574}
+    - {x: 0.7636699, y: 0.2597676}
+    - {x: 0.7636699, y: 0.5058574}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 56dcda775ef985147ba6f713c3631253, type: 2}
+    materialId: 0
+    sourceTextureGUID: 37168b5c0eada0d49be020cc5a3e6f4f
+    extractRegion: 1
+    regionX: 0
+    regionY: 128
+    regionW: 128
+    regionH: 128
+    flipped: 1
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: homingturret/5
+    boundsData:
+    - {x: -1, y: 0.5, z: 0}
+    - {x: 126, y: 127, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 128, y: 128, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -64, y: -63, z: 0}
+    - {x: 62, y: -63, z: 0}
+    - {x: -64, y: 64, z: 0}
+    - {x: 62, y: 64, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.5175801, y: 0.51367384}
+    - {x: 0.7636699, y: 0.51367384}
+    - {x: 0.5175801, y: 0.7617168}
+    - {x: 0.7636699, y: 0.7617168}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 56dcda775ef985147ba6f713c3631253, type: 2}
+    materialId: 0
+    sourceTextureGUID: 37168b5c0eada0d49be020cc5a3e6f4f
+    extractRegion: 1
+    regionX: 128
+    regionY: 128
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: homingturret/6
+    boundsData:
+    - {x: -1, y: 0.5, z: 0}
+    - {x: 126, y: 127, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 128, y: 128, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -64, y: -63, z: 0}
+    - {x: 62, y: -63, z: 0}
+    - {x: -64, y: 64, z: 0}
+    - {x: 62, y: 64, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.003908203, y: 0.003908203}
+    - {x: 0.24999805, y: 0.003908203}
+    - {x: 0.003908203, y: 0.25195116}
+    - {x: 0.24999805, y: 0.25195116}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 5858fdaf2d99429458f8584115f3add4, type: 2}
+    materialId: 0
+    sourceTextureGUID: 37168b5c0eada0d49be020cc5a3e6f4f
+    extractRegion: 1
+    regionX: 256
+    regionY: 128
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: homingturret/7
+    boundsData:
+    - {x: -1, y: 0, z: 0}
+    - {x: 126, y: 128, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 128, y: 128, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -64, y: -64, z: 0}
+    - {x: 62, y: -64, z: 0}
+    - {x: -64, y: 64, z: 0}
+    - {x: 62, y: 64, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.26172072, y: 0.003908203}
+    - {x: 0.50781053, y: 0.003908203}
+    - {x: 0.26172072, y: 0.25390428}
+    - {x: 0.50781053, y: 0.25390428}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 56dcda775ef985147ba6f713c3631253, type: 2}
+    materialId: 0
+    sourceTextureGUID: 37168b5c0eada0d49be020cc5a3e6f4f
+    extractRegion: 1
+    regionX: 384
+    regionY: 128
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: homingturret/8
+    boundsData:
+    - {x: -1, y: 0.5, z: 0}
+    - {x: 126, y: 127, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 128, y: 128, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -64, y: -63, z: 0}
+    - {x: 62, y: -63, z: 0}
+    - {x: -64, y: 64, z: 0}
+    - {x: 62, y: 64, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.003908203, y: 0.2597676}
+    - {x: 0.24999805, y: 0.2597676}
+    - {x: 0.003908203, y: 0.50781053}
+    - {x: 0.24999805, y: 0.50781053}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 5858fdaf2d99429458f8584115f3add4, type: 2}
+    materialId: 0
+    sourceTextureGUID: 37168b5c0eada0d49be020cc5a3e6f4f
+    extractRegion: 1
+    regionX: 0
+    regionY: 0
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: homingturret/9
+    boundsData:
+    - {x: -1, y: 0.5, z: 0}
+    - {x: 126, y: 127, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 128, y: 128, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -64, y: -63, z: 0}
+    - {x: 62, y: -63, z: 0}
+    - {x: -64, y: 64, z: 0}
+    - {x: 62, y: 64, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.003908203, y: 0.51562697}
+    - {x: 0.24999805, y: 0.51562697}
+    - {x: 0.003908203, y: 0.7636699}
+    - {x: 0.24999805, y: 0.7636699}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 5858fdaf2d99429458f8584115f3add4, type: 2}
+    materialId: 0
+    sourceTextureGUID: 37168b5c0eada0d49be020cc5a3e6f4f
+    extractRegion: 1
+    regionX: 128
+    regionY: 0
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: homingturret/10
+    boundsData:
+    - {x: 0, y: 0.5, z: 0}
+    - {x: 128, y: 127, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 128, y: 128, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -64, y: -63, z: 0}
+    - {x: 64, y: -63, z: 0}
+    - {x: -64, y: 64, z: 0}
+    - {x: 64, y: 64, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.003908203, y: 0.5195332}
+    - {x: 0.25390428, y: 0.5195332}
+    - {x: 0.003908203, y: 0.76757616}
+    - {x: 0.25390428, y: 0.76757616}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 56dcda775ef985147ba6f713c3631253, type: 2}
+    materialId: 0
+    sourceTextureGUID: 37168b5c0eada0d49be020cc5a3e6f4f
+    extractRegion: 1
+    regionX: 256
+    regionY: 0
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: homingturret/11
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 128, y: 128, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 128, y: 128, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -64, y: -64, z: 0}
+    - {x: 64, y: -64, z: 0}
+    - {x: -64, y: 64, z: 0}
+    - {x: 64, y: 64, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.003908203, y: 0.003908203}
+    - {x: 0.25390428, y: 0.003908203}
+    - {x: 0.003908203, y: 0.25390428}
+    - {x: 0.25390428, y: 0.25390428}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 56dcda775ef985147ba6f713c3631253, type: 2}
+    materialId: 0
+    sourceTextureGUID: 37168b5c0eada0d49be020cc5a3e6f4f
+    extractRegion: 1
+    regionX: 384
+    regionY: 0
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: homingturret_tower/0
+    boundsData:
+    - {x: 1, y: 0.5, z: 0}
+    - {x: 50, y: 53, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 128, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -24, y: -26, z: 0}
+    - {x: 26, y: -26, z: 0}
+    - {x: -24, y: 27, z: 0}
+    - {x: 26, y: 27, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.1289082, y: 0.8945332}
+    - {x: 0.1289082, y: 0.99218553}
+    - {x: 0.23241992, y: 0.8945332}
+    - {x: 0.23241992, y: 0.99218553}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 56dcda775ef985147ba6f713c3631253, type: 2}
+    materialId: 0
+    sourceTextureGUID: 699b69157718e9c4ca94cdc4b0d036a8
+    extractRegion: 1
+    regionX: 0
+    regionY: 0
+    regionW: 64
+    regionH: 128
+    flipped: 1
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: homingturret_tower/1
+    boundsData:
+    - {x: 1, y: -0.5, z: 0}
+    - {x: 50, y: 57, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 128, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -24, y: -29, z: 0}
+    - {x: 26, y: -29, z: 0}
+    - {x: -24, y: 28, z: 0}
+    - {x: 26, y: 28, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.2597676, y: 0.87500197}
+    - {x: 0.2597676, y: 0.9726543}
+    - {x: 0.37109178, y: 0.87500197}
+    - {x: 0.37109178, y: 0.9726543}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 56dcda775ef985147ba6f713c3631253, type: 2}
+    materialId: 0
+    sourceTextureGUID: 699b69157718e9c4ca94cdc4b0d036a8
+    extractRegion: 1
+    regionX: 64
+    regionY: 0
+    regionW: 64
+    regionH: 128
+    flipped: 1
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: homingturret_tower/2
+    boundsData:
+    - {x: 0.5, y: -8, z: 0}
+    - {x: 49, y: 70, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 128, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -24, y: -43, z: 0}
+    - {x: 25, y: -43, z: 0}
+    - {x: -24, y: 27, z: 0}
+    - {x: 25, y: 27, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.003908203, y: 0.7753926}
+    - {x: 0.003908203, y: 0.8710918}
+    - {x: 0.14062305, y: 0.7753926}
+    - {x: 0.14062305, y: 0.8710918}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 56dcda775ef985147ba6f713c3631253, type: 2}
+    materialId: 0
+    sourceTextureGUID: 699b69157718e9c4ca94cdc4b0d036a8
+    extractRegion: 1
+    regionX: 128
+    regionY: 0
+    regionW: 64
+    regionH: 128
+    flipped: 1
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: homingturret_tower/3
+    boundsData:
+    - {x: 0.5, y: -10.5, z: 0}
+    - {x: 49, y: 75, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 128, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -24, y: -48, z: 0}
+    - {x: 25, y: -48, z: 0}
+    - {x: -24, y: 27, z: 0}
+    - {x: 25, y: 27, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.26172072, y: 0.77148634}
+    - {x: 0.26172072, y: 0.86718553}
+    - {x: 0.40820116, y: 0.77148634}
+    - {x: 0.40820116, y: 0.86718553}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 56dcda775ef985147ba6f713c3631253, type: 2}
+    materialId: 0
+    sourceTextureGUID: 699b69157718e9c4ca94cdc4b0d036a8
+    extractRegion: 1
+    regionX: 192
+    regionY: 0
+    regionW: 64
+    regionH: 128
+    flipped: 1
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: homingturret_tower/4
+    boundsData:
+    - {x: 0.5, y: -11, z: 0}
+    - {x: 53, y: 78, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 128, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -26, y: -50, z: 0}
+    - {x: 27, y: -50, z: 0}
+    - {x: -26, y: 28, z: 0}
+    - {x: 27, y: 28, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.7695332, y: 0.003908203}
+    - {x: 0.8730449, y: 0.003908203}
+    - {x: 0.7695332, y: 0.15624805}
+    - {x: 0.8730449, y: 0.15624805}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 56dcda775ef985147ba6f713c3631253, type: 2}
+    materialId: 0
+    sourceTextureGUID: 699b69157718e9c4ca94cdc4b0d036a8
+    extractRegion: 1
+    regionX: 256
+    regionY: 0
+    regionW: 64
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: homingturret_tower/5
+    boundsData:
+    - {x: -0.5, y: -9, z: 0}
+    - {x: 51, y: 78, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 128, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -26, y: -48, z: 0}
+    - {x: 25, y: -48, z: 0}
+    - {x: -26, y: 30, z: 0}
+    - {x: 25, y: 30, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.5175801, y: 0.7695332}
+    - {x: 0.5175801, y: 0.86913866}
+    - {x: 0.6699199, y: 0.7695332}
+    - {x: 0.6699199, y: 0.86913866}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 56dcda775ef985147ba6f713c3631253, type: 2}
+    materialId: 0
+    sourceTextureGUID: 699b69157718e9c4ca94cdc4b0d036a8
+    extractRegion: 1
+    regionX: 320
+    regionY: 0
+    regionW: 64
+    regionH: 128
+    flipped: 1
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: homingturret_fire
+    boundsData:
+    - {x: 2, y: -2, z: 0}
+    - {x: 60, y: 60, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -28, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -28, y: 28, z: 0}
+    - {x: 32, y: 28, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.003908203, y: 0.8789082}
+    - {x: 0.1210918, y: 0.8789082}
+    - {x: 0.003908203, y: 0.9960918}
+    - {x: 0.1210918, y: 0.9960918}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 56dcda775ef985147ba6f713c3631253, type: 2}
+    materialId: 0
+    sourceTextureGUID: 02d320eb9aa57b24e94be5ed1650bf68
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 1
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: homing_turret_bullet_overlay
+    boundsData:
+    - {x: -2.5, y: -3.5, z: 0}
+    - {x: 57, y: 53, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -31, y: -30, z: 0}
+    - {x: 26, y: -30, z: 0}
+    - {x: -31, y: 23, z: 0}
+    - {x: 26, y: 23, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.14843945, y: 0.7753926}
+    - {x: 0.14843945, y: 0.8867168}
+    - {x: 0.25195116, y: 0.7753926}
+    - {x: 0.25195116, y: 0.8867168}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 56dcda775ef985147ba6f713c3631253, type: 2}
+    materialId: 0
+    sourceTextureGUID: 432056365404f1c44819ce281793f528
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 1
+    complexGeometry: 0
+    colliderType: 1
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: homing_turret_bullet
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 128, y: 128, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 128, y: 128, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -64, y: -64, z: 0}
+    - {x: 64, y: -64, z: 0}
+    - {x: -64, y: 64, z: 0}
+    - {x: 64, y: 64, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.003908203, y: 0.26172072}
+    - {x: 0.25390428, y: 0.26172072}
+    - {x: 0.003908203, y: 0.5117168}
+    - {x: 0.25390428, y: 0.5117168}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 56dcda775ef985147ba6f713c3631253, type: 2}
+    materialId: 0
+    sourceTextureGUID: 436097dd428bb16408a78d546bfeeac8
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 1
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  premultipliedAlpha: 0
+  material: {fileID: 0}
+  materials:
+  - {fileID: 2100000, guid: 56dcda775ef985147ba6f713c3631253, type: 2}
+  - {fileID: 2100000, guid: 5858fdaf2d99429458f8584115f3add4, type: 2}
+  textures:
+  - {fileID: 2800000, guid: c5fd0f73dfff8944581ec88e40661580, type: 3}
+  - {fileID: 2800000, guid: d866e6464d0c8b842ada000c261fdfec, type: 3}
+  allowMultipleAtlases: 1
+  spriteCollectionGUID: 22076bd597f8742408ce3824962f2c5b
+  spriteCollectionName: HomingTurretCollection
+  invOrthoSize: 0.003125
+  halfTargetHeight: 320
+  buildKey: 543693459
+  dataGuid: 2fef8122c95bbeb40ba7264596464236
+--- !u!1001 &100100000
+Prefab:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 147589}
+  m_IsPrefabParent: 1
+  m_IsExploded: 0

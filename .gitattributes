@@ -1,0 +1,10 @@
+* text=auto
+*.cs text eol=lf
+*.shader text eol=lf
+*.md text eol=lf
+*.png binary
+*.jpg binary
+*.mp3 binary
+*.ogg binary
+*.wav binary
+*.bytes binary

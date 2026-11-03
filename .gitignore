@@ -1,0 +1,33 @@
+# Unity generated state
+**/[Ll]ibrary/
+**/[Tt]emp/
+**/[Oo]bj/
+**/[Ll]ogs/
+**/[Uu]ser[Ss]ettings/
+**/[Mm]emoryCaptures/
+**/[Rr]ecordings/
+**/.vs/
+**/*.csproj
+**/*.sln
+**/*.user
+**/*.pidb
+**/*.booproj
+**/*.opendb
+**/*.VC.db
+# Machine-local toolchains, review recordings and build products
+/work/
+/outputs/
+/Toolchains/
+/Builds/
+*.apk
+*.aab
+*.ipa
+*.keystore
+*.jks
+*.log
+*.mp4
+*.zip
+.env
+.env.*
+**/user.keystore
+/android-final-exports/

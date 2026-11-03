@@ -1,0 +1,2436 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &147589
+GameObject:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_Component:
+  - 4: {fileID: 479954}
+  - 114: {fileID: 11409266}
+  m_Layer: 0
+  m_Name: tileset_aztek_treetops
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &479954
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 147589}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+--- !u!114 &11409266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 147589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60f28a10f064b0573af11a2e931d98da, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  version: 3
+  materialIdsValid: 1
+  spriteDefinitions:
+  - name: tileset_aztek_treetops/0
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.007814453, y: 0.0039072265}
+    - {x: 0.25781053, y: 0.0039072265}
+    - {x: 0.007814453, y: 0.12890527}
+    - {x: 0.25781053, y: 0.12890527}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 6e5d2994e278cff4889f0600b277e718, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1ffbdd9c0bb18774b96d8dd21b8d4b90
+    extractRegion: 1
+    regionX: 0
+    regionY: 896
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_treetops/1
+    boundsData:
+    - {x: -3.75, y: 0, z: 0}
+    - {x: 56.5, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 24.5, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 24.5, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.27343947, y: 0.7412119}
+    - {x: 0.27343947, y: 0.85156155}
+    - {x: 0.52343553, y: 0.7412119}
+    - {x: 0.52343553, y: 0.85156155}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 6e5d2994e278cff4889f0600b277e718, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1ffbdd9c0bb18774b96d8dd21b8d4b90
+    extractRegion: 1
+    regionX: 128
+    regionY: 896
+    regionW: 128
+    regionH: 128
+    flipped: 1
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_treetops/2
+    boundsData:
+    - {x: 0.25, y: 0.25, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.5, y: 0, z: 0}
+    - {x: 0, y: 0.5, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 1.001955, y: 0.0039072265}
+    - {x: 0.9882793, y: 0.0039072265}
+    - {x: 1.001955, y: -0.002930664}
+    - {x: 0.9882793, y: -0.002930664}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 6e5d2994e278cff4889f0600b277e718, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1ffbdd9c0bb18774b96d8dd21b8d4b90
+    extractRegion: 1
+    regionX: 256
+    regionY: 896
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_treetops/3
+    boundsData:
+    - {x: 31.75, y: -11.75, z: 0}
+    - {x: 0.5, y: 40.5, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: 31.5, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: 31.5, y: 8.5, z: 0}
+    - {x: 32, y: 8.5, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.9472676, y: 0.30078223}
+    - {x: 0.9492168, y: 0.30078223}
+    - {x: 0.9472676, y: 0.37988183}
+    - {x: 0.9492168, y: 0.37988183}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 6e5d2994e278cff4889f0600b277e718, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1ffbdd9c0bb18774b96d8dd21b8d4b90
+    extractRegion: 1
+    regionX: 384
+    regionY: 896
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_treetops/4
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.27343947, y: 0.0039072265}
+    - {x: 0.52343553, y: 0.0039072265}
+    - {x: 0.27343947, y: 0.12890527}
+    - {x: 0.52343553, y: 0.12890527}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 6e5d2994e278cff4889f0600b277e718, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1ffbdd9c0bb18774b96d8dd21b8d4b90
+    extractRegion: 1
+    regionX: 512
+    regionY: 896
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_treetops/5
+    boundsData:
+    - {x: -31.75, y: -1.5, z: 0}
+    - {x: 0.5, y: 61, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: -31.5, y: -32, z: 0}
+    - {x: -32, y: 29, z: 0}
+    - {x: -31.5, y: 29, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.92968947, y: 0.20996192}
+    - {x: 0.93163866, y: 0.20996192}
+    - {x: 0.92968947, y: 0.32910058}
+    - {x: 0.93163866, y: 0.32910058}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 6e5d2994e278cff4889f0600b277e718, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1ffbdd9c0bb18774b96d8dd21b8d4b90
+    extractRegion: 1
+    regionX: 640
+    regionY: 896
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_treetops/6
+    boundsData:
+    - {x: 0.25, y: 0.25, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.5, y: 0, z: 0}
+    - {x: 0, y: 0.5, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 1.0039082, y: 0.0039072265}
+    - {x: 0.9902324, y: 0.0039072265}
+    - {x: 1.0039082, y: -0.002930664}
+    - {x: 0.9902324, y: -0.002930664}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 6e5d2994e278cff4889f0600b277e718, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1ffbdd9c0bb18774b96d8dd21b8d4b90
+    extractRegion: 1
+    regionX: 768
+    regionY: 896
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_treetops/7
+    boundsData:
+    - {x: 0.25, y: 0.25, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.5, y: 0, z: 0}
+    - {x: 0, y: 0.5, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 1.0058613, y: 0.0039072265}
+    - {x: 0.99218553, y: 0.0039072265}
+    - {x: 1.0058613, y: -0.002930664}
+    - {x: 0.99218553, y: -0.002930664}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 6e5d2994e278cff4889f0600b277e718, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1ffbdd9c0bb18774b96d8dd21b8d4b90
+    extractRegion: 1
+    regionX: 896
+    regionY: 896
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_treetops/8
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.53906447, y: 0.0039072265}
+    - {x: 0.78906053, y: 0.0039072265}
+    - {x: 0.53906447, y: 0.12890527}
+    - {x: 0.78906053, y: 0.12890527}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 6e5d2994e278cff4889f0600b277e718, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1ffbdd9c0bb18774b96d8dd21b8d4b90
+    extractRegion: 1
+    regionX: 0
+    regionY: 768
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_treetops/9
+    boundsData:
+    - {x: -4.25, y: 0, z: 0}
+    - {x: 55.5, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 23.5, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 23.5, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.007814453, y: 0.8066416}
+    - {x: 0.007814453, y: 0.9150381}
+    - {x: 0.25781053, y: 0.8066416}
+    - {x: 0.25781053, y: 0.9150381}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 6e5d2994e278cff4889f0600b277e718, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1ffbdd9c0bb18774b96d8dd21b8d4b90
+    extractRegion: 1
+    regionX: 128
+    regionY: 768
+    regionW: 128
+    regionH: 128
+    flipped: 1
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_treetops/10
+    boundsData:
+    - {x: 0.25, y: 0.25, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.5, y: 0, z: 0}
+    - {x: 0, y: 0.5, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 1.001955, y: 0.004883789}
+    - {x: 0.9882793, y: 0.004883789}
+    - {x: 1.001955, y: -0.0019541015}
+    - {x: 0.9882793, y: -0.0019541015}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 6e5d2994e278cff4889f0600b277e718, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1ffbdd9c0bb18774b96d8dd21b8d4b90
+    extractRegion: 1
+    regionX: 256
+    regionY: 768
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_treetops/11
+    boundsData:
+    - {x: 31.75, y: 0, z: 0}
+    - {x: 0.5, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: 31.5, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: 31.5, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.98437697, y: 0.0039072265}
+    - {x: 0.98632616, y: 0.0039072265}
+    - {x: 0.98437697, y: 0.12890527}
+    - {x: 0.98632616, y: 0.12890527}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 6e5d2994e278cff4889f0600b277e718, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1ffbdd9c0bb18774b96d8dd21b8d4b90
+    extractRegion: 1
+    regionX: 384
+    regionY: 768
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_treetops/12
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.007814453, y: 0.13671973}
+    - {x: 0.25781053, y: 0.13671973}
+    - {x: 0.007814453, y: 0.26171777}
+    - {x: 0.25781053, y: 0.26171777}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 6e5d2994e278cff4889f0600b277e718, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1ffbdd9c0bb18774b96d8dd21b8d4b90
+    extractRegion: 1
+    regionX: 512
+    regionY: 768
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_treetops/13
+    boundsData:
+    - {x: -31.75, y: 0, z: 0}
+    - {x: 0.5, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: -31.5, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: -31.5, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.9785176, y: 0.13671973}
+    - {x: 0.9804668, y: 0.13671973}
+    - {x: 0.9785176, y: 0.26171777}
+    - {x: 0.9804668, y: 0.26171777}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 6e5d2994e278cff4889f0600b277e718, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1ffbdd9c0bb18774b96d8dd21b8d4b90
+    extractRegion: 1
+    regionX: 640
+    regionY: 768
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_treetops/14
+    boundsData:
+    - {x: 0.25, y: 0.25, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.5, y: 0, z: 0}
+    - {x: 0, y: 0.5, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 1.0039082, y: 0.004883789}
+    - {x: 0.9902324, y: 0.004883789}
+    - {x: 1.0039082, y: -0.0019541015}
+    - {x: 0.9902324, y: -0.0019541015}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 6e5d2994e278cff4889f0600b277e718, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1ffbdd9c0bb18774b96d8dd21b8d4b90
+    extractRegion: 1
+    regionX: 768
+    regionY: 768
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_treetops/15
+    boundsData:
+    - {x: 0.25, y: 0.25, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.5, y: 0, z: 0}
+    - {x: 0, y: 0.5, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 1.0058613, y: 0.004883789}
+    - {x: 0.99218553, y: 0.004883789}
+    - {x: 1.0058613, y: -0.0019541015}
+    - {x: 0.99218553, y: -0.0019541015}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 6e5d2994e278cff4889f0600b277e718, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1ffbdd9c0bb18774b96d8dd21b8d4b90
+    extractRegion: 1
+    regionX: 896
+    regionY: 768
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_treetops/16
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.27343947, y: 0.13671973}
+    - {x: 0.52343553, y: 0.13671973}
+    - {x: 0.27343947, y: 0.26171777}
+    - {x: 0.52343553, y: 0.26171777}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 6e5d2994e278cff4889f0600b277e718, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1ffbdd9c0bb18774b96d8dd21b8d4b90
+    extractRegion: 1
+    regionX: 0
+    regionY: 640
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_treetops/17
+    boundsData:
+    - {x: -0.5, y: 0, z: 0}
+    - {x: 63, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 31, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 31, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.53906447, y: 0.7402353}
+    - {x: 0.53906447, y: 0.8632803}
+    - {x: 0.78906053, y: 0.7402353}
+    - {x: 0.78906053, y: 0.8632803}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 6e5d2994e278cff4889f0600b277e718, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1ffbdd9c0bb18774b96d8dd21b8d4b90
+    extractRegion: 1
+    regionX: 128
+    regionY: 640
+    regionW: 128
+    regionH: 128
+    flipped: 1
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_treetops/18
+    boundsData:
+    - {x: 0.25, y: 0.25, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.5, y: 0, z: 0}
+    - {x: 0, y: 0.5, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 1.001955, y: 0.0058603515}
+    - {x: 0.9882793, y: 0.0058603515}
+    - {x: 1.001955, y: -0.0009775391}
+    - {x: 0.9882793, y: -0.0009775391}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 6e5d2994e278cff4889f0600b277e718, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1ffbdd9c0bb18774b96d8dd21b8d4b90
+    extractRegion: 1
+    regionX: 256
+    regionY: 640
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_treetops/19
+    boundsData:
+    - {x: 31.75, y: 15.5, z: 0}
+    - {x: 0.5, y: 33, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: 31.5, y: -1, z: 0}
+    - {x: 32, y: -1, z: 0}
+    - {x: 31.5, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.92968947, y: 0.33691505}
+    - {x: 0.93163866, y: 0.33691505}
+    - {x: 0.92968947, y: 0.4013662}
+    - {x: 0.93163866, y: 0.4013662}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 6e5d2994e278cff4889f0600b277e718, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1ffbdd9c0bb18774b96d8dd21b8d4b90
+    extractRegion: 1
+    regionX: 384
+    regionY: 640
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_treetops/20
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.53906447, y: 0.13671973}
+    - {x: 0.78906053, y: 0.13671973}
+    - {x: 0.53906447, y: 0.26171777}
+    - {x: 0.78906053, y: 0.26171777}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 6e5d2994e278cff4889f0600b277e718, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1ffbdd9c0bb18774b96d8dd21b8d4b90
+    extractRegion: 1
+    regionX: 512
+    regionY: 640
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_treetops/21
+    boundsData:
+    - {x: -31.75, y: 0, z: 0}
+    - {x: 0.5, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: -31.5, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: -31.5, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.8945332, y: 0.20996192}
+    - {x: 0.8964824, y: 0.20996192}
+    - {x: 0.8945332, y: 0.33495995}
+    - {x: 0.8964824, y: 0.33495995}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 6e5d2994e278cff4889f0600b277e718, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1ffbdd9c0bb18774b96d8dd21b8d4b90
+    extractRegion: 1
+    regionX: 640
+    regionY: 640
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_treetops/22
+    boundsData:
+    - {x: 0.25, y: 0.25, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.5, y: 0, z: 0}
+    - {x: 0, y: 0.5, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 1.0039082, y: 0.0058603515}
+    - {x: 0.9902324, y: 0.0058603515}
+    - {x: 1.0039082, y: -0.0009775391}
+    - {x: 0.9902324, y: -0.0009775391}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 6e5d2994e278cff4889f0600b277e718, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1ffbdd9c0bb18774b96d8dd21b8d4b90
+    extractRegion: 1
+    regionX: 768
+    regionY: 640
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_treetops/23
+    boundsData:
+    - {x: 0.25, y: 0.25, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.5, y: 0, z: 0}
+    - {x: 0, y: 0.5, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 1.0058613, y: 0.0058603515}
+    - {x: 0.99218553, y: 0.0058603515}
+    - {x: 1.0058613, y: -0.0009775391}
+    - {x: 0.99218553, y: -0.0009775391}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 6e5d2994e278cff4889f0600b277e718, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1ffbdd9c0bb18774b96d8dd21b8d4b90
+    extractRegion: 1
+    regionX: 896
+    regionY: 640
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_treetops/24
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.007814453, y: 0.40918067}
+    - {x: 0.25781053, y: 0.40918067}
+    - {x: 0.007814453, y: 0.53417873}
+    - {x: 0.25781053, y: 0.53417873}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 6e5d2994e278cff4889f0600b277e718, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1ffbdd9c0bb18774b96d8dd21b8d4b90
+    extractRegion: 1
+    regionX: 0
+    regionY: 512
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_treetops/25
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.007814453, y: 0.26953223}
+    - {x: 0.25781053, y: 0.26953223}
+    - {x: 0.007814453, y: 0.39453027}
+    - {x: 0.25781053, y: 0.39453027}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 6e5d2994e278cff4889f0600b277e718, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1ffbdd9c0bb18774b96d8dd21b8d4b90
+    extractRegion: 1
+    regionX: 128
+    regionY: 512
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_treetops/26
+    boundsData:
+    - {x: -31.75, y: -31.75, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: -31.5, y: -32, z: 0}
+    - {x: -32, y: -31.5, z: 0}
+    - {x: -31.5, y: -31.5, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.91211134, y: 0.33984473}
+    - {x: 0.91406053, y: 0.33984473}
+    - {x: 0.91211134, y: 0.34081933}
+    - {x: 0.91406053, y: 0.34081933}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 6e5d2994e278cff4889f0600b277e718, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1ffbdd9c0bb18774b96d8dd21b8d4b90
+    extractRegion: 1
+    regionX: 256
+    regionY: 512
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_treetops/27
+    boundsData:
+    - {x: 31.75, y: -9.75, z: 0}
+    - {x: 0.5, y: 42.5, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: 31.5, y: -31, z: 0}
+    - {x: 32, y: -31, z: 0}
+    - {x: 31.5, y: 11.5, z: 0}
+    - {x: 32, y: 11.5, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.9472676, y: 0.20996192}
+    - {x: 0.9492168, y: 0.20996192}
+    - {x: 0.9472676, y: 0.29296777}
+    - {x: 0.9492168, y: 0.29296777}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 6e5d2994e278cff4889f0600b277e718, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1ffbdd9c0bb18774b96d8dd21b8d4b90
+    extractRegion: 1
+    regionX: 384
+    regionY: 512
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_treetops/28
+    boundsData:
+    - {x: 0, y: 0.25, z: 0}
+    - {x: 64, y: 63.5, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -31.5, z: 0}
+    - {x: 32, y: -31.5, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.007814453, y: 0.67480564}
+    - {x: 0.25781053, y: 0.67480564}
+    - {x: 0.007814453, y: 0.7988272}
+    - {x: 0.25781053, y: 0.7988272}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 6e5d2994e278cff4889f0600b277e718, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1ffbdd9c0bb18774b96d8dd21b8d4b90
+    extractRegion: 1
+    regionX: 512
+    regionY: 512
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_treetops/29
+    boundsData:
+    - {x: -31.75, y: 0.75, z: 0}
+    - {x: 0.5, y: 62.5, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -30.5, z: 0}
+    - {x: -31.5, y: -30.5, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: -31.5, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.91211134, y: 0.20996192}
+    - {x: 0.91406053, y: 0.20996192}
+    - {x: 0.91211134, y: 0.33203027}
+    - {x: 0.91406053, y: 0.33203027}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 6e5d2994e278cff4889f0600b277e718, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1ffbdd9c0bb18774b96d8dd21b8d4b90
+    extractRegion: 1
+    regionX: 640
+    regionY: 512
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_treetops/30
+    boundsData:
+    - {x: 0.25, y: 0.25, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.5, y: 0, z: 0}
+    - {x: 0, y: 0.5, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 1.001955, y: 0.006836914}
+    - {x: 0.9882793, y: 0.006836914}
+    - {x: 1.001955, y: -9.765625E-07}
+    - {x: 0.9882793, y: -9.765625E-07}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 6e5d2994e278cff4889f0600b277e718, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1ffbdd9c0bb18774b96d8dd21b8d4b90
+    extractRegion: 1
+    regionX: 768
+    regionY: 512
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_treetops/31
+    boundsData:
+    - {x: 0.25, y: 0.25, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.5, y: 0, z: 0}
+    - {x: 0, y: 0.5, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 1.0039082, y: 0.006836914}
+    - {x: 0.9902324, y: 0.006836914}
+    - {x: 1.0039082, y: -9.765625E-07}
+    - {x: 0.9902324, y: -9.765625E-07}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 6e5d2994e278cff4889f0600b277e718, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1ffbdd9c0bb18774b96d8dd21b8d4b90
+    extractRegion: 1
+    regionX: 896
+    regionY: 512
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_treetops/32
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.27343947, y: 0.34277442}
+    - {x: 0.52343553, y: 0.34277442}
+    - {x: 0.27343947, y: 0.46777245}
+    - {x: 0.52343553, y: 0.46777245}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 6e5d2994e278cff4889f0600b277e718, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1ffbdd9c0bb18774b96d8dd21b8d4b90
+    extractRegion: 1
+    regionX: 0
+    regionY: 384
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_treetops/33
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.53906447, y: 0.34277442}
+    - {x: 0.78906053, y: 0.34277442}
+    - {x: 0.53906447, y: 0.46777245}
+    - {x: 0.78906053, y: 0.46777245}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 6e5d2994e278cff4889f0600b277e718, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1ffbdd9c0bb18774b96d8dd21b8d4b90
+    extractRegion: 1
+    regionX: 128
+    regionY: 384
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_treetops/34
+    boundsData:
+    - {x: -29.75, y: 0, z: 0}
+    - {x: 4.5, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: -27.5, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: -27.5, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.95117384, y: 0.0039072265}
+    - {x: 0.96874803, y: 0.0039072265}
+    - {x: 0.95117384, y: 0.12890527}
+    - {x: 0.96874803, y: 0.12890527}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 6e5d2994e278cff4889f0600b277e718, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1ffbdd9c0bb18774b96d8dd21b8d4b90
+    extractRegion: 1
+    regionX: 256
+    regionY: 384
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_treetops/35
+    boundsData:
+    - {x: 0.25, y: 0.25, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.5, y: 0, z: 0}
+    - {x: 0, y: 0.5, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 1.0058613, y: 0.006836914}
+    - {x: 0.99218553, y: 0.006836914}
+    - {x: 1.0058613, y: -9.765625E-07}
+    - {x: 0.99218553, y: -9.765625E-07}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 6e5d2994e278cff4889f0600b277e718, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1ffbdd9c0bb18774b96d8dd21b8d4b90
+    extractRegion: 1
+    regionX: 384
+    regionY: 384
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_treetops/36
+    boundsData:
+    - {x: 0.25, y: 0.25, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.5, y: 0, z: 0}
+    - {x: 0, y: 0.5, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 1.001955, y: 0.007813477}
+    - {x: 0.9882793, y: 0.007813477}
+    - {x: 1.001955, y: 0.00097558595}
+    - {x: 0.9882793, y: 0.00097558595}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 6e5d2994e278cff4889f0600b277e718, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1ffbdd9c0bb18774b96d8dd21b8d4b90
+    extractRegion: 1
+    regionX: 512
+    regionY: 384
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_treetops/37
+    boundsData:
+    - {x: 0.25, y: 0.25, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.5, y: 0, z: 0}
+    - {x: 0, y: 0.5, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 1.0039082, y: 0.007813477}
+    - {x: 0.9902324, y: 0.007813477}
+    - {x: 1.0039082, y: 0.00097558595}
+    - {x: 0.9902324, y: 0.00097558595}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 6e5d2994e278cff4889f0600b277e718, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1ffbdd9c0bb18774b96d8dd21b8d4b90
+    extractRegion: 1
+    regionX: 640
+    regionY: 384
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_treetops/38
+    boundsData:
+    - {x: 0.25, y: 0.25, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.5, y: 0, z: 0}
+    - {x: 0, y: 0.5, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 1.0058613, y: 0.007813477}
+    - {x: 0.99218553, y: 0.007813477}
+    - {x: 1.0058613, y: 0.00097558595}
+    - {x: 0.99218553, y: 0.00097558595}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 6e5d2994e278cff4889f0600b277e718, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1ffbdd9c0bb18774b96d8dd21b8d4b90
+    extractRegion: 1
+    regionX: 768
+    regionY: 384
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_treetops/39
+    boundsData:
+    - {x: 0.25, y: 0.25, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.5, y: 0, z: 0}
+    - {x: 0, y: 0.5, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 1.001955, y: 0.008790039}
+    - {x: 0.9882793, y: 0.008790039}
+    - {x: 1.001955, y: 0.0019521484}
+    - {x: 0.9882793, y: 0.0019521484}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 6e5d2994e278cff4889f0600b277e718, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1ffbdd9c0bb18774b96d8dd21b8d4b90
+    extractRegion: 1
+    regionX: 896
+    regionY: 384
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_treetops/40
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.27343947, y: 0.47558692}
+    - {x: 0.52343553, y: 0.47558692}
+    - {x: 0.27343947, y: 0.600585}
+    - {x: 0.52343553, y: 0.600585}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 6e5d2994e278cff4889f0600b277e718, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1ffbdd9c0bb18774b96d8dd21b8d4b90
+    extractRegion: 1
+    regionX: 0
+    regionY: 256
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_treetops/41
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.007814453, y: 0.54199314}
+    - {x: 0.25781053, y: 0.54199314}
+    - {x: 0.007814453, y: 0.66699123}
+    - {x: 0.25781053, y: 0.66699123}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 6e5d2994e278cff4889f0600b277e718, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1ffbdd9c0bb18774b96d8dd21b8d4b90
+    extractRegion: 1
+    regionX: 128
+    regionY: 256
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_treetops/42
+    boundsData:
+    - {x: -29.25, y: 28.5, z: 0}
+    - {x: 5.5, y: 7, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: 25, z: 0}
+    - {x: -26.5, y: 25, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: -26.5, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.9648457, y: 0.31152442}
+    - {x: 0.9648457, y: 0.32226464}
+    - {x: 0.99218553, y: 0.31152442}
+    - {x: 0.99218553, y: 0.32226464}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 6e5d2994e278cff4889f0600b277e718, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1ffbdd9c0bb18774b96d8dd21b8d4b90
+    extractRegion: 1
+    regionX: 256
+    regionY: 256
+    regionW: 128
+    regionH: 128
+    flipped: 1
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_treetops/43
+    boundsData:
+    - {x: 0.25, y: 0.25, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.5, y: 0, z: 0}
+    - {x: 0, y: 0.5, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 1.0039082, y: 0.008790039}
+    - {x: 0.9902324, y: 0.008790039}
+    - {x: 1.0039082, y: 0.0019521484}
+    - {x: 0.9902324, y: 0.0019521484}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 6e5d2994e278cff4889f0600b277e718, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1ffbdd9c0bb18774b96d8dd21b8d4b90
+    extractRegion: 1
+    regionX: 384
+    regionY: 256
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_treetops/44
+    boundsData:
+    - {x: 0.25, y: 0.25, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.5, y: 0, z: 0}
+    - {x: 0, y: 0.5, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 1.0058613, y: 0.008790039}
+    - {x: 0.99218553, y: 0.008790039}
+    - {x: 1.0058613, y: 0.0019521484}
+    - {x: 0.99218553, y: 0.0019521484}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 6e5d2994e278cff4889f0600b277e718, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1ffbdd9c0bb18774b96d8dd21b8d4b90
+    extractRegion: 1
+    regionX: 512
+    regionY: 256
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_treetops/45
+    boundsData:
+    - {x: 0.25, y: 0.25, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.5, y: 0, z: 0}
+    - {x: 0, y: 0.5, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 1.001955, y: 0.009766602}
+    - {x: 0.9882793, y: 0.009766602}
+    - {x: 1.001955, y: 0.002928711}
+    - {x: 0.9882793, y: 0.002928711}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 6e5d2994e278cff4889f0600b277e718, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1ffbdd9c0bb18774b96d8dd21b8d4b90
+    extractRegion: 1
+    regionX: 640
+    regionY: 256
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_treetops/46
+    boundsData:
+    - {x: 0.25, y: 0.25, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.5, y: 0, z: 0}
+    - {x: 0, y: 0.5, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 1.0039082, y: 0.009766602}
+    - {x: 0.9902324, y: 0.009766602}
+    - {x: 1.0039082, y: 0.002928711}
+    - {x: 0.9902324, y: 0.002928711}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 6e5d2994e278cff4889f0600b277e718, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1ffbdd9c0bb18774b96d8dd21b8d4b90
+    extractRegion: 1
+    regionX: 768
+    regionY: 256
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_treetops/47
+    boundsData:
+    - {x: 0.25, y: 0.25, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.5, y: 0, z: 0}
+    - {x: 0, y: 0.5, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 1.0058613, y: 0.009766602}
+    - {x: 0.99218553, y: 0.009766602}
+    - {x: 1.0058613, y: 0.002928711}
+    - {x: 0.99218553, y: 0.002928711}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 6e5d2994e278cff4889f0600b277e718, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1ffbdd9c0bb18774b96d8dd21b8d4b90
+    extractRegion: 1
+    regionX: 896
+    regionY: 256
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_treetops/48
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.53906447, y: 0.47558692}
+    - {x: 0.78906053, y: 0.47558692}
+    - {x: 0.53906447, y: 0.600585}
+    - {x: 0.78906053, y: 0.600585}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 6e5d2994e278cff4889f0600b277e718, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1ffbdd9c0bb18774b96d8dd21b8d4b90
+    extractRegion: 1
+    regionX: 0
+    regionY: 128
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_treetops/49
+    boundsData:
+    - {x: -0.25, y: 0, z: 0}
+    - {x: 63.5, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 31.5, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 31.5, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.53906447, y: 0.6083994}
+    - {x: 0.53906447, y: 0.7324209}
+    - {x: 0.78906053, y: 0.6083994}
+    - {x: 0.78906053, y: 0.7324209}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 6e5d2994e278cff4889f0600b277e718, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1ffbdd9c0bb18774b96d8dd21b8d4b90
+    extractRegion: 1
+    regionX: 128
+    regionY: 128
+    regionW: 128
+    regionH: 128
+    flipped: 1
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_treetops/50
+    boundsData:
+    - {x: 0.25, y: 0.25, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.5, y: 0, z: 0}
+    - {x: 0, y: 0.5, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 1.001955, y: 0.010743164}
+    - {x: 0.9882793, y: 0.010743164}
+    - {x: 1.001955, y: 0.0039052735}
+    - {x: 0.9882793, y: 0.0039052735}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 6e5d2994e278cff4889f0600b277e718, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1ffbdd9c0bb18774b96d8dd21b8d4b90
+    extractRegion: 1
+    regionX: 256
+    regionY: 128
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_treetops/51
+    boundsData:
+    - {x: 28.75, y: -23.25, z: 0}
+    - {x: 6.5, y: 17.5, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: 25.5, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: 25.5, y: -14.5, z: 0}
+    - {x: 32, y: -14.5, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.9648457, y: 0.26953223}
+    - {x: 0.9902324, y: 0.26953223}
+    - {x: 0.9648457, y: 0.30370995}
+    - {x: 0.9902324, y: 0.30370995}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 6e5d2994e278cff4889f0600b277e718, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1ffbdd9c0bb18774b96d8dd21b8d4b90
+    extractRegion: 1
+    regionX: 384
+    regionY: 128
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_treetops/52
+    boundsData:
+    - {x: -15.25, y: -23.25, z: 0}
+    - {x: 33.5, y: 17.5, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 1.5, y: -32, z: 0}
+    - {x: -32, y: -14.5, z: 0}
+    - {x: 1.5, y: -14.5, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.8945332, y: 0.13671973}
+    - {x: 0.8945332, y: 0.20214745}
+    - {x: 0.96288866, y: 0.13671973}
+    - {x: 0.96288866, y: 0.20214745}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 6e5d2994e278cff4889f0600b277e718, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1ffbdd9c0bb18774b96d8dd21b8d4b90
+    extractRegion: 1
+    regionX: 512
+    regionY: 128
+    regionW: 128
+    regionH: 128
+    flipped: 1
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_treetops/53
+    boundsData:
+    - {x: 0.25, y: 0.25, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.5, y: 0, z: 0}
+    - {x: 0, y: 0.5, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 1.0039082, y: 0.010743164}
+    - {x: 0.9902324, y: 0.010743164}
+    - {x: 1.0039082, y: 0.0039052735}
+    - {x: 0.9902324, y: 0.0039052735}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 6e5d2994e278cff4889f0600b277e718, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1ffbdd9c0bb18774b96d8dd21b8d4b90
+    extractRegion: 1
+    regionX: 640
+    regionY: 128
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_treetops/54
+    boundsData:
+    - {x: 0.25, y: 0.25, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.5, y: 0, z: 0}
+    - {x: 0, y: 0.5, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 1.0058613, y: 0.010743164}
+    - {x: 0.99218553, y: 0.010743164}
+    - {x: 1.0058613, y: 0.0039052735}
+    - {x: 0.99218553, y: 0.0039052735}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 6e5d2994e278cff4889f0600b277e718, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1ffbdd9c0bb18774b96d8dd21b8d4b90
+    extractRegion: 1
+    regionX: 768
+    regionY: 128
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_treetops/55
+    boundsData:
+    - {x: 0.25, y: 0.25, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.5, y: 0, z: 0}
+    - {x: 0, y: 0.5, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 1.001955, y: 0.011719727}
+    - {x: 0.9882793, y: 0.011719727}
+    - {x: 1.001955, y: 0.004881836}
+    - {x: 0.9882793, y: 0.004881836}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 6e5d2994e278cff4889f0600b277e718, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1ffbdd9c0bb18774b96d8dd21b8d4b90
+    extractRegion: 1
+    regionX: 896
+    regionY: 128
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_treetops/56
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.27343947, y: 0.6083994}
+    - {x: 0.52343553, y: 0.6083994}
+    - {x: 0.27343947, y: 0.7333975}
+    - {x: 0.52343553, y: 0.7333975}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 6e5d2994e278cff4889f0600b277e718, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1ffbdd9c0bb18774b96d8dd21b8d4b90
+    extractRegion: 1
+    regionX: 0
+    regionY: 0
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_treetops/57
+    boundsData:
+    - {x: -0.5, y: 5.75, z: 0}
+    - {x: 63, y: 52.5, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -20.5, z: 0}
+    - {x: 31, y: -20.5, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 31, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.27343947, y: 0.85937595}
+    - {x: 0.5195293, y: 0.85937595}
+    - {x: 0.27343947, y: 0.9619131}
+    - {x: 0.5195293, y: 0.9619131}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 6e5d2994e278cff4889f0600b277e718, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1ffbdd9c0bb18774b96d8dd21b8d4b90
+    extractRegion: 1
+    regionX: 128
+    regionY: 0
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_treetops/58
+    boundsData:
+    - {x: 0.25, y: 0.25, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.5, y: 0, z: 0}
+    - {x: 0, y: 0.5, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 1.0039082, y: 0.011719727}
+    - {x: 0.9902324, y: 0.011719727}
+    - {x: 1.0039082, y: 0.004881836}
+    - {x: 0.9902324, y: 0.004881836}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 6e5d2994e278cff4889f0600b277e718, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1ffbdd9c0bb18774b96d8dd21b8d4b90
+    extractRegion: 1
+    regionX: 256
+    regionY: 0
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_treetops/59
+    boundsData:
+    - {x: 22.5, y: 0, z: 0}
+    - {x: 19, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: 13, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: 13, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.80468947, y: 0.13671973}
+    - {x: 0.8789043, y: 0.13671973}
+    - {x: 0.80468947, y: 0.26171777}
+    - {x: 0.8789043, y: 0.26171777}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 6e5d2994e278cff4889f0600b277e718, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1ffbdd9c0bb18774b96d8dd21b8d4b90
+    extractRegion: 1
+    regionX: 384
+    regionY: 0
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_treetops/60
+    boundsData:
+    - {x: -15.25, y: 0, z: 0}
+    - {x: 33.5, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 1.5, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 1.5, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.80468947, y: 0.0039072265}
+    - {x: 0.9355449, y: 0.0039072265}
+    - {x: 0.80468947, y: 0.12890527}
+    - {x: 0.9355449, y: 0.12890527}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 6e5d2994e278cff4889f0600b277e718, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1ffbdd9c0bb18774b96d8dd21b8d4b90
+    extractRegion: 1
+    regionX: 512
+    regionY: 0
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_treetops/61
+    boundsData:
+    - {x: 0.25, y: 0.25, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.5, y: 0, z: 0}
+    - {x: 0, y: 0.5, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 1.0058613, y: 0.011719727}
+    - {x: 0.99218553, y: 0.011719727}
+    - {x: 1.0058613, y: 0.004881836}
+    - {x: 0.99218553, y: 0.004881836}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 6e5d2994e278cff4889f0600b277e718, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1ffbdd9c0bb18774b96d8dd21b8d4b90
+    extractRegion: 1
+    regionX: 640
+    regionY: 0
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_treetops/62
+    boundsData:
+    - {x: 0.25, y: 0.25, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.5, y: 0, z: 0}
+    - {x: 0, y: 0.5, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 1.001955, y: 0.012696289}
+    - {x: 0.9882793, y: 0.012696289}
+    - {x: 1.001955, y: 0.0058583985}
+    - {x: 0.9882793, y: 0.0058583985}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 6e5d2994e278cff4889f0600b277e718, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1ffbdd9c0bb18774b96d8dd21b8d4b90
+    extractRegion: 1
+    regionX: 768
+    regionY: 0
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_treetops/63
+    boundsData:
+    - {x: 0.25, y: 0.25, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.5, y: 0, z: 0}
+    - {x: 0, y: 0.5, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 1.0039082, y: 0.012696289}
+    - {x: 0.9902324, y: 0.012696289}
+    - {x: 1.0039082, y: 0.0058583985}
+    - {x: 0.9902324, y: 0.0058583985}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 6e5d2994e278cff4889f0600b277e718, type: 2}
+    materialId: 0
+    sourceTextureGUID: 1ffbdd9c0bb18774b96d8dd21b8d4b90
+    extractRegion: 1
+    regionX: 896
+    regionY: 0
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  premultipliedAlpha: 0
+  material: {fileID: 0}
+  materials:
+  - {fileID: 2100000, guid: 6e5d2994e278cff4889f0600b277e718, type: 2}
+  textures:
+  - {fileID: 2800000, guid: 282689f083defbd4086235d3f78c6f24, type: 3}
+  allowMultipleAtlases: 0
+  spriteCollectionGUID: dadec68f4caf74140b65f8fef2a7ef5a
+  spriteCollectionName: tileset_aztek_treetops
+  invOrthoSize: 0.00625
+  halfTargetHeight: 320
+  buildKey: 959419234
+  dataGuid: f155e629f268d2a43a3dcea1e61365f7
+--- !u!1001 &100100000
+Prefab:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 147589}
+  m_IsPrefabParent: 1
+  m_IsExploded: 0

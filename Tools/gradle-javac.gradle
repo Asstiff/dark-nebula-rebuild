@@ -1,0 +1,8 @@
+// Use ordinary javac child processes on hosts without AF_UNIX support.
+allprojects {
+    tasks.withType(JavaCompile).configureEach {
+        options.fork = true
+        def javac = System.getProperty('os.name').toLowerCase().contains('windows') ? 'javac.exe' : 'javac'
+        options.forkOptions.executable = new File(System.getProperty('java.home'), 'bin/' + javac).absolutePath
+    }
+}

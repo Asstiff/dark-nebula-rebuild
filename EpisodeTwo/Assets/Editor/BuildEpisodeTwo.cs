@@ -1,0 +1,63 @@
+#if UNITY_EDITOR && UNITY_ANDROID
+using System;
+using System.IO;
+using System.Linq;
+using UnityEditor;
+using UnityEditor.Build;
+using UnityEditor.Build.Reporting;
+using UnityEditor.Android;
+using UnityEngine;
+
+public static class CodexBuildEpisodeTwo
+{
+    public static void Build()
+    {
+        string sdk = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Android", "Sdk");
+        string ndk = Path.Combine(sdk, "ndk", "27.2.12479018");
+        string managedJdk = Path.GetFullPath(Path.Combine(Application.dataPath, "../../Toolchains/jdk17"));
+        string previousWorkJdk = Path.GetFullPath(Path.Combine(Application.dataPath, "../../jdk17/jdk-17.0.20.1+1"));
+        string javaExe = Application.platform == RuntimePlatform.WindowsEditor ? "java.exe" : "java";
+        string jdk = new[] { managedJdk, previousWorkJdk, Environment.GetEnvironmentVariable("DARK_NEBULA_JDK17"), EditorPrefs.GetString("Jdk17Path"), Environment.GetEnvironmentVariable("JAVA_HOME") }
+            .FirstOrDefault(p => !string.IsNullOrEmpty(p) && File.Exists(Path.Combine(p, "bin", javaExe)));
+        if (string.IsNullOrEmpty(jdk)) throw new Exception("JDK 17 not found. Configure DARK_NEBULA_JDK17 or Unity External Tools.");
+        var keys = new[] { "AndroidSdkRoot", "AndroidNdkRootR27C", "Jdk17Path" };
+        var previous = keys.Select(x => EditorPrefs.GetString(x)).ToArray();
+        var boolKeys = new[] { "SdkUseEmbedded", "NdkUseEmbedded", "JdkUseEmbedded" };
+        var previousBool = boolKeys.Select(x => EditorPrefs.GetBool(x, true)).ToArray();
+        bool previousExport = EditorUserBuildSettings.exportAsGoogleAndroidProject;
+        bool exportProject = Array.IndexOf(Environment.GetCommandLineArgs(), "-exportGradle") >= 0;
+        try
+        {
+            EditorUserBuildSettings.exportAsGoogleAndroidProject = exportProject;
+            UnityEditor.Android.AndroidExternalToolsSettings.sdkRootPath = sdk;
+            UnityEditor.Android.AndroidExternalToolsSettings.ndkRootPath = ndk;
+            UnityEditor.Android.AndroidExternalToolsSettings.jdkRootPath = jdk;
+            PlayerSettings.productName = "Dark Nebula Episode Two";
+            PlayerSettings.bundleVersion = "0.1.9";
+            PlayerSettings.SplashScreen.show = false;
+            PlayerSettings.SplashScreen.showUnityLogo = false;
+            LauncherIconBuilder.SetIcons();
+            PlayerSettings.SetApplicationIdentifier(NamedBuildTarget.Android, "com.darknebula.reference.tall");
+            PlayerSettings.SetScriptingBackend(NamedBuildTarget.Android, ScriptingImplementation.IL2CPP);
+            PlayerSettings.Android.targetArchitectures = AndroidArchitecture.ARM64;
+            PlayerSettings.Android.bundleVersionCode = 10;
+            PlayerSettings.Android.minSdkVersion = AndroidSdkVersions.AndroidApiLevel26;
+            PlayerSettings.Android.targetSdkVersion = AndroidSdkVersions.AndroidApiLevel35;
+            var scenes = EditorBuildSettings.scenes.Where(x => x.enabled).Select(x => x.path).ToArray();
+            var output = Path.GetFullPath(Path.Combine(Application.dataPath, "../../dark-nebula-2-test.apk"));
+            if (exportProject) output = Path.GetFullPath(Path.Combine(Application.dataPath, "../../android-final-exports/episode2"));
+            Debug.Log("CODEX_BUILD scenes=" + scenes.Length + " output=" + output);
+            var result = BuildPipeline.BuildPlayer(scenes, output, BuildTarget.Android, BuildOptions.None);
+            Debug.Log("CODEX_BUILD_RESULT " + result.summary.result + " errors=" + result.summary.totalErrors + " warnings=" + result.summary.totalWarnings);
+            if (result.summary.result != BuildResult.Succeeded) throw new Exception("Android development build did not succeed");
+        }
+        finally
+        {
+            EditorUserBuildSettings.exportAsGoogleAndroidProject = previousExport;
+            for (int i=0; i<keys.Length; i++) EditorPrefs.SetString(keys[i], previous[i]);
+            for (int i=0; i<boolKeys.Length; i++) EditorPrefs.SetBool(boolKeys[i], previousBool[i]);
+        }
+    }
+
+}
+#endif

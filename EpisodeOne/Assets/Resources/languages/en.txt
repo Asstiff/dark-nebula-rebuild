@@ -1,0 +1,278 @@
+# Generic
+SUBTITLE=Episode One
+ARE YOU SURE?=Are you sure?
+YES=Yes
+NO=No
+
+# IAP Shop
+NO INTERNET=No internet connection
+SHOP=Shop
+HC_SMALL=x {0}
+HC_LARGE=x {0}
+PROCESSING PURCHASE=Processing purchase
+PURCHASE FAILED=Check internet connection
+HC_SMALL_DESCRIPTION= 
+HC_LARGE_DESCRIPTION=20% more
+I_WANT_IT_ALL_DESCRIPTION=Save 50% unlock all vessels & booster upgrades
+I_WANT_IT_ALL=I want it all!
+RESTORING PURCHASES=Restoring purchases
+
+# Booster Selection
+BOOSTER DETAILS=Upgrade details
+BOOSTER SELECTION=Optional upgrades
+BOOSTER HEADER=Prepare level
+BOOSTER SELECTION SUBTIBLE=All upgrades are available.\nTurn them on or off for this level.\n\nLeave all off to play with the original rules.
+SPEED=Speed
+SHIELD=Shield
+MAGNET=Magnet
+SPEED_DESCRIPTION=Gives you more speed\n\ntip:\nthis will improve your time result greatly!
+SHIELD_DESCRIPTION=The shield prevents you from dying when damaged. one use. \n\ntip:\nextra shields will be found throughout levels!
+MAGNET_DESCRIPTION=The magnet attracts cells from a distance.\n\ntip:\nthis will save you time from picking up the cells yourself!
+ON=On
+OFF=Off
+UNLOCK=Unlock
+BUY=Buy
+PURCHASE HEADER=Unlock upgrade
+PURCHASE=Purchase
+CANCEL=Cancel
+HC NEEDED=Not enough shards
+HC NEEDED TEXT=You need to buy more shards for this item. continue to shop?
+
+# Booster In-game
+HC PICKUP=Shard
+HC PICKUP LARGE=Picked up shard
+
+# Level Complete
+PENALTY TEXT=+{0} sec time penalty
+PENALTY TEXT SMALL=+{0} sec
+TIME TO NEXT={0} from
+EXCELLENT=Excellent!
+CELLS={0}/{1}
+
+# Avatar Shop
+AVATAR HEADER=Change vessel
+CYBORG_AVATAR_DESCRIPTION=Cyborg
+DEFAULT_AVATAR_DESCRIPTION=Default
+HALCYON_AVATAR_DESCRIPTION=Halcyon
+PALRINGO_AVATAR_DESCRIPTION=Palringo
+TROJAN_AVATAR_DESCRIPTION=Trojan
+CYBORG_AVATAR=Cyborg
+DEFAULT_AVATAR=Original
+HALCYON_AVATAR=Halcyon
+PALRINGO_AVATAR=Palringo
+TROJAN_AVATAR=Trojan
+EQUIP VESSEL BUTTON=Equip vessel
+CHANGE AVATAR BUTTON=Change vessel
+
+# Menu
+CONTINUE GAME=Continue game
+PLAY GAME=Play game
+SELECT LEVEL=Select level
+START LEVEL=Start level
+UNLOCK LEVEL=Unlock level
+ASCENSION=Ascension
+SPEED ZONE A=Speed zone A
+LEAP OF FAITH=Leap of faith
+THE GRINDHOUSE=The grindhouse
+KINETICS=Kinetics
+SPEED ZONE B=Speed zone B
+CROSSFIRE=Crossfire
+THE ABYSS=The abyss
+NEMESIS=Nemesis
+THE MAINFRAME=The mainframe
+THE CORE=The core
+LEVEL 12=Prismatic path
+LEVEL 13=Path of purity
+LEVEL 14=The gateway
+LEVEL 15=Speed zone c
+LEVEL 16=Maelstrom
+LEVEL 17=Rip tide
+LEVEL 18=The meatgrinder
+LEVEL 19=Speed zone d
+LEVEL 20=Plasma field
+LEVEL 21=Overload
+LEVEL 22=Eye of the storm
+LEVEL 23=The core
+ORIGINAL=Original
+EXTENDED=Extended
+LOADING=Loading
+INSTRUCTIONS=Instructions
+TILT FORWARD=Tilt forward to move
+FOR EXTRA LIFE=For extra life
+COLLECT ALL HINT=Collect all to avoid time penalty
+QUIT?=Quit?
+QUIT=Quit
+PLAY=Play
+
+# Options
+OPTIONS=Options
+RESTORE PURCHASES=Restore purchases
+CALIBRATE CONTROLS=Calibrate controls
+CALIBRATE=Calibrate
+CALIBRATED!=Calibrated!
+CALIBRATE TEXT=Hold the device in the desired playing position and press the calibrate button.\n\nyou can recalibrate at any time during the game By pressing the screen with two fingers.
+VIBRATION=Vibration
+SOUND EFFECTS=Sound effects
+DISABLED=Disabled
+ENABLED=Enabled
+POST SCORES=Post results
+ALWAYS=Always
+NEVER=Never
+DIFFICULTY=Difficulty
+NORMAL=Normal
+EXPERT=Expert
+GO BACK=Go back
+
+# Leaderboard
+LEADERBOARDS=Leaderboards
+TOTAL TIME=Total time
+ALL TIME=All time
+LEVEL=Level
+LEVEL_NR=Level {0}
+LEADERBOARD=Leaderboard
+LOCAL=Local
+FRIENDS=Friends
+GLOBAL=Global
+VIEW TYPE=Players
+TIME PERIOD=Time period
+DAILY=Today
+TODAY=Today
+WEEKLY=This week
+ALLTIME=Global
+CONTACTS=Friends
+LOCAL LEADERBOARD POSITION=?
+NO TOTAL SCORE INFO=Beat all levels on this difficulty to see your entry here
+CORE LEVEL INFO=No score on\ncore levels
+
+# Credits
+CREDITS=Credits
+ART & DESIGN=Art & design
+PROGRAMMING=Programming
+MUSIC & SOUND=Music & sound
+MUSIC=Music
+
+# In-game
+CELLS COLLECTED=Cells collected
+PLAYER=Player
+LIFE LOST={0} life lost
+LIFE LEFT={0} life left
+LIVES LEFT={0} lives left
+LIVES LOST={0} lives lost
+SHIELD LOST={0} shield lost
+YOUR TIME=Your time
+YOUR BEST TIME=Your best time
+LEADERBOARD NAME=Leaderboard name
+Player=Player
+BRONZE STAR!=Bronze star!
+SILVER STAR!=Silver star!
+GOLD STAR!=Gold star!
+EXPERT BRONZE STAR!=Expert bronze star!
+EXPERT SILVER STAR!=Expert silver star!
+EXPERT GOLD STAR!=Expert gold star!
+CONTINUE=Continue
+No=No
+Yes=Yes
+Connection error=Connection error
+OK=Ok
+TRY AGAIN=Try again
+MAIN MENU=Main menu
+NEXT LEVEL=Next level
+EXPERT MODE!=Expert mode!
+ENTERING=Entering
+FIREWALL DOWN!=Firewall {0} down!
+SPEED ZONE!=Speed zone!
+SHIELD DOWN=Shield down
+SHIELD FOUND=Shield found
+SHIELD RESTORED=Shield restored
+Excellent!=Excellent!
+Outstanding!=Outstanding!
+Perfect!=Perfect!
+Superb!=Superb!
+Level complete=Level complete
+EXIT TO MAIN MENU?=Exit to main menu?
+GAME PAUSED=Game paused
+RESUME GAME=Resume game
+GAME OPTIONS=Game options
+RESTART LEVEL=Restart level
+RESTART LEVEL?=Restart level?
+GAME OVER=Game over
+TO BE CONTINUED ...=To be continued...
+
+# End of game
+END GAME CONGRATULATIONS=Contratulations!\ntotal time is
+END GAME CONNECTED=Total time leaderboards are now unlocked\n\nreplay levels to improve your time
+END GAME NOT CONNECTED=Total time leaderboards are now unlocked\n\ncompare times with your friends on palringo
+
+# End of chapter 1
+END OF CHAPTER ONE HEADER=End of chapter one
+END OF CHAPTER ONE TEXT=Congratulations!\nyou have completed the first chapter\n\nthe challenge continues
+CONNECT SPHERO=Connect sphero
+DISCONNECT SPHERO=Disconnect sphero
+Need to pair a Sphero=Need to pair a sphero
+TAP A SPHERO TO CONNECT=Tap a sphero to connect
+Already connected=Already connected
+connecting to sphero device=Connecting to {0}
+Failed to connect=Failed to connect
+Connection Failed=Connection failed
+Connection Success=Connection success
+Bluetooth Not Enabled=Bluetooth not enabled
+Sphero Instructions=Play with the white light\nup and the blue light\ntoward you
+
+# Palringo
+PALRINGO CONNECT=Connect to palringo
+PALRINGO CONNECT LONG=Connect with your friends on palringo
+PALRINGO OPEN LONG=Open Palringo and chat about Dark Nebula!
+PALRINGO DISCONNECT HEADER=Important!
+PALRINGO DISCONNECT PROMPT=Disconnecting from Palringo will remove any game progress made while connected.\n\nConnect to Palringo on this device again to restore your game progress.
+PALRINGO DISCONNECT CONFIRM=Disconnect
+DISCONNECT PALRINGO=Disconnect palringo
+ACHIEVEMENT UNLOCKED=Achievement unlocked
+ACHIEVEMENT.GOLDSTARS.0=Get your first gold star
+ACHIEVEMENT.GOLDSTARS.1=Get 4 gold stars
+ACHIEVEMENT.GOLDSTARS.2=Get 7 gold stars
+ACHIEVEMENT.GOLDSTARS.3=Get 10 gold stars
+ACHIEVEMENT.GOLDSTARS.4=Get 13 gold stars
+ACHIEVEMENT.GOLDSTARS.5=Get 16 gold stars
+ACHIEVEMENT.GOLDSTARS.6=Get 19 gold stars
+ACHIEVEMENT.GOLDSTARS.7=Get 22 gold stars
+ACHIEVEMENT.GOLDSTARS.8=Get 25 gold stars
+ACHIEVEMENT.GOLDSTARS.9=Get 28 gold stars
+ACHIEVEMENT.GOLDSTARS.10=Get 31 gold stars
+ACHIEVEMENT.GOLDSTARS.11=Get 34 gold stars
+ACHIEVEMENT.GOLDSTARS.12=Get 37 gold stars
+ACHIEVEMENT.GOLDSTARS.13=Get 40 gold stars
+ACHIEVEMENT.GOLDSTARS.14=Get 44 gold stars
+PALRINGO LEADERBOARD ADVERTISEMENT=Compare your results with others on palringo!
+CONNECT=Connect
+
+# Content gating
+GATE LOCK HEADER=Locked gate
+GATE LOCK EXPLANATION=Unlock levels {0} - {1}
+GATE LOCK EXPLANATION 2=And get
+REWARD AMOUNT=X {0}
+GATE IAP BUTTON=Purchase
+GATE PALRINGO BUTTON=Connect to palringo
+UNLOCK ALTERNATIVE=Or
+GATE UNLOCKED EXPLANATION=You already have everything you need to get past this gate. claim your reward and continue.
+GATE UNLOCK BUTTON=Continue
+COLLECT UNLOCK REWARD BUTTON=Collect reward
+FOR FREE=For free
+REACH_LEVEL_EXPLANATION=Reach level {0} on Palringo.
+REWARD=Reward
+
+# Palringo Login
+PALRINGO LOGIN EXPLANATION=Please log in with your palringo account below.
+PALRINGO LOGIN GET PALRINGO=Don't have an account yet?
+E-MAIL ADDRESS=E-mail address
+PASSWORD=Password
+LOG IN=Log in
+GET PALRINGO=Get palringo
+PALRINGO FAILED AUTHORIZE=Login failed.\nplease try again.
+PALRINGO LOGIN SUCCESS=Login successful!\n\nyou can now enjoy all the benefits of palringo, such as leaderboards, achievements and more.
+
+# Loading hints
+LOADING.HINT.ACHIEVEMENTS=Join palringo and earn achievements as you play dark nebula!
+LOADING.HINT.CONNECT=Join palringo and connect with other players around the world!
+LOADING.HINT.STUFF=Join palringo to unlock free rewards and extra content!
+LOADING.HINT.LEADERBOARDS=Join palringo and compare your best time to other players!
+LOADING.HINT.CALIBRATE=You can recalibrate at any time during the game by pressing the screen with two fingers.

@@ -1,0 +1,2436 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &147589
+GameObject:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_Component:
+  - 4: {fileID: 479954}
+  - 114: {fileID: 11409266}
+  m_Layer: 0
+  m_Name: tileset_desert_abyss
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &479954
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 147589}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+--- !u!114 &11409266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 147589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60f28a10f064b0573af11a2e931d98da, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  version: 3
+  materialIdsValid: 1
+  spriteDefinitions:
+  - name: tileset_desert_abyss/0
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.007814453, y: 0.007814453}
+    - {x: 0.13281055, y: 0.007814453}
+    - {x: 0.007814453, y: 0.13281055}
+    - {x: 0.13281055, y: 0.13281055}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: da42d99f89236f74e8324f5900dc66d9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2caef90b96e8f6545a976c0cd70641e3
+    extractRegion: 1
+    regionX: 0
+    regionY: 448
+    regionW: 64
+    regionH: 64
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_desert_abyss/1
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.007814453, y: 0.14843945}
+    - {x: 0.13281055, y: 0.14843945}
+    - {x: 0.007814453, y: 0.27343553}
+    - {x: 0.13281055, y: 0.27343553}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: da42d99f89236f74e8324f5900dc66d9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2caef90b96e8f6545a976c0cd70641e3
+    extractRegion: 1
+    regionX: 64
+    regionY: 448
+    regionW: 64
+    regionH: 64
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_desert_abyss/2
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.007814453, y: 0.28906447}
+    - {x: 0.13281055, y: 0.28906447}
+    - {x: 0.007814453, y: 0.41406053}
+    - {x: 0.13281055, y: 0.41406053}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: da42d99f89236f74e8324f5900dc66d9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2caef90b96e8f6545a976c0cd70641e3
+    extractRegion: 1
+    regionX: 128
+    regionY: 448
+    regionW: 64
+    regionH: 64
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_desert_abyss/3
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.007814453, y: 0.42968947}
+    - {x: 0.13281055, y: 0.42968947}
+    - {x: 0.007814453, y: 0.55468553}
+    - {x: 0.13281055, y: 0.55468553}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: da42d99f89236f74e8324f5900dc66d9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2caef90b96e8f6545a976c0cd70641e3
+    extractRegion: 1
+    regionX: 192
+    regionY: 448
+    regionW: 64
+    regionH: 64
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_desert_abyss/4
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.007814453, y: 0.57031447}
+    - {x: 0.13281055, y: 0.57031447}
+    - {x: 0.007814453, y: 0.69531053}
+    - {x: 0.13281055, y: 0.69531053}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: da42d99f89236f74e8324f5900dc66d9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2caef90b96e8f6545a976c0cd70641e3
+    extractRegion: 1
+    regionX: 256
+    regionY: 448
+    regionW: 64
+    regionH: 64
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_desert_abyss/5
+    boundsData:
+    - {x: -31.5, y: 0, z: 0}
+    - {x: 1, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: -31, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: -31, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.42968947, y: 0.71093947}
+    - {x: 0.43163866, y: 0.71093947}
+    - {x: 0.42968947, y: 0.83593553}
+    - {x: 0.43163866, y: 0.83593553}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: da42d99f89236f74e8324f5900dc66d9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2caef90b96e8f6545a976c0cd70641e3
+    extractRegion: 1
+    regionX: 320
+    regionY: 448
+    regionW: 64
+    regionH: 64
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_desert_abyss/6
+    boundsData:
+    - {x: 0.5, y: 0.5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.007814453, y: 0.99218947}
+    - {x: -0.005861328, y: 0.99218947}
+    - {x: 0.007814453, y: 0.97851366}
+    - {x: -0.005861328, y: 0.97851366}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: da42d99f89236f74e8324f5900dc66d9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2caef90b96e8f6545a976c0cd70641e3
+    extractRegion: 1
+    regionX: 384
+    regionY: 448
+    regionW: 64
+    regionH: 64
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_desert_abyss/7
+    boundsData:
+    - {x: 0.5, y: 0.5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.007814453, y: 0.9941426}
+    - {x: -0.005861328, y: 0.9941426}
+    - {x: 0.007814453, y: 0.9804668}
+    - {x: -0.005861328, y: 0.9804668}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: da42d99f89236f74e8324f5900dc66d9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2caef90b96e8f6545a976c0cd70641e3
+    extractRegion: 1
+    regionX: 448
+    regionY: 448
+    regionW: 64
+    regionH: 64
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_desert_abyss/8
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.007814453, y: 0.71093947}
+    - {x: 0.13281055, y: 0.71093947}
+    - {x: 0.007814453, y: 0.83593553}
+    - {x: 0.13281055, y: 0.83593553}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: da42d99f89236f74e8324f5900dc66d9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2caef90b96e8f6545a976c0cd70641e3
+    extractRegion: 1
+    regionX: 0
+    regionY: 384
+    regionW: 64
+    regionH: 64
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_desert_abyss/9
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.007814453, y: 0.85156447}
+    - {x: 0.13281055, y: 0.85156447}
+    - {x: 0.007814453, y: 0.97656053}
+    - {x: 0.13281055, y: 0.97656053}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: da42d99f89236f74e8324f5900dc66d9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2caef90b96e8f6545a976c0cd70641e3
+    extractRegion: 1
+    regionX: 64
+    regionY: 384
+    regionW: 64
+    regionH: 64
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_desert_abyss/10
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.14843945, y: 0.007814453}
+    - {x: 0.27343553, y: 0.007814453}
+    - {x: 0.14843945, y: 0.13281055}
+    - {x: 0.27343553, y: 0.13281055}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: da42d99f89236f74e8324f5900dc66d9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2caef90b96e8f6545a976c0cd70641e3
+    extractRegion: 1
+    regionX: 128
+    regionY: 384
+    regionW: 64
+    regionH: 64
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_desert_abyss/11
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.28906447, y: 0.007814453}
+    - {x: 0.41406053, y: 0.007814453}
+    - {x: 0.28906447, y: 0.13281055}
+    - {x: 0.41406053, y: 0.13281055}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: da42d99f89236f74e8324f5900dc66d9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2caef90b96e8f6545a976c0cd70641e3
+    extractRegion: 1
+    regionX: 192
+    regionY: 384
+    regionW: 64
+    regionH: 64
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_desert_abyss/12
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.42968947, y: 0.007814453}
+    - {x: 0.55468553, y: 0.007814453}
+    - {x: 0.42968947, y: 0.13281055}
+    - {x: 0.55468553, y: 0.13281055}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: da42d99f89236f74e8324f5900dc66d9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2caef90b96e8f6545a976c0cd70641e3
+    extractRegion: 1
+    regionX: 256
+    regionY: 384
+    regionW: 64
+    regionH: 64
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_desert_abyss/13
+    boundsData:
+    - {x: -31.5, y: 0, z: 0}
+    - {x: 1, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: -31, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: -31, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.42968947, y: 0.85156447}
+    - {x: 0.43163866, y: 0.85156447}
+    - {x: 0.42968947, y: 0.97656053}
+    - {x: 0.43163866, y: 0.97656053}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: da42d99f89236f74e8324f5900dc66d9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2caef90b96e8f6545a976c0cd70641e3
+    extractRegion: 1
+    regionX: 320
+    regionY: 384
+    regionW: 64
+    regionH: 64
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_desert_abyss/14
+    boundsData:
+    - {x: 0.5, y: 0.5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.007814453, y: 0.9960957}
+    - {x: -0.005861328, y: 0.9960957}
+    - {x: 0.007814453, y: 0.9824199}
+    - {x: -0.005861328, y: 0.9824199}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: da42d99f89236f74e8324f5900dc66d9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2caef90b96e8f6545a976c0cd70641e3
+    extractRegion: 1
+    regionX: 384
+    regionY: 384
+    regionW: 64
+    regionH: 64
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_desert_abyss/15
+    boundsData:
+    - {x: 0.5, y: 0.5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.007814453, y: 0.99804884}
+    - {x: -0.005861328, y: 0.99804884}
+    - {x: 0.007814453, y: 0.98437303}
+    - {x: -0.005861328, y: 0.98437303}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: da42d99f89236f74e8324f5900dc66d9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2caef90b96e8f6545a976c0cd70641e3
+    extractRegion: 1
+    regionX: 448
+    regionY: 384
+    regionW: 64
+    regionH: 64
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_desert_abyss/16
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.57031447, y: 0.007814453}
+    - {x: 0.69531053, y: 0.007814453}
+    - {x: 0.57031447, y: 0.13281055}
+    - {x: 0.69531053, y: 0.13281055}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: da42d99f89236f74e8324f5900dc66d9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2caef90b96e8f6545a976c0cd70641e3
+    extractRegion: 1
+    regionX: 0
+    regionY: 320
+    regionW: 64
+    regionH: 64
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_desert_abyss/17
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.71093947, y: 0.007814453}
+    - {x: 0.83593553, y: 0.007814453}
+    - {x: 0.71093947, y: 0.13281055}
+    - {x: 0.83593553, y: 0.13281055}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: da42d99f89236f74e8324f5900dc66d9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2caef90b96e8f6545a976c0cd70641e3
+    extractRegion: 1
+    regionX: 64
+    regionY: 320
+    regionW: 64
+    regionH: 64
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_desert_abyss/18
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.85156447, y: 0.007814453}
+    - {x: 0.97656053, y: 0.007814453}
+    - {x: 0.85156447, y: 0.13281055}
+    - {x: 0.97656053, y: 0.13281055}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: da42d99f89236f74e8324f5900dc66d9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2caef90b96e8f6545a976c0cd70641e3
+    extractRegion: 1
+    regionX: 128
+    regionY: 320
+    regionW: 64
+    regionH: 64
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_desert_abyss/19
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.14843945, y: 0.14843945}
+    - {x: 0.27343553, y: 0.14843945}
+    - {x: 0.14843945, y: 0.27343553}
+    - {x: 0.27343553, y: 0.27343553}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: da42d99f89236f74e8324f5900dc66d9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2caef90b96e8f6545a976c0cd70641e3
+    extractRegion: 1
+    regionX: 192
+    regionY: 320
+    regionW: 64
+    regionH: 64
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_desert_abyss/20
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.14843945, y: 0.28906447}
+    - {x: 0.27343553, y: 0.28906447}
+    - {x: 0.14843945, y: 0.41406053}
+    - {x: 0.27343553, y: 0.41406053}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: da42d99f89236f74e8324f5900dc66d9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2caef90b96e8f6545a976c0cd70641e3
+    extractRegion: 1
+    regionX: 256
+    regionY: 320
+    regionW: 64
+    regionH: 64
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_desert_abyss/21
+    boundsData:
+    - {x: -31.5, y: 0, z: 0}
+    - {x: 1, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: -31, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: -31, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.4472676, y: 0.71093947}
+    - {x: 0.44921678, y: 0.71093947}
+    - {x: 0.4472676, y: 0.83593553}
+    - {x: 0.44921678, y: 0.83593553}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: da42d99f89236f74e8324f5900dc66d9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2caef90b96e8f6545a976c0cd70641e3
+    extractRegion: 1
+    regionX: 320
+    regionY: 320
+    regionW: 64
+    regionH: 64
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_desert_abyss/22
+    boundsData:
+    - {x: 0.5, y: 0.5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.007814453, y: 1.0000019}
+    - {x: -0.005861328, y: 1.0000019}
+    - {x: 0.007814453, y: 0.98632616}
+    - {x: -0.005861328, y: 0.98632616}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: da42d99f89236f74e8324f5900dc66d9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2caef90b96e8f6545a976c0cd70641e3
+    extractRegion: 1
+    regionX: 384
+    regionY: 320
+    regionW: 64
+    regionH: 64
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_desert_abyss/23
+    boundsData:
+    - {x: 0.5, y: 0.5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.007814453, y: 1.001955}
+    - {x: -0.005861328, y: 1.001955}
+    - {x: 0.007814453, y: 0.9882793}
+    - {x: -0.005861328, y: 0.9882793}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: da42d99f89236f74e8324f5900dc66d9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2caef90b96e8f6545a976c0cd70641e3
+    extractRegion: 1
+    regionX: 448
+    regionY: 320
+    regionW: 64
+    regionH: 64
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_desert_abyss/24
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.14843945, y: 0.42968947}
+    - {x: 0.27343553, y: 0.42968947}
+    - {x: 0.14843945, y: 0.55468553}
+    - {x: 0.27343553, y: 0.55468553}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: da42d99f89236f74e8324f5900dc66d9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2caef90b96e8f6545a976c0cd70641e3
+    extractRegion: 1
+    regionX: 0
+    regionY: 256
+    regionW: 64
+    regionH: 64
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_desert_abyss/25
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.14843945, y: 0.57031447}
+    - {x: 0.27343553, y: 0.57031447}
+    - {x: 0.14843945, y: 0.69531053}
+    - {x: 0.27343553, y: 0.69531053}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: da42d99f89236f74e8324f5900dc66d9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2caef90b96e8f6545a976c0cd70641e3
+    extractRegion: 1
+    regionX: 64
+    regionY: 256
+    regionW: 64
+    regionH: 64
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_desert_abyss/26
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.14843945, y: 0.71093947}
+    - {x: 0.27343553, y: 0.71093947}
+    - {x: 0.14843945, y: 0.83593553}
+    - {x: 0.27343553, y: 0.83593553}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: da42d99f89236f74e8324f5900dc66d9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2caef90b96e8f6545a976c0cd70641e3
+    extractRegion: 1
+    regionX: 128
+    regionY: 256
+    regionW: 64
+    regionH: 64
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_desert_abyss/27
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.14843945, y: 0.85156447}
+    - {x: 0.27343553, y: 0.85156447}
+    - {x: 0.14843945, y: 0.97656053}
+    - {x: 0.27343553, y: 0.97656053}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: da42d99f89236f74e8324f5900dc66d9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2caef90b96e8f6545a976c0cd70641e3
+    extractRegion: 1
+    regionX: 192
+    regionY: 256
+    regionW: 64
+    regionH: 64
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_desert_abyss/28
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.28906447, y: 0.14843945}
+    - {x: 0.41406053, y: 0.14843945}
+    - {x: 0.28906447, y: 0.27343553}
+    - {x: 0.41406053, y: 0.27343553}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: da42d99f89236f74e8324f5900dc66d9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2caef90b96e8f6545a976c0cd70641e3
+    extractRegion: 1
+    regionX: 256
+    regionY: 256
+    regionW: 64
+    regionH: 64
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_desert_abyss/29
+    boundsData:
+    - {x: -31.5, y: 0, z: 0}
+    - {x: 1, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: -31, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: -31, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.4472676, y: 0.85156447}
+    - {x: 0.44921678, y: 0.85156447}
+    - {x: 0.4472676, y: 0.97656053}
+    - {x: 0.44921678, y: 0.97656053}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: da42d99f89236f74e8324f5900dc66d9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2caef90b96e8f6545a976c0cd70641e3
+    extractRegion: 1
+    regionX: 320
+    regionY: 256
+    regionW: 64
+    regionH: 64
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_desert_abyss/30
+    boundsData:
+    - {x: 0.5, y: 0.5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.007814453, y: 1.0039082}
+    - {x: -0.005861328, y: 1.0039082}
+    - {x: 0.007814453, y: 0.9902324}
+    - {x: -0.005861328, y: 0.9902324}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: da42d99f89236f74e8324f5900dc66d9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2caef90b96e8f6545a976c0cd70641e3
+    extractRegion: 1
+    regionX: 384
+    regionY: 256
+    regionW: 64
+    regionH: 64
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_desert_abyss/31
+    boundsData:
+    - {x: 0.5, y: 0.5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.007814453, y: 1.0058613}
+    - {x: -0.005861328, y: 1.0058613}
+    - {x: 0.007814453, y: 0.99218553}
+    - {x: -0.005861328, y: 0.99218553}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: da42d99f89236f74e8324f5900dc66d9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2caef90b96e8f6545a976c0cd70641e3
+    extractRegion: 1
+    regionX: 448
+    regionY: 256
+    regionW: 64
+    regionH: 64
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_desert_abyss/32
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.42968947, y: 0.14843945}
+    - {x: 0.55468553, y: 0.14843945}
+    - {x: 0.42968947, y: 0.27343553}
+    - {x: 0.55468553, y: 0.27343553}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: da42d99f89236f74e8324f5900dc66d9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2caef90b96e8f6545a976c0cd70641e3
+    extractRegion: 1
+    regionX: 0
+    regionY: 192
+    regionW: 64
+    regionH: 64
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_desert_abyss/33
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.57031447, y: 0.14843945}
+    - {x: 0.69531053, y: 0.14843945}
+    - {x: 0.57031447, y: 0.27343553}
+    - {x: 0.69531053, y: 0.27343553}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: da42d99f89236f74e8324f5900dc66d9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2caef90b96e8f6545a976c0cd70641e3
+    extractRegion: 1
+    regionX: 64
+    regionY: 192
+    regionW: 64
+    regionH: 64
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_desert_abyss/34
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.71093947, y: 0.14843945}
+    - {x: 0.83593553, y: 0.14843945}
+    - {x: 0.71093947, y: 0.27343553}
+    - {x: 0.83593553, y: 0.27343553}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: da42d99f89236f74e8324f5900dc66d9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2caef90b96e8f6545a976c0cd70641e3
+    extractRegion: 1
+    regionX: 128
+    regionY: 192
+    regionW: 64
+    regionH: 64
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_desert_abyss/35
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.85156447, y: 0.14843945}
+    - {x: 0.97656053, y: 0.14843945}
+    - {x: 0.85156447, y: 0.27343553}
+    - {x: 0.97656053, y: 0.27343553}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: da42d99f89236f74e8324f5900dc66d9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2caef90b96e8f6545a976c0cd70641e3
+    extractRegion: 1
+    regionX: 192
+    regionY: 192
+    regionW: 64
+    regionH: 64
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_desert_abyss/36
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.28906447, y: 0.28906447}
+    - {x: 0.41406053, y: 0.28906447}
+    - {x: 0.28906447, y: 0.41406053}
+    - {x: 0.41406053, y: 0.41406053}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: da42d99f89236f74e8324f5900dc66d9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2caef90b96e8f6545a976c0cd70641e3
+    extractRegion: 1
+    regionX: 256
+    regionY: 192
+    regionW: 64
+    regionH: 64
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_desert_abyss/37
+    boundsData:
+    - {x: -31.5, y: 0, z: 0}
+    - {x: 1, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: -31, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: -31, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.46484572, y: 0.71093947}
+    - {x: 0.4667949, y: 0.71093947}
+    - {x: 0.46484572, y: 0.83593553}
+    - {x: 0.4667949, y: 0.83593553}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: da42d99f89236f74e8324f5900dc66d9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2caef90b96e8f6545a976c0cd70641e3
+    extractRegion: 1
+    regionX: 320
+    regionY: 192
+    regionW: 64
+    regionH: 64
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_desert_abyss/38
+    boundsData:
+    - {x: 0.5, y: 0.5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.009767578, y: 0.99218947}
+    - {x: -0.003908203, y: 0.99218947}
+    - {x: 0.009767578, y: 0.97851366}
+    - {x: -0.003908203, y: 0.97851366}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: da42d99f89236f74e8324f5900dc66d9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2caef90b96e8f6545a976c0cd70641e3
+    extractRegion: 1
+    regionX: 384
+    regionY: 192
+    regionW: 64
+    regionH: 64
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_desert_abyss/39
+    boundsData:
+    - {x: 0.5, y: 0.5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.009767578, y: 0.9941426}
+    - {x: -0.003908203, y: 0.9941426}
+    - {x: 0.009767578, y: 0.9804668}
+    - {x: -0.003908203, y: 0.9804668}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: da42d99f89236f74e8324f5900dc66d9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2caef90b96e8f6545a976c0cd70641e3
+    extractRegion: 1
+    regionX: 448
+    regionY: 192
+    regionW: 64
+    regionH: 64
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_desert_abyss/40
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.28906447, y: 0.42968947}
+    - {x: 0.41406053, y: 0.42968947}
+    - {x: 0.28906447, y: 0.55468553}
+    - {x: 0.41406053, y: 0.55468553}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: da42d99f89236f74e8324f5900dc66d9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2caef90b96e8f6545a976c0cd70641e3
+    extractRegion: 1
+    regionX: 0
+    regionY: 128
+    regionW: 64
+    regionH: 64
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_desert_abyss/41
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.28906447, y: 0.57031447}
+    - {x: 0.41406053, y: 0.57031447}
+    - {x: 0.28906447, y: 0.69531053}
+    - {x: 0.41406053, y: 0.69531053}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: da42d99f89236f74e8324f5900dc66d9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2caef90b96e8f6545a976c0cd70641e3
+    extractRegion: 1
+    regionX: 64
+    regionY: 128
+    regionW: 64
+    regionH: 64
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_desert_abyss/42
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.28906447, y: 0.71093947}
+    - {x: 0.41406053, y: 0.71093947}
+    - {x: 0.28906447, y: 0.83593553}
+    - {x: 0.41406053, y: 0.83593553}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: da42d99f89236f74e8324f5900dc66d9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2caef90b96e8f6545a976c0cd70641e3
+    extractRegion: 1
+    regionX: 128
+    regionY: 128
+    regionW: 64
+    regionH: 64
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_desert_abyss/43
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.28906447, y: 0.85156447}
+    - {x: 0.41406053, y: 0.85156447}
+    - {x: 0.28906447, y: 0.97656053}
+    - {x: 0.41406053, y: 0.97656053}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: da42d99f89236f74e8324f5900dc66d9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2caef90b96e8f6545a976c0cd70641e3
+    extractRegion: 1
+    regionX: 192
+    regionY: 128
+    regionW: 64
+    regionH: 64
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_desert_abyss/44
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.42968947, y: 0.28906447}
+    - {x: 0.55468553, y: 0.28906447}
+    - {x: 0.42968947, y: 0.41406053}
+    - {x: 0.55468553, y: 0.41406053}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: da42d99f89236f74e8324f5900dc66d9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2caef90b96e8f6545a976c0cd70641e3
+    extractRegion: 1
+    regionX: 256
+    regionY: 128
+    regionW: 64
+    regionH: 64
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_desert_abyss/45
+    boundsData:
+    - {x: -31.5, y: 0, z: 0}
+    - {x: 1, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: -31, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: -31, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.46484572, y: 0.85156447}
+    - {x: 0.4667949, y: 0.85156447}
+    - {x: 0.46484572, y: 0.97656053}
+    - {x: 0.4667949, y: 0.97656053}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: da42d99f89236f74e8324f5900dc66d9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2caef90b96e8f6545a976c0cd70641e3
+    extractRegion: 1
+    regionX: 320
+    regionY: 128
+    regionW: 64
+    regionH: 64
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_desert_abyss/46
+    boundsData:
+    - {x: 0.5, y: 0.5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.009767578, y: 0.9960957}
+    - {x: -0.003908203, y: 0.9960957}
+    - {x: 0.009767578, y: 0.9824199}
+    - {x: -0.003908203, y: 0.9824199}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: da42d99f89236f74e8324f5900dc66d9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2caef90b96e8f6545a976c0cd70641e3
+    extractRegion: 1
+    regionX: 384
+    regionY: 128
+    regionW: 64
+    regionH: 64
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_desert_abyss/47
+    boundsData:
+    - {x: 0.5, y: 0.5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.009767578, y: 0.99804884}
+    - {x: -0.003908203, y: 0.99804884}
+    - {x: 0.009767578, y: 0.98437303}
+    - {x: -0.003908203, y: 0.98437303}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: da42d99f89236f74e8324f5900dc66d9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2caef90b96e8f6545a976c0cd70641e3
+    extractRegion: 1
+    regionX: 448
+    regionY: 128
+    regionW: 64
+    regionH: 64
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_desert_abyss/48
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.57031447, y: 0.28906447}
+    - {x: 0.69531053, y: 0.28906447}
+    - {x: 0.57031447, y: 0.41406053}
+    - {x: 0.69531053, y: 0.41406053}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: da42d99f89236f74e8324f5900dc66d9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2caef90b96e8f6545a976c0cd70641e3
+    extractRegion: 1
+    regionX: 0
+    regionY: 64
+    regionW: 64
+    regionH: 64
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_desert_abyss/49
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.71093947, y: 0.28906447}
+    - {x: 0.83593553, y: 0.28906447}
+    - {x: 0.71093947, y: 0.41406053}
+    - {x: 0.83593553, y: 0.41406053}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: da42d99f89236f74e8324f5900dc66d9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2caef90b96e8f6545a976c0cd70641e3
+    extractRegion: 1
+    regionX: 64
+    regionY: 64
+    regionW: 64
+    regionH: 64
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_desert_abyss/50
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.85156447, y: 0.28906447}
+    - {x: 0.97656053, y: 0.28906447}
+    - {x: 0.85156447, y: 0.41406053}
+    - {x: 0.97656053, y: 0.41406053}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: da42d99f89236f74e8324f5900dc66d9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2caef90b96e8f6545a976c0cd70641e3
+    extractRegion: 1
+    regionX: 128
+    regionY: 64
+    regionW: 64
+    regionH: 64
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_desert_abyss/51
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.42968947, y: 0.42968947}
+    - {x: 0.55468553, y: 0.42968947}
+    - {x: 0.42968947, y: 0.55468553}
+    - {x: 0.55468553, y: 0.55468553}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: da42d99f89236f74e8324f5900dc66d9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2caef90b96e8f6545a976c0cd70641e3
+    extractRegion: 1
+    regionX: 192
+    regionY: 64
+    regionW: 64
+    regionH: 64
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_desert_abyss/52
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.42968947, y: 0.57031447}
+    - {x: 0.55468553, y: 0.57031447}
+    - {x: 0.42968947, y: 0.69531053}
+    - {x: 0.55468553, y: 0.69531053}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: da42d99f89236f74e8324f5900dc66d9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2caef90b96e8f6545a976c0cd70641e3
+    extractRegion: 1
+    regionX: 256
+    regionY: 64
+    regionW: 64
+    regionH: 64
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_desert_abyss/53
+    boundsData:
+    - {x: -31.5, y: 0, z: 0}
+    - {x: 1, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: -31, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: -31, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.48242384, y: 0.71093947}
+    - {x: 0.48437303, y: 0.71093947}
+    - {x: 0.48242384, y: 0.83593553}
+    - {x: 0.48437303, y: 0.83593553}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: da42d99f89236f74e8324f5900dc66d9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2caef90b96e8f6545a976c0cd70641e3
+    extractRegion: 1
+    regionX: 320
+    regionY: 64
+    regionW: 64
+    regionH: 64
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_desert_abyss/54
+    boundsData:
+    - {x: 0.5, y: 0.5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.009767578, y: 1.0000019}
+    - {x: -0.003908203, y: 1.0000019}
+    - {x: 0.009767578, y: 0.98632616}
+    - {x: -0.003908203, y: 0.98632616}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: da42d99f89236f74e8324f5900dc66d9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2caef90b96e8f6545a976c0cd70641e3
+    extractRegion: 1
+    regionX: 384
+    regionY: 64
+    regionW: 64
+    regionH: 64
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_desert_abyss/55
+    boundsData:
+    - {x: 0.5, y: 0.5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.009767578, y: 1.001955}
+    - {x: -0.003908203, y: 1.001955}
+    - {x: 0.009767578, y: 0.9882793}
+    - {x: -0.003908203, y: 0.9882793}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: da42d99f89236f74e8324f5900dc66d9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2caef90b96e8f6545a976c0cd70641e3
+    extractRegion: 1
+    regionX: 448
+    regionY: 64
+    regionW: 64
+    regionH: 64
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_desert_abyss/56
+    boundsData:
+    - {x: 0, y: 31.5, z: 0}
+    - {x: 64, y: 1, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -32, y: 31, z: 0}
+    - {x: 32, y: 31, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.48242384, y: 0.85156447}
+    - {x: 0.48242384, y: 0.97656053}
+    - {x: 0.48437303, y: 0.85156447}
+    - {x: 0.48437303, y: 0.97656053}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: da42d99f89236f74e8324f5900dc66d9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2caef90b96e8f6545a976c0cd70641e3
+    extractRegion: 1
+    regionX: 0
+    regionY: 0
+    regionW: 64
+    regionH: 64
+    flipped: 1
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_desert_abyss/57
+    boundsData:
+    - {x: 0, y: 31.5, z: 0}
+    - {x: 64, y: 1, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -32, y: 31, z: 0}
+    - {x: 32, y: 31, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.50000197, y: 0.71093947}
+    - {x: 0.50000197, y: 0.83593553}
+    - {x: 0.50195116, y: 0.71093947}
+    - {x: 0.50195116, y: 0.83593553}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: da42d99f89236f74e8324f5900dc66d9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2caef90b96e8f6545a976c0cd70641e3
+    extractRegion: 1
+    regionX: 64
+    regionY: 0
+    regionW: 64
+    regionH: 64
+    flipped: 1
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_desert_abyss/58
+    boundsData:
+    - {x: 0, y: 31.5, z: 0}
+    - {x: 64, y: 1, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -32, y: 31, z: 0}
+    - {x: 32, y: 31, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.50000197, y: 0.85156447}
+    - {x: 0.50000197, y: 0.97656053}
+    - {x: 0.50195116, y: 0.85156447}
+    - {x: 0.50195116, y: 0.97656053}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: da42d99f89236f74e8324f5900dc66d9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2caef90b96e8f6545a976c0cd70641e3
+    extractRegion: 1
+    regionX: 128
+    regionY: 0
+    regionW: 64
+    regionH: 64
+    flipped: 1
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_desert_abyss/59
+    boundsData:
+    - {x: 0, y: 31.5, z: 0}
+    - {x: 64, y: 1, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -32, y: 31, z: 0}
+    - {x: 32, y: 31, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.5175801, y: 0.71093947}
+    - {x: 0.5175801, y: 0.83593553}
+    - {x: 0.5195293, y: 0.71093947}
+    - {x: 0.5195293, y: 0.83593553}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: da42d99f89236f74e8324f5900dc66d9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2caef90b96e8f6545a976c0cd70641e3
+    extractRegion: 1
+    regionX: 192
+    regionY: 0
+    regionW: 64
+    regionH: 64
+    flipped: 1
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_desert_abyss/60
+    boundsData:
+    - {x: 0, y: 31.5, z: 0}
+    - {x: 64, y: 1, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -32, y: 31, z: 0}
+    - {x: 32, y: 31, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.5175801, y: 0.85156447}
+    - {x: 0.5175801, y: 0.97656053}
+    - {x: 0.5195293, y: 0.85156447}
+    - {x: 0.5195293, y: 0.97656053}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: da42d99f89236f74e8324f5900dc66d9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2caef90b96e8f6545a976c0cd70641e3
+    extractRegion: 1
+    regionX: 256
+    regionY: 0
+    regionW: 64
+    regionH: 64
+    flipped: 1
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_desert_abyss/61
+    boundsData:
+    - {x: -31.5, y: 31.5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -32, y: 31, z: 0}
+    - {x: -31, y: 31, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: -31, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.5351582, y: 0.71093947}
+    - {x: 0.5371074, y: 0.71093947}
+    - {x: 0.5351582, y: 0.71288866}
+    - {x: 0.5371074, y: 0.71288866}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: da42d99f89236f74e8324f5900dc66d9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2caef90b96e8f6545a976c0cd70641e3
+    extractRegion: 1
+    regionX: 320
+    regionY: 0
+    regionW: 64
+    regionH: 64
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_desert_abyss/62
+    boundsData:
+    - {x: 0.5, y: 0.5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.009767578, y: 1.0039082}
+    - {x: -0.003908203, y: 1.0039082}
+    - {x: 0.009767578, y: 0.9902324}
+    - {x: -0.003908203, y: 0.9902324}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: da42d99f89236f74e8324f5900dc66d9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2caef90b96e8f6545a976c0cd70641e3
+    extractRegion: 1
+    regionX: 384
+    regionY: 0
+    regionW: 64
+    regionH: 64
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_desert_abyss/63
+    boundsData:
+    - {x: 0.5, y: 0.5, z: 0}
+    - {x: 1, y: 1, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.009767578, y: 1.0058613}
+    - {x: -0.003908203, y: 1.0058613}
+    - {x: 0.009767578, y: 0.99218553}
+    - {x: -0.003908203, y: 0.99218553}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: da42d99f89236f74e8324f5900dc66d9, type: 2}
+    materialId: 0
+    sourceTextureGUID: 2caef90b96e8f6545a976c0cd70641e3
+    extractRegion: 1
+    regionX: 448
+    regionY: 0
+    regionW: 64
+    regionH: 64
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  premultipliedAlpha: 0
+  material: {fileID: 0}
+  materials:
+  - {fileID: 2100000, guid: da42d99f89236f74e8324f5900dc66d9, type: 2}
+  textures:
+  - {fileID: 2800000, guid: d6d996a8b0c1aa04eac32576b7042d87, type: 3}
+  allowMultipleAtlases: 0
+  spriteCollectionGUID: 3a0bad43b7ed2ee4eaf080f9186fedb8
+  spriteCollectionName: tileset_desert_abyss
+  invOrthoSize: 0.003125
+  halfTargetHeight: 320
+  buildKey: 1854901377
+  dataGuid: 3131272693277da4eaad18f390b1639a
+--- !u!1001 &100100000
+Prefab:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 147589}
+  m_IsPrefabParent: 1
+  m_IsExploded: 0

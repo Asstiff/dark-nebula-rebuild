@@ -1,0 +1,142 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &147589
+GameObject:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_Component:
+  - 4: {fileID: 479954}
+  - 114: {fileID: 11409266}
+  m_Layer: 0
+  m_Name: SuperStarCollection
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &479954
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 147589}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+--- !u!114 &11409266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 147589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60f28a10f064b0573af11a2e931d98da, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  version: 3
+  materialIdsValid: 1
+  spriteDefinitions:
+  - name: UI_Superstar
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 512, y: 512, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 512, y: 512, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -256, y: -256, z: 0}
+    - {x: 256, y: -256, z: 0}
+    - {x: -256, y: 256, z: 0}
+    - {x: 256, y: 256, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 1.953125E-06, y: 9.765625E-07}
+    - {x: 0.99999803, y: 9.765625E-07}
+    - {x: 1.953125E-06, y: 0.49999902}
+    - {x: 0.99999803, y: 0.49999902}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 67611564588d69f42b74dc807f14d96b, type: 2}
+    materialId: 0
+    sourceTextureGUID: 111110c1fec0a0144a94eb6f0ad800d0
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 1
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: UI_SuperstarExpert
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 512, y: 512, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 512, y: 512, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -256, y: -256, z: 0}
+    - {x: 256, y: -256, z: 0}
+    - {x: -256, y: 256, z: 0}
+    - {x: 256, y: 256, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 1.953125E-06, y: 0.50000095}
+    - {x: 0.99999803, y: 0.50000095}
+    - {x: 1.953125E-06, y: 0.99999905}
+    - {x: 0.99999803, y: 0.99999905}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 67611564588d69f42b74dc807f14d96b, type: 2}
+    materialId: 0
+    sourceTextureGUID: c5a7a99013e9bcf45ac2e3a5e851e20f
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 1
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  premultipliedAlpha: 0
+  material: {fileID: 0}
+  materials:
+  - {fileID: 2100000, guid: 67611564588d69f42b74dc807f14d96b, type: 2}
+  textures:
+  - {fileID: 2800000, guid: bb2381c9e768b2a48a0bdc76e740279c, type: 3}
+  allowMultipleAtlases: 0
+  spriteCollectionGUID: 310ab1f83b80c6741b44ff8ccb5d690c
+  spriteCollectionName: SuperStarCollection
+  invOrthoSize: 0.003125
+  halfTargetHeight: 320
+  buildKey: 1947204190
+  dataGuid: 57f71d334aed86c41bc86726a9b5c301
+--- !u!1001 &100100000
+Prefab:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 147589}
+  m_IsPrefabParent: 1
+  m_IsExploded: 0

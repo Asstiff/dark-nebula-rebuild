@@ -1,0 +1,2436 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &147589
+GameObject:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_Component:
+  - 4: {fileID: 479954}
+  - 114: {fileID: 11409266}
+  m_Layer: 0
+  m_Name: tileset_aztek_bedrock
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &479954
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 147589}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+--- !u!114 &11409266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 147589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60f28a10f064b0573af11a2e931d98da, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  version: 3
+  materialIdsValid: 1
+  spriteDefinitions:
+  - name: tileset_aztek_bedrock/0
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.0039072265, y: 0.0039072265}
+    - {x: 0.12890527, y: 0.0039072265}
+    - {x: 0.0039072265, y: 0.12890527}
+    - {x: 0.12890527, y: 0.12890527}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 64759b6b83a4e8542b67968f7712f9ab, type: 2}
+    materialId: 0
+    sourceTextureGUID: 8b81a1353fa445e4583590c72016d86e
+    extractRegion: 1
+    regionX: 0
+    regionY: 896
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_bedrock/1
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.0039072265, y: 0.13671973}
+    - {x: 0.12890527, y: 0.13671973}
+    - {x: 0.0039072265, y: 0.26171777}
+    - {x: 0.12890527, y: 0.26171777}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 64759b6b83a4e8542b67968f7712f9ab, type: 2}
+    materialId: 0
+    sourceTextureGUID: 8b81a1353fa445e4583590c72016d86e
+    extractRegion: 1
+    regionX: 128
+    regionY: 896
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_bedrock/2
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.0039072265, y: 0.26953223}
+    - {x: 0.12890527, y: 0.26953223}
+    - {x: 0.0039072265, y: 0.39453027}
+    - {x: 0.12890527, y: 0.39453027}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 64759b6b83a4e8542b67968f7712f9ab, type: 2}
+    materialId: 0
+    sourceTextureGUID: 8b81a1353fa445e4583590c72016d86e
+    extractRegion: 1
+    regionX: 256
+    regionY: 896
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_bedrock/3
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.0039072265, y: 0.40234473}
+    - {x: 0.12890527, y: 0.40234473}
+    - {x: 0.0039072265, y: 0.5273428}
+    - {x: 0.12890527, y: 0.5273428}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 64759b6b83a4e8542b67968f7712f9ab, type: 2}
+    materialId: 0
+    sourceTextureGUID: 8b81a1353fa445e4583590c72016d86e
+    extractRegion: 1
+    regionX: 384
+    regionY: 896
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_bedrock/4
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.0039072265, y: 0.5351572}
+    - {x: 0.12890527, y: 0.5351572}
+    - {x: 0.0039072265, y: 0.6601553}
+    - {x: 0.12890527, y: 0.6601553}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 64759b6b83a4e8542b67968f7712f9ab, type: 2}
+    materialId: 0
+    sourceTextureGUID: 8b81a1353fa445e4583590c72016d86e
+    extractRegion: 1
+    regionX: 512
+    regionY: 896
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_bedrock/5
+    boundsData:
+    - {x: -31.75, y: 0, z: 0}
+    - {x: 0.5, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: -31.5, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: -31.5, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.9443369, y: 0.038086914}
+    - {x: 0.94531155, y: 0.038086914}
+    - {x: 0.9443369, y: 0.16308495}
+    - {x: 0.94531155, y: 0.16308495}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 64759b6b83a4e8542b67968f7712f9ab, type: 2}
+    materialId: 0
+    sourceTextureGUID: 8b81a1353fa445e4583590c72016d86e
+    extractRegion: 1
+    regionX: 640
+    regionY: 896
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_bedrock/6
+    boundsData:
+    - {x: 0.25, y: 0.25, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.5, y: 0, z: 0}
+    - {x: 0, y: 0.5, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.0039072265, y: 0.9990244}
+    - {x: -0.002930664, y: 0.9990244}
+    - {x: 0.0039072265, y: 0.99218655}
+    - {x: -0.002930664, y: 0.99218655}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 64759b6b83a4e8542b67968f7712f9ab, type: 2}
+    materialId: 0
+    sourceTextureGUID: 8b81a1353fa445e4583590c72016d86e
+    extractRegion: 1
+    regionX: 768
+    regionY: 896
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_bedrock/7
+    boundsData:
+    - {x: 0.25, y: 0.25, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.5, y: 0, z: 0}
+    - {x: 0, y: 0.5, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.0039072265, y: 1.000001}
+    - {x: -0.002930664, y: 1.000001}
+    - {x: 0.0039072265, y: 0.9931631}
+    - {x: -0.002930664, y: 0.9931631}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 64759b6b83a4e8542b67968f7712f9ab, type: 2}
+    materialId: 0
+    sourceTextureGUID: 8b81a1353fa445e4583590c72016d86e
+    extractRegion: 1
+    regionX: 896
+    regionY: 896
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_bedrock/8
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.0039072265, y: 0.6679697}
+    - {x: 0.12890527, y: 0.6679697}
+    - {x: 0.0039072265, y: 0.7929678}
+    - {x: 0.12890527, y: 0.7929678}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 64759b6b83a4e8542b67968f7712f9ab, type: 2}
+    materialId: 0
+    sourceTextureGUID: 8b81a1353fa445e4583590c72016d86e
+    extractRegion: 1
+    regionX: 0
+    regionY: 768
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_bedrock/9
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.0039072265, y: 0.8007822}
+    - {x: 0.12890527, y: 0.8007822}
+    - {x: 0.0039072265, y: 0.9257803}
+    - {x: 0.12890527, y: 0.9257803}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 64759b6b83a4e8542b67968f7712f9ab, type: 2}
+    materialId: 0
+    sourceTextureGUID: 8b81a1353fa445e4583590c72016d86e
+    extractRegion: 1
+    regionX: 128
+    regionY: 768
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_bedrock/10
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.13671973, y: 0.0039072265}
+    - {x: 0.26171777, y: 0.0039072265}
+    - {x: 0.13671973, y: 0.12890527}
+    - {x: 0.26171777, y: 0.12890527}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 64759b6b83a4e8542b67968f7712f9ab, type: 2}
+    materialId: 0
+    sourceTextureGUID: 8b81a1353fa445e4583590c72016d86e
+    extractRegion: 1
+    regionX: 256
+    regionY: 768
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_bedrock/11
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.26953223, y: 0.0039072265}
+    - {x: 0.39453027, y: 0.0039072265}
+    - {x: 0.26953223, y: 0.12890527}
+    - {x: 0.39453027, y: 0.12890527}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 64759b6b83a4e8542b67968f7712f9ab, type: 2}
+    materialId: 0
+    sourceTextureGUID: 8b81a1353fa445e4583590c72016d86e
+    extractRegion: 1
+    regionX: 384
+    regionY: 768
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_bedrock/12
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.40234473, y: 0.0039072265}
+    - {x: 0.5273428, y: 0.0039072265}
+    - {x: 0.40234473, y: 0.12890527}
+    - {x: 0.5273428, y: 0.12890527}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 64759b6b83a4e8542b67968f7712f9ab, type: 2}
+    materialId: 0
+    sourceTextureGUID: 8b81a1353fa445e4583590c72016d86e
+    extractRegion: 1
+    regionX: 512
+    regionY: 768
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_bedrock/13
+    boundsData:
+    - {x: -31.75, y: 0, z: 0}
+    - {x: 0.5, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: -31.5, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: -31.5, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.95312595, y: 0.038086914}
+    - {x: 0.9541006, y: 0.038086914}
+    - {x: 0.95312595, y: 0.16308495}
+    - {x: 0.9541006, y: 0.16308495}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 64759b6b83a4e8542b67968f7712f9ab, type: 2}
+    materialId: 0
+    sourceTextureGUID: 8b81a1353fa445e4583590c72016d86e
+    extractRegion: 1
+    regionX: 640
+    regionY: 768
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_bedrock/14
+    boundsData:
+    - {x: 0.25, y: 0.25, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.5, y: 0, z: 0}
+    - {x: 0, y: 0.5, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.0039072265, y: 1.0009775}
+    - {x: -0.002930664, y: 1.0009775}
+    - {x: 0.0039072265, y: 0.9941397}
+    - {x: -0.002930664, y: 0.9941397}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 64759b6b83a4e8542b67968f7712f9ab, type: 2}
+    materialId: 0
+    sourceTextureGUID: 8b81a1353fa445e4583590c72016d86e
+    extractRegion: 1
+    regionX: 768
+    regionY: 768
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_bedrock/15
+    boundsData:
+    - {x: 0.25, y: 0.25, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.5, y: 0, z: 0}
+    - {x: 0, y: 0.5, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.0039072265, y: 1.0019541}
+    - {x: -0.002930664, y: 1.0019541}
+    - {x: 0.0039072265, y: 0.99511623}
+    - {x: -0.002930664, y: 0.99511623}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 64759b6b83a4e8542b67968f7712f9ab, type: 2}
+    materialId: 0
+    sourceTextureGUID: 8b81a1353fa445e4583590c72016d86e
+    extractRegion: 1
+    regionX: 896
+    regionY: 768
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_bedrock/16
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.5351572, y: 0.0039072265}
+    - {x: 0.6601553, y: 0.0039072265}
+    - {x: 0.5351572, y: 0.12890527}
+    - {x: 0.6601553, y: 0.12890527}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 64759b6b83a4e8542b67968f7712f9ab, type: 2}
+    materialId: 0
+    sourceTextureGUID: 8b81a1353fa445e4583590c72016d86e
+    extractRegion: 1
+    regionX: 0
+    regionY: 640
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_bedrock/17
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.6679697, y: 0.0039072265}
+    - {x: 0.7929678, y: 0.0039072265}
+    - {x: 0.6679697, y: 0.12890527}
+    - {x: 0.7929678, y: 0.12890527}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 64759b6b83a4e8542b67968f7712f9ab, type: 2}
+    materialId: 0
+    sourceTextureGUID: 8b81a1353fa445e4583590c72016d86e
+    extractRegion: 1
+    regionX: 128
+    regionY: 640
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_bedrock/18
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.8007822, y: 0.0039072265}
+    - {x: 0.9257803, y: 0.0039072265}
+    - {x: 0.8007822, y: 0.12890527}
+    - {x: 0.9257803, y: 0.12890527}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 64759b6b83a4e8542b67968f7712f9ab, type: 2}
+    materialId: 0
+    sourceTextureGUID: 8b81a1353fa445e4583590c72016d86e
+    extractRegion: 1
+    regionX: 256
+    regionY: 640
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_bedrock/19
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.13671973, y: 0.13671973}
+    - {x: 0.26171777, y: 0.13671973}
+    - {x: 0.13671973, y: 0.26171777}
+    - {x: 0.26171777, y: 0.26171777}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 64759b6b83a4e8542b67968f7712f9ab, type: 2}
+    materialId: 0
+    sourceTextureGUID: 8b81a1353fa445e4583590c72016d86e
+    extractRegion: 1
+    regionX: 384
+    regionY: 640
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_bedrock/20
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.26953223, y: 0.13671973}
+    - {x: 0.39453027, y: 0.13671973}
+    - {x: 0.26953223, y: 0.26171777}
+    - {x: 0.39453027, y: 0.26171777}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 64759b6b83a4e8542b67968f7712f9ab, type: 2}
+    materialId: 0
+    sourceTextureGUID: 8b81a1353fa445e4583590c72016d86e
+    extractRegion: 1
+    regionX: 512
+    regionY: 640
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_bedrock/21
+    boundsData:
+    - {x: -31.75, y: 0, z: 0}
+    - {x: 0.5, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: -31.5, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: -31.5, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.961915, y: 0.038086914}
+    - {x: 0.9628897, y: 0.038086914}
+    - {x: 0.961915, y: 0.16308495}
+    - {x: 0.9628897, y: 0.16308495}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 64759b6b83a4e8542b67968f7712f9ab, type: 2}
+    materialId: 0
+    sourceTextureGUID: 8b81a1353fa445e4583590c72016d86e
+    extractRegion: 1
+    regionX: 640
+    regionY: 640
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_bedrock/22
+    boundsData:
+    - {x: 0.25, y: 0.25, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.5, y: 0, z: 0}
+    - {x: 0, y: 0.5, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.0039072265, y: 1.0029306}
+    - {x: -0.002930664, y: 1.0029306}
+    - {x: 0.0039072265, y: 0.9960928}
+    - {x: -0.002930664, y: 0.9960928}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 64759b6b83a4e8542b67968f7712f9ab, type: 2}
+    materialId: 0
+    sourceTextureGUID: 8b81a1353fa445e4583590c72016d86e
+    extractRegion: 1
+    regionX: 768
+    regionY: 640
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_bedrock/23
+    boundsData:
+    - {x: 0.25, y: 0.25, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.5, y: 0, z: 0}
+    - {x: 0, y: 0.5, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.004883789, y: 0.9990244}
+    - {x: -0.0019541015, y: 0.9990244}
+    - {x: 0.004883789, y: 0.99218655}
+    - {x: -0.0019541015, y: 0.99218655}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 64759b6b83a4e8542b67968f7712f9ab, type: 2}
+    materialId: 0
+    sourceTextureGUID: 8b81a1353fa445e4583590c72016d86e
+    extractRegion: 1
+    regionX: 896
+    regionY: 640
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_bedrock/24
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.40234473, y: 0.13671973}
+    - {x: 0.5273428, y: 0.13671973}
+    - {x: 0.40234473, y: 0.26171777}
+    - {x: 0.5273428, y: 0.26171777}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 64759b6b83a4e8542b67968f7712f9ab, type: 2}
+    materialId: 0
+    sourceTextureGUID: 8b81a1353fa445e4583590c72016d86e
+    extractRegion: 1
+    regionX: 0
+    regionY: 512
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_bedrock/25
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.5351572, y: 0.13671973}
+    - {x: 0.6601553, y: 0.13671973}
+    - {x: 0.5351572, y: 0.26171777}
+    - {x: 0.6601553, y: 0.26171777}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 64759b6b83a4e8542b67968f7712f9ab, type: 2}
+    materialId: 0
+    sourceTextureGUID: 8b81a1353fa445e4583590c72016d86e
+    extractRegion: 1
+    regionX: 128
+    regionY: 512
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_bedrock/26
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.6679697, y: 0.13671973}
+    - {x: 0.7929678, y: 0.13671973}
+    - {x: 0.6679697, y: 0.26171777}
+    - {x: 0.7929678, y: 0.26171777}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 64759b6b83a4e8542b67968f7712f9ab, type: 2}
+    materialId: 0
+    sourceTextureGUID: 8b81a1353fa445e4583590c72016d86e
+    extractRegion: 1
+    regionX: 256
+    regionY: 512
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_bedrock/27
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.8007822, y: 0.13671973}
+    - {x: 0.9257803, y: 0.13671973}
+    - {x: 0.8007822, y: 0.26171777}
+    - {x: 0.9257803, y: 0.26171777}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 64759b6b83a4e8542b67968f7712f9ab, type: 2}
+    materialId: 0
+    sourceTextureGUID: 8b81a1353fa445e4583590c72016d86e
+    extractRegion: 1
+    regionX: 384
+    regionY: 512
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_bedrock/28
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.13671973, y: 0.26953223}
+    - {x: 0.26171777, y: 0.26953223}
+    - {x: 0.13671973, y: 0.39453027}
+    - {x: 0.26171777, y: 0.39453027}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 64759b6b83a4e8542b67968f7712f9ab, type: 2}
+    materialId: 0
+    sourceTextureGUID: 8b81a1353fa445e4583590c72016d86e
+    extractRegion: 1
+    regionX: 512
+    regionY: 512
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_bedrock/29
+    boundsData:
+    - {x: -31.25, y: 0, z: 0}
+    - {x: 1.5, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: -30.5, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: -30.5, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.9335947, y: 0.038086914}
+    - {x: 0.9365225, y: 0.038086914}
+    - {x: 0.9335947, y: 0.16308495}
+    - {x: 0.9365225, y: 0.16308495}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 64759b6b83a4e8542b67968f7712f9ab, type: 2}
+    materialId: 0
+    sourceTextureGUID: 8b81a1353fa445e4583590c72016d86e
+    extractRegion: 1
+    regionX: 640
+    regionY: 512
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_bedrock/30
+    boundsData:
+    - {x: 0.25, y: 0.25, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.5, y: 0, z: 0}
+    - {x: 0, y: 0.5, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.004883789, y: 1.000001}
+    - {x: -0.0019541015, y: 1.000001}
+    - {x: 0.004883789, y: 0.9931631}
+    - {x: -0.0019541015, y: 0.9931631}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 64759b6b83a4e8542b67968f7712f9ab, type: 2}
+    materialId: 0
+    sourceTextureGUID: 8b81a1353fa445e4583590c72016d86e
+    extractRegion: 1
+    regionX: 768
+    regionY: 512
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_bedrock/31
+    boundsData:
+    - {x: 0.25, y: 0.25, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.5, y: 0, z: 0}
+    - {x: 0, y: 0.5, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.004883789, y: 1.0009775}
+    - {x: -0.0019541015, y: 1.0009775}
+    - {x: 0.004883789, y: 0.9941397}
+    - {x: -0.0019541015, y: 0.9941397}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 64759b6b83a4e8542b67968f7712f9ab, type: 2}
+    materialId: 0
+    sourceTextureGUID: 8b81a1353fa445e4583590c72016d86e
+    extractRegion: 1
+    regionX: 896
+    regionY: 512
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_bedrock/32
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.13671973, y: 0.40234473}
+    - {x: 0.26171777, y: 0.40234473}
+    - {x: 0.13671973, y: 0.5273428}
+    - {x: 0.26171777, y: 0.5273428}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 64759b6b83a4e8542b67968f7712f9ab, type: 2}
+    materialId: 0
+    sourceTextureGUID: 8b81a1353fa445e4583590c72016d86e
+    extractRegion: 1
+    regionX: 0
+    regionY: 384
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_bedrock/33
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.13671973, y: 0.5351572}
+    - {x: 0.26171777, y: 0.5351572}
+    - {x: 0.13671973, y: 0.6601553}
+    - {x: 0.26171777, y: 0.6601553}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 64759b6b83a4e8542b67968f7712f9ab, type: 2}
+    materialId: 0
+    sourceTextureGUID: 8b81a1353fa445e4583590c72016d86e
+    extractRegion: 1
+    regionX: 128
+    regionY: 384
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_bedrock/34
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.13671973, y: 0.6679697}
+    - {x: 0.26171777, y: 0.6679697}
+    - {x: 0.13671973, y: 0.7929678}
+    - {x: 0.26171777, y: 0.7929678}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 64759b6b83a4e8542b67968f7712f9ab, type: 2}
+    materialId: 0
+    sourceTextureGUID: 8b81a1353fa445e4583590c72016d86e
+    extractRegion: 1
+    regionX: 256
+    regionY: 384
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_bedrock/35
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.13671973, y: 0.8007822}
+    - {x: 0.26171777, y: 0.8007822}
+    - {x: 0.13671973, y: 0.9257803}
+    - {x: 0.26171777, y: 0.9257803}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 64759b6b83a4e8542b67968f7712f9ab, type: 2}
+    materialId: 0
+    sourceTextureGUID: 8b81a1353fa445e4583590c72016d86e
+    extractRegion: 1
+    regionX: 384
+    regionY: 384
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_bedrock/36
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.26953223, y: 0.26953223}
+    - {x: 0.39453027, y: 0.26953223}
+    - {x: 0.26953223, y: 0.39453027}
+    - {x: 0.39453027, y: 0.39453027}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 64759b6b83a4e8542b67968f7712f9ab, type: 2}
+    materialId: 0
+    sourceTextureGUID: 8b81a1353fa445e4583590c72016d86e
+    extractRegion: 1
+    regionX: 512
+    regionY: 384
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_bedrock/37
+    boundsData:
+    - {x: -31.75, y: 0, z: 0}
+    - {x: 0.5, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: -31.5, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: -31.5, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.9707041, y: 0.038086914}
+    - {x: 0.97167873, y: 0.038086914}
+    - {x: 0.9707041, y: 0.16308495}
+    - {x: 0.97167873, y: 0.16308495}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 64759b6b83a4e8542b67968f7712f9ab, type: 2}
+    materialId: 0
+    sourceTextureGUID: 8b81a1353fa445e4583590c72016d86e
+    extractRegion: 1
+    regionX: 640
+    regionY: 384
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_bedrock/38
+    boundsData:
+    - {x: 0.25, y: 0.25, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.5, y: 0, z: 0}
+    - {x: 0, y: 0.5, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.004883789, y: 1.0019541}
+    - {x: -0.0019541015, y: 1.0019541}
+    - {x: 0.004883789, y: 0.99511623}
+    - {x: -0.0019541015, y: 0.99511623}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 64759b6b83a4e8542b67968f7712f9ab, type: 2}
+    materialId: 0
+    sourceTextureGUID: 8b81a1353fa445e4583590c72016d86e
+    extractRegion: 1
+    regionX: 768
+    regionY: 384
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_bedrock/39
+    boundsData:
+    - {x: 0.25, y: 0.25, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.5, y: 0, z: 0}
+    - {x: 0, y: 0.5, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.004883789, y: 1.0029306}
+    - {x: -0.0019541015, y: 1.0029306}
+    - {x: 0.004883789, y: 0.9960928}
+    - {x: -0.0019541015, y: 0.9960928}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 64759b6b83a4e8542b67968f7712f9ab, type: 2}
+    materialId: 0
+    sourceTextureGUID: 8b81a1353fa445e4583590c72016d86e
+    extractRegion: 1
+    regionX: 896
+    regionY: 384
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_bedrock/40
+    boundsData:
+    - {x: 25.25, y: 17.25, z: 0}
+    - {x: 13.5, y: 29.5, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: 18.5, y: 2.5, z: 0}
+    - {x: 32, y: 2.5, z: 0}
+    - {x: 18.5, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.9335947, y: 0.0039072265}
+    - {x: 0.9335947, y: 0.030272461}
+    - {x: 0.99121, y: 0.0039072265}
+    - {x: 0.99121, y: 0.030272461}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 64759b6b83a4e8542b67968f7712f9ab, type: 2}
+    materialId: 0
+    sourceTextureGUID: 8b81a1353fa445e4583590c72016d86e
+    extractRegion: 1
+    regionX: 0
+    regionY: 256
+    regionW: 128
+    regionH: 128
+    flipped: 1
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_bedrock/41
+    boundsData:
+    - {x: 0, y: 9.25, z: 0}
+    - {x: 64, y: 45.5, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -13.5, z: 0}
+    - {x: 32, y: -13.5, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.26953223, y: 0.6679697}
+    - {x: 0.26953223, y: 0.7929678}
+    - {x: 0.35839745, y: 0.6679697}
+    - {x: 0.35839745, y: 0.7929678}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 64759b6b83a4e8542b67968f7712f9ab, type: 2}
+    materialId: 0
+    sourceTextureGUID: 8b81a1353fa445e4583590c72016d86e
+    extractRegion: 1
+    regionX: 128
+    regionY: 256
+    regionW: 128
+    regionH: 128
+    flipped: 1
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_bedrock/42
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.26953223, y: 0.40234473}
+    - {x: 0.39453027, y: 0.40234473}
+    - {x: 0.26953223, y: 0.5273428}
+    - {x: 0.39453027, y: 0.5273428}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 64759b6b83a4e8542b67968f7712f9ab, type: 2}
+    materialId: 0
+    sourceTextureGUID: 8b81a1353fa445e4583590c72016d86e
+    extractRegion: 1
+    regionX: 256
+    regionY: 256
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_bedrock/43
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: -32, z: 0}
+    - {x: 32, y: -32, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.26953223, y: 0.5351572}
+    - {x: 0.39453027, y: 0.5351572}
+    - {x: 0.26953223, y: 0.6601553}
+    - {x: 0.39453027, y: 0.6601553}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 64759b6b83a4e8542b67968f7712f9ab, type: 2}
+    materialId: 0
+    sourceTextureGUID: 8b81a1353fa445e4583590c72016d86e
+    extractRegion: 1
+    regionX: 384
+    regionY: 256
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_bedrock/44
+    boundsData:
+    - {x: 0, y: 17.25, z: 0}
+    - {x: 64, y: 29.5, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: 2.5, z: 0}
+    - {x: 32, y: 2.5, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.0039072265, y: 0.9335947}
+    - {x: 0.12890527, y: 0.9335947}
+    - {x: 0.0039072265, y: 0.99121}
+    - {x: 0.12890527, y: 0.99121}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 64759b6b83a4e8542b67968f7712f9ab, type: 2}
+    materialId: 0
+    sourceTextureGUID: 8b81a1353fa445e4583590c72016d86e
+    extractRegion: 1
+    regionX: 512
+    regionY: 256
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_bedrock/45
+    boundsData:
+    - {x: -31.75, y: 25, z: 0}
+    - {x: 0.5, y: 14, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: 18, z: 0}
+    - {x: -31.5, y: 18, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: -31.5, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.99218845, y: 0.038086914}
+    - {x: 0.9931631, y: 0.038086914}
+    - {x: 0.99218845, y: 0.06542871}
+    - {x: 0.9931631, y: 0.06542871}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 64759b6b83a4e8542b67968f7712f9ab, type: 2}
+    materialId: 0
+    sourceTextureGUID: 8b81a1353fa445e4583590c72016d86e
+    extractRegion: 1
+    regionX: 640
+    regionY: 256
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_bedrock/46
+    boundsData:
+    - {x: 0.25, y: 0.25, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.5, y: 0, z: 0}
+    - {x: 0, y: 0.5, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.0058603515, y: 0.9990244}
+    - {x: -0.0009775391, y: 0.9990244}
+    - {x: 0.0058603515, y: 0.99218655}
+    - {x: -0.0009775391, y: 0.99218655}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 64759b6b83a4e8542b67968f7712f9ab, type: 2}
+    materialId: 0
+    sourceTextureGUID: 8b81a1353fa445e4583590c72016d86e
+    extractRegion: 1
+    regionX: 768
+    regionY: 256
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_bedrock/47
+    boundsData:
+    - {x: 0.25, y: 0.25, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.5, y: 0, z: 0}
+    - {x: 0, y: 0.5, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.0058603515, y: 1.000001}
+    - {x: -0.0009775391, y: 1.000001}
+    - {x: 0.0058603515, y: 0.9931631}
+    - {x: -0.0009775391, y: 0.9931631}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 64759b6b83a4e8542b67968f7712f9ab, type: 2}
+    materialId: 0
+    sourceTextureGUID: 8b81a1353fa445e4583590c72016d86e
+    extractRegion: 1
+    regionX: 896
+    regionY: 256
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_bedrock/48
+    boundsData:
+    - {x: 0.25, y: 0.25, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.5, y: 0, z: 0}
+    - {x: 0, y: 0.5, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.0058603515, y: 1.0009775}
+    - {x: -0.0009775391, y: 1.0009775}
+    - {x: 0.0058603515, y: 0.9941397}
+    - {x: -0.0009775391, y: 0.9941397}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 64759b6b83a4e8542b67968f7712f9ab, type: 2}
+    materialId: 0
+    sourceTextureGUID: 8b81a1353fa445e4583590c72016d86e
+    extractRegion: 1
+    regionX: 0
+    regionY: 128
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_bedrock/49
+    boundsData:
+    - {x: 0.25, y: 0.25, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.5, y: 0, z: 0}
+    - {x: 0, y: 0.5, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.0058603515, y: 1.0019541}
+    - {x: -0.0009775391, y: 1.0019541}
+    - {x: 0.0058603515, y: 0.99511623}
+    - {x: -0.0009775391, y: 0.99511623}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 64759b6b83a4e8542b67968f7712f9ab, type: 2}
+    materialId: 0
+    sourceTextureGUID: 8b81a1353fa445e4583590c72016d86e
+    extractRegion: 1
+    regionX: 128
+    regionY: 128
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_bedrock/50
+    boundsData:
+    - {x: 14.75, y: 30.75, z: 0}
+    - {x: 34.5, y: 2.5, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -2.5, y: 29.5, z: 0}
+    - {x: 32, y: 29.5, z: 0}
+    - {x: -2.5, y: 32, z: 0}
+    - {x: 32, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.97949314, y: 0.038086914}
+    - {x: 0.97949314, y: 0.105467774}
+    - {x: 0.98437405, y: 0.038086914}
+    - {x: 0.98437405, y: 0.105467774}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 64759b6b83a4e8542b67968f7712f9ab, type: 2}
+    materialId: 0
+    sourceTextureGUID: 8b81a1353fa445e4583590c72016d86e
+    extractRegion: 1
+    regionX: 256
+    regionY: 128
+    regionW: 128
+    regionH: 128
+    flipped: 1
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_bedrock/51
+    boundsData:
+    - {x: -31.5, y: 31.75, z: 0}
+    - {x: 1, y: 0.5, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -32, y: 31.5, z: 0}
+    - {x: -31, y: 31.5, z: 0}
+    - {x: -32, y: 32, z: 0}
+    - {x: -31, y: 32, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.99218845, y: 0.07324316}
+    - {x: 0.9941397, y: 0.07324316}
+    - {x: 0.99218845, y: 0.074217774}
+    - {x: 0.9941397, y: 0.074217774}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 64759b6b83a4e8542b67968f7712f9ab, type: 2}
+    materialId: 0
+    sourceTextureGUID: 8b81a1353fa445e4583590c72016d86e
+    extractRegion: 1
+    regionX: 384
+    regionY: 128
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_bedrock/52
+    boundsData:
+    - {x: 0.25, y: 0.25, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.5, y: 0, z: 0}
+    - {x: 0, y: 0.5, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.0058603515, y: 1.0029306}
+    - {x: -0.0009775391, y: 1.0029306}
+    - {x: 0.0058603515, y: 0.9960928}
+    - {x: -0.0009775391, y: 0.9960928}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 64759b6b83a4e8542b67968f7712f9ab, type: 2}
+    materialId: 0
+    sourceTextureGUID: 8b81a1353fa445e4583590c72016d86e
+    extractRegion: 1
+    regionX: 512
+    regionY: 128
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_bedrock/53
+    boundsData:
+    - {x: 0.25, y: 0.25, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.5, y: 0, z: 0}
+    - {x: 0, y: 0.5, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.006836914, y: 0.9990244}
+    - {x: -9.765625E-07, y: 0.9990244}
+    - {x: 0.006836914, y: 0.99218655}
+    - {x: -9.765625E-07, y: 0.99218655}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 64759b6b83a4e8542b67968f7712f9ab, type: 2}
+    materialId: 0
+    sourceTextureGUID: 8b81a1353fa445e4583590c72016d86e
+    extractRegion: 1
+    regionX: 640
+    regionY: 128
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_bedrock/54
+    boundsData:
+    - {x: 0.25, y: 0.25, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.5, y: 0, z: 0}
+    - {x: 0, y: 0.5, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.006836914, y: 1.000001}
+    - {x: -9.765625E-07, y: 1.000001}
+    - {x: 0.006836914, y: 0.9931631}
+    - {x: -9.765625E-07, y: 0.9931631}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 64759b6b83a4e8542b67968f7712f9ab, type: 2}
+    materialId: 0
+    sourceTextureGUID: 8b81a1353fa445e4583590c72016d86e
+    extractRegion: 1
+    regionX: 768
+    regionY: 128
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_bedrock/55
+    boundsData:
+    - {x: 0.25, y: 0.25, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.5, y: 0, z: 0}
+    - {x: 0, y: 0.5, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.006836914, y: 1.0009775}
+    - {x: -9.765625E-07, y: 1.0009775}
+    - {x: 0.006836914, y: 0.9941397}
+    - {x: -9.765625E-07, y: 0.9941397}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 64759b6b83a4e8542b67968f7712f9ab, type: 2}
+    materialId: 0
+    sourceTextureGUID: 8b81a1353fa445e4583590c72016d86e
+    extractRegion: 1
+    regionX: 896
+    regionY: 128
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_bedrock/56
+    boundsData:
+    - {x: 0.25, y: 0.25, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.5, y: 0, z: 0}
+    - {x: 0, y: 0.5, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.006836914, y: 1.0019541}
+    - {x: -9.765625E-07, y: 1.0019541}
+    - {x: 0.006836914, y: 0.99511623}
+    - {x: -9.765625E-07, y: 0.99511623}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 64759b6b83a4e8542b67968f7712f9ab, type: 2}
+    materialId: 0
+    sourceTextureGUID: 8b81a1353fa445e4583590c72016d86e
+    extractRegion: 1
+    regionX: 0
+    regionY: 0
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_bedrock/57
+    boundsData:
+    - {x: 0.25, y: 0.25, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.5, y: 0, z: 0}
+    - {x: 0, y: 0.5, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.006836914, y: 1.0029306}
+    - {x: -9.765625E-07, y: 1.0029306}
+    - {x: 0.006836914, y: 0.9960928}
+    - {x: -9.765625E-07, y: 0.9960928}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 64759b6b83a4e8542b67968f7712f9ab, type: 2}
+    materialId: 0
+    sourceTextureGUID: 8b81a1353fa445e4583590c72016d86e
+    extractRegion: 1
+    regionX: 128
+    regionY: 0
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_bedrock/58
+    boundsData:
+    - {x: 0.25, y: 0.25, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.5, y: 0, z: 0}
+    - {x: 0, y: 0.5, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.007813477, y: 0.9990244}
+    - {x: 0.00097558595, y: 0.9990244}
+    - {x: 0.007813477, y: 0.99218655}
+    - {x: 0.00097558595, y: 0.99218655}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 64759b6b83a4e8542b67968f7712f9ab, type: 2}
+    materialId: 0
+    sourceTextureGUID: 8b81a1353fa445e4583590c72016d86e
+    extractRegion: 1
+    regionX: 256
+    regionY: 0
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_bedrock/59
+    boundsData:
+    - {x: 0.25, y: 0.25, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.5, y: 0, z: 0}
+    - {x: 0, y: 0.5, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.007813477, y: 1.000001}
+    - {x: 0.00097558595, y: 1.000001}
+    - {x: 0.007813477, y: 0.9931631}
+    - {x: 0.00097558595, y: 0.9931631}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 64759b6b83a4e8542b67968f7712f9ab, type: 2}
+    materialId: 0
+    sourceTextureGUID: 8b81a1353fa445e4583590c72016d86e
+    extractRegion: 1
+    regionX: 384
+    regionY: 0
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_bedrock/60
+    boundsData:
+    - {x: 0.25, y: 0.25, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.5, y: 0, z: 0}
+    - {x: 0, y: 0.5, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.007813477, y: 1.0009775}
+    - {x: 0.00097558595, y: 1.0009775}
+    - {x: 0.007813477, y: 0.9941397}
+    - {x: 0.00097558595, y: 0.9941397}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 64759b6b83a4e8542b67968f7712f9ab, type: 2}
+    materialId: 0
+    sourceTextureGUID: 8b81a1353fa445e4583590c72016d86e
+    extractRegion: 1
+    regionX: 512
+    regionY: 0
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_bedrock/61
+    boundsData:
+    - {x: 0.25, y: 0.25, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.5, y: 0, z: 0}
+    - {x: 0, y: 0.5, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.007813477, y: 1.0019541}
+    - {x: 0.00097558595, y: 1.0019541}
+    - {x: 0.007813477, y: 0.99511623}
+    - {x: 0.00097558595, y: 0.99511623}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 64759b6b83a4e8542b67968f7712f9ab, type: 2}
+    materialId: 0
+    sourceTextureGUID: 8b81a1353fa445e4583590c72016d86e
+    extractRegion: 1
+    regionX: 640
+    regionY: 0
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_bedrock/62
+    boundsData:
+    - {x: 0.25, y: 0.25, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.5, y: 0, z: 0}
+    - {x: 0, y: 0.5, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.007813477, y: 1.0029306}
+    - {x: 0.00097558595, y: 1.0029306}
+    - {x: 0.007813477, y: 0.9960928}
+    - {x: 0.00097558595, y: 0.9960928}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 64759b6b83a4e8542b67968f7712f9ab, type: 2}
+    materialId: 0
+    sourceTextureGUID: 8b81a1353fa445e4583590c72016d86e
+    extractRegion: 1
+    regionX: 768
+    regionY: 0
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_aztek_bedrock/63
+    boundsData:
+    - {x: 0.25, y: 0.25, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 64, y: 64, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0.5, y: 0, z: 0}
+    - {x: 0, y: 0.5, z: 0}
+    - {x: 0.5, y: 0.5, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.008790039, y: 0.9990244}
+    - {x: 0.0019521484, y: 0.9990244}
+    - {x: 0.008790039, y: 0.99218655}
+    - {x: 0.0019521484, y: 0.99218655}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 64759b6b83a4e8542b67968f7712f9ab, type: 2}
+    materialId: 0
+    sourceTextureGUID: 8b81a1353fa445e4583590c72016d86e
+    extractRegion: 1
+    regionX: 896
+    regionY: 0
+    regionW: 128
+    regionH: 128
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 0
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  premultipliedAlpha: 0
+  material: {fileID: 0}
+  materials:
+  - {fileID: 2100000, guid: 64759b6b83a4e8542b67968f7712f9ab, type: 2}
+  textures:
+  - {fileID: 2800000, guid: 7dc98e267cc14564ebd18a91f40b9f93, type: 3}
+  allowMultipleAtlases: 0
+  spriteCollectionGUID: e92f13269f7a54544b075a1f06224eb7
+  spriteCollectionName: tileset_aztek_bedrock
+  invOrthoSize: 0.00625
+  halfTargetHeight: 320
+  buildKey: 1460550157
+  dataGuid: 50ee28e8dc644a94b8d4cbfd557feeb4
+--- !u!1001 &100100000
+Prefab:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 147589}
+  m_IsPrefabParent: 1
+  m_IsExploded: 0

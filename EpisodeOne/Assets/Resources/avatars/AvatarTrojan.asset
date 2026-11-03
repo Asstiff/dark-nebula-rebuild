@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4101c7d2cce390aeae94def900f98a8e, type: 3}
+  m_Name: AvatarTrojan
+  m_EditorClassIdentifier:
+  Name: TROJAN_AVATAR
+  Description: TROJAN_AVATAR_DESCRIPTION
+  Price: 1000
+  IconID: vessel/24
+  SpriteCollection: {fileID: 11409266, guid: 5d7d4a8ea94fbd04b9cc3e41a7b7d412, type: 2}
+  DefaultAvatar: 0

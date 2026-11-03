@@ -1,0 +1,105 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &147589
+GameObject:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_Component:
+  - 4: {fileID: 479954}
+  - 114: {fileID: 11409266}
+  m_Layer: 0
+  m_Name: UIMenuCompressedCollection
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &479954
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 147589}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+--- !u!114 &11409266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 147589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60f28a10f064b0573af11a2e931d98da, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  version: 3
+  materialIdsValid: 1
+  spriteDefinitions:
+  - name: UI_Logoglow
+    boundsData:
+    - {x: 0.25, y: 0, z: 0}
+    - {x: 225.5, y: 109, z: 0}
+    untrimmedBoundsData:
+    - {x: 0.25, y: 0, z: 0}
+    - {x: 225.5, y: 109, z: 0}
+    texelSize: {x: 0.5, y: 0.5}
+    positions:
+    - {x: -112.5, y: -54.5, z: 0}
+    - {x: 113, y: -54.5, z: 0}
+    - {x: -112.5, y: 54.5, z: 0}
+    - {x: 113, y: 54.5, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.003908203, y: 0.003908203}
+    - {x: 0.88476366, y: 0.003908203}
+    - {x: 0.003908203, y: 0.42968553}
+    - {x: 0.88476366, y: 0.42968553}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: 3f20f6c5af78dca42b73433a40f78d14, type: 2}
+    materialId: 0
+    sourceTextureGUID: c8ba71c6ce8994f669eb277e1fba808d
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 1
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  premultipliedAlpha: 0
+  material: {fileID: 0}
+  materials:
+  - {fileID: 2100000, guid: 3f20f6c5af78dca42b73433a40f78d14, type: 2}
+  textures:
+  - {fileID: 2800000, guid: c3fb68c7af32fb44694a30d301cdfa70, type: 3}
+  allowMultipleAtlases: 0
+  spriteCollectionGUID: 4abc94b9e7119412cb801a32d10a96e7
+  spriteCollectionName: UIMenuCompressedCollection
+  invOrthoSize: 0.00625
+  halfTargetHeight: 320
+  buildKey: 1003558342
+  dataGuid: 5ea37b1dcbfea4e66828160b99c4c77d
+--- !u!1001 &100100000
+Prefab:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 147589}
+  m_IsPrefabParent: 1
+  m_IsExploded: 0

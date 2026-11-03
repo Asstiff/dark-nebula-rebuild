@@ -1,0 +1,54 @@
+public class SimpleText : Entity
+{
+	protected tk2dTextMesh _textMesh;
+
+	protected tk2dTextMesh textMesh
+	{
+		get
+		{
+			if (_textMesh == null)
+			{
+				_textMesh = GetComponent<tk2dTextMesh>();
+			}
+			return _textMesh;
+		}
+	}
+
+	public float Spacing
+	{
+		get
+		{
+			return textMesh.spacing;
+		}
+		set
+		{
+			textMesh.spacing = value;
+			_textMesh.text = _textMesh.text;
+			_textMesh.Commit();
+		}
+	}
+
+	protected override void Awake()
+	{
+		base.Awake();
+		base.alwaysAlive = true;
+		freezable = false;
+	}
+
+	public virtual void SetText(string text)
+	{
+		textMesh.text = text;
+		_textMesh.Commit();
+	}
+
+	public virtual void SetStringID(string stringID)
+	{
+		textMesh.text = Language.Get(stringID);
+		_textMesh.Commit();
+	}
+
+	public void UseCurrentTextAsStringID()
+	{
+		SetStringID(textMesh.text);
+	}
+}

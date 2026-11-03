@@ -1,0 +1,215 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &147589
+GameObject:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_Component:
+  - 4: {fileID: 479954}
+  - 114: {fileID: 11409266}
+  m_Layer: 0
+  m_Name: CreditsCollection
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &479954
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 147589}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+--- !u!114 &11409266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 147589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60f28a10f064b0573af11a2e931d98da, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  version: 3
+  materialIdsValid: 1
+  spriteDefinitions:
+  - name: tileset_matrix_credits_bg
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 500, y: 500, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 500, y: 500, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -250, y: -250, z: 0}
+    - {x: 250, y: -250, z: 0}
+    - {x: -250, y: 250, z: 0}
+    - {x: 250, y: 250, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.0019541015, y: 0.4941416}
+    - {x: 0.4902334, y: 0.4941416}
+    - {x: 0.0019541015, y: 0.9824209}
+    - {x: 0.4902334, y: 0.9824209}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: bff279279c5f75f49bd3a176ab566f34, type: 2}
+    materialId: 0
+    sourceTextureGUID: 96cdf6018d1691146a0ddbfedbe2c5e9
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 1
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: tileset_matrix_credits_front
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 500, y: 500, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 500, y: 500, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -250, y: -250, z: 0}
+    - {x: 250, y: -250, z: 0}
+    - {x: -250, y: 250, z: 0}
+    - {x: 250, y: 250, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.4941416, y: 0.4941416}
+    - {x: 0.9824209, y: 0.4941416}
+    - {x: 0.4941416, y: 0.9824209}
+    - {x: 0.9824209, y: 0.9824209}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: bff279279c5f75f49bd3a176ab566f34, type: 2}
+    materialId: 0
+    sourceTextureGUID: f2a87ba359f79de48af0b7793a67e1f5
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 1
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: vinjett
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 350, y: 350, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 350, y: 350, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -175, y: -175, z: 0}
+    - {x: 175, y: -175, z: 0}
+    - {x: -175, y: 175, z: 0}
+    - {x: 175, y: 175, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.65625095, y: 0.0019541015}
+    - {x: 0.9980459, y: 0.0019541015}
+    - {x: 0.65625095, y: 0.34374902}
+    - {x: 0.9980459, y: 0.34374902}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: bff279279c5f75f49bd3a176ab566f34, type: 2}
+    materialId: 0
+    sourceTextureGUID: db1cb938943ceff4eaeedf12578d895e
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 1
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  - name: UI_End_Screen
+    boundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 666, y: 500, z: 0}
+    untrimmedBoundsData:
+    - {x: 0, y: 0, z: 0}
+    - {x: 666, y: 500, z: 0}
+    texelSize: {x: 1, y: 1}
+    positions:
+    - {x: -333, y: -250, z: 0}
+    - {x: 333, y: -250, z: 0}
+    - {x: -333, y: 250, z: 0}
+    - {x: 333, y: 250, z: 0}
+    normals: []
+    tangents: []
+    uvs:
+    - {x: 0.0019541015, y: 0.0019541015}
+    - {x: 0.6523428, y: 0.0019541015}
+    - {x: 0.0019541015, y: 0.4902334}
+    - {x: 0.6523428, y: 0.4902334}
+    indices: 000000000300000001000000020000000300000000000000
+    material: {fileID: 2100000, guid: bff279279c5f75f49bd3a176ab566f34, type: 2}
+    materialId: 0
+    sourceTextureGUID: 75189704d9d28498093ea5452f055998
+    extractRegion: 0
+    regionX: 0
+    regionY: 0
+    regionW: 0
+    regionH: 0
+    flipped: 0
+    complexGeometry: 0
+    colliderType: 1
+    colliderVertices: []
+    colliderIndicesFwd:
+    colliderIndicesBack:
+    colliderConvex: 0
+    colliderSmoothSphereCollisions: 0
+  premultipliedAlpha: 0
+  material: {fileID: 0}
+  materials: []
+  textures:
+  - {fileID: 2800000, guid: 36dfc2dbc1d9f49458566384a75adb7f, type: 3}
+  allowMultipleAtlases: 1
+  spriteCollectionGUID: 8e8fbe0d130787f47bb808f3ed41a95e
+  spriteCollectionName: CreditsCollection
+  invOrthoSize: 0.003125
+  halfTargetHeight: 320
+  buildKey: 446322939
+  dataGuid: 09b926ef716220746bad3badd7c64c52
+--- !u!1001 &100100000
+Prefab:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 147589}
+  m_IsPrefabParent: 1
+  m_IsExploded: 0

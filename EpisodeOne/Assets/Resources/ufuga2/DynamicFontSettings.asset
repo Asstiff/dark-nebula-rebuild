@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89942e900a5b29fd32136f199e764a3b, type: 3}
+  m_Name: DynamicFontSettings
+  m_EditorClassIdentifier:
+  OrthographicSize: 240
+  Colors:
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 0.7137255, g: 0.7137255, b: 0.7137255, a: 1}
+  - {r: 1, g: 0.63529414, b: 0, a: 1}
+  - {r: 0, g: 0, b: 0, a: 1}
+  - {r: 0.1882353, g: 0.1882353, b: 0.1882353, a: 1}
+  - {r: 0.50735295, g: 0.50735295, b: 0.50735295, a: 1}
+  - {r: 0, g: 1, b: 0.0056796074, a: 1}
+  - {r: 0.0627451, g: 0.39607844, b: 0.09411765, a: 1}
+  - {r: 0.8367629, g: 0.97794116, b: 0.7550281, a: 1}
+  - {r: 0.63235295, g: 0.0697448, b: 0.0697448, a: 1}
+  - {r: 1, g: 0, b: 0, a: 1}
+  Entries:
+  - Name: Size7
+    Font: {fileID: 12800000, guid: 7565db49c6675794cbb289c56fd90534, type: 3}
+    Style: 0
+    Size: 7
+    LineSpacing: 0.65
+    FilterMode: 1
+    Overrides:
+    - Languages:
+      - ar
+      Font: {fileID: 12800000, guid: bcd82f10ae2ddd04abdacd4f1dd427fb, type: 3}
+      Style: 0
+      Size: 7
+      LineSpacing: 0.85
+      FilterMode: 1
+      Offset: {x: 0, y: 0, z: 0}
+  - Name: Size9
+    Font: {fileID: 12800000, guid: 7565db49c6675794cbb289c56fd90534, type: 3}
+    Style: 0
+    Size: 9
+    LineSpacing: 0.8
+    FilterMode: 1
+    Overrides:
+    - Languages:
+      - ar
+      Font: {fileID: 12800000, guid: bcd82f10ae2ddd04abdacd4f1dd427fb, type: 3}
+      Style: 0
+      Size: 8
+      LineSpacing: 0.9
+      FilterMode: 1
+      Offset: {x: 0, y: -3, z: 0}
+  - Name: Size11
+    Font: {fileID: 12800000, guid: 7565db49c6675794cbb289c56fd90534, type: 3}
+    Style: 0
+    Size: 11
+    LineSpacing: 0.8
+    FilterMode: 1
+    Overrides:
+    - Languages:
+      - ar
+      Font: {fileID: 12800000, guid: bcd82f10ae2ddd04abdacd4f1dd427fb, type: 3}
+      Style: 0
+      Size: 11
+      LineSpacing: 0.95
+      FilterMode: 1
+      Offset: {x: 0, y: -3, z: 0}
+  - Name: Arial
+    Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    Style: 0
+    Size: 7
+    LineSpacing: 0.65
+    FilterMode: 1
+    Overrides:
+    - Languages:
+      - ar
+      Font: {fileID: 12800000, guid: bcd82f10ae2ddd04abdacd4f1dd427fb, type: 3}
+      Style: 0
+      Size: 7
+      LineSpacing: 0.75
+      FilterMode: 1
+      Offset: {x: 0, y: -3, z: 0}
+  - Name: Size6
+    Font: {fileID: 12800000, guid: 7565db49c6675794cbb289c56fd90534, type: 3}
+    Style: 0
+    Size: 6
+    LineSpacing: 0.65
+    FilterMode: 1
+    Overrides:
+    - Languages:
+      - ar
+      Font: {fileID: 12800000, guid: bcd82f10ae2ddd04abdacd4f1dd427fb, type: 3}
+      Style: 0
+      Size: 6
+      LineSpacing: 0.8
+      FilterMode: 1
+      Offset: {x: 0, y: 0, z: 0}
+  - Name: ArialSmall
+    Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    Style: 0
+    Size: 5
+    LineSpacing: 0.65
+    FilterMode: 1
+    Overrides: []
