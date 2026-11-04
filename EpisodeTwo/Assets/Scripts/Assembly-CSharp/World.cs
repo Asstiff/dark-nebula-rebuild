@@ -334,6 +334,7 @@ public class World : MonoBehaviour
 			yield return 0;
 		}
 		hud.onResumeGame();
+        GameHaptics.Play(HapticEvent.Spawn);
 		skillMeter.Init();
 		t = Time.realtimeSinceStartup;
 		while (t > Time.realtimeSinceStartup)
@@ -459,6 +460,7 @@ public class World : MonoBehaviour
 
 	private void OnFadeInComplete()
 	{
+        ShardWallet.SpawnInLevel();
 		fade.FadeComplete -= OnFadeInComplete;
 		fade.enabled = false;
 	}
@@ -598,6 +600,7 @@ public class World : MonoBehaviour
 
 	public static void TriggerEndOfLevel()
 	{
+        GameHaptics.Play(HapticEvent.Finish);
 		DarkNebulaMetrics.EndLevel(levelNum, UserSettings.I.expert);
 		LevelCompleteScreen.Result.CompletionTime = Time.time - startTime;
 		LevelCompleteScreen.Result.LevelNum = levelNum;

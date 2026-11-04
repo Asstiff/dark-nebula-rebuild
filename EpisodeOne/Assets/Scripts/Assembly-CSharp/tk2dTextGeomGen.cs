@@ -89,23 +89,7 @@ public static class tk2dTextGeomGen
 				flag = true;
 			}
 			bool flag2 = num4 == 94;
-			tk2dFontChar tk2dFontChar2;
-			if (fontInst.useDictionary)
-			{
-				if (!fontInst.charDict.ContainsKey(num4))
-				{
-					num4 = 0;
-				}
-				tk2dFontChar2 = fontInst.charDict[num4];
-			}
-			else
-			{
-				if (num4 >= fontInst.chars.Length)
-				{
-					num4 = 0;
-				}
-				tk2dFontChar2 = fontInst.chars[num4];
-			}
+			tk2dFontChar tk2dFontChar2 = fontInst.GetSafeCharacter(num4);
 			if (flag2)
 			{
 				num4 = 94;
@@ -375,23 +359,7 @@ public static class tk2dTextGeomGen
 		{
 			int num5 = formattedText[i];
 			bool flag = num5 == 94;
-			tk2dFontChar tk2dFontChar2;
-			if (fontInst.useDictionary)
-			{
-				if (!fontInst.charDict.ContainsKey(num5))
-				{
-					num5 = 0;
-				}
-				tk2dFontChar2 = fontInst.charDict[num5];
-			}
-			else
-			{
-				if (num5 >= fontInst.chars.Length)
-				{
-					num5 = 0;
-				}
-				tk2dFontChar2 = fontInst.chars[num5];
-			}
+			tk2dFontChar tk2dFontChar2 = fontInst.GetSafeCharacter(num5);
 			if (flag)
 			{
 				num5 = 94;

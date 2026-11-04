@@ -74,7 +74,7 @@ public class ElectroPuckSlotEntity : Entity
 				centerPuck = null;
 				UpdateGfx();
 				ObjectPool.instance.GetObjectForType<Shockwave>().Play(string.Empty, base.transform.position, 0.6f, 12);
-				Audio.Play("TriggerSound", TriggerSound);
+				Audio.Play("TriggerSound", TriggerSound, transform);
 			}
 		}
 	}

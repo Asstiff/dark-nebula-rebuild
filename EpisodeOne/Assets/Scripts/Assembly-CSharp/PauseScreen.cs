@@ -11,6 +11,7 @@ public class PauseScreen : SimpleScreen
 	public ConfirmScreen confirmScreen;
 
 	private bool _isEnabled = true;
+	private int _inputEnabledFrame = -1;
 
 	public event HandlerDelegate EventResumeGame;
 
@@ -27,11 +28,11 @@ public class PauseScreen : SimpleScreen
 		btn1.GetComponentInChildren<DynamicFont>().Text = "OPTIONS".Localize();
 		btn1.GetComponentInChildren<SimpleButton>().ButtonUpEvent += delegate
 		{
+			SetEnabled(false);
 			if (EventLaunchOptions != null)
 			{
 				EventLaunchOptions();
 			}
-			SetEnabled(false);
 		};
 		btn2.GetComponentInChildren<DynamicFont>().Text = "RESTART LEVEL".Localize();
 		btn2.GetComponentInChildren<SimpleButton>().ButtonUpEvent += delegate
@@ -58,9 +59,14 @@ public class PauseScreen : SimpleScreen
 		confirmScreen.EventYES += onMainMenu;
 	}
 
+	private void OnEnable()
+	{
+		_inputEnabledFrame = Time.frameCount;
+	}
+
 	private void Update()
 	{
-		if (_isEnabled)
+		if (_isEnabled && Time.frameCount > _inputEnabledFrame)
 		{
 			if (Input.GetKeyUp(KeyCode.Escape))
 			{
@@ -76,6 +82,7 @@ public class PauseScreen : SimpleScreen
 	public void SetEnabled(bool on)
 	{
 		_isEnabled = on;
+		if (on) _inputEnabledFrame = Time.frameCount;
 		if (btn0 != null)
 		{
 			btn0.GetComponentInChildren<SimpleButton>().enabled = on;

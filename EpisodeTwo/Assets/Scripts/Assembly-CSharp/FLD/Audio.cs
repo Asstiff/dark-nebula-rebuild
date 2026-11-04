@@ -271,7 +271,7 @@ namespace FLD
 
 		public static void Play(string pID, AudioClip pClip)
 		{
-			Play(pID, pClip, Camera.main.transform.position + Camera.main.transform.forward * 10f);
+			Play(pID, pClip, Vector3.zero, null, AudioUnit.AudioType.SoundEffect, false, false);
 		}
 
 		public static void Play(string pID, AudioClip pClip, Vector3 pPosition)
@@ -297,9 +297,9 @@ namespace FLD
 			return audioUnit;
 		}
 
-		private static void Play(string pID, AudioClip pClip, Vector3 pPosition, Transform pTransform, AudioUnit.AudioType pType = AudioUnit.AudioType.SoundEffect, bool pLoop = false)
+		private static void Play(string pID, AudioClip pClip, Vector3 pPosition, Transform pTransform, AudioUnit.AudioType pType = AudioUnit.AudioType.SoundEffect, bool pLoop = false, bool pSpatial = true)
 		{
-			if (IsSoundEffectsMuted || IsSoundPlaying(pID))
+			if ((pType == AudioUnit.AudioType.SoundEffect ? IsSoundEffectsMuted : IsMusicMuted) || pClip == null || IsSoundPlaying(pID))
 			{
 				return;
 			}
@@ -329,6 +329,7 @@ namespace FLD
 			audioUnit.AudioSource.loop = pLoop;
 			audioUnit.AudioSource.playOnAwake = false;
 			audioUnit.AudioSource.priority = 128;
+			audioUnit.ConfigureStereo(pSpatial && pType == AudioUnit.AudioType.SoundEffect);
 			audioUnit.AudioSource.Play();
 			audioUnit.Play();
 			if (pTransform == null)
@@ -357,7 +358,7 @@ namespace FLD
 
 		public static void PlayLoop(string pID, AudioClip pClip)
 		{
-			Play(pID, pClip, Camera.main.transform.position + Camera.main.transform.forward * 10f, null, AudioUnit.AudioType.SoundEffect, true);
+			Play(pID, pClip, Vector3.zero, null, AudioUnit.AudioType.SoundEffect, true, false);
 		}
 
 		public static void Stop(string pID)

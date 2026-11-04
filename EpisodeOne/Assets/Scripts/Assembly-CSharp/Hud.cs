@@ -182,12 +182,13 @@ public class Hud : MonoBehaviour
 		GfxIconLives.SetActive(true);
 		GfxTextLives.GetComponent<Renderer>().enabled = true;
 		GfxTextOrbs.GetComponent<Renderer>().enabled = true;
-		GfxTextTime.GetComponent<Renderer>().enabled = true;
+		GfxTextTime.GetComponent<Renderer>().enabled = GamePreferences.ShowTimer;
 	}
 
 	private void onLaunchCalibrateScreen()
 	{
 		_optionScreen.SetEnabled(false);
+		_optionScreen.gameObject.SetActive(false);
 		_calibrateScreen.gameObject.SetActive(true);
 		_calibrateScreen.Show();
 	}
@@ -195,17 +196,20 @@ public class Hud : MonoBehaviour
 	private void onCloseCalibrateScreen()
 	{
 		_calibrateScreen.gameObject.SetActive(false);
+		_optionScreen.gameObject.SetActive(true);
 		_optionScreen.SetEnabled(true);
 	}
 
 	private void onLaunchOptions()
 	{
+		_pauseScreen.gameObject.SetActive(false);
 		_optionScreen.gameObject.SetActive(true);
 	}
 
 	private void onCloseIngameOptions()
 	{
 		_optionScreen.gameObject.SetActive(false);
+		_pauseScreen.gameObject.SetActive(true);
 		_pauseScreen.SetEnabled(true);
 	}
 
@@ -265,6 +269,7 @@ public class Hud : MonoBehaviour
 		{
 			GfxIconLives.GetComponent<Renderer>().enabled = false;
 		}
+		_textTime.GetComponent<Renderer>().enabled = GamePreferences.ShowTimer && !World.isInMatrixMode;
 		_textTime.text = LevelCompleteSection.ToTimeString(World.SecondsPlayedLevel);
 		_textTime.Commit();
 	}
@@ -298,6 +303,7 @@ public class Hud : MonoBehaviour
 
 	public void Pause()
 	{
+        GameHaptics.Cancel();
 		Time.timeScale = 0f;
 		DarkNebulaAdsManager.Instance.ShowAd("InGameMenu");
 		state = State.Pause;
@@ -318,6 +324,7 @@ public class Hud : MonoBehaviour
 
 	public void AddOrb()
 	{
+        GameHaptics.Play(HapticEvent.Pickup);
 		lifeOrbScale = 2.2f;
 		UpdateOrbs();
 	}
@@ -393,6 +400,7 @@ public class Hud : MonoBehaviour
 
 	public void ShowShieldFound()
 	{
+        GameHaptics.Play(HapticEvent.Pickup);
 		ShowShieldUpMessage("SHIELD FOUND");
 	}
 

@@ -54,11 +54,11 @@ public class LevelCircle : MonoBehaviour
 		originalPosition = base.transform.position;
 		selected.Clear();
 		selectedLevel = UserSettings.Instance.GetLastSelectedLevel(UserSettings.Instance.IsExpertMode);
-		Transform transform = base.transform.FindChild("Stars");
+		Transform transform = base.transform.Find("Stars");
 		for (int i = _firstSelectableLevel; i <= _lastSelectableLevel + 1; i++)
 		{
 			bool flag = ContentGatingManager.Instance.IsLevelGated(i) && !ContentGatingManager.Instance.IsGateUnlocked(i);
-			LevelSelectGfx component = base.transform.FindChild("Selected" + i).GetComponent<LevelSelectGfx>();
+			LevelSelectGfx component = base.transform.Find("Selected" + i).GetComponent<LevelSelectGfx>();
 			selected.Add(i, component);
 			if (component != null)
 			{
@@ -69,7 +69,7 @@ public class LevelCircle : MonoBehaviour
 					component.gameObject.SetActive(false);
 				}
 			}
-			Transform transform2 = transform.FindChild("Star" + i);
+			Transform transform2 = transform.Find("Star" + i);
 			if (!(transform2 != null))
 			{
 				continue;
@@ -180,7 +180,7 @@ public class LevelCircle : MonoBehaviour
 		Init();
 		if ((HasLevel(pLevel) && pLevel == 11) || pLevel == 23)
 		{
-			Transform transform = base.transform.FindChild("Stars");
+			Transform transform = base.transform.Find("Stars");
 			transform.gameObject.SetActive(false);
 			for (int i = _firstSelectableLevel; i <= _lastSelectableLevel; i++)
 			{

@@ -321,7 +321,7 @@ public class StarfighterVesselEntity : Vessel
 		{
 			if (!UserSettings.I.expert && !shieldActivated)
 			{
-				Audio.Play("shieldSound", shieldSound);
+				Audio.Play("shieldSound", shieldSound, transform);
 				TriggerShieldUp();
 				SpawnShockwaveInverted(base.transform.position);
 				UnityEngine.Object.Destroy(e.gameObject);
@@ -331,7 +331,7 @@ public class StarfighterVesselEntity : Vessel
 		if (e.gameObject.GetComponent<StarfighterWeaponsPickupEntity>() != null)
 		{
 			StarfighterWeaponsPickupEntity component = e.gameObject.GetComponent<StarfighterWeaponsPickupEntity>();
-			Audio.Play("pickupSound", pickupSound);
+			Audio.Play("pickupSound", pickupSound, transform);
 			UpgradeWeapons();
 			SpawnShockwaveInverted(base.transform.position);
 			component.RemoveFromWorld();

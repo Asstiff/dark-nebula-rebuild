@@ -124,7 +124,7 @@ public class VesselMatrixSpawnEntity : VesselSpawnEntity
 			standardVessel.DropFromSky();
 			standardVessel.DisableMovementInAir();
 			ObjectPool.instance.GetObjectForType<Shockwave>().Play("Big", base.transform.position, 0.7f, 8);
-			Audio.Play("endOfSpawnSound", endOfSpawnSound);
+			Audio.Play("endOfSpawnSound", endOfSpawnSound, transform);
 		}
 		if (IsEffectDone())
 		{
@@ -140,7 +140,7 @@ public class VesselMatrixSpawnEntity : VesselSpawnEntity
 	{
 		startedTwirl = true;
 		base.transform.Translate(1000f, 0f, 0f);
-		Audio.Play("spawnSound", spawnSound);
+		Audio.Play("spawnSound", spawnSound, transform);
 	}
 
 	public bool IsAnimationDone()

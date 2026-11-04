@@ -245,7 +245,10 @@ public class FugaJSON
 					{
 						char[] array = new char[4];
 						Array.Copy(json, index, array, 0, 4);
-						text = text + "&#x" + new string(array) + ";";
+						ushort codeUnit;
+                        if (!ushort.TryParse(new string(array), System.Globalization.NumberStyles.HexNumber,
+                            System.Globalization.CultureInfo.InvariantCulture, out codeUnit)) return null;
+                        text += (char)codeUnit;
 						index += 4;
 						continue;
 					}

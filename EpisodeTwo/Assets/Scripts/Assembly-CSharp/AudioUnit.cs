@@ -98,6 +98,23 @@ public class AudioUnit : MonoBehaviour
 	}
 
 	public event Action<AudioUnit> Removed;
+    private bool positionalStereo;
+    public void ConfigureStereo(bool positional)
+    {
+        positionalStereo = positional;
+        AudioSource.spatialBlend = 0f;
+        AudioSource.panStereo = 0f;
+        AudioSource.dopplerLevel = 0f;
+    }
+    private void LateUpdate()
+    {
+        if (!positionalStereo || AudioSource == null || !AudioSource.isPlaying) return;
+        Camera camera = World.cameraFollow != null ? World.cameraFollow.GetComponent<Camera>() : Camera.main;
+        if (camera == null) return;
+        float horizontal = camera.WorldToViewportPoint(transform.position).x;
+        AudioSource.panStereo = Mathf.Clamp((horizontal - .5f) * 1.7f, -.85f, .85f);
+    }
+
 
 	public void Play()
 	{

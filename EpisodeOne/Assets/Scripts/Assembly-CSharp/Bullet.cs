@@ -68,7 +68,7 @@ public class Bullet : Entity
 
 	private void ReturnToPool()
 	{
-		base.GetComponent<Rigidbody>().velocity = Vector3.zero;
+		base.GetComponent<Rigidbody>().linearVelocity = Vector3.zero;
 		ObjectPool.instance.PoolObject(this);
 		_inited = false;
 	}
@@ -91,7 +91,7 @@ public class Bullet : Entity
 			}
 			else if (collision.rigidbody != null)
 			{
-				collision.rigidbody.AddForce(collision.rigidbody.velocity + _velocity * 16f, ForceMode.VelocityChange);
+				collision.rigidbody.AddForce(collision.rigidbody.linearVelocity + _velocity * 16f, ForceMode.VelocityChange);
 			}
 			ObjectPool.instance.GetObjectForType<Particle>().Play("2", base.transform.position, 1.3f);
 			ObjectPool.instance.GetObjectForType<Particle>().Play("2", base.transform.position, 1f);

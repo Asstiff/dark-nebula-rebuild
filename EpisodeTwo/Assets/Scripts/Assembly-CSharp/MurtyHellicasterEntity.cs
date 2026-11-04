@@ -146,7 +146,7 @@ public class MurtyHellicasterEntity : Enemy
 			warningLightsTimer = 0f;
 			if (warningLightsOn)
 			{
-				Audio.Play("warning", SfxWarning);
+				Audio.Play("warning", SfxWarning, transform);
 			}
 		}
 	}
@@ -219,7 +219,7 @@ public class MurtyHellicasterEntity : Enemy
 		swingCycle = (int)(num2 / 180f);
 		if (swingCycle != prevSwingCycle && audioClip != null)
 		{
-			Audio.Play("swing", audioClip);
+			Audio.Play("swing", audioClip, transform);
 			Debug.Log("Play swing " + audioClip);
 		}
 		prevSwingCycle = swingCycle;

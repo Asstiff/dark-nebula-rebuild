@@ -49,7 +49,7 @@ public class AvatarButton : MonoBehaviour
 		}
 		else
 		{
-			_avatarIcon.color = Color.grey;
+			_avatarIcon.color = Color.black;
 		}
 	}
 }

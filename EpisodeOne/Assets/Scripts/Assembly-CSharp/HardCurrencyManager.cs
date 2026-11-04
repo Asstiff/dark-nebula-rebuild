@@ -42,11 +42,12 @@ public class HardCurrencyManager
 
 	public bool Spend(int pAmount)
 	{
-		if (pAmount > Amount)
+		if (pAmount <= 0 || pAmount > Amount)
 		{
 			return false;
 		}
 		_storage.Set("HardCurrency", Amount - pAmount);
+        _storage.Save(); PlayerPrefs.Save();
 		if (BalanceChangedEvent != null)
 		{
 			BalanceChangedEvent();
@@ -56,8 +57,10 @@ public class HardCurrencyManager
 
 	public void Earn(int pAmount)
 	{
-		int pValue = Amount + pAmount;
+		if (pAmount <= 0) return;
+		int pValue = (int)Math.Min(int.MaxValue, (long)Amount + pAmount);
 		_storage.Set("HardCurrency", pValue);
+        _storage.Save(); PlayerPrefs.Save();
 		if (BalanceChangedEvent != null)
 		{
 			BalanceChangedEvent();

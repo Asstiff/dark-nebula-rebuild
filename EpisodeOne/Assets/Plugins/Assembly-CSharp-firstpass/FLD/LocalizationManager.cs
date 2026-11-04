@@ -76,7 +76,7 @@ namespace FLD
 		private LocalizationManager()
 		{
 			_culture = (CultureInfo)CultureInfo.InvariantCulture.Clone();
-			SetPrimaryLanguage(GetSystemLanguage());
+			SetPrimaryLanguage("en");
 			if (string.IsNullOrEmpty(_filenameForLocalization))
 			{
 				if (!TryLoadLanguage("en"))
@@ -251,6 +251,7 @@ namespace FLD
 
 		public bool TryGetText(int pIndex, string pStringId, out string pOutText)
 		{
+			if (pIndex == 0 && GameLocalization.TryGet(pStringId, out pOutText)) return true;
 			string[] textArray = GetTextArray(pStringId);
 			if (textArray == null)
 			{

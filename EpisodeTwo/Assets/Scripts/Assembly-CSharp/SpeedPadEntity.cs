@@ -74,7 +74,7 @@ public class SpeedPadEntity : Entity
 		standardVessel.ResetForcedVelocity();
 		standardVessel.SetForcedVelocity(vector, true);
 		standardVessel.ResetVelocity();
-		Audio.Play("speedpad", activationSound);
+		Audio.Play("speedpad", activationSound, transform);
 		Sprite.Play("SpeedPadActive");
 		isActivated = true;
 		Invoke("ResumeNormalAnimation", 0.5f);

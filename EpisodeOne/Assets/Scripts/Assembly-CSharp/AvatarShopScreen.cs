@@ -58,8 +58,6 @@ public class AvatarShopScreen : MonoBehaviour
 
 	private void StartProcedure()
 	{
-		foreach(HardCurrencyBalance balance in Object.FindObjectsByType<HardCurrencyBalance>())
-			if(balance.gameObject.scene==gameObject.scene)balance.gameObject.SetActive(false);
 		_equipButton.Text = "EQUIP VESSEL BUTTON".Localize();
 		_purchaseButton.Text = "BUY".Localize();
 		_menuHeader.SetTitleID("AVATAR HEADER");
@@ -82,8 +80,9 @@ public class AvatarShopScreen : MonoBehaviour
 		float num = (Camera.main.ViewportToWorldPoint(Vector3.one).x - Camera.main.ViewportToWorldPoint(Vector3.zero).x) / 2f;
 		List<string> list = new List<string>();
 		int num2 = 0;
-		foreach (Avatar allAvatar in AvatarManager.Instance.AllAvatars)
+		foreach (int index in AvatarUnlocks.DisplayOrder())
 		{
+            Avatar allAvatar = AvatarManager.Instance.AllAvatars.Find(a=>a.ID==AvatarUnlocks.Ids[index]);
 			AvatarButton avatarButton = (AvatarButton)Object.Instantiate(_avatarButtonPrefab);
 			_avatarButtons.Add(avatarButton);
 			avatarButton.Avatar = allAvatar;
@@ -121,7 +120,9 @@ public class AvatarShopScreen : MonoBehaviour
 	{
 		bool owned = _visibleAvatar.Owned;
 		_priceInfo.SetActive(!owned);
-		_purchaseButton.gameObject.SetActive(!owned);
+        _price.WrapWidth = 280f;
+        _price.Wrapping = DynamicFont.WrapType.SHRINK;
+		_purchaseButton.gameObject.SetActive(!owned && AvatarUnlocks.Balance >= _visibleAvatar.Price);
 		_equipButton.gameObject.SetActive(owned);
 		foreach (AvatarButton avatarButton in _avatarButtons)
 		{
@@ -183,22 +184,24 @@ public class AvatarShopScreen : MonoBehaviour
 
 	private void HandlePurchaseEvent(SimpleButton pButton)
 	{
-		if (HardCurrencyManager.Instance.Spend(_visibleAvatar.Price))
+		if (AvatarUnlocks.TryPurchase(_visibleAvatar.ID))
 		{
 			DarkNebulaMetrics.CurrencyPurchase(_visibleAvatar.ID);
 			AvatarManager.UnlockAvatar(_visibleAvatar);
+            int[] order=AvatarUnlocks.DisplayOrder();
+            _avatarButtons.Sort((a,b)=>System.Array.IndexOf(order,AvatarUnlocks.IndexOf(a.Avatar.ID)).CompareTo(System.Array.IndexOf(order,AvatarUnlocks.IndexOf(b.Avatar.ID))));
+            float spacing=(Camera.main.ViewportToWorldPoint(Vector3.one).x-Camera.main.ViewportToWorldPoint(Vector3.zero).x)/2f;
+            _swiper.Reorder(_avatarButtons.ConvertAll(a=>a.transform).ToArray(),spacing,_avatarButtons.FindIndex(a=>a.Avatar==_visibleAvatar));
 			UpdateButtonsAndPrice();
 			BounceActiveButton();
 		}
-		else
-		{
-			ShowConfirmBuyHCScreen();
-		}
+
 	}
 
 	private void HandleEquipEvent(SimpleButton source)
 	{
-		AvatarManager.Instance.ActiveAvatar = _visibleAvatar;
+		if (!_visibleAvatar.Owned) return;
+        AvatarManager.Instance.ActiveAvatar = _visibleAvatar;
 		StartCoroutine(GotoPreviousScene());
 	}
 

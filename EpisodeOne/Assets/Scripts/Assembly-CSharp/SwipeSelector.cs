@@ -67,6 +67,14 @@ public class SwipeSelector : MonoBehaviour
 		pObject.localPosition = pAtPosition;
 	}
 
+    public void Reorder(Transform[] objects, float spacing, int selected)
+    {
+        _selectableObjects=objects;
+        for(int i=0;i<objects.Length;i++) objects[i].localPosition=new Vector3(i*spacing,0,0);
+        _selectedIndex=selected;
+        SnapTo(selected);
+    }
+
 	private void Start()
 	{
 		MoveTo(0);

@@ -65,6 +65,9 @@ public class LevelCompleteScreen : MonoBehaviour
 	private Alert _alertScreen;
 
 	private bool _done;
+	private bool _initialized;
+	private bool _skipping;
+	private bool _continuing;
 
 	private bool _gotBetterStarThenLast;
 
@@ -76,8 +79,7 @@ public class LevelCompleteScreen : MonoBehaviour
 		OriginalPosition = base.transform.position;
 		SleepTimeoutManager.AllowSleepIn(60f);
 		fade = CameraObject.AddComponent<CameraFade>();
-		fade.FadeIn();
-		fade.FadeComplete += OnFadeInComplete;
+
 		if (Result.LevelNum == 0)
 		{
 			Result.LevelNum = 1;
@@ -88,6 +90,9 @@ public class LevelCompleteScreen : MonoBehaviour
 		CalculateScore();
 		DarkNebulaMetrics.StartLevelScreen(DarkNebulaMetrics.LevelScreens.LevelComplete_, Result.LevelNum);
 		Setup();
+		_initialized = true;
+		fade.FadeComplete += OnFadeInComplete;
+		fade.FadeIn();
 	}
 
 	private void Setup()
@@ -112,7 +117,7 @@ public class LevelCompleteScreen : MonoBehaviour
 		sections[3].EventStar += OnPlayStarSound;
 		sections[0].EventStartTick += OnStartTick;
 		sections[2].EventStartTick += OnStartTick;
-		NameInput.GetComponentInChildren<SimpleText>().SetText(userName);
+		NameInput.GetComponentInChildren<SimpleText>().SetLiteralText(userName);
 		NameInput.GetComponent<SimpleButton>().ButtonUpEvent += OnChangeName;
 		ContinueButton.GetComponentInChildren<SimpleText>().SetStringID("CONTINUE");
 		ContinueButton.GetComponent<SimpleButton>().ButtonUpEvent += OnContinue;
@@ -129,32 +134,43 @@ public class LevelCompleteScreen : MonoBehaviour
 
 	private void OnPlayStarSound(bool big)
 	{
+        GameHaptics.Play(HapticEvent.Star);
 		Audio.Play("star" + UnityEngine.Random.value, (!big) ? SfxStar : SfxStarBig);
 	}
 
 	private void OnDisable()
 	{
-		try
+		CancelInvoke("OnStopTick");
+		OnStopTick();
+	}
+
+	private void OnDestroy()
+	{
+		_initialized = false;
+		if (sections != null)
 		{
-			sections[0].EventComplete -= OnNextSection;
-			sections[1].EventComplete -= OnNextSection;
-			sections[2].EventComplete -= OnNextSection;
-			sections[3].EventComplete -= OnDone;
-			sections[0].EventStar -= OnPlayStarSound;
-			sections[1].EventStar -= OnPlayStarSound;
-			sections[2].EventStar -= OnPlayStarSound;
-			sections[3].EventStar -= OnPlayStarSound;
-			sections[0].EventStartTick -= OnStartTick;
-			sections[2].EventStartTick -= OnStartTick;
+			for (int i = 0; i < sections.Length; i++)
+			{
+				if (sections[i] == null) continue;
+				sections[i].EventComplete -= OnNextSection;
+				sections[i].EventComplete -= OnDone;
+				sections[i].EventStar -= OnPlayStarSound;
+				sections[i].EventStartTick -= OnStartTick;
+			}
 		}
-		catch (Exception)
+		if (fade != null)
 		{
+			fade.FadeComplete -= OnFadeInComplete;
+			fade.FadeComplete -= OnFadeInSuperStar;
+			fade.FadeComplete -= OnFadeOutSuperStar;
 		}
-		sections = null;
+		if (GfxSuperStarScreen != null)
+			GfxSuperStarScreen.GetComponent<SuperStarScreen>().ScreenClosed -= OnSuperStarClose;
 	}
 
 	private void OnStartTick()
 	{
+        GameHaptics.Play(HapticEvent.Score);
 		Audio.PlayLoop("Tick", SfxTick);
 		Invoke("OnStopTick", 1.6666666f);
 	}
@@ -172,12 +188,14 @@ public class LevelCompleteScreen : MonoBehaviour
 
 	private void OnNextSection()
 	{
+		if (!_initialized || _done || _skipping || currentSection + 1 >= sections.Length) return;
 		currentSection++;
 		sections[currentSection].StartAnimation();
 	}
 
 	private void OnDone()
 	{
+		if (!_initialized || _done) return;
 		_done = true;
 		OnStopTick();
 		if (_gotBetterStarThenLast && UserSettings.I.GetIsAllGold(1, 19, Result.Expert))
@@ -207,6 +225,7 @@ public class LevelCompleteScreen : MonoBehaviour
 
 	private void OnSuperStarClose()
 	{
+		GfxSuperStarScreen.GetComponent<SuperStarScreen>().ScreenClosed -= OnSuperStarClose;
 		fade.FadeComplete += OnFadeOutSuperStar;
 		fade.FadeOut();
 	}
@@ -311,14 +330,16 @@ public class LevelCompleteScreen : MonoBehaviour
 				base.transform.position = OriginalPosition;
 				keyboard = null;
 			}
-			NameInput.GetComponentInChildren<SimpleText>().SetText(userName);
+			NameInput.GetComponentInChildren<SimpleText>().SetLiteralText(userName);
 		}
-		if (Input.GetMouseButton(0) && !_done)
+		if (_initialized && Input.GetMouseButton(0) && !_done)
 		{
+			_skipping = true;
 			sections[0].SetComplete();
 			sections[1].SetComplete();
 			sections[2].SetComplete();
 			sections[3].SetComplete();
+			_skipping = false;
 			OnDone();
 		}
 	}
@@ -334,9 +355,9 @@ public class LevelCompleteScreen : MonoBehaviour
 
 	private void OnChangeName(SimpleButton button)
 	{
-		bool flag = false;
-		keyboard = TouchScreenKeyboard.Open(userName, TouchScreenKeyboardType.ASCIICapable);
-		if (flag || TouchScreenKeyboard.area.height > 0f)
+		if (!TouchScreenKeyboard.isSupported) return;
+		keyboard = TouchScreenKeyboard.Open(userName, TouchScreenKeyboardType.Default);
+		if (keyboard != null && TouchScreenKeyboard.area.height > 0f)
 		{
 			Debug.Log("TouchScreenKeyboard.area " + TouchScreenKeyboard.area);
 			base.transform.position = OriginalPosition + new Vector3(0f, 100f, 0f);
@@ -345,6 +366,8 @@ public class LevelCompleteScreen : MonoBehaviour
 
 	private void OnContinue(SimpleButton button)
 	{
+		if (!_initialized || !_done || _continuing) return;
+		_continuing = true;
 		SaveUserName();
 		Invoke("OnGotoLevelCompleteLeaderboard", 0.6f);
 		fade.FadeOut();

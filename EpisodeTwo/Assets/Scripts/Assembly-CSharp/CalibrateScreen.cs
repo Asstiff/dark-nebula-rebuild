@@ -13,6 +13,8 @@ public class CalibrateScreen : MonoBehaviour
 	private SimpleText _titleText;
 
 	private float _triggerGoBackAtTime;
+	private readonly Transform[] _instructionLines = new Transform[8];
+	private readonly Vector3[] _instructionPositions = new Vector3[8];
 
 	public event HandlerDelegate EventGoBack;
 
@@ -22,7 +24,14 @@ public class CalibrateScreen : MonoBehaviour
 		foreach (SimpleText simpleText in componentsInChildren)
 		{
 			simpleText.UseCurrentTextAsStringID();
+			for (int i = 0; i < _instructionLines.Length; i++)
+			{
+				if (simpleText.name != "Text" + i) continue;
+				_instructionLines[i] = simpleText.transform;
+				_instructionPositions[i] = simpleText.transform.localPosition;
+			}
 		}
+		RefreshInstructionLayout();
 		ButtonCalibrate.GetComponent<SimpleButton>().ButtonUpEvent += delegate
 		{
 			UserSettings.I.Calibrate();
@@ -46,6 +55,8 @@ public class CalibrateScreen : MonoBehaviour
 
 	private void OnEnable()
 	{
+		GamePreferences.Changed += RefreshInstructionLayout;
+		RefreshInstructionLayout();
 		_triggerGoBackAtTime = 0f;
 		// The previous calibration leaves both button hierarchies inactive.
 		// Restore their text renderers as well as the currently active labels.
@@ -60,6 +71,24 @@ public class CalibrateScreen : MonoBehaviour
 		}
 		ButtonGoBack.SetActive(true);
 		ButtonCalibrate.SetActive(true);
+	}
+
+	private void OnDisable()
+	{
+		GamePreferences.Changed -= RefreshInstructionLayout;
+	}
+
+	private void RefreshInstructionLayout()
+	{
+		if (_instructionLines[0] == null) return;
+		for (int i = 0; i < _instructionLines.Length; i++)
+		{
+			if (_instructionLines[i] == null) continue;
+			Vector3 position = _instructionPositions[i];
+			if (GamePreferences.Chinese)
+				position.y = _instructionPositions[0].y - i * 22f - (i >= 4 ? 12f : 0f);
+			_instructionLines[i].localPosition = position;
+		}
 	}
 
 	private void OnGoBack()

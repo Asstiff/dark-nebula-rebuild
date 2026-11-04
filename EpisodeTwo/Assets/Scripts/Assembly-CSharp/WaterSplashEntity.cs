@@ -36,7 +36,7 @@ public class WaterSplashEntity : Entity
 		splashAlpha = 1f;
 		rippleAlpha = 1f;
 		time = 0f;
-		Audio.Play("SplashSound", SplashSound);
+		Audio.Play("SplashSound", SplashSound, transform);
 	}
 
 	private void Update()

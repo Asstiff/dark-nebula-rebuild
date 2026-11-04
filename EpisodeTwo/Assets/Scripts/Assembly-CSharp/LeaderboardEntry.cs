@@ -33,7 +33,7 @@ public class LeaderboardEntry : MonoBehaviour
 		GfxStar.GetComponent<Renderer>().enabled = flag && entry.star >= 0;
 		if (flag)
 		{
-			GfxName.GetComponentInChildren<SimpleText>().SetText(string.Format("{0}. {1}", position + 1, entry.name));
+			GfxName.GetComponentInChildren<SimpleText>().SetLiteralText(string.Format("{0}. {1}", position + 1, entry.name));
 			GfxTime.GetComponentInChildren<SimpleText>().SetText(LevelCompleteTimeSection.ToTimeString(entry.time));
 			GfxDate.GetComponentInChildren<SimpleText>().SetText("^5" + (entry.date == default(System.DateTime) ? "BEST TIME" : entry.date.ToString("MMM d, yyyy", CultureInfo.InvariantCulture).ToUpperInvariant()));
 			if (entry.star >= 0 && entry.expert)

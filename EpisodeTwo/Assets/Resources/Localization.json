@@ -1,0 +1,1214 @@
+{
+  "entries": [
+    {
+      "key": "SUBTITLE",
+      "en": "Episode One",
+      "zh": "第一章"
+    },
+    {
+      "key": "ARE YOU SURE?",
+      "en": "Are you sure?",
+      "zh": "确定吗？"
+    },
+    {
+      "key": "YES",
+      "en": "Yes",
+      "zh": "是"
+    },
+    {
+      "key": "NO",
+      "en": "No",
+      "zh": "否"
+    },
+    {
+      "key": "ON",
+      "en": "On",
+      "zh": "开启"
+    },
+    {
+      "key": "OFF",
+      "en": "Off",
+      "zh": "关闭"
+    },
+    {
+      "key": "CANCEL",
+      "en": "Cancel",
+      "zh": "取消"
+    },
+    {
+      "key": "CONTINUE GAME",
+      "en": "Continue game",
+      "zh": "继续游戏"
+    },
+    {
+      "key": "PLAY GAME",
+      "en": "Play game",
+      "zh": "开始游戏"
+    },
+    {
+      "key": "NEW GAME",
+      "en": "NEW GAME",
+      "zh": "新游戏"
+    },
+    {
+      "key": "SELECT LEVEL",
+      "en": "Select level",
+      "zh": "选择关卡"
+    },
+    {
+      "key": "START LEVEL",
+      "en": "Start level",
+      "zh": "开始关卡"
+    },
+    {
+      "key": "UNLOCK LEVEL",
+      "en": "Unlock level",
+      "zh": "解锁关卡"
+    },
+    {
+      "key": "ORIGINAL",
+      "en": "Original",
+      "zh": "原版"
+    },
+    {
+      "key": "EXTENDED",
+      "en": "Extended",
+      "zh": "拓展"
+    },
+    {
+      "key": "LOADING",
+      "en": "Loading",
+      "zh": "加载中"
+    },
+    {
+      "key": "INSTRUCTIONS",
+      "en": "Instructions",
+      "zh": "操作说明"
+    },
+    {
+      "key": "TILT FORWARD",
+      "en": "Tilt forward to move",
+      "zh": "倾斜设备移动"
+    },
+    {
+      "key": "TO MOVE",
+      "en": "TO MOVE",
+      "zh": "控制移动"
+    },
+    {
+      "key": "FOR EXTRA LIFE",
+      "en": "For extra life",
+      "zh": "获得额外生命"
+    },
+    {
+      "key": "COLLECT ALL HINT",
+      "en": "Collect all to avoid time penalty",
+      "zh": "收集全部能量球，避免时间惩罚"
+    },
+    {
+      "key": "QUIT?",
+      "en": "Quit?",
+      "zh": "退出游戏？"
+    },
+    {
+      "key": "QUIT",
+      "en": "Quit",
+      "zh": "退出"
+    },
+    {
+      "key": "PLAY",
+      "en": "Play",
+      "zh": "开始"
+    },
+    {
+      "key": "OPTIONS",
+      "en": "Options",
+      "zh": "设置"
+    },
+    {
+      "key": "GAME OPTIONS",
+      "en": "Game options",
+      "zh": "游戏设置"
+    },
+    {
+      "key": "CALIBRATE CONTROLS",
+      "en": "Calibrate controls",
+      "zh": "校准控制"
+    },
+    {
+      "key": "CALIBRATE",
+      "en": "Calibrate",
+      "zh": "校准"
+    },
+    {
+      "key": "CALIBRATED!",
+      "en": "Calibrated!",
+      "zh": "校准完成！"
+    },
+    {
+      "key": "CALIBRATE TEXT",
+      "en": "Hold the device in the desired playing position and press the calibrate button.\n\nyou can recalibrate at any time during the game By pressing the screen with two fingers.",
+      "zh": "以舒适的姿势握住设备，点击校准。\n\n游戏中可随时双指触屏重新校准。"
+    },
+    {
+      "key": "VIBRATION",
+      "en": "Vibration",
+      "zh": "震动"
+    },
+    {
+      "key": "SOUND EFFECTS",
+      "en": "Sound effects",
+      "zh": "音效"
+    },
+    {
+      "key": "DISABLED",
+      "en": "Disabled",
+      "zh": "关闭"
+    },
+    {
+      "key": "ENABLED",
+      "en": "Enabled",
+      "zh": "开启"
+    },
+    {
+      "key": "ENHANCED",
+      "en": "ENHANCED",
+      "zh": "增强"
+    },
+    {
+      "key": "TIMER",
+      "en": "TIMER",
+      "zh": "计时器"
+    },
+    {
+      "key": "LANGUAGE",
+      "en": "LANGUAGE",
+      "zh": "语言"
+    },
+    {
+      "key": "ENGLISH",
+      "en": "ENGLISH",
+      "zh": "ENGLISH"
+    },
+    {
+      "key": "SIMPLIFIED CHINESE",
+      "en": "SIMPLIFIED CHINESE",
+      "zh": "简体中文"
+    },
+    {
+      "key": "VESSEL",
+      "en": "VESSEL",
+      "zh": "球体"
+    },
+    {
+      "key": "SELECT VESSEL",
+      "en": "SELECT VESSEL",
+      "zh": "选择球体"
+    },
+    {
+      "key": "LOCKED",
+      "en": "LOCKED",
+      "zh": "未解锁"
+    },
+    {
+      "key": "EQUIPPED",
+      "en": "EQUIPPED",
+      "zh": "已装备"
+    },
+    {
+      "key": "EQUIP",
+      "en": "EQUIP",
+      "zh": "装备"
+    },
+    {
+      "key": "CLEAR LEVELS",
+      "en": "CLEAR {0} DISTINCT LEVELS",
+      "zh": "通关 {0} 个不同关卡"
+    },
+    {
+      "key": "PROGRESS",
+      "en": "PROGRESS: {0}/{1}",
+      "zh": "进度：{0}/{1}"
+    },
+    {
+      "key": "DIFFICULTY",
+      "en": "Difficulty",
+      "zh": "难度"
+    },
+    {
+      "key": "NORMAL",
+      "en": "Normal",
+      "zh": "普通"
+    },
+    {
+      "key": "EXPERT",
+      "en": "Expert",
+      "zh": "专家"
+    },
+    {
+      "key": "GO BACK",
+      "en": "Go back",
+      "zh": "返回"
+    },
+    {
+      "key": "LEADERBOARDS",
+      "en": "Leaderboards",
+      "zh": "排行榜"
+    },
+    {
+      "key": "TOTAL TIME",
+      "en": "Total time",
+      "zh": "总用时"
+    },
+    {
+      "key": "ALL TIME",
+      "en": "All time",
+      "zh": "全部时间"
+    },
+    {
+      "key": "LEVEL",
+      "en": "Level",
+      "zh": "关卡"
+    },
+    {
+      "key": "LEVEL_NR",
+      "en": "Level {0}",
+      "zh": "第 {0} 关"
+    },
+    {
+      "key": "LEVEL %d",
+      "en": "LEVEL %d",
+      "zh": "第 %d 关"
+    },
+    {
+      "key": "LEADERBOARD",
+      "en": "Leaderboard",
+      "zh": "排行榜"
+    },
+    {
+      "key": "LOCAL",
+      "en": "Local",
+      "zh": "本地"
+    },
+    {
+      "key": "FRIENDS",
+      "en": "Friends",
+      "zh": "好友"
+    },
+    {
+      "key": "GLOBAL",
+      "en": "Global",
+      "zh": "全球"
+    },
+    {
+      "key": "VIEW TYPE",
+      "en": "Players",
+      "zh": "玩家"
+    },
+    {
+      "key": "TIME PERIOD",
+      "en": "Time period",
+      "zh": "时间范围"
+    },
+    {
+      "key": "DAILY",
+      "en": "Today",
+      "zh": "今天"
+    },
+    {
+      "key": "TODAY",
+      "en": "Today",
+      "zh": "今天"
+    },
+    {
+      "key": "WEEKLY",
+      "en": "This week",
+      "zh": "本周"
+    },
+    {
+      "key": "THIS WEEK",
+      "en": "THIS WEEK",
+      "zh": "本周"
+    },
+    {
+      "key": "ALLTIME",
+      "en": "Global",
+      "zh": "全球"
+    },
+    {
+      "key": "CONTACTS",
+      "en": "Friends",
+      "zh": "好友"
+    },
+    {
+      "key": "NO TOTAL SCORE INFO",
+      "en": "Beat all levels on this difficulty to see your entry here",
+      "zh": "完成此难度的全部关卡后显示总用时"
+    },
+    {
+      "key": "CORE LEVEL INFO",
+      "en": "No score on\ncore levels",
+      "zh": "核心关卡\n不计分"
+    },
+    {
+      "key": "CREDITS",
+      "en": "Credits",
+      "zh": "制作人员"
+    },
+    {
+      "key": "ART & DESIGN",
+      "en": "Art & design",
+      "zh": "美术与设计"
+    },
+    {
+      "key": "PROGRAMMING",
+      "en": "Programming",
+      "zh": "程序"
+    },
+    {
+      "key": "MUSIC & SOUND",
+      "en": "Music & sound",
+      "zh": "音乐与音效"
+    },
+    {
+      "key": "MUSIC",
+      "en": "Music",
+      "zh": "音乐"
+    },
+    {
+      "key": "CELLS COLLECTED",
+      "en": "Cells collected",
+      "zh": "收集能量球"
+    },
+    {
+      "key": "ORBS COLLECTED",
+      "en": "ORBS COLLECTED",
+      "zh": "收集能量球"
+    },
+    {
+      "key": "PLAYER",
+      "en": "Player",
+      "zh": "玩家"
+    },
+    {
+      "key": "LIFE LOST",
+      "en": "{0} life lost",
+      "zh": "损失 {0} 条生命"
+    },
+    {
+      "key": "LIFE LEFT",
+      "en": "{0} life left",
+      "zh": "剩余 {0} 条生命"
+    },
+    {
+      "key": "LIVES LEFT",
+      "en": "{0} lives left",
+      "zh": "剩余 {0} 条生命"
+    },
+    {
+      "key": "LIVES LOST",
+      "en": "{0} lives lost",
+      "zh": "损失 {0} 条生命"
+    },
+    {
+      "key": "SHIELD LOST",
+      "en": "{0} shield lost",
+      "zh": "损失 {0} 个护盾"
+    },
+    {
+      "key": "%d LIFE LOST",
+      "en": "%d LIFE LOST",
+      "zh": "损失 %d 条生命"
+    },
+    {
+      "key": "%d LIVES LOST",
+      "en": "%d LIVES LOST",
+      "zh": "损失 %d 条生命"
+    },
+    {
+      "key": "%d LIVES LEFT",
+      "en": "%d LIVES LEFT",
+      "zh": "剩余 %d 条生命"
+    },
+    {
+      "key": "%d SHIELD LOST",
+      "en": "%d SHIELD LOST",
+      "zh": "损失 %d 个护盾"
+    },
+    {
+      "key": "%d SHIELDS LOST",
+      "en": "%d SHIELDS LOST",
+      "zh": "损失 %d 个护盾"
+    },
+    {
+      "key": "NO SHIELD LOST",
+      "en": "NO SHIELD LOST",
+      "zh": "未损失护盾"
+    },
+    {
+      "key": "YOUR TIME",
+      "en": "Your time",
+      "zh": "本次用时"
+    },
+    {
+      "key": "YOUR BEST TIME",
+      "en": "Your best time",
+      "zh": "最佳用时"
+    },
+    {
+      "key": "LEADERBOARD NAME",
+      "en": "Leaderboard name",
+      "zh": "排行榜昵称"
+    },
+    {
+      "key": "(CLICK TO CHANGE)",
+      "en": "(TAP TO CHANGE)",
+      "zh": "点击修改"
+    },
+    {
+      "key": "BRONZE STAR!",
+      "en": "Bronze star!",
+      "zh": "铜星！"
+    },
+    {
+      "key": "SILVER STAR!",
+      "en": "Silver star!",
+      "zh": "银星！"
+    },
+    {
+      "key": "GOLD STAR!",
+      "en": "Gold star!",
+      "zh": "金星！"
+    },
+    {
+      "key": "EXPERT BRONZE STAR!",
+      "en": "Expert bronze star!",
+      "zh": "专家铜星！"
+    },
+    {
+      "key": "EXPERT SILVER STAR!",
+      "en": "Expert silver star!",
+      "zh": "专家银星！"
+    },
+    {
+      "key": "EXPERT GOLD STAR!",
+      "en": "Expert gold star!",
+      "zh": "专家金星！"
+    },
+    {
+      "key": "CONTINUE",
+      "en": "Continue",
+      "zh": "继续"
+    },
+    {
+      "key": "CONTINUE?",
+      "en": "CONTINUE?",
+      "zh": "继续？"
+    },
+    {
+      "key": "OK",
+      "en": "Ok",
+      "zh": "确定"
+    },
+    {
+      "key": "TRY AGAIN",
+      "en": "Try again",
+      "zh": "重试"
+    },
+    {
+      "key": "MAIN MENU",
+      "en": "Main menu",
+      "zh": "主菜单"
+    },
+    {
+      "key": "NEXT LEVEL",
+      "en": "Next level",
+      "zh": "下一关"
+    },
+    {
+      "key": "EXPERT MODE!",
+      "en": "Expert mode!",
+      "zh": "专家模式！"
+    },
+    {
+      "key": "EXTRA LIFE!",
+      "en": "EXTRA LIFE!",
+      "zh": "额外生命！"
+    },
+    {
+      "key": "ENTERING",
+      "en": "Entering",
+      "zh": "进入"
+    },
+    {
+      "key": "FIREWALL DOWN!",
+      "en": "Firewall {0} down!",
+      "zh": "防火墙 {0} 已解除！"
+    },
+    {
+      "key": "FIREWALL %d DOWN!",
+      "en": "FIREWALL %d DOWN!",
+      "zh": "防火墙 %d 已解除！"
+    },
+    {
+      "key": "SPEED ZONE!",
+      "en": "Speed zone!",
+      "zh": "加速区域！"
+    },
+    {
+      "key": "SHIELD DOWN",
+      "en": "Shield down",
+      "zh": "护盾失效"
+    },
+    {
+      "key": "SHIELD FOUND",
+      "en": "Shield found",
+      "zh": "获得护盾"
+    },
+    {
+      "key": "SHIELD RESTORED",
+      "en": "Shield restored",
+      "zh": "护盾恢复"
+    },
+    {
+      "key": "EXCELLENT",
+      "en": "Excellent!",
+      "zh": "出色！"
+    },
+    {
+      "key": "EXCELLENT!",
+      "en": "Excellent!",
+      "zh": "出色！"
+    },
+    {
+      "key": "OUTSTANDING!",
+      "en": "Outstanding!",
+      "zh": "卓越！"
+    },
+    {
+      "key": "PERFECT!",
+      "en": "Perfect!",
+      "zh": "完美！"
+    },
+    {
+      "key": "SUPERB!",
+      "en": "Superb!",
+      "zh": "精彩！"
+    },
+    {
+      "key": "LEVEL COMPLETE",
+      "en": "Level complete",
+      "zh": "关卡完成"
+    },
+    {
+      "key": "EXIT TO MAIN MENU?",
+      "en": "Exit to main menu?",
+      "zh": "返回主菜单？"
+    },
+    {
+      "key": "GAME PAUSED",
+      "en": "Game paused",
+      "zh": "游戏暂停"
+    },
+    {
+      "key": "RESUME GAME",
+      "en": "Resume game",
+      "zh": "继续游戏"
+    },
+    {
+      "key": "RESTART LEVEL",
+      "en": "Restart level",
+      "zh": "重新开始"
+    },
+    {
+      "key": "RESTART LEVEL?",
+      "en": "Restart level?",
+      "zh": "重新开始本关？"
+    },
+    {
+      "key": "GAME OVER",
+      "en": "Game over",
+      "zh": "游戏结束"
+    },
+    {
+      "key": "TO BE CONTINUED ...",
+      "en": "TO BE CONTINUED...",
+      "zh": "未完待续……"
+    },
+    {
+      "key": "END GAME CONGRATULATIONS",
+      "en": "Contratulations!\ntotal time is",
+      "zh": "恭喜通关！\n总用时"
+    },
+    {
+      "key": "END GAME CONNECTED",
+      "en": "Total time leaderboards are now unlocked\n\nreplay levels to improve your time",
+      "zh": "总用时排行榜已解锁\n\n重新挑战关卡，刷新最佳成绩"
+    },
+    {
+      "key": "END GAME NOT CONNECTED",
+      "en": "Total time leaderboards are now unlocked\n\ncompare times with your friends on palringo",
+      "zh": "总用时排行榜已解锁\n\n重新挑战关卡，刷新最佳成绩"
+    },
+    {
+      "key": "END OF CHAPTER ONE HEADER",
+      "en": "End of chapter one",
+      "zh": "第一章结束"
+    },
+    {
+      "key": "END OF CHAPTER ONE TEXT",
+      "en": "Congratulations!\nyou have completed the first chapter\n\nthe challenge continues",
+      "zh": "恭喜！\n你已完成第一章\n\n挑战仍在继续"
+    },
+    {
+      "key": "EPISODE TWO",
+      "en": "EPISODE TWO",
+      "zh": "第二章"
+    },
+    {
+      "key": "AVATAR HEADER",
+      "en": "Change vessel",
+      "zh": "选择球体"
+    },
+    {
+      "key": "CYBORG_AVATAR",
+      "en": "Cyborg",
+      "zh": "赛博格"
+    },
+    {
+      "key": "DEFAULT_AVATAR",
+      "en": "Default",
+      "zh": "原型"
+    },
+    {
+      "key": "HALCYON_AVATAR",
+      "en": "Halcyon",
+      "zh": "翠鸟"
+    },
+    {
+      "key": "PALRINGO_AVATAR",
+      "en": "Palringo",
+      "zh": "帕尔灵"
+    },
+    {
+      "key": "TROJAN_AVATAR",
+      "en": "Trojan",
+      "zh": "特洛伊"
+    },
+    {
+      "key": "CYBORG_AVATAR_DESCRIPTION",
+      "en": "Cyborg",
+      "zh": "赛博格"
+    },
+    {
+      "key": "DEFAULT_AVATAR_DESCRIPTION",
+      "en": "Default",
+      "zh": "原型"
+    },
+    {
+      "key": "HALCYON_AVATAR_DESCRIPTION",
+      "en": "Halcyon",
+      "zh": "翠鸟"
+    },
+    {
+      "key": "PALRINGO_AVATAR_DESCRIPTION",
+      "en": "Palringo",
+      "zh": "帕尔灵"
+    },
+    {
+      "key": "TROJAN_AVATAR_DESCRIPTION",
+      "en": "Trojan",
+      "zh": "特洛伊"
+    },
+    {
+      "key": "EQUIP VESSEL BUTTON",
+      "en": "Equip vessel",
+      "zh": "装备球体"
+    },
+    {
+      "key": "CHANGE AVATAR BUTTON",
+      "en": "Change vessel",
+      "zh": "更换球体"
+    },
+    {
+      "key": "BOOSTER DETAILS",
+      "en": "Upgrade details",
+      "zh": "升级详情"
+    },
+    {
+      "key": "BOOSTER SELECTION",
+      "en": "Optional upgrades",
+      "zh": "可选升级"
+    },
+    {
+      "key": "BOOSTER HEADER",
+      "en": "Prepare level",
+      "zh": "关卡准备"
+    },
+    {
+      "key": "BOOSTER SELECTION SUBTIBLE",
+      "en": "All upgrades are available.\nTurn them on or off for this level.\n\nLeave all off to play with the original rules.",
+      "zh": "可自由开启或关闭本关升级。\n\n全部关闭即可按原版规则游玩。"
+    },
+    {
+      "key": "SPEED",
+      "en": "Speed",
+      "zh": "速度"
+    },
+    {
+      "key": "SHIELD",
+      "en": "Shield",
+      "zh": "护盾"
+    },
+    {
+      "key": "MAGNET",
+      "en": "Magnet",
+      "zh": "磁铁"
+    },
+    {
+      "key": "SPEED_DESCRIPTION",
+      "en": "Gives you more speed\n\ntip:\nthis will improve your time result greatly!",
+      "zh": "提高移动速度。\n\n可缩短通关用时。"
+    },
+    {
+      "key": "SHIELD_DESCRIPTION",
+      "en": "The shield prevents you from dying when damaged. one use. \n\ntip:\nextra shields will be found throughout levels!",
+      "zh": "抵挡一次伤害。\n\n关卡中可以找到更多护盾。"
+    },
+    {
+      "key": "MAGNET_DESCRIPTION",
+      "en": "The magnet attracts cells from a distance.\n\ntip:\nthis will save you time from picking up the cells yourself!",
+      "zh": "吸引附近的能量球。\n\n节省收集时间。"
+    },
+    {
+      "key": "HC PICKUP",
+      "en": "Shard",
+      "zh": "碎片"
+    },
+    {
+      "key": "HC PICKUP LARGE",
+      "en": "Picked up shard",
+      "zh": "获得碎片"
+    },
+    {
+      "key": "PENALTY TEXT",
+      "en": "+{0} sec time penalty",
+      "zh": "时间惩罚 +{0} 秒"
+    },
+    {
+      "key": "PENALTY TEXT SMALL",
+      "en": "+{0} sec",
+      "zh": "+{0} 秒"
+    },
+    {
+      "key": "TIME TO NEXT",
+      "en": "{0} from",
+      "zh": "距离下一评级 {0}"
+    },
+    {
+      "key": "CELLS",
+      "en": "{0}/{1}",
+      "zh": "{0}/{1}"
+    },
+    {
+      "key": "ASCENSION",
+      "en": "Ascension",
+      "zh": "升腾"
+    },
+    {
+      "key": "SPEED ZONE A",
+      "en": "Speed zone A",
+      "zh": "加速区 A"
+    },
+    {
+      "key": "LEAP OF FAITH",
+      "en": "Leap of faith",
+      "zh": "信仰之跃"
+    },
+    {
+      "key": "THE GRINDHOUSE",
+      "en": "The grindhouse",
+      "zh": "绞杀工厂"
+    },
+    {
+      "key": "KINETICS",
+      "en": "Kinetics",
+      "zh": "动能"
+    },
+    {
+      "key": "SPEED ZONE B",
+      "en": "Speed zone B",
+      "zh": "加速区 B"
+    },
+    {
+      "key": "CROSSFIRE",
+      "en": "Crossfire",
+      "zh": "交叉火力"
+    },
+    {
+      "key": "THE ABYSS",
+      "en": "The abyss",
+      "zh": "深渊"
+    },
+    {
+      "key": "NEMESIS",
+      "en": "Nemesis",
+      "zh": "宿敌"
+    },
+    {
+      "key": "THE MAINFRAME",
+      "en": "The mainframe",
+      "zh": "主机"
+    },
+    {
+      "key": "THE CORE",
+      "en": "The core",
+      "zh": "核心"
+    },
+    {
+      "key": "ROUGH LANDING",
+      "en": "ROUGH LANDING",
+      "zh": "迫降"
+    },
+    {
+      "key": "THE FACTORY",
+      "en": "THE FACTORY",
+      "zh": "工厂"
+    },
+    {
+      "key": "CONTACT",
+      "en": "CONTACT",
+      "zh": "接触"
+    },
+    {
+      "key": "PLATFORMS",
+      "en": "PLATFORMS",
+      "zh": "平台"
+    },
+    {
+      "key": "SHARP EDGES",
+      "en": "SHARP EDGES",
+      "zh": "锋芒"
+    },
+    {
+      "key": "SHOWDOWN",
+      "en": "SHOWDOWN",
+      "zh": "对决"
+    },
+    {
+      "key": "PLEXUS GATEWAY",
+      "en": "PLEXUS GATEWAY",
+      "zh": "枢纽之门"
+    },
+    {
+      "key": "DARK CORNERS",
+      "en": "DARK CORNERS",
+      "zh": "暗角"
+    },
+    {
+      "key": "NARROW PATHS",
+      "en": "NARROW PATHS",
+      "zh": "狭路"
+    },
+    {
+      "key": "STEPSTONES",
+      "en": "STEPSTONES",
+      "zh": "踏石"
+    },
+    {
+      "key": "CRITTERS",
+      "en": "CRITTERS",
+      "zh": "异兽"
+    },
+    {
+      "key": "HEART OF DARKNESS",
+      "en": "HEART OF DARKNESS",
+      "zh": "黑暗之心"
+    },
+    {
+      "key": "SECOND GATEWAY",
+      "en": "SECOND GATEWAY",
+      "zh": "第二道门"
+    },
+    {
+      "key": "BATTLEGROUND",
+      "en": "BATTLEGROUND",
+      "zh": "战场"
+    },
+    {
+      "key": "LEAPFROG",
+      "en": "LEAPFROG",
+      "zh": "跳跃"
+    },
+    {
+      "key": "SERPENTS",
+      "en": "SERPENTS",
+      "zh": "蛇群"
+    },
+    {
+      "key": "SLINGSHOT",
+      "en": "SLINGSHOT",
+      "zh": "弹弓"
+    },
+    {
+      "key": "DUST",
+      "en": "DUST",
+      "zh": "尘埃"
+    },
+    {
+      "key": "ENDGAME",
+      "en": "ENDGAME",
+      "zh": "终局"
+    },
+    {
+      "key": "UNITY",
+      "en": "UNITY",
+      "zh": "合一"
+    },
+    {
+      "key": "HOLD THE DEVICE IN THE",
+      "en": "HOLD THE DEVICE IN THE",
+      "zh": "握住设备，保持"
+    },
+    {
+      "key": "DESIRED PLAYING POSITION",
+      "en": "DESIRED PLAYING POSITION",
+      "zh": "舒适的游玩姿势"
+    },
+    {
+      "key": "AND PRESS THE CALIBRATE",
+      "en": "AND PRESS THE CALIBRATE",
+      "zh": "然后点击校准"
+    },
+    {
+      "key": "BUTTON.",
+      "en": "BUTTON.",
+      "zh": "按钮。"
+    },
+    {
+      "key": "YOU CAN RECALIBRATE",
+      "en": "YOU CAN RECALIBRATE",
+      "zh": "游戏中可随时"
+    },
+    {
+      "key": "AT ANY TIME DURING THE GAME",
+      "en": "AT ANY TIME DURING THE GAME",
+      "zh": "重新校准"
+    },
+    {
+      "key": "BY PRESSING THE SCREEN",
+      "en": "BY PRESSING THE SCREEN",
+      "zh": "只需用两根手指"
+    },
+    {
+      "key": "WITH TWO FINGERS.",
+      "en": "WITH TWO FINGERS.",
+      "zh": "同时触碰屏幕。"
+    },
+    {
+      "key": "CALIBRATE CONTROLS_INSTRUCTIONS1",
+      "en": "IF YOU WANT TO PLAY",
+      "zh": "若要改变"
+    },
+    {
+      "key": "CALIBRATE CONTROLS_INSTRUCTIONS2",
+      "en": "AT A DIFFERENT",
+      "zh": "握持角度"
+    },
+    {
+      "key": "CALIBRATE CONTROLS_INSTRUCTIONS3",
+      "en": "ANGLE, JUST SELECT",
+      "zh": "请在设置菜单中"
+    },
+    {
+      "key": "CALIBRATE CONTROLS_INSTRUCTIONS4",
+      "en": "CALIBRATE CONTROLS FROM",
+      "zh": "选择校准控制"
+    },
+    {
+      "key": "CALIBRATE CONTROLS_INSTRUCTIONS5",
+      "en": "THE OPTIONS MENU",
+      "zh": "即可重新校准"
+    },
+    {
+      "key": "YOU ARE REALLY GOOD!",
+      "en": "YOU ARE REALLY GOOD!",
+      "zh": "你的表现非常出色！"
+    },
+    {
+      "key": "BUT ARE YOU GOOD ENOUGH",
+      "en": "BUT ARE YOU GOOD ENOUGH",
+      "zh": "准备好挑战"
+    },
+    {
+      "key": "TO RECEIVE GOLD STARS",
+      "en": "TO RECEIVE GOLD STARS",
+      "zh": "所有关卡的"
+    },
+    {
+      "key": "ON ALL THE LEVELS?",
+      "en": "ON ALL THE LEVELS?",
+      "zh": "金星了吗？"
+    },
+    {
+      "key": "YOU HAVE RECEIVED",
+      "en": "YOU HAVE RECEIVED",
+      "zh": "你已获得"
+    },
+    {
+      "key": "GOLD STARS ON ALL LEVELS!",
+      "en": "GOLD STARS ON ALL LEVELS!",
+      "zh": "全部关卡的金星！"
+    },
+    {
+      "key": "YOU ARE THE TRUE MASTER",
+      "en": "YOU ARE THE TRUE MASTER",
+      "zh": "你是真正的"
+    },
+    {
+      "key": "OF DARK NEBULA!",
+      "en": "OF DARK NEBULA!",
+      "zh": "暗黑星云大师！"
+    },
+    {
+      "key": "YOU HAVE RECEIVED EXPERT",
+      "en": "YOU HAVE RECEIVED EXPERT",
+      "zh": "你已获得专家难度"
+    },
+    {
+      "key": "GOLD STARS ON ALL LEVELS V2",
+      "en": "GOLD STARS ON ALL LEVELS!",
+      "zh": "全部关卡的金星！"
+    },
+    {
+      "key": "THE TRUE MASTERS ENVY",
+      "en": "THE TRUE MASTERS ENVY",
+      "zh": "这份精湛技艺"
+    },
+    {
+      "key": "YOUR SKILLS!",
+      "en": "YOUR SKILLS!",
+      "zh": "令人叹服！"
+    },
+    {
+      "key": "CONGRATULATIONS!",
+      "en": "CONGRATULATIONS!",
+      "zh": "恭喜！"
+    },
+    {
+      "key": "ALL PROGRESS",
+      "en": "ALL PROGRESS",
+      "zh": "所有进度"
+    },
+    {
+      "key": "WILL BE LOST!",
+      "en": "WILL BE LOST!",
+      "zh": "将被清除！"
+    },
+    {
+      "key": "THE GAME IS MUCH HARDER WITH",
+      "en": "THE GAME IS MUCH HARDER WITH",
+      "zh": "专家难度更具挑战"
+    },
+    {
+      "key": "THE EXPERT SETTINGS, AND YOUR",
+      "en": "THE EXPERT SETTINGS,AND YOUR",
+      "zh": "在此模式下"
+    },
+    {
+      "key": "SHIELD IS DISABLED",
+      "en": "SHIELD IS DISABLED",
+      "zh": "护盾将被禁用"
+    },
+    {
+      "key": "VIEW YOUR BEST TIMES IN LEADERBOARDS.",
+      "en": "VIEW YOUR BEST TIMES IN LEADERBOARDS.",
+      "zh": "在排行榜中查看你的最佳用时。"
+    },
+    {
+      "key": "LOADING.HINT.CALIBRATE",
+      "en": "You can recalibrate at any time during the game by pressing the screen with two fingers.",
+      "zh": "游戏中可随时双指触屏重新校准。"
+    },
+    {
+      "key": "LEVEL 21",
+      "en": "STRANDED",
+      "zh": "搁浅"
+    },
+    {
+      "key": "LEVEL 22",
+      "en": "BLADE ARRAY",
+      "zh": "刀阵"
+    },
+    {
+      "key": "LEVEL 23",
+      "en": "CLOSE QUARTERS",
+      "zh": "近身战"
+    },
+    {
+      "key": "LEVEL 24",
+      "en": "THIRD GATEWAY",
+      "zh": "第三道门"
+    },
+    {
+      "key": "LEVEL 25",
+      "en": "DARK STREAM",
+      "zh": "暗流"
+    },
+    {
+      "key": "LEVEL 26",
+      "en": "SURGE",
+      "zh": "涌动"
+    },
+    {
+      "key": "LEVEL 27",
+      "en": "PINNED",
+      "zh": "围困"
+    },
+    {
+      "key": "LEVEL 28",
+      "en": "FOURTH GATEWAY",
+      "zh": "第四道门"
+    },
+    {
+      "key": "LEVEL 29",
+      "en": "TIMEOUT",
+      "zh": "时限"
+    },
+    {
+      "key": "LEVEL 30",
+      "en": "BULLET TIME",
+      "zh": "子弹时间"
+    },
+    {
+      "key": "LEVEL 31",
+      "en": "THE NEST",
+      "zh": "巢穴"
+    },
+    {
+      "key": "LEVEL 32",
+      "en": "THE HIVE",
+      "zh": "蜂巢"
+    },
+    {
+      "key": "SHARD PRICE",
+      "en": "{0} shards",
+      "zh": "{0} 个碎片"
+    },
+    {
+      "key": "SHARD BALANCE",
+      "en": "Balance: {0}",
+      "zh": "已有碎片：{0}"
+    },
+    {
+      "key": "SHARD TIP",
+      "en": "Collect cyan shard orbs in levels.",
+      "zh": "在关卡中收集青色碎片球。"
+    },
+    {
+      "key": "BUY",
+      "en": "Buy",
+      "zh": "购买"
+    }
+  ]
+}

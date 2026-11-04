@@ -62,4 +62,34 @@ public class tk2dFontData : MonoBehaviour
 			charDictValues.Add(dict[charDictKeys[i]]);
 		}
 	}
+
+    // Recovered atlases contain empty slots, including slot zero. They are not
+    // renderable fallback glyphs and can lack the four gradient coordinates.
+    public tk2dFontChar GetSafeCharacter(int code)
+    {
+        InitDictionary();
+        tk2dFontChar glyph = FindCharacter(code);
+        if (glyph == null && code >= 0 && code <= char.MaxValue)
+            glyph = FindCharacter(char.ToUpperInvariant((char)code));
+        if (glyph == null) glyph = FindCharacter('?');
+        if (glyph == null) glyph = FindCharacter(' ');
+        if (glyph == null) glyph = new tk2dFontChar { advance = Mathf.Max(1f, lineHeight * .5f) };
+        if (textureGradients && (glyph.gradientUv == null || glyph.gradientUv.Length < 4))
+        {
+            float width = 1f / Mathf.Max(1, gradientCount);
+            glyph.gradientUv = new[] { new Vector2(0, 1), new Vector2(width, 1), Vector2.zero, new Vector2(width, 0) };
+        }
+        return glyph;
+    }
+
+    tk2dFontChar FindCharacter(int code)
+    {
+        tk2dFontChar glyph = null;
+        if (useDictionary)
+        {
+            if (charDict != null) charDict.TryGetValue(code, out glyph);
+        }
+        else if (chars != null && code >= 0 && code < chars.Length) glyph = chars[code];
+        return glyph != null && (glyph.advance > 0 || glyph.p0 != glyph.p1) ? glyph : null;
+    }
 }

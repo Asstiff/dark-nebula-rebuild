@@ -64,7 +64,7 @@ public class MagnetVesselSlotEntity : Entity
 	{
 		catched = true;
 		World.vessel.GetComponent<Rigidbody>().MovePosition(base.transform.position);
-		Audio.Play("endLevelVesselStopSound", endLevelVesselStopSound);
+		Audio.Play("endLevelVesselStopSound", endLevelVesselStopSound, transform);
 		World.TriggerFlag(flag);
 	}
 

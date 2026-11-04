@@ -58,7 +58,7 @@ public class EndOfGame : Entity
 		World.cameraFollow.windowPosZ = position.z;
 		vessel.transform.position = position;
 		vessel.AllowedToMove = true;
-		vessel.GetComponent<Rigidbody>().velocity = Vector3.zero;
+		vessel.GetComponent<Rigidbody>().linearVelocity = Vector3.zero;
 		vessel.ResetDrag();
 		Object[] array = Object.FindObjectsOfType(typeof(MatrixChaser));
 		foreach (Object obj in array)
@@ -91,12 +91,12 @@ public class EndOfGame : Entity
 		World.vessel.transform.position = position;
 		if (num < 100f)
 		{
-			float num2 = World.vessel.GetComponent<Rigidbody>().drag - 0.05f * Time.deltaTime * 30f;
+			float num2 = World.vessel.GetComponent<Rigidbody>().linearDamping - 0.05f * Time.deltaTime * 30f;
 			if (num2 < 0f)
 			{
 				num2 = 0f;
 			}
-			World.vessel.GetComponent<Rigidbody>().drag = num2;
+			World.vessel.GetComponent<Rigidbody>().linearDamping = num2;
 		}
 	}
 

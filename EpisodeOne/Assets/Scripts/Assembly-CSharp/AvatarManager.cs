@@ -34,8 +34,10 @@ public class AvatarManager
 		}
 		set
 		{
+			if (value == null || !value.Owned) return;
 			_activeAvatar = value;
 			UserSettings.Instance.ActiveAvatarId = _activeAvatar.ID;
+            FLD.PersistentStore.GetInstance("DN1UserSettings").Save(); PlayerPrefs.Save();
 		}
 	}
 
@@ -45,7 +47,7 @@ public class AvatarManager
 		{
 			if (_allAvatars.Count == 0)
 			{
-				Object[] array = Resources.LoadAll("Avatars");
+				Object[] array = Resources.LoadAll("avatars");
 				Object[] array2 = array;
 				foreach (Object obj in array2)
 				{
@@ -78,7 +80,7 @@ public class AvatarManager
 	{
 		foreach (Avatar allAvatar in AllAvatars)
 		{
-			if (UserSettings.Instance.ActiveAvatarId == allAvatar.ID)
+			if (UserSettings.Instance.ActiveAvatarId == allAvatar.ID && allAvatar.Owned)
 			{
 				return allAvatar;
 			}

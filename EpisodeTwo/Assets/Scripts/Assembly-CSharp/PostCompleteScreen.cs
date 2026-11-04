@@ -140,7 +140,7 @@ public class PostCompleteScreen : MonoBehaviour
 		lastYes = null;
 		lastNo = null;
 		_confirmScreen = null;
-		_leaderboardView.EventDifficultyChanged -= FeedLeaderboardView;
+		if (_leaderboardView != null) _leaderboardView.EventDifficultyChanged -= FeedLeaderboardView;
 		_leaderboardView = null;
 	}
 

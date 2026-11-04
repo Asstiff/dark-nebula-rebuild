@@ -8,6 +8,8 @@ public class LifeOrb : Entity
 	public AudioClip Sfx;
 
 	private bool _isTaken;
+    private bool _containsShard;
+    public void MarkShard() { _containsShard=true; sprite.color=new Color(.1f,1f,1f,1f); }
 
 	private tk2dAnimatedSprite _sprite;
 
@@ -64,6 +66,7 @@ public class LifeOrb : Entity
 				Audio.Play("lifeorb" + _audioIndex, Sfx, World.vessel.transform.position);
 				_audioIndex = (_audioIndex + 1) % 15;
 			}
+            if(_containsShard) { _containsShard=false; ShardWallet.Collect(); }
 			SpawnShockwave();
 			SpawnParticle();
 			DisableRenderer();

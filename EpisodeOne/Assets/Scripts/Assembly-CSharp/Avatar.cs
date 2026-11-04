@@ -22,7 +22,7 @@ public class Avatar : Product
 			{
 				return true;
 			}
-			return true; // All vessels are available offline.
+			return AvatarUnlocks.IsUnlocked(ID);
 		}
 	}
 }

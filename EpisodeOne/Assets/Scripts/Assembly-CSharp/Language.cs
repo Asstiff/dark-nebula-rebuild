@@ -15,7 +15,7 @@ public class Language
 		{
 			if (_current == null)
 			{
-				SetLanguage(Application.systemLanguage);
+				SetLanguage(SystemLanguage.English);
 			}
 			return GetLanguageFileName(_current.language);
 		}
@@ -36,9 +36,11 @@ public class Language
 
 	public static string Get(string id)
 	{
+        string translated;
+        if (GameLocalization.TryGet(id, out translated)) return translated;
 		if (_current == null)
 		{
-			SetLanguage(Application.systemLanguage);
+			SetLanguage(SystemLanguage.English);
 		}
 		string text = (string)_current.table[id];
 		if (string.IsNullOrEmpty(text))

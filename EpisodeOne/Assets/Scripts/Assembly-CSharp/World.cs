@@ -276,6 +276,7 @@ public class World : MonoBehaviour
 			_startedFadeIn = true;
 			PlayMusic();
 			hud.onResumeGame();
+        GameHaptics.Play(HapticEvent.Spawn);
 			multipliedStartTime = Mathf.RoundToInt(Time.time * 100000f);
 			skillMeter.Init();
 			if (UserSettings.Instance.IsExpertMode)
@@ -408,6 +409,7 @@ public class World : MonoBehaviour
 
 	public static void TriggerEndOfLevel()
 	{
+        GameHaptics.Play(HapticEvent.Finish);
 		if (!multipliedStartTime.IsConsistent)
 		{
 			Debug.Log("SecureInt warning: Start time has been hacked. Setting crappy score for player");

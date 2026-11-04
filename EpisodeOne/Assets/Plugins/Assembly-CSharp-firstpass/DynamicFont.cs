@@ -44,6 +44,14 @@ public class DynamicFont : MonoBehaviour
 
 	private string _currentText = string.Empty;
 
+    public bool IsLiteralText { get; private set; }
+    public void SetLiteralText(string value)
+    {
+        IsLiteralText = true;
+        _currentText = value ?? string.Empty;
+        Refresh();
+    }
+
 	public string Text
 	{
 		get
@@ -52,7 +60,8 @@ public class DynamicFont : MonoBehaviour
 		}
 		set
 		{
-			_currentText = value;
+			IsLiteralText = false;
+            _currentText = Application.isPlaying ? GameLocalization.Text(value) : value;
 			Refresh();
 		}
 	}
@@ -101,6 +110,8 @@ public class DynamicFont : MonoBehaviour
 		_orgLocalPosition = position;
 		base.transform.localPosition = position;
 	}
+
+	private void OnEnable() { if (!IsLiteralText && !string.IsNullOrEmpty(_currentText)) Text = GameLocalization.Text(_currentText); }
 
 	private void Awake()
 	{
@@ -232,7 +243,9 @@ public class DynamicFont : MonoBehaviour
 		{
 			return pText;
 		}
-		RefreshTextMesh(GetTextMesh(), Settings.Entries[SelectedEntry]);
+		// Measure the incoming script with its own font before wrapping or shrinking.
+        GetTextMesh().text = pText;
+        RefreshTextMesh(GetTextMesh(), Settings.Entries[SelectedEntry]);
 		if (Wrapping == WrapType.WORD)
 		{
 			_scale = 1f;
@@ -353,7 +366,12 @@ public class DynamicFont : MonoBehaviour
 				lineSpacing = fontOverride.LineSpacing;
 			}
 		}
-		font.material.mainTexture.filterMode = filterMode;
+		if (Application.isPlaying && GameLocalization.ContainsChinese(pTextMesh.text) && GameLocalization.ChineseFont != null)
+        {
+            font = GameLocalization.ChineseFont;
+            lineSpacing = 1.15f;
+        }
+        font.material.mainTexture.filterMode = filterMode;
 		int num = ((!Application.isPlaying) ? 768 : Screen.height);
 		float num2 = 100f / ((float)num / 2f);
 		num2 = Mathf.Round(num2 * 1000f) / 1000f;

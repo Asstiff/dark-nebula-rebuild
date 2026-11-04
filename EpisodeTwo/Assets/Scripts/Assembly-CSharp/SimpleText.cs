@@ -35,6 +35,12 @@ public class SimpleText : Entity
 		freezable = false;
 	}
 
+    public virtual void SetLiteralText(string text)
+    {
+        textMesh.SetLiteralText(text);
+        textMesh.Commit();
+    }
+
 	public virtual void SetText(string text)
 	{
 		textMesh.text = text;
@@ -49,6 +55,6 @@ public class SimpleText : Entity
 
 	public void UseCurrentTextAsStringID()
 	{
-		SetStringID(textMesh.text);
+		if(!textMesh.IsLiteralText) SetStringID(textMesh.text);
 	}
 }

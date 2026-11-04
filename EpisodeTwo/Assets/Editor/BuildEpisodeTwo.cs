@@ -1,4 +1,4 @@
-﻿#if UNITY_EDITOR && UNITY_ANDROID
+#if UNITY_EDITOR && UNITY_ANDROID
 using System;
 using System.IO;
 using System.Linq;
@@ -25,8 +25,11 @@ public static class BuildEpisodeTwo
         var boolKeys = new[] { "SdkUseEmbedded", "NdkUseEmbedded", "JdkUseEmbedded" };
         var previousBool = boolKeys.Select(x => EditorPrefs.GetBool(x, true)).ToArray();
         bool previousExport = EditorUserBuildSettings.exportAsGoogleAndroidProject;
+        string previousIdentifier = PlayerSettings.GetApplicationIdentifier(NamedBuildTarget.Android);
         bool exportProject = Array.IndexOf(Environment.GetCommandLineArgs(), "-exportGradle") >= 0;
         bool development = Array.IndexOf(Environment.GetCommandLineArgs(), "-development") >= 0;
+        bool validation = Array.IndexOf(Environment.GetCommandLineArgs(), "-validation") >= 0;
+        if (validation && !development) throw new Exception("Validation packages must be Development builds.");
         try
         {
             EditorUserBuildSettings.exportAsGoogleAndroidProject = exportProject;
@@ -34,14 +37,14 @@ public static class BuildEpisodeTwo
             UnityEditor.Android.AndroidExternalToolsSettings.ndkRootPath = ndk;
             UnityEditor.Android.AndroidExternalToolsSettings.jdkRootPath = jdk;
             PlayerSettings.productName = "Dark Nebula Episode Two";
-            PlayerSettings.bundleVersion = "0.2.0";
+            PlayerSettings.bundleVersion = "0.3.0";
             PlayerSettings.SplashScreen.show = false;
             PlayerSettings.SplashScreen.showUnityLogo = false;
             LauncherIconBuilder.SetIcons();
-            PlayerSettings.SetApplicationIdentifier(NamedBuildTarget.Android, "com.darknebula.reference.tall");
+            PlayerSettings.SetApplicationIdentifier(NamedBuildTarget.Android, validation ? "com.darknebula.validation.two" : "com.darknebula.reference.tall");
             PlayerSettings.SetScriptingBackend(NamedBuildTarget.Android, ScriptingImplementation.IL2CPP);
             PlayerSettings.Android.targetArchitectures = AndroidArchitecture.ARM64;
-            PlayerSettings.Android.bundleVersionCode = 14;
+            PlayerSettings.Android.bundleVersionCode = 15;
             PlayerSettings.Android.minSdkVersion = AndroidSdkVersions.AndroidApiLevel26;
             PlayerSettings.Android.targetSdkVersion = AndroidSdkVersions.AndroidApiLevel35;
             var scenes = EditorBuildSettings.scenes.Where(x => x.enabled).Select(x => x.path).ToArray();
@@ -59,6 +62,8 @@ public static class BuildEpisodeTwo
         finally
         {
             EditorUserBuildSettings.exportAsGoogleAndroidProject = previousExport;
+            PlayerSettings.SetApplicationIdentifier(NamedBuildTarget.Android, previousIdentifier);
+            AssetDatabase.SaveAssets();
             for (int i=0; i<keys.Length; i++) EditorPrefs.SetString(keys[i], previous[i]);
             for (int i=0; i<boolKeys.Length; i++) EditorPrefs.SetBool(boolKeys[i], previousBool[i]);
         }

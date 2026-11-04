@@ -24,6 +24,30 @@ public class FlipperButton : MonoBehaviour
 	private string _off = "OFF";
 
 	private bool _value;
+    private string _titleId;
+    private string[] _choices;
+    private int _choiceIndex;
+    public event System.Action<int> EventChoiceChanged;
+    public int CurrentChoice { get { return _choiceIndex; } }
+
+    private void OnEnable() { GamePreferences.Changed += RefreshLabels; RefreshLabels(); }
+    private void OnDisable() { GamePreferences.Changed -= RefreshLabels; }
+    public void InitChoices(int value, string[] names, string title)
+    {
+        _choices=names;
+        _choiceIndex=Mathf.Clamp(value,0,names.Length-1);
+        _titleId=title;
+        RefreshLabels();
+    }
+    public void RefreshLabels()
+    {
+        if (_titleId==null) return;
+        Title.SetActive(!string.IsNullOrEmpty(_titleId));
+        Title.GetComponent<SimpleText>().SetText(GameLocalization.Text(_titleId));
+        string value=_choices!=null ? _choices[_choiceIndex] : (_value ? _on : _off);
+        Value.GetComponent<SimpleText>().SetText(GameLocalization.Text(value));
+    }
+
 
 	private bool _enabled = true;
 
@@ -80,22 +104,15 @@ public class FlipperButton : MonoBehaviour
 		Title.transform.Translate(Vector3.down * 28f);
 	}
 
-	public void Init(bool value, string onStringID, string offStringID, string titleStringID)
-	{
-		_value = value;
-		_on = onStringID;
-		_off = offStringID;
-		Title.SetActive(!string.IsNullOrEmpty(titleStringID));
-		if (!string.IsNullOrEmpty(titleStringID)) Title.GetComponent<SimpleText>().SetStringID(titleStringID);
-		if (_value)
-		{
-			Value.GetComponent<SimpleText>().SetStringID(_on);
-		}
-		else
-		{
-			Value.GetComponent<SimpleText>().SetStringID(_off);
-		}
-	}
+    public void Init(bool value, string onStringID, string offStringID, string titleStringID)
+    {
+        _choices=null;
+        _value=value;
+        _on=onStringID;
+        _off=offStringID;
+        _titleId=titleStringID;
+        RefreshLabels();
+    }
 
 	private void OnToggleLeft(SimpleButton source)
 	{
@@ -107,25 +124,27 @@ public class FlipperButton : MonoBehaviour
 		OnToggle(false);
 	}
 
-	private void OnToggle(bool isLeft)
-	{
-		_value = !_value;
-		LastTapWasLeft = isLeft;
-		if (_value)
-		{
-			Value.GetComponent<SimpleText>().SetStringID(_on);
-		}
-		else
-		{
-			Value.GetComponent<SimpleText>().SetStringID(_off);
-		}
-		if (EventValueChanged != null)
-		{
-			EventValueChanged(_value);
-		}
-		StopCoroutine("AnimateSpacing");
-		StartCoroutine("AnimateSpacing");
-	}
+    private void OnToggle(bool isLeft)
+    {
+        LastTapWasLeft=isLeft;
+        if (_choices!=null)
+        {
+            _choiceIndex=(_choiceIndex+(isLeft ? -1 : 1)+_choices.Length)%_choices.Length;
+            RefreshLabels();
+            if(EventChoiceChanged!=null) EventChoiceChanged(_choiceIndex);
+        }
+        else
+        {
+            _value=!_value;
+            RefreshLabels();
+            if(EventValueChanged!=null) EventValueChanged(_value);
+        }
+        if(!GamePreferences.Chinese)
+        {
+            StopCoroutine("AnimateSpacing");
+            StartCoroutine("AnimateSpacing");
+        }
+    }
 
 	private IEnumerator AnimateSpacing()
 	{

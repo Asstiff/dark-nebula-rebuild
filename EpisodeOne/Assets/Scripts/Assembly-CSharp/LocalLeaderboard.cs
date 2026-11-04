@@ -129,11 +129,21 @@ public sealed class LocalLeaderboard
             !DateTime.TryParse(dateText, CultureInfo.CurrentCulture, DateTimeStyles.None, out date) &&
             !DateTime.TryParse(dateText, CultureInfo.InvariantCulture, DateTimeStyles.None, out date)) date = default(DateTime);
         entry = new LeaderboardEntryVO {
-            name = Field(data, "name"), time = time, date = date,
+            name = ReadName(data), time = time, date = date,
             star = Math.Max(-1, Math.Min(2, star)), expert = expert
         };
         if (string.IsNullOrEmpty(entry.name)) entry.name = "PLAYER";
         return true;
+    }
+
+    private static string ReadName(Dictionary<string, object> data)
+    {
+        string name = Field(data, "name");
+        if (Field(data, "nameEncoding") == "unicode") return name;
+        // Old JSON decoding wrote Unicode escapes as HTML entities. Repair rows
+        // saved by that decoder, while marking new literal names unambiguously.
+        return System.Text.RegularExpressions.Regex.Replace(name, @"&#x([0-9a-fA-F]{4});",
+            match => ((char)Convert.ToInt32(match.Groups[1].Value, 16)).ToString());
     }
 
     public static Dictionary<string, object> Serialize(LeaderboardEntryVO entry)
@@ -141,6 +151,7 @@ public sealed class LocalLeaderboard
         return new Dictionary<string, object> {
             { "date", entry.date.ToString("O", CultureInfo.InvariantCulture) },
             { "name", entry.name ?? "PLAYER" },
+            { "nameEncoding", "unicode" },
             { "time", entry.time.ToString("R", CultureInfo.InvariantCulture) },
             { "star", entry.star.ToString(CultureInfo.InvariantCulture) },
             { "expert", entry.expert.ToString() }

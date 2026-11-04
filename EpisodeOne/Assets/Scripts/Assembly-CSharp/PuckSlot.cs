@@ -22,7 +22,7 @@ public class PuckSlot : Entity
 	{
 		if (!_occupied && other.CompareTag("Puck"))
 		{
-			other.GetComponent<Rigidbody>().drag = 3f;
+			other.GetComponent<Rigidbody>().linearDamping = 3f;
 			Vector2 vector = new Vector2(other.transform.position.x - base.transform.position.x, other.transform.position.z - base.transform.position.z) * 2f;
 			if (vector.sqrMagnitude < 1f)
 			{

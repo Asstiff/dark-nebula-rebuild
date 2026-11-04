@@ -65,7 +65,7 @@ public class UserSettings
 
 	public void Calibrate()
 	{
-		Vector3 forward = Input.acceleration;
+		Vector3 forward = LevelMotionCalibration.Gravity;
 		forward.Normalize();
 		if (forward.sqrMagnitude == 0f)
 		{
@@ -336,6 +336,7 @@ public class UserSettings
 	public void SetUserName(string name)
 	{
 		settings.Set("UserName", name);
+		PlayerPrefs.Save();
 	}
 
 	public float GetBestTime(int levelNum, bool expert)
@@ -367,13 +368,12 @@ public class UserSettings
 
 	public bool GetVibration()
 	{
-		settings.Set("Vibration", true, false);
-		return settings.GetBool("Vibration");
+        return GamePreferences.Vibration != VibrationMode.Disabled;
 	}
 
 	public void SetVibration(bool value)
 	{
-		settings.Set("Vibration", value);
+        GamePreferences.Vibration = value ? VibrationMode.Original : VibrationMode.Disabled;
 	}
 
 	public int GetHighestPlayedLevel(LevelPack pack)

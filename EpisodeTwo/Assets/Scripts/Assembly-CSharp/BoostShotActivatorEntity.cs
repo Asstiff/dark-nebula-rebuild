@@ -62,7 +62,7 @@ public class BoostShotActivatorEntity : Entity
 			}
 			ObjectPool.instance.GetObjectForType<BoostShotBullet>().Fire(base.transform.position, velocityThisFrame * speed, color, damage);
 			ObjectPool.instance.GetObjectForType<Shockwave>().Play("Big", base.transform.position, 0.6f, 9);
-			Audio.Play("TriggerBoost", TriggerSound);
+			Audio.Play("TriggerBoost", TriggerSound, transform);
 		}
 	}
 }

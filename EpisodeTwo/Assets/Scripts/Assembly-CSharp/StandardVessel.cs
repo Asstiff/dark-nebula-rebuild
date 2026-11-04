@@ -269,6 +269,8 @@ public class StandardVessel : Vessel
 		_anim = GfxPuck.GetComponentInChildren<tk2dAnimatedSprite>();
 		_animShield = GfxShield.GetComponentInChildren<tk2dAnimatedSprite>();
 		_animEnergy = GfxEnergy.GetComponentInChildren<tk2dAnimatedSprite>();
+        VesselSkins.Apply(_anim, false);
+        VesselSkins.Apply(_animEnergy, true);
 		_animPos = _anim.transform.localPosition;
 		_animShieldPos = _animShield.transform.localPosition;
 		_animEnergyPos = _animEnergy.transform.localPosition;
@@ -559,6 +561,7 @@ public class StandardVessel : Vessel
 
 	public override void TriggerExtraLife()
 	{
+        GameHaptics.Play(HapticEvent.Pickup);
 		Vessel._lives++;
 		TextAttachedEntity objectForType = ObjectPool.instance.GetObjectForType<TextAttachedEntity>();
 		objectForType.SetText("1UP");
@@ -595,6 +598,7 @@ public class StandardVessel : Vessel
 		if (skinType != VesselSkinType.Matrix)
 		{
 			_isPlayingJumpAnimation = true;
+            GameHaptics.Play(HapticEvent.Jump);
 			_anim.Play("VesselJump");
 			_anim.gameObject.transform.localScale = Vector3.one * 0.65f;
 		}
@@ -621,6 +625,13 @@ public class StandardVessel : Vessel
 		_anim.gameObject.transform.localScale = Vector3.one;
 		UpdateVesselGfx();
 	}
+
+    public void RefreshSkin()
+    {
+        VesselSkins.Apply(_anim, false);
+        VesselSkins.Apply(_animEnergy, true);
+        UpdateVesselGfx();
+    }
 
 	public override void UpdateVesselGfx()
 	{
@@ -790,10 +801,7 @@ public class StandardVessel : Vessel
 
 	private void Vibrate()
 	{
-		if (UserSettings.I.GetVibration())
-		{
-			Handheld.Vibrate();
-		}
+        GameHaptics.Play(HapticEvent.Damage);
 	}
 
 	private void DieComplete()
@@ -1011,6 +1019,7 @@ public class StandardVessel : Vessel
 
 	public void Spawn(VesselSkinType skin)
 	{
+        GameHaptics.Play(HapticEvent.Spawn);
 		Reset();
 		skinType = skin;
 		if (skinType == VesselSkinType.Matrix)

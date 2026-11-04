@@ -54,6 +54,9 @@ public class LevelCompleteScreen : MonoBehaviour
 	private int currentSection = -1;
 
 	private bool _done;
+	private bool _initialized;
+	private bool _skipping;
+	private bool _continuing;
 
 	private bool _showingAd;
 
@@ -72,8 +75,7 @@ public class LevelCompleteScreen : MonoBehaviour
 	{
 		Time.timeScale = 1f;
 		fade = CameraObject.AddComponent<CameraFade>();
-		fade.FadeIn();
-		fade.FadeComplete += OnFadeInComplete;
+
 		if (Result.LevelNum == 0)
 		{
 			Result.LevelNum = 1;
@@ -83,6 +85,9 @@ public class LevelCompleteScreen : MonoBehaviour
 			Result.OrbsOnLevel = 50;
 		}
 		Setup();
+		_initialized = true;
+		fade.FadeComplete += OnFadeInComplete;
+		fade.FadeIn();
 	}
 
 	private void Start()
@@ -94,7 +99,7 @@ public class LevelCompleteScreen : MonoBehaviour
 
 	private void Setup()
 	{
-		sections = new LevelCompleteSection[4];
+		sections = new LevelCompleteSection[3];
 		sections[0] = OrbsGroup.GetComponent<LevelCompleteSection>();
 		sections[1] = TimeGroup.GetComponent<LevelCompleteSection>();
 		sections[2] = ResultGroup.GetComponent<LevelCompleteSection>();
@@ -126,38 +131,35 @@ public class LevelCompleteScreen : MonoBehaviour
 
 	private void OnPlayStarSound(bool big)
 	{
+        GameHaptics.Play(HapticEvent.Star);
 		Audio.Play("star" + Random.value, (!big) ? SfxStar : SfxStarBig);
 	}
 
-	private void OnDisable()
+	private void OnDestroy()
 	{
-		try
+		_initialized = false;
+		if (sections != null)
 		{
-			LevelCompleteSection obj = sections[0];
-			obj.EventComplete = (Action)Delegate.Remove(obj.EventComplete, new Action(OnNextSection));
-			LevelCompleteSection obj2 = sections[1];
-			obj2.EventComplete = (Action)Delegate.Remove(obj2.EventComplete, new Action(OnNextSection));
-			LevelCompleteSection obj3 = sections[2];
-			obj3.EventComplete = (Action)Delegate.Remove(obj3.EventComplete, new Action(OnDone));
-			LevelCompleteSection obj4 = sections[0];
-			obj4.StarSound = (Action<bool>)Delegate.Remove(obj4.StarSound, new Action<bool>(OnPlayStarSound));
-			LevelCompleteSection obj5 = sections[1];
-			obj5.StarSound = (Action<bool>)Delegate.Remove(obj5.StarSound, new Action<bool>(OnPlayStarSound));
-			LevelCompleteSection obj6 = sections[2];
-			obj6.StarSound = (Action<bool>)Delegate.Remove(obj6.StarSound, new Action<bool>(OnPlayStarSound));
-			LevelCompleteSection obj7 = sections[0];
-			obj7.Tick = (Action)Delegate.Remove(obj7.Tick, new Action(OnTick));
-			LevelCompleteSection obj8 = sections[1];
-			obj8.Tick = (Action)Delegate.Combine(obj8.Tick, new Action(OnTick));
+			foreach (LevelCompleteSection section in sections)
+			{
+				if (section == null) continue;
+				section.EventComplete -= OnNextSection;
+				section.EventComplete -= OnDone;
+				section.StarSound -= OnPlayStarSound;
+				section.Tick -= OnTick;
+			}
 		}
-		catch (Exception)
+		if (fade != null)
 		{
+			fade.FadeComplete -= OnFadeInComplete;
+			fade.FadeComplete -= OnFadeInSuperStar;
+			fade.FadeComplete -= OnFadeOutSuperStar;
 		}
-		sections = null;
 	}
 
 	private void OnTick()
 	{
+        GameHaptics.Play(HapticEvent.Score);
 		Audio.Play("Tick" + Random.value, SfxTick);
 	}
 
@@ -169,6 +171,7 @@ public class LevelCompleteScreen : MonoBehaviour
 
 	private void OnNextSection()
 	{
+		if (!_initialized || _done || _skipping || currentSection + 1 >= sections.Length) return;
 		currentSection++;
 		if (!(sections[currentSection] == null))
 		{
@@ -178,6 +181,7 @@ public class LevelCompleteScreen : MonoBehaviour
 
 	private void OnDone()
 	{
+		if (!_initialized || _done) return;
 		_done = true;
 		DarkNebulaAchievements.Instance.SyncAchievements();
 		ContinueButton.gameObject.SetActive(true);
@@ -372,17 +376,21 @@ public class LevelCompleteScreen : MonoBehaviour
 
 	private void Update()
 	{
-		if (!_showingAd && Input.GetMouseButton(0) && !_done)
+		if (_initialized && !_showingAd && Input.GetMouseButton(0) && !_done)
 		{
+			_skipping = true;
 			sections[0].SetComplete();
 			sections[1].SetComplete();
 			sections[2].SetComplete();
+			_skipping = false;
 			OnDone();
 		}
 	}
 
 	private void OnContinue(SimpleButton button)
 	{
+		if (!_initialized || !_done || _continuing) return;
+		_continuing = true;
 		Invoke("OnGotoLevelCompleteLeaderboard", 0.6f);
 		fade.FadeOut();
 	}

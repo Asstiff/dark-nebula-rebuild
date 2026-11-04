@@ -410,19 +410,19 @@ public class Vessel : Entity
 		}
 		if (!AllowedToMove)
 		{
-			_rigidbody.AddForce(-_rigidbody.velocity, ForceMode.VelocityChange);
+			_rigidbody.AddForce(-_rigidbody.linearVelocity, ForceMode.VelocityChange);
 			SetRelaxedAccelleration();
 			return;
 		}
 		if (_transform.position.z < _cameraTransform.position.z - (float)(Constants.OriginalScreenHeight / 2))
 		{
-			_rigidbody.AddForce(-_rigidbody.velocity, ForceMode.VelocityChange);
+			_rigidbody.AddForce(-_rigidbody.linearVelocity, ForceMode.VelocityChange);
 			SetRelaxedAccelleration();
 			return;
 		}
 		if (_transform.position.z > _cameraTransform.position.z + (float)(Constants.OriginalScreenHeight / 2))
 		{
-			_rigidbody.AddForce(-_rigidbody.velocity, ForceMode.VelocityChange);
+			_rigidbody.AddForce(-_rigidbody.linearVelocity, ForceMode.VelocityChange);
 			SetRelaxedAccelleration();
 			return;
 		}
@@ -478,7 +478,7 @@ public class Vessel : Entity
 		tmp.x = tmp2.x * Acceleration * 100f * Time.deltaTime;
 		tmp.y = 0f;
 		tmp.z = tmp2.y * Acceleration * 100f * Time.deltaTime;
-		_rigidbody.AddForce(tmp - _rigidbody.velocity, ForceMode.VelocityChange);
+		_rigidbody.AddForce(tmp - _rigidbody.linearVelocity, ForceMode.VelocityChange);
 	}
 
 	private void SetSolid(bool on, bool pForceSet = false)
@@ -498,6 +498,7 @@ public class Vessel : Entity
 
 	public void TriggerGainHC()
 	{
+        GameHaptics.Play(HapticEvent.Pickup);
 		HardCurrencyManager.Instance.Earn(CustomBuildVariables<CustomBuildVars>.Instance.InGameHCValue);
 		Audio.Play("extralife", SfxExtraLife, _transform);
 	}
@@ -525,6 +526,7 @@ public class Vessel : Entity
 		SetSolid(false);
 		_gfxTransform.localPosition = new Vector3(_gfxTransform.localPosition.x, _gfxTransform.localPosition.y, -128f);
 		_isPlayingJumpAnimation = true;
+            GameHaptics.Play(HapticEvent.Jump);
 		_vesselAnimator.Play("VesselJump");
 		_vesselAnimator.CurrentClip.fps = 22.5f;
 		_vesselAnimator.gameObject.transform.localScale = Vector3.one * 0.65f;
@@ -662,7 +664,7 @@ public class Vessel : Entity
 
 	public void TriggerDeathCollision()
 	{
-		if (_rigidbody.velocity.sqrMagnitude > 9f)
+		if (_rigidbody.linearVelocity.sqrMagnitude > 9f)
 		{
 			TakeDamage();
 		}
@@ -703,10 +705,7 @@ public class Vessel : Entity
 
 	private void Vibrate()
 	{
-		if (UserSettings.Instance.GetVibration())
-		{
-			Handheld.Vibrate();
-		}
+        GameHaptics.Play(HapticEvent.Damage);
 	}
 
 	private void Die()
@@ -798,6 +797,6 @@ public class Vessel : Entity
 
 	public void ResetDrag()
 	{
-		_rigidbody.drag = 1f;
+		_rigidbody.linearDamping = 1f;
 	}
 }

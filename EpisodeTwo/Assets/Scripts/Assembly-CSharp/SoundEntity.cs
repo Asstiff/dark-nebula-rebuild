@@ -21,7 +21,7 @@ public class SoundEntity : Entity
 
 	private void OnActivated()
 	{
-		Audio.Play("sfx" + Random.value, Sfx);
+		Audio.Play("sfx" + Random.value, Sfx, transform);
 	}
 
 	protected override void OnDestroy()

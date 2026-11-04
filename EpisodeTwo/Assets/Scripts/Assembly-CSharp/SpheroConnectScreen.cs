@@ -46,7 +46,7 @@ public class SpheroConnectScreen : MonoBehaviour
 
 	private void Start()
 	{
-		if (!BuildSettings.Current.SpheroEnabled) return;
+		if (!BuildSettings.Current.SpheroEnabled) { gameObject.SetActive(false); return; }
 		spheroProvider = SpheroProvider.GetSharedProvider();
 		ButtonGoBack.ButtonUpEvent += delegate
 		{

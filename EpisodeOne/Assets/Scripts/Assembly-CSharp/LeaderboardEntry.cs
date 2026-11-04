@@ -93,9 +93,9 @@ public class LeaderboardEntry : MonoBehaviour
 				_positionText.Text = string.Empty;
 				_userIDText.gameObject.SetActive(false);
 			}
-			_localNameText.Text = DarkNebulaPalringo.IsAuthorized ? pEntry.name :
+			_localNameText.SetLiteralText(DarkNebulaPalringo.IsAuthorized ? pEntry.name :
 				(pListposition + 1) + ". " + (pEntry.date == default(DateTime) ? "LOCAL BEST" :
-				pEntry.date.ToString("MM/dd HH:mm", System.Globalization.CultureInfo.InvariantCulture));
+				pEntry.date.ToString("MM/dd HH:mm", System.Globalization.CultureInfo.InvariantCulture)));
 			_timeText.Text = LevelCompleteSection.ToTimeString(pEntry.time);
 			if (pEntry.star >= 0 && pEntry.expert)
 			{

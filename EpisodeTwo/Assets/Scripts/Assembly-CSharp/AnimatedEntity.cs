@@ -269,11 +269,11 @@ public class AnimatedEntity : Entity
 		{
 			if (curveAnimationNode == currentNode)
 			{
-				Audio.Play("TakeOffSound" + UnityEngine.Random.value, TakeOffSound);
+				Audio.Play("TakeOffSound" + UnityEngine.Random.value, TakeOffSound, transform);
 			}
 			else
 			{
-				Audio.Play("ArriveSound" + UnityEngine.Random.value, ArriveSound);
+				Audio.Play("ArriveSound" + UnityEngine.Random.value, ArriveSound, transform);
 			}
 		}
 		lastNode = currentNode;
@@ -302,7 +302,7 @@ public class AnimatedEntity : Entity
 
 	public virtual void OnAnimationDone()
 	{
-		Audio.Play("ArriveSound", ArriveSound);
+		Audio.Play("ArriveSound", ArriveSound, transform);
 	}
 
 	private void OnVesselRespawned()
@@ -374,7 +374,7 @@ public class AnimatedEntity : Entity
 	{
 		if (!isCrusher && !World.IsFrozen(base.transform.position.z))
 		{
-			Audio.Play("TakeOffSound" + UnityEngine.Random.value, TakeOffSound);
+			Audio.Play("TakeOffSound" + UnityEngine.Random.value, TakeOffSound, transform);
 		}
 		if (curveAnimation != null)
 		{

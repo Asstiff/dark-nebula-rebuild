@@ -149,6 +149,15 @@ public class tk2dTextMesh : MonoBehaviour, ISpriteCollectionForceBuild
 		}
 	}
 
+    public bool IsLiteralText { get; private set; }
+    public void SetLiteralText(string value)
+    {
+        IsLiteralText = true;
+        UpgradeData();
+        data.text = value ?? string.Empty;
+        SetNeedUpdate(UpdateFlags.UpdateText);
+    }
+
 	public string text
 	{
 		get
@@ -159,7 +168,8 @@ public class tk2dTextMesh : MonoBehaviour, ISpriteCollectionForceBuild
 		set
 		{
 			UpgradeData();
-			data.text = value;
+			IsLiteralText = false;
+            data.text = Application.isPlaying ? GameLocalization.Text(value) : value;
 			SetNeedUpdate(UpdateFlags.UpdateText);
 		}
 	}
@@ -279,7 +289,7 @@ public class tk2dTextMesh : MonoBehaviour, ISpriteCollectionForceBuild
 		set
 		{
 			UpgradeData();
-			data.textureGradient = value % font.gradientCount;
+			data.textureGradient = value % Mathf.Max(1,font.gradientCount);
 			SetNeedUpdate(UpdateFlags.UpdateText);
 		}
 	}
@@ -446,23 +456,7 @@ public class tk2dTextMesh : MonoBehaviour, ISpriteCollectionForceBuild
 		{
 			char c = _source[i];
 			bool flag2 = c == '^';
-			tk2dFontChar tk2dFontChar2;
-			if (_fontInst.useDictionary)
-			{
-				if (!_fontInst.charDict.ContainsKey(c))
-				{
-					c = '\0';
-				}
-				tk2dFontChar2 = _fontInst.charDict[c];
-			}
-			else
-			{
-				if (c >= _fontInst.chars.Length)
-				{
-					c = '\0';
-				}
-				tk2dFontChar2 = _fontInst.chars[(uint)c];
-			}
+			tk2dFontChar tk2dFontChar2 = _fontInst.GetSafeCharacter(c);
 			if (flag2)
 			{
 				c = '^';
@@ -553,8 +547,11 @@ public class tk2dTextMesh : MonoBehaviour, ISpriteCollectionForceBuild
 		}
 	}
 
+	private void OnEnable() { if (Application.isPlaying) { if(!IsLiteralText) text = GameLocalization.Text(text); Commit(); } }
+
 	private void Awake()
 	{
+        if (Application.isPlaying) if(!IsLiteralText) text = GameLocalization.Text(text);
 		UpgradeData();
 		if (data.font != null)
 		{
@@ -567,23 +564,19 @@ public class tk2dTextMesh : MonoBehaviour, ISpriteCollectionForceBuild
 			UpdateMaterial();
 		}
 		updateFlags = UpdateFlags.UpdateNone;
+        if (Application.isPlaying) CjkTextRenderer.Render(this);
 	}
 
 	protected void OnDestroy()
 	{
-		if (meshFilter == null)
-		{
-			meshFilter = GetComponent<MeshFilter>();
-		}
-		if (meshFilter != null)
-		{
-			mesh = meshFilter.sharedMesh;
-		}
-		if ((bool)mesh)
-		{
-			UnityEngine.Object.DestroyImmediate(mesh, true);
-			meshFilter.mesh = null;
-		}
+		// Only Init-created meshes belong to this component. A hidden label can
+		// still reference a recovered asset which must survive object destruction.
+		if (mesh == null) return;
+		if (meshFilter != null && meshFilter.sharedMesh == mesh)
+			meshFilter.sharedMesh = null;
+		if (Application.isPlaying) UnityEngine.Object.Destroy(mesh);
+		else UnityEngine.Object.DestroyImmediate(mesh);
+		mesh = null;
 	}
 
 	public int NumDrawnCharacters()
@@ -608,17 +601,6 @@ public class tk2dTextMesh : MonoBehaviour, ISpriteCollectionForceBuild
 		{
 			int num2 = _formattedText[i];
 			bool flag = num2 == 94;
-			if (_fontInst.useDictionary)
-			{
-				if (!_fontInst.charDict.ContainsKey(num2))
-				{
-					num2 = 0;
-				}
-			}
-			else if (num2 >= _fontInst.chars.Length)
-			{
-				num2 = 0;
-			}
 			if (flag)
 			{
 				num2 = 94;
@@ -748,6 +730,7 @@ public class tk2dTextMesh : MonoBehaviour, ISpriteCollectionForceBuild
 
 	public void DoNotUse__CommitInternal()
 	{
+        if (Application.isPlaying) CjkTextRenderer.Restore(this);
 		InitInstance();
 		if (_fontInst == null)
 		{
@@ -810,6 +793,7 @@ public class tk2dTextMesh : MonoBehaviour, ISpriteCollectionForceBuild
 			}
 		}
 		updateFlags = UpdateFlags.UpdateNone;
+        if (Application.isPlaying) CjkTextRenderer.Render(this);
 	}
 
 	public void MakePixelPerfect()
