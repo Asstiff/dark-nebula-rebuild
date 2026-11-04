@@ -22,8 +22,12 @@ if ($unityProcess.ExitCode -ne 0 -or -not ([IO.File]::ReadAllText($log).Contains
 $export = Join-Path $repo "android-final-exports/episode$Episode"
 $editorDir = Split-Path -Parent $UnityEditor
 $gradle = Join-Path $editorDir 'Data/PlaybackEngines/AndroidPlayer/Tools/gradle/lib/gradle-launcher-9.1.0.jar'
+$priorErrorPreference = $ErrorActionPreference
+$ErrorActionPreference = 'Continue' # Windows PowerShell can treat harmless javac stderr notes as terminating errors.
 & (Join-Path $Jdk 'bin/java.exe') '-Xmx4096m' '-Dfile.encoding=UTF-8' '-Dorg.gradle.daemon=false' '-Dorg.gradle.internal.instrumentation.agent=false' -classpath $gradle org.gradle.launcher.GradleMain -p $export '-Dorg.gradle.jvmargs=-Xmx4096m -Dfile.encoding=UTF-8' --max-workers=2 --init-script (Join-Path $PSScriptRoot 'gradle-javac.gradle') assembleRelease
-if ($LASTEXITCODE -ne 0) { throw 'Gradle packaging failed.' }
+$gradleExitCode = $LASTEXITCODE
+$ErrorActionPreference = $priorErrorPreference
+if ($gradleExitCode -ne 0) { throw 'Gradle packaging failed.' }
 $apk = Join-Path $export 'launcher/build/outputs/apk/release/launcher-release.apk'
 $destination = Join-Path $builds "DarkNebula-Episode$Episode-Android64.apk"
 Copy-Item -LiteralPath $apk -Destination $destination

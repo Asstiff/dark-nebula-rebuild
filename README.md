@@ -26,6 +26,8 @@ The display names remain **Dark Nebula Episode One** and **Dark Nebula Episode T
 
 See [build instructions](docs/BUILDING.md), [validation status](docs/STATUS.md) and [provenance](docs/PROVENANCE.md).
 
+The current Episode Two development package is **0.1.10**. [The audio audit](docs/AUDIO-AUDIT.md) records source comparisons, Android encoding measurements and listening excerpts; audio changes have not been applied by that assessment.
+
 ## License and original content
 
 The MIT license in `LICENSE` applies only to original contributions made for this rebuild. Recovered Dark Nebula code, levels, artwork, audio, fonts and third-party components retain their respective rights and licenses. No ownership or permission to relicense those materials is claimed. See [NOTICE](NOTICE.md).

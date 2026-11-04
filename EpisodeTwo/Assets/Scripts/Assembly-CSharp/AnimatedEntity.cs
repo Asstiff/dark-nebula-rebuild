@@ -310,30 +310,18 @@ public class AnimatedEntity : Entity
 	float? authoredScanStart;
     public virtual void OnActivateEvent()
 	{
-        // Keep the authored scan sprite, curve and two-second timing. Only move
-        // its entry point by the additional height exposed by a tall camera.
+        // Native triggers run in the physics step. Resolve the scan entry after
+        // the camera and its scrolling parent have settled for this frame.
         if (World.levelNum == 1 && (activateEventFlag == 10 || activateEventFlag == 11)
             && GetParameterString("image") == "entity_shockwave" && curveAnimation != null
-            && curveAnimation.nodes.Count > 0 && World.cameraFollow != null)
+            && curveAnimation.nodes.Count > 0 && World.cameraFollow != null
+            && World.cameraFollow.GetComponent<Camera>().aspect < LegacyScreenFit.ReferenceAspect - .001f)
         {
-            var first = curveAnimation.nodes[0];
-            if (!authoredScanStart.HasValue) authoredScanStart = first.position.y;
-            first.position = new Vector2(first.position.x, authoredScanStart.Value);
-            SetPosition(first.position);
-            Camera camera = World.cameraFollow.GetComponent<Camera>();
-            if (camera.aspect < LegacyScreenFit.ReferenceAspect - .001f && Sprite != null)
-            {
-                Bounds bounds = Sprite.GetComponent<Renderer>().bounds;
-                float depth = camera.WorldToViewportPoint(bounds.center).z;
-                float screenTop = camera.ViewportToWorldPoint(new Vector3(.5f, 1f, depth)).z;
-                // The trailing edge begins just outside the actual top edge.
-                // Transform the offset back into the scrolling layer's space.
-                float extra = Mathf.Max(0f, screenTop - bounds.min.z + 1f);
-                Vector3 offset = Vector3.forward * extra;
-                if (transform.parent != null) offset = transform.parent.InverseTransformVector(offset);
-                first.position = new Vector2(first.position.x, first.position.y - offset.z);
-                SetPosition(first.position);
-            }
+            curveAnimation.pause();
+            var entry = GetComponent<TallScanEntry>();
+            if (entry == null) entry = gameObject.AddComponent<TallScanEntry>();
+            entry.Schedule(this);
+            return;
         }
 		playAnimation();
 		if (IsFrozen)
@@ -341,6 +329,32 @@ public class AnimatedEntity : Entity
 			Defrost();
 		}
 	}
+
+    internal void StartTallScan()
+    {
+        if (curveAnimation == null || World.cameraFollow == null || Sprite == null) return;
+        var first = curveAnimation.nodes[0];
+        if (!authoredScanStart.HasValue) authoredScanStart = first.position.y;
+        first.position = new Vector2(first.position.x, authoredScanStart.Value);
+        SetPosition(first.position);
+        Camera camera = World.cameraFollow.GetComponent<Camera>();
+        Bounds bounds = Sprite.GetComponent<Renderer>().bounds;
+        float depth = camera.WorldToViewportPoint(bounds.center).z;
+        float screenTop = camera.ViewportToWorldPoint(new Vector3(.5f, 1f, depth)).z;
+        float extra = Mathf.Max(0f, screenTop - bounds.min.z + 1f);
+        Vector3 offset = Vector3.forward * extra;
+        if (transform.parent != null) offset = transform.parent.InverseTransformVector(offset);
+        first.position = new Vector2(first.position.x, first.position.y - offset.z);
+        SetPosition(first.position);
+        var body = GetComponent<Rigidbody>();
+        if (body != null && body.isKinematic) body.position = transform.position;
+        playAnimation();
+        if (IsFrozen) Defrost();
+        bounds = Sprite.GetComponent<Renderer>().bounds;
+        Debug.Log("FOREST_SCAN_ENTRY flag=" + activateEventFlag
+            + " bottom=" + camera.WorldToViewportPoint(bounds.center - Vector3.forward * bounds.extents.z).y
+            + " cameraZ=" + camera.transform.position.z);
+    }
 
 	private void playAnimation()
 	{

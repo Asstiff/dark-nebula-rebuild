@@ -1,32 +1,42 @@
-# Validation status ¡ª 2026-11-04
+# Validation status â€” 2026-11-04
 
-Episode Two development build: **0.1.9**, Android version code **10**. Display name: **Dark Nebula Episode Two**. Episode One retains its existing **Dark Nebula Episode One** label and 0.1.7 build configuration.
+Current Episode Two build: **0.1.10 / Android version code 11**, display name **Dark Nebula Episode Two**. Episode One retains its existing 0.1.7 configuration and **Dark Nebula Episode One** label.
 
-## Changes in this revision
+## Current behavior
 
-- Restored the original player disappearance during the stone-ring transition. Removed the temporary puck material/render-queue override and custom depth-test parameter at the user's request.
-- Separated the top forest portal cap from the main tile batch. During the tall portal approach, its black exterior and the matching Matrix overlay cap are hidden. The original central portal artwork remains.
-- Retained the original scan sprite, two-second curve duration and destination. The entry point alone moves far enough outside the actual tall viewport for the entire bar to enter from the top. No repeated scan-edge tiles or stretched scan artwork are added.
-- Expanded mechanism wake distances with camera height and visible child bounds. Moving scrolling parents retain dynamic bounds.
-- Disabled lossy RGB block compression for the recovered forest/Matrix atlas.
-- Preserved the user-accepted post-level leaderboard layout.
+- The forest scan keeps its original sprite, two-second duration and destination. A one-frame `TallScanEntry` component starts the curve after the camera and scrolling parent finish LateUpdate. This fixes a native trigger timing problem missed by the earlier editor-only fixture. No repeated scan tiles or stretched scan artwork are used.
+- The upper forest portal foliage retains its silhouette. Only the opaque exterior of its upper three tile rows is removed, with a smooth transition into the original undergrowth. A complete eight-row undergrowth cycle and half-texel UV inset avoid incomplete repeats and black atlas-gutter seams.
+- The temporary puck material/render-queue/depth override is removed. The character disappears during the stone-ring transition as originally designed.
+- The accepted post-level leaderboard remains unchanged.
+- The display name contains no Jump Fix, Preview or similar suffix.
 
-## Verified
+## Verified on the actual Android package
 
-Android ARM64 export and Gradle packaging succeeded with zero build errors. APK metadata confirms version 0.1.9/code 10 and the original Episode Two display name. The source retains legacy serialization/deprecation warnings. See [build manifest](validation/episode2-build.json).
+Fresh Unity export and fresh Android Gradle packaging passed with zero build errors. Legacy serialization/deprecation warnings remain. The APK is ARM64, minimum API 26, target API 35.
 
-Unity editor at **540¡Á1200**:
+Android 16 emulator, **540Ã—1200**:
 
-- Both native scan trigger handlers (flags 10 and 11) captured. At activation, each scan bar's lower edge is at normalized viewport Y **1.0014** (just outside the top); each then crosses the screen and leaves below it.
-- A sweep across the level-one forest region produced **2,632 frames**, **22,671 visible entity samples**, and **0 frozen visible samples**.
-- Wake-bound checks passed for a scrolling parent, a large visible child, a taller frustum and an intentionally distant sleeping object.
-- The native stone-ring sequence was captured before the whiteout. Layer isolation identified the black cap; the corrected capture shows its removal and the restored original player disappearance.
-- Atlas import audit: RGB **2048¡Á2048 RGB24**, separate mask **1024¡Á1024 RGB24**, both uncompressed.
+- Both scan flags 10 and 11 logged a lower bar edge at normalized viewport Y **1.001404**, just outside the top. Native recordings show both bars entering from above and traversing the view.
+- The native portal sequence completed through flags 60, 104, 106, 103, 105 and 99, without observed runtime exceptions. Recordings show the original character disappearance and the corrected top foliage transition before the whiteout.
+- Installed Android app information displays **Dark Nebula Episode Two**. Manifest label and launcher activity were checked; the launcher has no label override.
+- APK signatures match the preceding 0.1.8-preview and 0.1.9 artifacts. Package identity is unchanged, enabling an upgrade without intentionally removing saves.
 
-Earlier checks retained from the preceding work: eight controlled jump-pad/moving-platform landings passed; leaving the platform falls as expected. A prior Vivo V2307A measurement improved median presentation intervals from about 33.30 ms to 16.64 ms after the frame-rate target change. Those are historical measurements, not a fresh measurement of 0.1.9.
+Selected screenshots and native scan diagnostics are in [episode2-0.1.10 validation](validation/episode2-0.1.10). Package identity and checksum are in the [build manifest](validation/episode2-build.json).
 
-The user deferred phone testing for this revision. Editor trigger fixtures and scene sweeps do not establish a complete manual level playthrough or final phone acceptance.
+The user reported that their linked 0.1.9 download still showed the old name and old behavior. Local 0.1.9 metadata and emulator results did not establish the cause of that delivery discrepancy. Version 0.1.10 uses a unique filename and a dedicated GitHub release download to make the delivered artifact unambiguous.
 
-## Remaining visual limitation
+The user deferred phone testing. Emulator fixtures do not establish complete manual level playthrough or phone acceptance.
 
-The cyan direction arrows use a separate mask. Their current individual contours are approximately 64 pixels wide. The matching recovered iOS mask atlas is only 512¡Á512 (smaller than the current 1024¡Á1024 mask), so replacing the RGB atlas cannot supply a higher-resolution contour. No fabricated or redrawn replacement is included. Additional source material would be needed to establish a genuine higher-resolution original arrow.
+## Retained earlier checks
+
+The level-one mechanism sweep recorded **2,632 frames / 22,671 visible entity samples / zero frozen visible samples**. Wake-bound checks covered scrolling parents, large visible children, a taller frustum and an intentionally distant sleeping object. This revision does not change those wake-distance rules.
+
+Eight controlled jump-pad/moving-platform landings passed earlier, with departure as a negative control. A preceding Vivo V2307A measurement improved median presentation intervals from about 33.30 ms to 16.64 ms after the frame-target change. Those are historical measurements, not new 0.1.10 phone measurements.
+
+## Audio assessment
+
+[Audio source and encoding impact report](AUDIO-AUDIT.md): all 116 source clips still use the existing Vorbis quality-0 import settings. All 83 Episode Two files match recovered iOS payloads byte-for-byte. Twenty-seven Android encoding fixtures quantify the additional error and the size tradeoff of higher-quality encoding. Raising quality on direct MP3 inputs alone produced identical output in these tests; PCM-decoded inputs responded to high-quality Vorbis. The assessment does not apply audio changes to the game.
+
+## Remaining source limitation
+
+Individual cyan arrow contours are approximately 64 pixels wide in the current separate mask. The matching recovered iOS mask is smaller than the current Android mask. The restored native 2048Ã—2048 RGB atlas is uncompressed, but it cannot supply a genuinely higher-resolution contour. No fabricated or redrawn replacement is included.

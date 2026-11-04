@@ -1,0 +1,7 @@
+11-03 23:53:58.714 25422 25441 I Unity   : ApplicationInfo 'com.darknebula.reference.tall', Version '0.1.10', Min API Level '26', Target API Level '35'
+11-03 23:53:59.137 25422 25441 I Unity   : Product Name: Dark Nebula Episode Two
+11-03 23:54:43.594 25422 25441 I Unity   : SCAN_REVIEW flag=10 screen=540x1200
+11-03 23:54:43.597 25422 25441 I Unity   : FOREST_SCAN_ENTRY flag=10 bottom=1.001404 cameraZ=-55356
+11-03 23:54:49.620 25422 25441 I Unity   : SCAN_REVIEW flag=11 screen=540x1200
+11-03 23:54:49.626 25422 25441 I Unity   : FOREST_SCAN_ENTRY flag=11 bottom=1.001404 cameraZ=-52924
+11-03 23:54:54.634 25422 25441 I Unity   : SCAN_REVIEW_END

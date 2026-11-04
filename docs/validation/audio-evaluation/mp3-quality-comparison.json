@@ -1,0 +1,22 @@
+[
+  {
+    "fixture": "forest_music",
+    "identicalDecodedSamples": true,
+    "maxDifference": 0.0
+  },
+  {
+    "fixture": "credits_music",
+    "identicalDecodedSamples": true,
+    "maxDifference": 0.0
+  },
+  {
+    "fixture": "scan",
+    "identicalDecodedSamples": true,
+    "maxDifference": 0.0
+  },
+  {
+    "fixture": "turret_mp3",
+    "identicalDecodedSamples": true,
+    "maxDifference": 0.0
+  }
+]

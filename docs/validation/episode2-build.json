@@ -1,14 +1,15 @@
 {
-  "file": "DarkNebula-Episode2-Android64.apk",
+  "file": "DarkNebula-Episode2-0.1.10-Android64.apk",
   "episode": 2,
-  "version": "0.1.9",
-  "versionCode": 10,
+  "version": "0.1.10",
+  "versionCode": 11,
   "displayName": "Dark Nebula Episode Two",
   "applicationId": "com.darknebula.reference.tall",
   "architecture": "arm64-v8a",
   "minSdk": 26,
   "targetSdk": 35,
-  "bytes": 62310697,
-  "sha256": "04aafdcdf2191a08f49d6bbc3e2e00e73493f51401972b99181c3b5a234671df",
-  "validation": "Unity export and Android Gradle packaging succeeded; phone testing deferred by user."
+  "bytes": 62314459,
+  "sha256": "0318193cd81cdf4ec29f01be969c5ba43145ec695d06ee59941d4e865e4b2bd1",
+  "validation": "Fresh Unity export and Gradle package succeeded; Android 16 emulator 540x1200 verified both native scan starts, portal foliage continuity, original player disappearance and installed app label. No new phone test.",
+  "sameSigningCertificateAsPrevious": true
 }
