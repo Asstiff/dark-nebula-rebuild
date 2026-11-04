@@ -131,6 +131,10 @@ public class AnimatedEntity : Entity
 			base.GetComponent<Collider>().enabled = false;
 			SetRenderersEnabled(false);
 		}
+		if (NeedsTallScanEntry())
+		{
+			GetTallScanEntry().HideUntilTriggered(this);
+		}
 		World.SignalVesselDied += OnVesselDied;
 		vesselRespawnedCondition = new FlagConditionChanged(110);
 		vesselRespawnedCondition.Callback += OnVesselRespawned;
@@ -278,6 +282,8 @@ public class AnimatedEntity : Entity
 	public virtual void Reset()
 	{
 		hasReportedDone = false;
+		var scanEntry = GetComponent<TallScanEntry>();
+		if (scanEntry != null) scanEntry.HideUntilTriggered(this);
 		if (!isCrusher)
 		{
 			if (curveAnimation != null)
@@ -308,21 +314,33 @@ public class AnimatedEntity : Entity
 	}
 
 	float? authoredScanStart;
+
+    bool NeedsTallScanEntry()
+    {
+        return activateEventFlag != -1
+            && GetParameterString("image") == "entity_shockwave" && curveAnimation != null
+            && curveAnimation.nodes.Count > 0 && World.cameraFollow != null
+            && World.cameraFollow.GetComponent<Camera>().aspect < LegacyScreenFit.ReferenceAspect - .001f;
+    }
+
+    TallScanEntry GetTallScanEntry()
+    {
+        var entry = GetComponent<TallScanEntry>();
+        return entry != null ? entry : gameObject.AddComponent<TallScanEntry>();
+    }
+
     public virtual void OnActivateEvent()
 	{
         // Native triggers run in the physics step. Resolve the scan entry after
         // the camera and its scrolling parent have settled for this frame.
-        if (World.levelNum == 1 && (activateEventFlag == 10 || activateEventFlag == 11)
-            && GetParameterString("image") == "entity_shockwave" && curveAnimation != null
-            && curveAnimation.nodes.Count > 0 && World.cameraFollow != null
-            && World.cameraFollow.GetComponent<Camera>().aspect < LegacyScreenFit.ReferenceAspect - .001f)
+        if (NeedsTallScanEntry())
         {
             curveAnimation.pause();
-            var entry = GetComponent<TallScanEntry>();
-            if (entry == null) entry = gameObject.AddComponent<TallScanEntry>();
-            entry.Schedule(this);
+            GetTallScanEntry().Schedule(this);
             return;
         }
+		var scanEntry = GetComponent<TallScanEntry>();
+		if (scanEntry != null) scanEntry.Reveal();
 		playAnimation();
 		if (IsFrozen)
 		{
