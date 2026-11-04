@@ -33,14 +33,14 @@ public static class CodexBuildEpisodeTwo
             UnityEditor.Android.AndroidExternalToolsSettings.ndkRootPath = ndk;
             UnityEditor.Android.AndroidExternalToolsSettings.jdkRootPath = jdk;
             PlayerSettings.productName = "Dark Nebula Episode Two";
-            PlayerSettings.bundleVersion = "0.1.11";
+            PlayerSettings.bundleVersion = "0.1.12";
             PlayerSettings.SplashScreen.show = false;
             PlayerSettings.SplashScreen.showUnityLogo = false;
             LauncherIconBuilder.SetIcons();
             PlayerSettings.SetApplicationIdentifier(NamedBuildTarget.Android, "com.darknebula.reference.tall");
             PlayerSettings.SetScriptingBackend(NamedBuildTarget.Android, ScriptingImplementation.IL2CPP);
             PlayerSettings.Android.targetArchitectures = AndroidArchitecture.ARM64;
-            PlayerSettings.Android.bundleVersionCode = 12;
+            PlayerSettings.Android.bundleVersionCode = 13;
             PlayerSettings.Android.minSdkVersion = AndroidSdkVersions.AndroidApiLevel26;
             PlayerSettings.Android.targetSdkVersion = AndroidSdkVersions.AndroidApiLevel35;
             var scenes = EditorBuildSettings.scenes.Where(x => x.enabled).Select(x => x.path).ToArray();

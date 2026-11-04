@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+guid: 7ba894ebd1d140029dc4b50a4cc063f4
+timeCreated: 1793553598
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 2
+  name:
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 1
+  characterPadding: 0
+  includeFontData: 1
+  use2xBehaviour: 0
+  fontNames:
+  - BankGothic Md BT DN
+  customCharacters:
+  fontRenderingMode: 0
+  output:
+    hasEmptyFontData: 0
+  userData:

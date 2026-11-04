@@ -108,7 +108,7 @@ public class SimpleButton : MonoBehaviour
 	private void Update()
 	{
 #if UNITY_EDITOR
-        if(UnityEditor.SessionState.GetBool("WideReview",false))return;
+        if(UnityEditor.SessionState.GetBool("WideReview",false) || UnityEditor.SessionState.GetBool("WideReviewMotion",false))return;
 #endif
 		if (Input.GetMouseButton(0))
 		{

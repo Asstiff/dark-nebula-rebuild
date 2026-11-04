@@ -2,26 +2,51 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// Continue the edge of a flat authored backdrop outside its original bounds.
-// The original mesh, transform, UVs and aspect remain unchanged.
+// Loading art covers the view at its original aspect; other flat page backdrops
+// keep the existing mirrored margins outside their authored bounds.
 public class BackdropMargins : MonoBehaviour
 {
     public Camera Camera;
+    public bool CoverOriginal;
     readonly List<Mesh> meshes=new List<Mesh>();
     readonly List<GameObject> objects=new List<GameObject>();
+    Renderer source;
+    Vector3 nativeScale,nativePosition;
+    float lastSize=-1f,lastAspect=-1f;
     IEnumerator Start()
     {
         yield return null;
         if(Camera==null)yield break;
-        Renderer source=null;float area=0;
-        foreach(Renderer r in Object.FindObjectsByType<Renderer>())
+        if(CoverOriginal && Camera.transform.parent!=null)
+        {
+            Transform background=Camera.transform.parent.Find("Background");
+            if(background!=null)source=background.GetComponent<Renderer>();
+        }
+        float area=0;
+        if(source==null)foreach(Renderer r in Object.FindObjectsByType<Renderer>())
         {
             if(r.gameObject.scene!=gameObject.scene || r.name!="Background" || r.GetComponent<MeshFilter>()==null)continue;
             float value=r.bounds.size.x*r.bounds.size.y;
             if(value>area){area=value;source=r;}
         }
         if(source==null)yield break;
+        if(CoverOriginal)
+        {
+            nativeScale=source.transform.localScale;
+            nativePosition=source.transform.localPosition;
+            FitOriginal();yield break;
+        }
         Create(source,true);Create(source,false);
+    }
+    void LateUpdate()
+    {
+        if(CoverOriginal && source!=null && Camera!=null &&
+            (!Mathf.Approximately(lastSize,Camera.orthographicSize) || !Mathf.Approximately(lastAspect,Camera.aspect)))FitOriginal();
+    }
+    void FitOriginal()
+    {
+        LegacyScreenFit.CoverBackdrop(Camera,source,nativeScale,nativePosition);
+        lastSize=Camera.orthographicSize;lastAspect=Camera.aspect;
     }
     void Create(Renderer source,bool top)
     {

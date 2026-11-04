@@ -21,6 +21,7 @@ public class ImageActionBehaviour : MonoBehaviour
 	private Renderer background;
 	private Vector3 backgroundScale;
 	private Vector3 backgroundPosition;
+	private Vector3 imageScale;
 	private float fittedSize = -1f;
 	private float fittedAspect = -1f;
 
@@ -90,6 +91,7 @@ public class ImageActionBehaviour : MonoBehaviour
 		{
 			Image.transform.parent = base.transform;
 			Image.transform.localPosition = Vector3.zero;
+			imageScale = Image.transform.localScale;
 			Image.SetActive(true);
 			World.hud.ShowHudIcons(false);
 			Transform backdrop = Image.transform.Find("Background");
@@ -108,35 +110,12 @@ public class ImageActionBehaviour : MonoBehaviour
 		if (Image == null || HudCamera == null) return;
 		if (background != null)
 		{
-			// Instructions/calibration are a hierarchy, not one renderer. Fill only
-			// their scenery; retain the phone, arrows, labels and icons at native scale.
-			Transform backdrop = background.transform;
-			backdrop.localScale = backgroundScale;
-			backdrop.localPosition = backgroundPosition;
-			Bounds bounds = background.bounds;
-			float height = HudCamera.orthographicSize * 2f;
-			float width = height * HudCamera.aspect;
-			float cover = Mathf.Max(width / Mathf.Max(bounds.size.x, 0.01f), height / Mathf.Max(bounds.size.y, 0.01f));
-			backdrop.localScale = Vector3.Scale(backgroundScale, new Vector3(cover, cover, 1f));
-			Vector3 position = backdrop.position;
-			bounds = background.bounds;
-			position.x += HudCamera.transform.position.x - bounds.center.x;
-			position.y += HudCamera.transform.position.y - bounds.center.y;
-			backdrop.position = position;
+			// Fit only scenery in a hierarchy; phone, arrows and labels retain their scale.
+			LegacyScreenFit.CoverBackdrop(HudCamera, background, backgroundScale, backgroundPosition);
 		}
 		else if (Image.GetComponent<Renderer>() != null)
 		{
-			Image.transform.localScale = Vector3.one;
-			Vector3 size = Image.GetComponent<Renderer>().bounds.size;
-			if (size.x == 0f || size.y == 0f)
-			{
-				size.x = 256f;
-				size.y = 512f;
-			}
-			Vector3 vector = HudCamera.ScreenToWorldPoint(Vector3.zero);
-			Vector3 vector2 = HudCamera.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0f));
-			Vector2 vector3 = new Vector2(vector2.x - vector.x, vector2.y - vector.y);
-			Image.transform.localScale = new Vector3(vector3.x / size.x, vector3.y / size.y, 1f);
+			LegacyScreenFit.CoverBackdrop(HudCamera, Image.GetComponent<Renderer>(), imageScale, Vector3.zero);
 		}
 		fittedSize = HudCamera.orthographicSize;
 		fittedAspect = HudCamera.aspect;

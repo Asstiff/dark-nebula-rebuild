@@ -53,24 +53,27 @@ public static class LegacyScreenFit
 
     // The safe rectangle positions controls, never a reduced camera viewport.
     // All scenery and page backgrounds render to the complete display.
-    public static Rect FrameViewport(bool levelScene)
+    public static Rect FrameViewport()
     {
         return new Rect(0f,0f,1f,1f);
     }
 
-    public static float LoadingCameraSize(Camera camera)
+    public static void CoverBackdrop(Camera camera, Renderer backdrop, Vector3 nativeScale, Vector3 nativePosition)
     {
-        Renderer backdrop=null;float area=0f;
-        foreach(Renderer renderer in UnityEngine.Object.FindObjectsByType<Renderer>())
-        {
-            if(renderer.gameObject.scene!=camera.gameObject.scene || renderer.name!="Background")continue;
-            Bounds b=renderer.bounds;float candidate=b.size.x*b.size.y;
-            if(candidate>area){area=candidate;backdrop=renderer;}
-        }
-        if(backdrop==null)return 256f;
+        Transform image = backdrop.transform;
+        image.localScale = nativeScale;
+        image.localPosition = nativePosition;
         Bounds bounds=backdrop.bounds;
-        return Mathf.Min(bounds.extents.y-Mathf.Abs(bounds.center.y-camera.transform.position.y),
-            (bounds.extents.x-Mathf.Abs(bounds.center.x-camera.transform.position.x))/Mathf.Max(camera.aspect,0.01f));
+        if (bounds.size.x <= 0f || bounds.size.y <= 0f) return;
+
+        // One scale preserves the artwork's proportions. On a tall display the
+        // image fills the height and its left/right edges fall outside the view.
+        float height = camera.orthographicSize * 2f;
+        float scale = Mathf.Max(height * camera.aspect / bounds.size.x, height / bounds.size.y);
+        image.localScale = Vector3.Scale(nativeScale, new Vector3(scale, scale, 1f));
+        Vector3 offset = camera.transform.position - backdrop.bounds.center;
+        image.position += camera.transform.right * Vector3.Dot(offset, camera.transform.right)
+            + camera.transform.up * Vector3.Dot(offset, camera.transform.up);
     }
 
     public static float MainMenuCameraSize(Camera camera)

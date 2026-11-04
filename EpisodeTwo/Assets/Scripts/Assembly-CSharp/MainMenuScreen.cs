@@ -104,6 +104,9 @@ public class MainMenuScreen : MonoBehaviour
 		{
 			gameObject.transform.localPosition = Vector3.up * 1000f;
 		}
+		// A hidden menu must keep its offscreen position when the display changes.
+		MenuContentFit layout = gameObject.GetComponent<MenuContentFit>();
+		if (layout != null) layout.enabled = on;
 	}
 
 	private void Update()

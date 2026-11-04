@@ -73,6 +73,80 @@ public class tk2dTextMesh : MonoBehaviour, ISpriteCollectionForceBuild
 
 	private MeshFilter meshFilter;
 
+	private RecoveredVectorFont.Profile vectorProfile;
+	private int vectorGeneration = -1;
+
+	public bool UsesRecoveredVectorFont { get { return vectorProfile != null; } }
+
+	private void PrepareVectorFont()
+	{
+		bool wasVector = vectorProfile != null;
+		// The accepted result screen deliberately keeps its recovered renderer.
+		RecoveredVectorFont.Profile candidate = Application.isPlaying && gameObject.scene.IsValid()
+			&& gameObject.scene.name != "PostComplete" ? RecoveredVectorFont.FindProfile(_font) : null;
+		if (candidate != null && !RecoveredVectorFont.Prepare(candidate, _text)) candidate = null;
+		if (candidate != vectorProfile)
+		{
+			if (candidate == null && vectorProfile != null) RecoveredVectorFont.Release(this);
+			vectorProfile = candidate;
+			updateFlags |= UpdateFlags.UpdateText | UpdateFlags.UpdateColors;
+		}
+		if (vectorProfile != null) RecoveredVectorFont.Register(this);
+		Material material = vectorProfile != null ? RecoveredVectorFont.Material : (_font != null ? _font.material : null);
+		if ((vectorProfile != null || wasVector) && material != null && GetComponent<Renderer>().sharedMaterial != material) GetComponent<Renderer>().sharedMaterial = material;
+		if (vectorProfile != null && vectorGeneration != RecoveredVectorFont.Generation)
+		{
+			vectorGeneration = RecoveredVectorFont.Generation;
+			updateFlags |= UpdateFlags.UpdateText;
+		}
+	}
+
+	public void InvalidateVectorFont() { updateFlags |= UpdateFlags.UpdateText; }
+
+	public void RefreshVectorFont()
+	{
+		if (vectorProfile != null && (vectorGeneration != RecoveredVectorFont.Generation || updateFlags != UpdateFlags.UpdateNone)) Commit();
+	}
+
+	private void OnEnable() { updateFlags |= UpdateFlags.UpdateText | UpdateFlags.UpdateColors; }
+
+	private void OnDisable()
+	{
+		// A hidden label can change to an unsupported glyph or font. Restore its
+		// bitmap before the last vector user releases the shared runtime material.
+		if (vectorProfile != null) GetComponent<Renderer>().sharedMaterial = _font != null ? _font.material : null;
+		RecoveredVectorFont.Release(this);
+		vectorProfile = null;
+		vectorGeneration = -1;
+	}
+
+	private void LateUpdate()
+	{
+		if (!Application.isPlaying) return;
+		if (vectorProfile != null) RefreshVectorFont();
+		else if (updateFlags != UpdateFlags.UpdateNone && gameObject.scene.name != "PostComplete" && RecoveredVectorFont.FindProfile(_font) != null) Commit();
+	}
+
+	private Color FontColor(Color color)
+	{
+		if (vectorProfile == null) return color;
+		Color tint = QualitySettings.activeColorSpace == ColorSpace.Linear ? vectorProfile.Tint.linear : vectorProfile.Tint;
+		return color * tint;
+	}
+
+	private float CharacterAdvance(int current, int next, tk2dFontChar bitmapCharacter)
+	{
+		float pairKerning = 0f;
+		if (_kerning && next >= 0)
+		{
+			foreach (tk2dFontKerning pair in _font.kerning)
+				if (pair.c0 == current && pair.c1 == next) { pairKerning = pair.amount; break; }
+		}
+		return vectorProfile != null
+			? RecoveredVectorFont.Advance(vectorProfile, current, next, spacing, pairKerning, _charScale.x, _scale.x)
+			: bitmapCharacter.advance + spacing + pairKerning;
+	}
+
 	public tk2dFontData font
 	{
 		get
@@ -285,6 +359,7 @@ public class tk2dTextMesh : MonoBehaviour, ISpriteCollectionForceBuild
 
 	protected void OnDestroy()
 	{
+		RecoveredVectorFont.Release(this);
 		if (meshFilter == null)
 		{
 			meshFilter = GetComponent<MeshFilter>();
@@ -433,15 +508,26 @@ public class tk2dTextMesh : MonoBehaviour, ISpriteCollectionForceBuild
 					continue;
 				}
 			}
-			float num7 = (tk2dFontChar2.p1.x - tk2dFontChar2.p0.x) * 0.33f;
-			float num8 = (tk2dFontChar2.p1.y - tk2dFontChar2.p0.y) * 0.1f;
+			Vector3 p0 = tk2dFontChar2.p0, p1 = tk2dFontChar2.p1;
+			RecoveredVectorFont.Glyph vectorGlyph = new RecoveredVectorFont.Glyph();
+			bool vectorCharacter = vectorProfile != null && RecoveredVectorFont.TryGetGlyph(vectorProfile, num5, out vectorGlyph);
+			if (vectorCharacter) { p0 = vectorGlyph.p0; p1 = vectorGlyph.p1; }
+			float num7 = (p1.x - p0.x) * 0.33f;
+			float num8 = (p1.y - p0.y) * 0.1f;
 			float num9 = (1f - _charScale.x) * num7;
 			float num10 = (1f - _charScale.y) * num8;
-			vertices[num3 * 4] = new Vector3(num + tk2dFontChar2.p0.x * _scale.x * _charScale.x + num9, yAnchorForHeight + num2 + tk2dFontChar2.p0.y * _scale.y * _charScale.y + num10, 0f);
-			vertices[num3 * 4 + 1] = new Vector3(num + tk2dFontChar2.p1.x * _scale.x * _charScale.x + num9, yAnchorForHeight + num2 + tk2dFontChar2.p0.y * _scale.y * _charScale.y + num10, 0f);
-			vertices[num3 * 4 + 2] = new Vector3(num + tk2dFontChar2.p0.x * _scale.x * _charScale.x + num9, yAnchorForHeight + num2 + tk2dFontChar2.p1.y * _scale.y * _charScale.y + num10, 0f);
-			vertices[num3 * 4 + 3] = new Vector3(num + tk2dFontChar2.p1.x * _scale.x * _charScale.x + num9, yAnchorForHeight + num2 + tk2dFontChar2.p1.y * _scale.y * _charScale.y + num10, 0f);
-			if (tk2dFontChar2.flipped)
+			vertices[num3 * 4] = new Vector3(num + p0.x * _scale.x * _charScale.x + num9, yAnchorForHeight + num2 + p0.y * _scale.y * _charScale.y + num10, 0f);
+			vertices[num3 * 4 + 1] = new Vector3(num + p1.x * _scale.x * _charScale.x + num9, yAnchorForHeight + num2 + p0.y * _scale.y * _charScale.y + num10, 0f);
+			vertices[num3 * 4 + 2] = new Vector3(num + p0.x * _scale.x * _charScale.x + num9, yAnchorForHeight + num2 + p1.y * _scale.y * _charScale.y + num10, 0f);
+			vertices[num3 * 4 + 3] = new Vector3(num + p1.x * _scale.x * _charScale.x + num9, yAnchorForHeight + num2 + p1.y * _scale.y * _charScale.y + num10, 0f);
+			if (vectorCharacter)
+			{
+				uvs[num3 * 4] = vectorGlyph.topLeft;
+				uvs[num3 * 4 + 1] = vectorGlyph.topRight;
+				uvs[num3 * 4 + 2] = vectorGlyph.bottomLeft;
+				uvs[num3 * 4 + 3] = vectorGlyph.bottomRight;
+			}
+			else if (tk2dFontChar2.flipped)
 			{
 				uvs[num3 * 4] = new Vector2(tk2dFontChar2.uv1.x, tk2dFontChar2.uv1.y);
 				uvs[num3 * 4 + 1] = new Vector2(tk2dFontChar2.uv1.x, tk2dFontChar2.uv0.y);
@@ -462,19 +548,7 @@ public class tk2dTextMesh : MonoBehaviour, ISpriteCollectionForceBuild
 				uv2[num3 * 4 + 2] = vector + tk2dFontChar2.gradientUv[2];
 				uv2[num3 * 4 + 3] = vector + tk2dFontChar2.gradientUv[3];
 			}
-			num += (tk2dFontChar2.advance + spacing) * _scale.x;
-			if (_kerning && i < _text.Length - 1)
-			{
-				tk2dFontKerning[] array = _font.kerning;
-				foreach (tk2dFontKerning tk2dFontKerning2 in array)
-				{
-					if (tk2dFontKerning2.c0 == _text[i] && tk2dFontKerning2.c1 == _text[i + 1])
-					{
-						num += tk2dFontKerning2.amount * _scale.x;
-						break;
-					}
-				}
-			}
+			num += CharacterAdvance(num5, i + 1 < _text.Length ? _text[i + 1] : -1, tk2dFontChar2) * _scale.x;
 			num3++;
 		}
 		if (num4 != num3)
@@ -498,13 +572,15 @@ public class tk2dTextMesh : MonoBehaviour, ISpriteCollectionForceBuild
 
 	public void Init()
 	{
+		if (_font == null) return;
+		PrepareVectorFont();
 		if (!_font || ((updateFlags & UpdateFlags.UpdateBuffers) == 0 && !(mesh == null)))
 		{
 			return;
 		}
 		_font.InitDictionary();
-		Color color = _color;
-		Color color2 = ((!_useGradient) ? _color : _color2);
+		Color color = FontColor(_color);
+		Color color2 = FontColor((!_useGradient) ? _color : _color2);
 		vertices = new Vector3[_maxChars * 4];
 		uvs = new Vector2[_maxChars * 4];
 		colors = new Color[_maxChars * 4];
@@ -565,6 +641,8 @@ public class tk2dTextMesh : MonoBehaviour, ISpriteCollectionForceBuild
 
 	public void Commit()
 	{
+		if (_font == null) return;
+		PrepareVectorFont();
 		_font.InitDictionary();
 		if ((updateFlags & UpdateFlags.UpdateBuffers) != UpdateFlags.UpdateNone || mesh == null)
 		{
@@ -581,6 +659,7 @@ public class tk2dTextMesh : MonoBehaviour, ISpriteCollectionForceBuild
 				}
 				mesh.vertices = vertices;
 				mesh.uv = uvs;
+				if (vectorProfile != null) mesh.RecalculateBounds();
 				if (font.textureGradients)
 				{
 					mesh.uv2 = uv2;
@@ -588,8 +667,8 @@ public class tk2dTextMesh : MonoBehaviour, ISpriteCollectionForceBuild
 			}
 			if ((updateFlags & UpdateFlags.UpdateColors) != UpdateFlags.UpdateNone)
 			{
-				Color color = _color;
-				Color color2 = ((!_useGradient) ? _color : _color2);
+				Color color = FontColor(_color);
+				Color color2 = FontColor((!_useGradient) ? _color : _color2);
 				for (int j = 0; j < colors.Length; j += 4)
 				{
 					colors[j] = (colors[j + 1] = color);
@@ -643,19 +722,7 @@ public class tk2dTextMesh : MonoBehaviour, ISpriteCollectionForceBuild
 				}
 				tk2dFontChar2 = _font.chars[num4];
 			}
-			num += (tk2dFontChar2.advance + spacing) * _scale.x;
-			if (_kerning && i < str.Length - 1)
-			{
-				tk2dFontKerning[] array = _font.kerning;
-				foreach (tk2dFontKerning tk2dFontKerning2 in array)
-				{
-					if (tk2dFontKerning2.c0 == str[i] && tk2dFontKerning2.c1 == str[i + 1])
-					{
-						num += tk2dFontKerning2.amount * _scale.x;
-						break;
-					}
-				}
-			}
+			num += CharacterAdvance(num4, i + 1 < str.Length ? str[i + 1] : -1, tk2dFontChar2) * _scale.x;
 			num3++;
 		}
 		b = Mathf.Max(num, b);

@@ -47,7 +47,9 @@ public class CalibrateScreen : MonoBehaviour
 	private void OnEnable()
 	{
 		_triggerGoBackAtTime = 0f;
-		SimpleText[] componentsInChildren = GetComponentsInChildren<SimpleText>();
+		// The previous calibration leaves both button hierarchies inactive.
+		// Restore their text renderers as well as the currently active labels.
+		SimpleText[] componentsInChildren = GetComponentsInChildren<SimpleText>(true);
 		foreach (SimpleText simpleText in componentsInChildren)
 		{
 			simpleText.GetComponent<Renderer>().enabled = true;
@@ -62,6 +64,7 @@ public class CalibrateScreen : MonoBehaviour
 
 	private void OnGoBack()
 	{
+		_triggerGoBackAtTime = 0f;
 		if (EventGoBack != null)
 		{
 			EventGoBack();

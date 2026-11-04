@@ -44,7 +44,7 @@ public class CameraSize : MonoBehaviour
             _camera.clearFlags=CameraClearFlags.SolidColor;
             _camera.backgroundColor=Color.black;
             _camera.depth=1000f;
-            var margins=gameObject.AddComponent<BackdropMargins>();margins.Camera=_camera;
+            var margins=gameObject.AddComponent<BackdropMargins>();margins.Camera=_camera;margins.CoverOriginal=true;
             foreach(LoadLevelScreen screen in UnityEngine.Object.FindObjectsByType<LoadLevelScreen>(FindObjectsInactive.Include))
             {
                 var layout=screen.GetComponent<MenuContentFit>();
@@ -71,7 +71,7 @@ public class CameraSize : MonoBehaviour
 
     private void LateUpdate()
     {
-        Rect viewport = LegacyScreenFit.FrameViewport(_levelScene || _mainMenu || _loadingScene);
+        Rect viewport = LegacyScreenFit.FrameViewport();
         Rect safe = LegacyScreenFit.ContentRect();
         if (viewport != _lastViewport || safe != _lastSafeArea)
         {
@@ -82,7 +82,7 @@ public class CameraSize : MonoBehaviour
 
     private void UpdateViewport()
     {
-        _lastViewport = LegacyScreenFit.FrameViewport(_levelScene || _mainMenu || _loadingScene);
+        _lastViewport = LegacyScreenFit.FrameViewport();
         _lastSafeArea = LegacyScreenFit.ContentRect();
         _camera.rect = _lastViewport;
         _camera.ResetProjectionMatrix();
