@@ -677,15 +677,25 @@ public class LevelEP2Runtime : ILevelEP2
 					gameObject2.transform.localPosition = new Vector3((float)(int)num2 * 64f + 32f, pLayer.position.y, (float)(-num) * 64f - 32f);
 					tk2dSprite component = gameObject2.GetComponent<tk2dSprite>();
 					component.spriteId = num3;
+                    if (LevelNum == 1 && layerName == "matrix_overlay" && num == 794
+                        && Screen.width < Screen.height * LegacyScreenFit.ReferenceAspect)
+                    {
+                        // The recovered header contains a white padding tile.
+                        // The extended neutral grid replaces this unused cap.
+                        UnityEngine.Object.Destroy(gameObject2);
+                        continue;
+                    }
                     if (LevelNum == 1 && Screen.width < Screen.height * LegacyScreenFit.ReferenceAspect
-                        && (layerName == "aztek_undergrowth" || (layerName == "aztek_walls" && num >= 794 && num <= 796)))
+                        && (layerName == "aztek_undergrowth" || (layerName == "aztek_walls" && num >= 794 && num <= 806)
+                            || (layerName == "matrix_overlay" && num >= 795 && num <= 806)))
                         InsetForestTileUvs(component);
 					string batchName = layerName + "_batch";
                     if (LevelNum == 1 && layerName.StartsWith("aztek_") && pLayer.GetComponent<ParallaxLayer>().scrollValue == 1f && num < 794)
                         batchName = "MatrixSide_" + batchName;
                     // The top cap of the forest portal contains an opaque black
                     // exterior. The tall temple shot exposes it above the leaves.
-                    if (LevelNum == 1 && num >= 794 && num <= 796 && (layerName == "aztek_walls" || layerName == "matrix_overlay"))
+                    if (LevelNum == 1 && num >= 794 && num <= 797 && layerName == "aztek_walls"
+                        && Screen.width < Screen.height * LegacyScreenFit.ReferenceAspect)
                         batchName = "ForestPortalCap_" + batchName;
                     BatchAdd(gameObject2, batchName, pLayer);
 				}
@@ -693,6 +703,44 @@ public class LevelEP2Runtime : ILevelEP2
 		}
         if (LevelNum == 1)
         {
+            if (layerName == "matrix_overlay" && Screen.width < Screen.height * LegacyScreenFit.ReferenceAspect)
+            {
+                // Extend only the portal's neutral perimeter. The two earlier
+                // scan patches (rows 820/859) and the central ring are unchanged.
+                const int first = 795, last = 806, columns = 12, rows = 12;
+                for (int row = first - rows; row <= last + rows; row++)
+                for (int column = 1 - columns; column <= 9 + columns; column++)
+                {
+                    if (row >= first && row <= last && column >= 1 && column <= 9) continue;
+                    // Stop before the independently authored first scan patch.
+                    if (row >= 820) continue;
+                    int sourceRow = row; bool flipY = false;
+                    if (row < first)
+                    {
+                        int phase = (first - row - 1) % 6;
+                        sourceRow = first + (phase < 3 ? phase : 5 - phase);
+                        flipY = phase < 3;
+                    }
+                    else if (row > last)
+                    {
+                        int phase = (row - last - 1) % 4;
+                        sourceRow = last - (phase < 2 ? phase : 3 - phase);
+                        flipY = phase < 2;
+                    }
+                    int sourceColumn = Mathf.Clamp(column, 1, 9);
+                    bool flipX = column < 1 ? (1 - column) % 2 == 1 : column > 9 && (column - 9) % 2 == 1;
+                    ushort id = tileMap.GetTile((ushort)sourceColumn, (ushort)sourceRow);
+                    if (id == TileMap.Empty) continue;
+                    var extension = UnityEngine.Object.Instantiate(tilemapAsset);
+                    extension.transform.SetParent(pLayer, false);
+                    extension.transform.rotation = Quaternion.LookRotation(Vector3.down);
+                    extension.transform.localPosition = new Vector3(column * 64f + 32f, pLayer.position.y, -row * 64f - 32f);
+                    extension.transform.localScale = new Vector3(flipX ? -1 : 1, flipY ? -1 : 1, 1);
+                    extension.GetComponent<tk2dSprite>().spriteId = id;
+                    InsetForestTileUvs(extension.GetComponent<tk2dSprite>());
+                    BatchAdd(extension, "PortalOverlayExtension", pLayer);
+                }
+            }
             if (layerName == "aztek_undergrowth" && Screen.width < Screen.height * LegacyScreenFit.ReferenceAspect)
             {
                 int first = 0;

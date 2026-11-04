@@ -1,11 +1,12 @@
 # Validation status — 2026-11-04
 
-Current Episode Two build: **0.1.10 / Android version code 11**, display name **Dark Nebula Episode Two**. Episode One retains its existing 0.1.7 configuration and **Dark Nebula Episode One** label.
+Current Episode Two build: **0.1.11 / Android version code 12**, display name **Dark Nebula Episode Two**. Episode One retains its existing 0.1.7 configuration and **Dark Nebula Episode One** label.
 
 ## Current behavior
 
 - The forest scan keeps its original sprite, two-second duration and destination. A one-frame `TallScanEntry` component starts the curve after the camera and scrolling parent finish LateUpdate. This fixes a native trigger timing problem missed by the earlier editor-only fixture. No repeated scan tiles or stretched scan artwork are used.
-- The upper forest portal foliage retains its silhouette. Only the opaque exterior of its upper three tile rows is removed, with a smooth transition into the original undergrowth. A complete eight-row undergrowth cycle and half-texel UV inset avoid incomplete repeats and black atlas-gutter seams.
+- The translucent Matrix overlay covers the expanded portal view. Its original central ring stays at the authored scale; neutral perimeter tiles continue outside it. Extension materials use the same additive blending and native opacity as the original layer, while avoiding extra depth writes. They are enabled only during the stone-ring approach, so the earlier scan patches are unchanged. During that approach, transparent scenery draws before the grid; this prevents split canopy batches from cutting a horizontal band out of the overlay as the camera rotates. The original grid's depth write is preserved. The recovered header's white padding tile is replaced rather than hiding valid overlay rows.
+- The upper forest portal foliage retains its silhouette. The opaque exterior and the join across its upper four tile rows blend into the original undergrowth. Including the fourth row removes the remaining dark wedge at the rotated top edge. A complete eight-row undergrowth cycle and half-texel UV inset avoid incomplete repeats and black atlas-gutter seams.
 - The temporary puck material/render-queue/depth override is removed. The character disappears during the stone-ring transition as originally designed.
 - The accepted post-level leaderboard remains unchanged.
 - The display name contains no Jump Fix, Preview or similar suffix.
@@ -21,9 +22,9 @@ Android 16 emulator, **540×1200**:
 - Installed Android app information displays **Dark Nebula Episode Two**. Manifest label and launcher activity were checked; the launcher has no label override.
 - APK signatures match the preceding 0.1.8-preview and 0.1.9 artifacts. Package identity is unchanged, enabling an upgrade without intentionally removing saves.
 
-Selected screenshots and native scan diagnostics are in [episode2-0.1.10 validation](validation/episode2-0.1.10). Package identity and checksum are in the [build manifest](validation/episode2-build.json).
+Selected screenshots and native scan diagnostics are in [episode2-0.1.11 validation](validation/episode2-0.1.11). Package identity and checksum are in the [build manifest](validation/episode2-build.json).
 
-The user reported that their linked 0.1.9 download still showed the old name and old behavior. Local 0.1.9 metadata and emulator results did not establish the cause of that delivery discrepancy. Version 0.1.10 uses a unique filename and a dedicated GitHub release download to make the delivered artifact unambiguous.
+The user reported that their linked 0.1.9 download still showed the old name and old behavior. Local 0.1.9 metadata and emulator results did not establish the cause of that delivery discrepancy. The newer packages use unique versioned filenames and dedicated GitHub release downloads to make the delivered artifacts unambiguous.
 
 The user deferred phone testing. Emulator fixtures do not establish complete manual level playthrough or phone acceptance.
 
@@ -31,7 +32,7 @@ The user deferred phone testing. Emulator fixtures do not establish complete man
 
 The level-one mechanism sweep recorded **2,632 frames / 22,671 visible entity samples / zero frozen visible samples**. Wake-bound checks covered scrolling parents, large visible children, a taller frustum and an intentionally distant sleeping object. This revision does not change those wake-distance rules.
 
-Eight controlled jump-pad/moving-platform landings passed earlier, with departure as a negative control. A preceding Vivo V2307A measurement improved median presentation intervals from about 33.30 ms to 16.64 ms after the frame-target change. Those are historical measurements, not new 0.1.10 phone measurements.
+Eight controlled jump-pad/moving-platform landings passed earlier, with departure as a negative control. A preceding Vivo V2307A measurement improved median presentation intervals from about 33.30 ms to 16.64 ms after the frame-target change. Those are historical measurements, not new 0.1.11 phone measurements.
 
 ## Audio assessment
 

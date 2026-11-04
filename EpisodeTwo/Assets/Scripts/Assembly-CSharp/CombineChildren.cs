@@ -57,7 +57,7 @@ public class CombineChildren : MonoBehaviour
 		foreach (DictionaryEntry item in hashtable)
 		{
             var layer=GetComponentInParent<ParallaxLayer>();
-            Material tileMaterial=layer!=null?layer.TileMaterial((Material)item.Key):(Material)item.Key;
+            Material tileMaterial=layer!=null?layer.TileMaterial((Material)item.Key,name.StartsWith("PortalOverlayExtension")):(Material)item.Key;
 			ArrayList arrayList2 = (ArrayList)item.Value;
 			MeshCombineUtility.MeshInstance[] combines = (MeshCombineUtility.MeshInstance[])arrayList2.ToArray(typeof(MeshCombineUtility.MeshInstance));
 			if (hashtable.Count == 1)

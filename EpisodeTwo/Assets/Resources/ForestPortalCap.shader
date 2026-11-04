@@ -22,8 +22,8 @@ Shader "Dark Nebula/Forest Portal Cap" {
    }
    fixed4 frag(v2f i):SV_Target {
     fixed4 c=tex2D(_MainTex,i.uv);
-    // This single authored cap row uses opaque black for the exterior of the
-    // narrow shot. Keep its leaf silhouette when that exterior becomes visible.
+    // The upper foliage rows include an opaque exterior and an abrupt join
+    // into the temple artwork. Blend the entire join into the canopy below.
     float exterior=smoothstep(.005,.025,max(c.r,max(c.g,c.b)));
     clip(exterior-.001);
     float blend=1-smoothstep(_CapRange.x,_CapRange.y,i.worldZ);

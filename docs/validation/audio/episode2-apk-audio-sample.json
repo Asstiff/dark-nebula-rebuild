@@ -244,5 +244,7 @@
       "bytes": 4352
     }
   ],
-  "errors": []
+  "errors": [],
+  "artifactVersion": "0.1.9",
+  "note": "Historical parser sample; current source audio and importer settings remain unchanged."
 }

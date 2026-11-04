@@ -25,17 +25,26 @@ public class ParallaxLayer : MonoBehaviour
 
 	private Material sharedMaterial;
     readonly Dictionary<Material,Material> ownedMaterials = new Dictionary<Material,Material>();
-    public Material TileMaterial(Material original)
+    readonly Dictionary<Material,Material> overlayExtensions = new Dictionary<Material,Material>();
+    bool hasAlphaOverride;
+    public Material TileMaterial(Material original, bool overlayExtension = false)
     {
+        var materials = overlayExtension ? overlayExtensions : ownedMaterials;
         Material copy;
-        if (!ownedMaterials.TryGetValue(original,out copy))
-        { copy=new Material(original);copy.name=original.name+" ("+name+")";ownedMaterials.Add(original,copy); }
+        if (!materials.TryGetValue(original,out copy))
+        {
+            copy=new Material(original);copy.name=original.name+" ("+name+")";
+            if (overlayExtension) copy.shader=Resources.Load<Shader>("PortalOverlayExtension");
+            if (hasAlphaOverride && copy.HasProperty("_Color")) copy.color=new Color(1f,1f,1f,currentAlpha);
+            materials.Add(original,copy);
+        }
         return copy;
     }
     void OnDestroy()
     {
         World.RemoveLayer(this);
         foreach (var material in ownedMaterials.Values) if(material!=null)Destroy(material);
+        foreach (var material in overlayExtensions.Values) if(material!=null)Destroy(material);
     }
 
 	private float currentAlpha = 1f;
@@ -127,6 +136,7 @@ public class ParallaxLayer : MonoBehaviour
 			return;
 		}
 		currentAlpha = value;
+        hasAlphaOverride = true;
 		if (sharedMaterial == null)
 		{
 			CombineChildren componentInChildren = GetComponentInChildren<CombineChildren>();
@@ -135,10 +145,14 @@ public class ParallaxLayer : MonoBehaviour
 				sharedMaterial = componentInChildren.GetComponent<Renderer>().sharedMaterial;
 			}
 		}
-		if (sharedMaterial != null)
+		if (sharedMaterial != null && sharedMaterial.HasProperty("_Color"))
 		{
 			sharedMaterial.color = new Color(1f, 1f, 1f, currentAlpha);
 		}
+        foreach (var material in ownedMaterials.Values)
+            if (material != null && material.HasProperty("_Color")) material.color=new Color(1f,1f,1f,currentAlpha);
+        foreach (var material in overlayExtensions.Values)
+            if (material != null && material.HasProperty("_Color")) material.color=new Color(1f,1f,1f,currentAlpha);
 	}
 
 	public void SetBlend(bool pBlend)
