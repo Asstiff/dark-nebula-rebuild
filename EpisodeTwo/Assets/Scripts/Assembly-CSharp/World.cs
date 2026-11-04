@@ -620,7 +620,6 @@ public class World : MonoBehaviour
 			TriggerEndOfLevel();
 			break;
 		}
-        if (flag==10 || flag==11 || flag==60 || flag==104 || flag==106 || flag==103 || flag==105 || flag==99) Debug.Log("REFERENCE_FLAG "+flag+" ball="+(vessel==null?"none":vessel.transform.position.ToString()));
 		if (!Flags.ContainsKey(flag))
 		{
 			Flags[flag] = 0;

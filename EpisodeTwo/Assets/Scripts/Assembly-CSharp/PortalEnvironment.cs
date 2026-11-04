@@ -64,7 +64,6 @@ public sealed class PortalEnvironment : MonoBehaviour
                 else forest.Add(renderer);
             }
         }
-        Debug.Log("PORTAL_ENVIRONMENT forestBatches=" + forest.Count);
     }
 
     void Approach() { approaching = true; }

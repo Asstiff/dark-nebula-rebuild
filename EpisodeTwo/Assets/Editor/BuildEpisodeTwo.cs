@@ -26,6 +26,7 @@ public static class BuildEpisodeTwo
         var previousBool = boolKeys.Select(x => EditorPrefs.GetBool(x, true)).ToArray();
         bool previousExport = EditorUserBuildSettings.exportAsGoogleAndroidProject;
         bool exportProject = Array.IndexOf(Environment.GetCommandLineArgs(), "-exportGradle") >= 0;
+        bool development = Array.IndexOf(Environment.GetCommandLineArgs(), "-development") >= 0;
         try
         {
             EditorUserBuildSettings.exportAsGoogleAndroidProject = exportProject;
@@ -44,12 +45,16 @@ public static class BuildEpisodeTwo
             PlayerSettings.Android.minSdkVersion = AndroidSdkVersions.AndroidApiLevel26;
             PlayerSettings.Android.targetSdkVersion = AndroidSdkVersions.AndroidApiLevel35;
             var scenes = EditorBuildSettings.scenes.Where(x => x.enabled).Select(x => x.path).ToArray();
-            var output = Path.GetFullPath(Path.Combine(Application.dataPath, "../../dark-nebula-2-test.apk"));
+            string fileName = "DarkNebula-Episode2-" + PlayerSettings.bundleVersion
+                + (development ? "-Development" : "-Android64") + ".apk";
+            var output = Path.GetFullPath(Path.Combine(Application.dataPath, "../../Builds", fileName));
             if (exportProject) output = Path.GetFullPath(Path.Combine(Application.dataPath, "../../android-final-exports/episode2"));
+            Directory.CreateDirectory(Path.GetDirectoryName(output));
             Debug.Log("BUILD scenes=" + scenes.Length + " output=" + output);
-            var result = BuildPipeline.BuildPlayer(scenes, output, BuildTarget.Android, BuildOptions.None);
+            var result = BuildPipeline.BuildPlayer(scenes, output, BuildTarget.Android,
+                development ? BuildOptions.Development : BuildOptions.None);
             Debug.Log("BUILD_RESULT " + result.summary.result + " errors=" + result.summary.totalErrors + " warnings=" + result.summary.totalWarnings);
-            if (result.summary.result != BuildResult.Succeeded) throw new Exception("Android development build did not succeed");
+            if (result.summary.result != BuildResult.Succeeded) throw new Exception("Android build did not succeed");
         }
         finally
         {

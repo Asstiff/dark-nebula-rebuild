@@ -9,6 +9,8 @@
 **/.vs/
 **/*.csproj
 **/*.sln
+**/*.slnx
+**/.vsconfig
 **/*.user
 **/*.pidb
 **/*.booproj
@@ -31,6 +33,7 @@
 .env.*
 **/user.keystore
 /android-final-exports/
+**/build/
 # Local build tooling, research and validation notes
 /Tools/
 /docs/

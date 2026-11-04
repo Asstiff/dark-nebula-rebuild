@@ -270,7 +270,7 @@ public class MainMenuScreen : MonoBehaviour
             using(var activity=player.GetStatic<AndroidJavaObject>("currentActivity"))
             using(var intent=new AndroidJavaObject("android.content.Intent","android.intent.action.MAIN"))
             {
-                intent.Call<AndroidJavaObject>("setClassName","com.codex.darknebula.episode2.test","com.unity3d.player.UnityPlayerActivity");
+                intent.Call<AndroidJavaObject>("setClassName","com.darknebula.reference.tall","com.unity3d.player.UnityPlayerActivity");
                 intent.Call<AndroidJavaObject>("addFlags",0x10000000);
                 activity.Call("startActivity",intent);
             }

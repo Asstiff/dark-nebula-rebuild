@@ -368,10 +368,6 @@ public class AnimatedEntity : Entity
         if (body != null && body.isKinematic) body.position = transform.position;
         playAnimation();
         if (IsFrozen) Defrost();
-        bounds = Sprite.GetComponent<Renderer>().bounds;
-        Debug.Log("FOREST_SCAN_ENTRY flag=" + activateEventFlag
-            + " bottom=" + camera.WorldToViewportPoint(bounds.center - Vector3.forward * bounds.extents.z).y
-            + " cameraZ=" + camera.transform.position.z);
     }
 
 	private void playAnimation()
