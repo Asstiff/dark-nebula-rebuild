@@ -167,7 +167,7 @@ public sealed class CjkTextRenderer : MonoBehaviour
             }
         }
         if (referenceHeight < .001f) referenceHeight = label.font.lineHeight * .6f;
-        float capHeight = referenceHeight;
+        float capHeight = referenceHeight * GameLocalization.ChineseTextScale;
         float unit = capHeight / (CjkFontAtlas.CapTop - CjkFontAtlas.CapBottom);
         float referenceCenter = (referenceBottom + referenceHeight * .5f) * characterScale.y
             - (1f - characterScale.y) * referenceHeight * .1f;

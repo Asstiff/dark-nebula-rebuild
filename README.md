@@ -8,12 +8,14 @@ A Unity 6 restoration of **Dark Nebula Episode One** and **Episode Two** for mod
 
 - [x] Modern Android support and tall-screen portrait layouts.
 - [x] Restored levels, gameplay, artwork and effects from both episodes.
-- [x] Local progress, level ratings and leaderboards.
+- [x] Local progress, level ratings and leaderboards with Chinese nickname input and display.
+- [x] Original settings interface extended with timer, language, vibration and vessel controls.
 - [x] Optional level timer in both episodes, enabled by default.
 - [x] Vessel selection in both episodes with shard purchases and free in-level collection.
-- [x] English and Simplified Chinese with a bundled geometric Chinese font.
+- [x] English and Simplified Chinese with a bundled geometric Chinese font, adjusted glyph sizing, fullwidth character widths and centered labels.
+- [x] Level completion results with skippable scoring animations.
 - [x] High-quality audio decoding and positional stereo effects.
-- [x] Vibration modes: disabled, original and enhanced; enhanced by default.
+- [x] Vibration modes: disabled, original and enhanced; enhanced by default, with distinct pickup strengths and level feedback.
 - [x] Background sensor calibration before each level starts.
 - [x] WASD controls for Windows Unity debugging, excluded from Release builds.
 - [ ] iOS support and IPA builds.

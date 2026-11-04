@@ -500,6 +500,7 @@ public class DynamicFont : MonoBehaviour
             CharacterInfo latin, chinese;
             if (referenceFont.GetCharacterInfo('H', out latin, fontSize, pEntry.Style) && font.GetCharacterInfo('中', out chinese, fontSize, pEntry.Style) && chinese.maxY > chinese.minY)
                 fontSize = Mathf.Max(1, Mathf.RoundToInt(fontSize * (float)(latin.maxY - latin.minY) / (chinese.maxY - chinese.minY)));
+            fontSize = Mathf.Max(1, Mathf.RoundToInt(fontSize * GameLocalization.ChineseTextScale));
         }
 		pTextMesh.font = font;
 		pTextMesh.GetComponent<Renderer>().sharedMaterial = font.material;

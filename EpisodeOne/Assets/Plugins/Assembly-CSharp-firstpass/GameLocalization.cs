@@ -4,6 +4,7 @@ using UnityEngine;
 
 public static class GameLocalization
 {
+    public const float ChineseTextScale = 1.4f;
     [Serializable] public class Entry { public string key, en, zh; }
     [Serializable] public class Catalog { public Entry[] entries; }
     static Dictionary<string, Entry> lookup;
