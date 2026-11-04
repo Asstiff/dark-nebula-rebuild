@@ -7,26 +7,22 @@ This is an independent fan restoration and reverse-engineering project. It is no
 ## Projects
 
 - `EpisodeOne/`: standalone Unity project for Episode One.
-- `EpisodeTwo/`: standalone Unity project for Episode Two, including ongoing tall-screen rendering and physics corrections.
-- `docs/`: build notes, provenance and current validation status.
+- `EpisodeTwo/`: standalone Unity project for Episode Two.
 
 Open either project in **Unity 6000.4.11f1** with Android Build Support, IL2CPP and ARM64 support. Each episode keeps its own Assets, Packages and ProjectSettings. Generated Library folders, toolchains, signing keys, device saves and APKs are excluded from Git.
 
-## Rebuild work
+## Engineering scope
 
 - Modern Unity and Android API compatibility.
 - Portrait framing for tall phones while retaining the authored horizontal scale.
 - Recovery of legacy sprite shaders and separate alpha textures.
-- Moving-platform support reconciliation during jump-pad landings.
-- Mechanism activation based on the expanded visible region.
-- Forest-to-Matrix transition rendering and scan coverage under active verification.
+- Reconstruction of level loading, gameplay, mechanisms and moving-platform physics.
+- Forest-to-Matrix transitions, sprite layers and camera effects.
 - Selected Episode Two RGB atlas data recovered from the iOS build.
 
-The display names remain **Dark Nebula Episode One** and **Dark Nebula Episode Two**. Version numbers distinguish development builds.
+The display names are **Dark Nebula Episode One** and **Dark Nebula Episode Two**.
 
-See [build instructions](docs/BUILDING.md), [validation status](docs/STATUS.md) and [provenance](docs/PROVENANCE.md).
-
-The current Episode Two development package is **[0.1.11](https://github.com/FluorescentLava/dark-nebula-rebuild/releases/tag/episode2-v0.1.11)**. [The audio audit](docs/AUDIO-AUDIT.md) records source comparisons, Android encoding measurements and listening excerpts; audio changes have not been applied by that assessment.
+Each project can be opened and built independently. Enable its recovered scenes in Unity Build Settings and select Android with the IL2CPP scripting backend and ARM64 architecture. The project-specific build entry points are in each project's `Assets/Editor` directory. Build tools, investigation notes, validation reports and test packages are maintained locally.
 
 ## License and original content
 

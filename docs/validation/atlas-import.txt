@@ -1,2 +1,0 @@
-atlas0_49.png imported=2048x2048 format=RGB24 max=2048 compression=Uncompressed androidOverride=False androidMax=2048 androidFormat=AutomaticCompressed
-atlas0_alpha_9.png imported=1024x1024 format=RGB24 max=2048 compression=Uncompressed androidOverride=False androidMax=2048 androidFormat=AutomaticCompressed

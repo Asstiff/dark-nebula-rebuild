@@ -1,1 +1,0 @@
-frames=2632 visibleSamples=22671 frozenVisible=0

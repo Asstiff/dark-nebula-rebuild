@@ -31,3 +31,7 @@
 .env.*
 **/user.keystore
 /android-final-exports/
+# Local build tooling, research and validation notes
+/Tools/
+/docs/
+/AGENTS.md
