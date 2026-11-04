@@ -179,6 +179,7 @@ public class DynamicFont : MonoBehaviour
 			}
 		}
 		RefreshTextMesh(GetTextMesh(), Settings.Entries[SelectedEntry], _scale);
+        AlignChineseText(GetTextMesh(), Settings.Entries[SelectedEntry], _scale);
 		if (FontRefreshed != null)
 		{
 			FontRefreshed();
@@ -207,6 +208,11 @@ public class DynamicFont : MonoBehaviour
 		{
 			return;
 		}
+        if (GameLocalization.ContainsChinese(pLine))
+        {
+            WordWrapChineseLine(pLine, pResult);
+            return;
+        }
 		float num = WrapWidth;
 		string[] array = pLine.Split(' ', '\t');
 		float unwrappedWidth = GetUnwrappedWidth(" ");
@@ -236,6 +242,116 @@ public class DynamicFont : MonoBehaviour
 			flag = false;
 		}
 	}
+
+    private void WordWrapChineseLine(string text, StringBuilder output)
+    {
+        var tokens = new List<string>();
+        foreach (System.Text.RegularExpressions.Match match in Regex.Matches(text, @"[A-Za-z0-9]+|[ \t]+|."))
+        {
+            string token = match.Value;
+            if (tokens.Count > 0 && "，。！？：；、）】》”’…".IndexOf(token[0]) >= 0)
+                tokens[tokens.Count - 1] += token;
+            else if (tokens.Count > 0 && "（【《“‘".IndexOf(tokens[tokens.Count - 1][tokens[tokens.Count - 1].Length - 1]) >= 0)
+                tokens[tokens.Count - 1] += token;
+            else tokens.Add(token);
+        }
+        string line = string.Empty;
+        foreach (string token in tokens)
+        {
+            float width = GetRenderedWidth(token);
+            if (line.Length > 0 && GetRenderedWidth(line + token) > WrapWidth)
+            {
+                output.Append('\n');
+                line = string.Empty;
+            }
+            if (line.Length == 0 && string.IsNullOrWhiteSpace(token)) continue;
+            // Very long Latin words in otherwise Chinese hints must also fit.
+            if (width > WrapWidth)
+            {
+                foreach (char c in token)
+                {
+                    if (line.Length > 0 && GetRenderedWidth(line + c) > WrapWidth) { output.Append('\n'); line = string.Empty; }
+                    output.Append(c); line += c;
+                }
+            }
+            else { output.Append(token); line += token; }
+        }
+    }
+
+    private float GetRenderedWidth(string value)
+    {
+        TextMesh mesh = GetTextMesh();
+        string previous = mesh.text;
+        mesh.text = value;
+        float width = mesh.GetComponent<Renderer>().localBounds.size.x;
+        mesh.text = previous;
+        return width;
+    }
+
+    // TextMesh bounds describe a typographic line box. Buttons need the center
+    // of the visible glyphs, which differs between the recovered and CJK fonts.
+    public float InkCenterWorldY
+    {
+        get
+        {
+            float low, high;
+            LocalInkY(GetTextMesh(), out low, out high);
+            return transform.TransformPoint(new Vector3(0f, (low + high) * .5f, 0f)).y;
+        }
+    }
+
+    private static void LocalInkY(TextMesh text, out float low, out float high)
+    {
+        Bounds bounds = text.GetComponent<Renderer>().localBounds;
+        string plain = Regex.Replace(text.text, "<.*?>", string.Empty).Replace("\r", "");
+        string[] lines = plain.Split('\n');
+        Font font = text.font;
+        float ascentFraction = font.lineHeight > 0 ? (float)font.ascent / font.lineHeight : .8f;
+        // Fractions come from the bundled fonts' hhea ascender/descender metrics.
+        if (font.name == "darknebula") ascentFraction = 1966f / (1966f + 492f);
+        else if (font == GameLocalization.ChineseFont) ascentFraction = 880f / (880f + 120f);
+        float cell = bounds.size.y / Mathf.Max(1f, 1f + (lines.Length - 1) * text.lineSpacing);
+        float baseline = bounds.max.y - cell * ascentFraction;
+        float pixel = text.characterSize * .1f;
+        low = float.PositiveInfinity; high = float.NegativeInfinity;
+        font.RequestCharactersInTexture(plain, text.fontSize, text.fontStyle);
+        for (int row = 0; row < lines.Length; row++)
+            foreach (char c in lines[row])
+            {
+                CharacterInfo info;
+                if (char.IsWhiteSpace(c) || !font.GetCharacterInfo(c, out info, text.fontSize, text.fontStyle) || info.maxY <= info.minY) continue;
+                low = Mathf.Min(low, baseline - row * cell * text.lineSpacing + info.minY * pixel);
+                high = Mathf.Max(high, baseline - row * cell * text.lineSpacing + info.maxY * pixel);
+            }
+        if (float.IsInfinity(low)) { low = bounds.min.y; high = bounds.max.y; }
+    }
+
+    private static void AlignChineseText(TextMesh text, DynamicFontSettings.Entry entry, float scale)
+    {
+        if (!Application.isPlaying || text.font != GameLocalization.ChineseFont || string.IsNullOrEmpty(text.text)) return;
+        Renderer renderer = text.GetComponent<Renderer>();
+        float chineseLow, chineseHigh;
+        LocalInkY(text, out chineseLow, out chineseHigh);
+        Font referenceFont = entry.Font;
+        int referenceSize = entry.Size;
+        var fontOverride = entry.GetOverride(LocalizationManager.Instance.PrimaryLanguageId);
+        if (fontOverride != null) { referenceFont = fontOverride.Font; referenceSize = fontOverride.Size; }
+        if (referenceFont == null || referenceFont == text.font) return;
+        Font currentFont = text.font;
+        string currentText = text.text;
+        int currentSize = text.fontSize;
+        Material currentMaterial = renderer.sharedMaterial;
+        float unit = Mathf.Round(100f / (Screen.height / 2f) * 1000f) / 1000f;
+        text.font = referenceFont; text.fontSize = Mathf.RoundToInt(referenceSize * scale / unit); text.text = "H";
+        float referenceLow, referenceHigh;
+        LocalInkY(text, out referenceLow, out referenceHigh);
+        text.font = currentFont; text.fontSize = currentSize; text.text = currentText;
+        renderer.sharedMaterial = currentMaterial;
+        int vertical = (int)text.anchor / 3;
+        float delta = vertical == 0 ? referenceHigh - chineseHigh
+            : vertical == 2 ? referenceLow - chineseLow : (referenceLow + referenceHigh - chineseLow - chineseHigh) * .5f;
+        text.transform.localPosition += text.transform.localRotation * (Vector3.up * delta * text.transform.localScale.y);
+    }
 
 	private string TryWrap(string pText)
 	{
@@ -301,9 +417,9 @@ public class DynamicFont : MonoBehaviour
 		TextMesh textMesh = GetTextMesh();
 		string text = textMesh.text;
 		textMesh.text = "a";
-		float x = textMesh.GetComponent<Renderer>().bounds.size.x;
+		float x = textMesh.GetComponent<Renderer>().localBounds.size.x;
 		textMesh.text = "a a";
-		float value = textMesh.GetComponent<Renderer>().bounds.size.x - 2f * x;
+		float value = textMesh.GetComponent<Renderer>().localBounds.size.x - 2f * x;
 		dictionary.Add(' ', value);
 		dictionary.Add('a', x);
 		textMesh.text = text;
@@ -317,7 +433,7 @@ public class DynamicFont : MonoBehaviour
 				continue;
 			}
 			textMesh.text = string.Empty + c;
-			float x2 = textMesh.GetComponent<Renderer>().bounds.size.x;
+			float x2 = textMesh.GetComponent<Renderer>().localBounds.size.x;
 			dictionary.Add(c, x2);
 			num += x2;
 		}
@@ -366,6 +482,7 @@ public class DynamicFont : MonoBehaviour
 				lineSpacing = fontOverride.LineSpacing;
 			}
 		}
+        Font referenceFont = font;
 		if (Application.isPlaying && GameLocalization.ContainsChinese(pTextMesh.text) && GameLocalization.ChineseFont != null)
         {
             font = GameLocalization.ChineseFont;
@@ -376,6 +493,14 @@ public class DynamicFont : MonoBehaviour
 		float num2 = 100f / ((float)num / 2f);
 		num2 = Mathf.Round(num2 * 1000f) / 1000f;
 		int fontSize = Mathf.RoundToInt((float)size * pScale / num2);
+        if (font != referenceFont)
+        {
+            referenceFont.RequestCharactersInTexture("H", fontSize, pEntry.Style);
+            font.RequestCharactersInTexture("中", fontSize, pEntry.Style);
+            CharacterInfo latin, chinese;
+            if (referenceFont.GetCharacterInfo('H', out latin, fontSize, pEntry.Style) && font.GetCharacterInfo('中', out chinese, fontSize, pEntry.Style) && chinese.maxY > chinese.minY)
+                fontSize = Mathf.Max(1, Mathf.RoundToInt(fontSize * (float)(latin.maxY - latin.minY) / (chinese.maxY - chinese.minY)));
+        }
 		pTextMesh.font = font;
 		pTextMesh.GetComponent<Renderer>().sharedMaterial = font.material;
 		pTextMesh.fontStyle = pEntry.Style;

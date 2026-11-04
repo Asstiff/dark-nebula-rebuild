@@ -10,9 +10,19 @@ public sealed class CjkTextRenderer : MonoBehaviour
     static readonly List<CjkTextRenderer> renderUsers = new List<CjkTextRenderer>();
     static readonly StringBuilder requestedText = new StringBuilder();
     static bool flushing;
+    static bool literalRequestsDirty = true;
+    static string preparedLiteralText = string.Empty;
+    static int preparedLiteralGeneration = -1;
     tk2dTextMesh label;
+    MeshFilter meshFilter;
+    Renderer meshRenderer;
     Mesh translatedMesh, originalMesh;
     Material originalMaterial;
+    Material translatedMaterial;
+    tk2dFontData materialFont;
+    Texture2D materialGradient;
+    int materialGradientIndex, materialGradientCount;
+    bool materialLiteral, lastIsLiteral;
     string lastText;
     Color lastColor, lastColor2;
     Vector3 lastScale, lastCharScale;
@@ -30,12 +40,13 @@ public sealed class CjkTextRenderer : MonoBehaviour
         Camera.onPreCull -= BeforeCameraCull;
         Camera.onPreCull += BeforeCameraCull;
         literalUsers.Clear(); renderUsers.Clear(); requestedText.Length = 0; flushing = false;
+        literalRequestsDirty = true; preparedLiteralText = string.Empty; preparedLiteralGeneration = -1;
     }
     public static void Restore(tk2dTextMesh source)
     {
         CjkTextRenderer renderer = source.GetComponent<CjkTextRenderer>();
         if (renderer == null) return;
-        literalUsers.Remove(renderer);
+        if (literalUsers.Remove(renderer)) literalRequestsDirty = true;
         if (!renderer.active) return;
         source.GetComponent<MeshFilter>().sharedMesh = renderer.originalMesh;
         source.GetComponent<Renderer>().sharedMaterial = renderer.originalMaterial;
@@ -52,19 +63,34 @@ public sealed class CjkTextRenderer : MonoBehaviour
         if (!needsFullFont) { Restore(source); return; }
         CjkTextRenderer renderer = source.GetComponent<CjkTextRenderer>();
         if (renderer == null) renderer = source.gameObject.AddComponent<CjkTextRenderer>();
-        renderer.label = source; renderer.Apply();
+        renderer.label = source;
+        if (renderer.meshFilter == null) renderer.meshFilter = source.GetComponent<MeshFilter>();
+        if (renderer.meshRenderer == null) renderer.meshRenderer = source.GetComponent<Renderer>();
+        renderer.Apply();
     }
     void OnEnable() { dirty = true; }
-    void OnDisable() { if (label != null) Restore(label); else literalUsers.Remove(this); }
-    void LateUpdate() { if (label != null && label.isActiveAndEnabled) Render(label); }
-    void OnDestroy() { literalUsers.Remove(this); if (translatedMesh != null) Destroy(translatedMesh); }
+    void OnDisable() { if (label != null) Restore(label); else if (literalUsers.Remove(this)) literalRequestsDirty = true; }
+    void LateUpdate()
+    {
+        if (label == null || !label.isActiveAndEnabled) return;
+        if (lastText != label.text || lastIsLiteral != label.IsLiteralText) Render(label);
+        else Apply();
+    }
+    void OnDestroy() { if (literalUsers.Remove(this)) literalRequestsDirty = true; if (translatedMesh != null) Destroy(translatedMesh); }
     static void PrepareLiteralUsers()
     {
-        requestedText.Length = 0;
-        foreach (CjkTextRenderer renderer in literalUsers)
-            if (renderer != null && renderer.isActiveAndEnabled && renderer.label != null && renderer.label.isActiveAndEnabled && renderer.label.IsLiteralText)
-                requestedText.Append(renderer.label.text);
-        CjkFontAtlas.PrepareLiteral(requestedText.ToString());
+        if (!literalRequestsDirty && preparedLiteralGeneration == CjkFontAtlas.LiteralGeneration && CjkFontAtlas.LiteralReady) return;
+        if (literalRequestsDirty)
+        {
+            requestedText.Length = 0;
+            foreach (CjkTextRenderer renderer in literalUsers)
+                if (renderer != null && renderer.isActiveAndEnabled && renderer.label != null && renderer.label.isActiveAndEnabled && renderer.label.IsLiteralText)
+                    requestedText.Append(renderer.label.text);
+            preparedLiteralText = requestedText.ToString();
+        }
+        CjkFontAtlas.PrepareLiteral(preparedLiteralText);
+        preparedLiteralGeneration = CjkFontAtlas.LiteralGeneration;
+        literalRequestsDirty = false;
     }
     static void BeforeCameraCull(Camera camera)
     {
@@ -84,17 +110,21 @@ public sealed class CjkTextRenderer : MonoBehaviour
     void Apply(bool prepareLiteral = true)
     {
         if (label.font == null) return;
-        if (label.IsLiteralText) literalUsers.Add(this); else literalUsers.Remove(this);
+        if (label.IsLiteralText)
+        {
+            if (literalUsers.Add(this) || lastText != label.text) literalRequestsDirty = true;
+        }
+        else if (literalUsers.Remove(this)) literalRequestsDirty = true;
         if (label.IsLiteralText && prepareLiteral) PrepareLiteralUsers();
         bool literal = label.IsLiteralText && CjkFontAtlas.LiteralReady;
         int generation = literal ? CjkFontAtlas.LiteralGeneration : -1;
-        MeshFilter filter = GetComponent<MeshFilter>(); Renderer target = GetComponent<Renderer>();
-        if (!active) { originalMesh = filter.sharedMesh; originalMaterial = target.sharedMaterial; }
+        if (!active) { originalMesh = meshFilter.sharedMesh; originalMaterial = meshRenderer.sharedMaterial; }
         Vector3 characterScale = Vector3.one;
         float spacing = label.Spacing, lineSpacing = label.LineSpacing;
         Color top = label.color, bottom = label.useGradient ? label.color2 : top;
         // Preserve the original vertex tint; Unity converts the sRGB ramp texture.
-        if (dirty || lastText != label.text || lastFont != label.font || lastAnchor != label.anchor || lastColor != top || lastColor2 != bottom || lastScale != label.scale || lastCharScale != characterScale || lastSpacing != spacing || lastLineSpacing != lineSpacing || usesLiteralFont != literal || glyphGeneration != generation)
+        bool rebuilt = dirty || lastText != label.text || lastFont != label.font || lastAnchor != label.anchor || lastColor != top || lastColor2 != bottom || lastScale != label.scale || lastCharScale != characterScale || lastSpacing != spacing || lastLineSpacing != lineSpacing || usesLiteralFont != literal || glyphGeneration != generation;
+        if (rebuilt)
         {
             usesLiteralFont = literal;
             Build(top, bottom, characterScale, spacing, lineSpacing);
@@ -102,8 +132,20 @@ public sealed class CjkTextRenderer : MonoBehaviour
             lastColor = top; lastColor2 = bottom; lastScale = label.scale; lastCharScale = characterScale;
             lastSpacing = spacing; lastLineSpacing = lineSpacing; glyphGeneration = generation; dirty = false;
         }
-        filter.sharedMesh = translatedMesh;
-        target.sharedMaterial = CjkFontAtlas.MaterialFor(label.font.name, label.font.textureGradients ? label.font.gradientTexture : null, label.textureGradient, label.font.gradientCount, literal);
+        Texture2D gradient = label.font.textureGradients ? label.font.gradientTexture : null;
+        int gradientIndex = label.textureGradient, gradientCount = label.font.gradientCount;
+        bool materialChanged = translatedMaterial == null || materialFont != label.font || materialGradient != gradient || materialGradientIndex != gradientIndex || materialGradientCount != gradientCount || materialLiteral != literal;
+        if (materialChanged)
+        {
+            translatedMaterial = CjkFontAtlas.MaterialFor(label.font.name, gradient, gradientIndex, gradientCount, literal);
+            materialFont = label.font; materialGradient = gradient; materialGradientIndex = gradientIndex;
+            materialGradientCount = gradientCount; materialLiteral = literal;
+        }
+        // Reassigning unchanged shared meshes/materials every frame makes Unity
+        // repeat renderer work even when a translated menu label is static.
+        if (!active || rebuilt) meshFilter.sharedMesh = translatedMesh;
+        if (!active || materialChanged) meshRenderer.sharedMaterial = translatedMaterial;
+        lastIsLiteral = label.IsLiteralText;
         active = true;
     }
     CjkFontAtlas.Glyph Glyph(char c) { return usesLiteralFont ? CjkFontAtlas.GetLiteralGlyph(c) : CjkFontAtlas.GetGlyph(c); }
@@ -114,21 +156,34 @@ public sealed class CjkTextRenderer : MonoBehaviour
         if (label.font.chars != null && label.font.chars.Length > 65) reference = label.font.chars[65];
         float referenceBottom = reference != null ? Mathf.Min(reference.p0.y, reference.p1.y) : label.font.lineHeight * .2f;
         float referenceHeight = reference != null ? Mathf.Abs(reference.p1.y - reference.p0.y) : label.font.lineHeight * .6f;
+
         if (referenceHeight < .001f) referenceHeight = label.font.lineHeight * .6f;
-        float capHeight = label.font.lineHeight * 1.1f;
+        float capHeight = referenceHeight;
         float unit = capHeight / (CjkFontAtlas.CapTop - CjkFontAtlas.CapBottom);
-        float baseline = referenceBottom - (capHeight - referenceHeight) * .5f - CjkFontAtlas.CapBottom * unit;
-        float lineHeight = label.font.lineHeight + lineSpacing;
-        if (label.text.IndexOf('\n') >= 0) lineHeight = Mathf.Max(lineHeight, capHeight * 1.25f);
+        float referenceCenter = (referenceBottom + referenceHeight * .5f) * characterScale.y
+            - (1f - characterScale.y) * referenceHeight * .1f;
+        float cellHeight = label.font.lineHeight + lineSpacing;
+        float lineHeight = label.text.IndexOf('\n') >= 0 ? Mathf.Max(cellHeight, capHeight * 1.25f) : cellHeight;
         // Preserve fullwidth cells without bitmap tracking or character compression.
         string[] lines = label.text.Replace("\r", "").Split('\n');
         int vertical = (int)label.anchor / 3, horizontal = (int)label.anchor % 3;
-        float firstBaseline = (vertical == 0 ? -lineHeight : vertical == 1 ? lines.Length * lineHeight * .5f - lineHeight : (lines.Length - 1) * lineHeight) + baseline;
+        float blockHeight = cellHeight + (lines.Length - 1) * lineHeight;
+        float firstBaseline = vertical == 0 ? -cellHeight : vertical == 1 ? blockHeight * .5f - cellHeight : blockHeight - cellHeight;
+        if (vertical == 1 && label.font.version >= 2 && label.font.texelSize.y > 0f) firstBaseline = Mathf.Floor(firstBaseline / label.font.texelSize.y) * label.font.texelSize.y;
         var vertices = new List<Vector3>(); var uv = new List<Vector2>(); var ramp = new List<Vector2>(); var colors = new List<Color>(); var triangles = new List<int>();
         for (int row = 0; row < lines.Length; row++)
         {
-            string line = lines[row]; float width = 0;
-            foreach (char c in line) width += Glyph(c).advance * unit;
+            string line = lines[row]; float width = 0, minY = float.PositiveInfinity, maxY = float.NegativeInfinity;
+            foreach (char c in line)
+            {
+                CjkFontAtlas.Glyph glyph = Glyph(c);
+                width += glyph.advance * unit;
+                if (glyph.y1 > glyph.y0 && !char.IsWhiteSpace(c)) { minY = Mathf.Min(minY, glyph.y0); maxY = Mathf.Max(maxY, glyph.y1); }
+            }
+            // Center the actual line's glyph bounds on the original Latin cap
+            // center, rather than assuming every translated glyph fills the atlas cap box.
+            float center = float.IsInfinity(minY) ? 0 : (minY + maxY) * .5f * unit * characterScale.y;
+            float baseline = firstBaseline - row * lineHeight + referenceCenter - center;
             float x = horizontal == 0 ? 0 : horizontal == 1 ? -width * .5f : -width;
             foreach (char c in line)
             {
@@ -137,7 +192,7 @@ public sealed class CjkTextRenderer : MonoBehaviour
                 {
                     int i = vertices.Count;
                     float x0 = x + g.x0 * unit, x1 = x + g.x1 * unit;
-                    float y0 = firstBaseline - row * lineHeight + g.y0 * unit * characterScale.y, y1 = firstBaseline - row * lineHeight + g.y1 * unit * characterScale.y;
+                    float y0 = baseline + g.y0 * unit * characterScale.y, y1 = baseline + g.y1 * unit * characterScale.y;
                     vertices.Add(Vector3.Scale(new Vector3(x0, y0, 0), label.scale)); vertices.Add(Vector3.Scale(new Vector3(x0, y1, 0), label.scale)); vertices.Add(Vector3.Scale(new Vector3(x1, y1, 0), label.scale)); vertices.Add(Vector3.Scale(new Vector3(x1, y0, 0), label.scale));
                     uv.Add(g.BottomLeft); uv.Add(g.TopLeft); uv.Add(g.TopRight); uv.Add(g.BottomRight);
                     float low = (g.y0 - CjkFontAtlas.CapBottom) / (CjkFontAtlas.CapTop - CjkFontAtlas.CapBottom), high = (g.y1 - CjkFontAtlas.CapBottom) / (CjkFontAtlas.CapTop - CjkFontAtlas.CapBottom);
@@ -151,4 +206,3 @@ public sealed class CjkTextRenderer : MonoBehaviour
         translatedMesh.Clear(); translatedMesh.SetVertices(vertices); translatedMesh.SetUVs(0, uv); translatedMesh.SetUVs(1, ramp); translatedMesh.SetColors(colors); translatedMesh.SetTriangles(triangles, 0); translatedMesh.RecalculateBounds();
     }
 }
-

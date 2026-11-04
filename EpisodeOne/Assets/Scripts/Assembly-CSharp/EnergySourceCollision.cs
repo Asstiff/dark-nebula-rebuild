@@ -19,6 +19,7 @@ public class EnergySourceCollision : MonoBehaviour
 	{
 		if (other.gameObject.CompareTag("Player") && World.vessel.TriggerEnergy(color))
 		{
+            GameHaptics.Play(HapticEvent.Pickup);
 			Audio.Play("energy", Sfx, World.vessel.transform);
 			string type = "Red";
 			switch (color)

@@ -113,6 +113,7 @@ public class LifeOrb : Entity
 		vessel.VesselDied = (Action)Delegate.Remove(vessel.VesselDied, new Action(CollectOrb));
 		if (World.vessel.TriggerLifeOrb(_transform.position))
 		{
+            GameHaptics.Play(HapticEvent.Pickup);
 			Audio.Play("lifeorb" + _audioIndex, Sfx, World.vessel.transform.position);
 			_audioIndex = (_audioIndex + 1) % 15;
 		}

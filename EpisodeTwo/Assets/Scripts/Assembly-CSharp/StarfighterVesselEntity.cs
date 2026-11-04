@@ -321,6 +321,7 @@ public class StarfighterVesselEntity : Vessel
 		{
 			if (!UserSettings.I.expert && !shieldActivated)
 			{
+                GameHaptics.Play(HapticEvent.Pickup);
 				Audio.Play("shieldSound", shieldSound, transform);
 				TriggerShieldUp();
 				SpawnShockwaveInverted(base.transform.position);
@@ -331,6 +332,7 @@ public class StarfighterVesselEntity : Vessel
 		if (e.gameObject.GetComponent<StarfighterWeaponsPickupEntity>() != null)
 		{
 			StarfighterWeaponsPickupEntity component = e.gameObject.GetComponent<StarfighterWeaponsPickupEntity>();
+            GameHaptics.Play(HapticEvent.Pickup);
 			Audio.Play("pickupSound", pickupSound, transform);
 			UpgradeWeapons();
 			SpawnShockwaveInverted(base.transform.position);

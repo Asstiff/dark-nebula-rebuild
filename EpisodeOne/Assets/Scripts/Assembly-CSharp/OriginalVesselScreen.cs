@@ -8,7 +8,7 @@ public sealed class OriginalVesselScreen : MonoBehaviour
     FlipperButton selector;
     SimpleButton action, back;
     DynamicFont details;
-    tk2dSprite preview;
+    tk2dSprite preview, lockedIcon;
     int[] order;
     int selected;
     bool closing;
@@ -61,6 +61,9 @@ public sealed class OriginalVesselScreen : MonoBehaviour
         var art=new GameObject("Vessel preview");art.layer=source.gameObject.layer;
         art.transform.SetParent(transform,false);art.transform.localPosition=new Vector3(0,35,0);
         preview=tk2dSprite.AddComponent(art,AvatarManager.Instance.AllAvatars.Find(a=>a.ID==AvatarUnlocks.Ids[selected]).SpriteCollection,24);
+        GameObject lockArt=Instantiate(Resources.Load<GameObject>("VesselLock"),preview.transform,false);
+        lockArt.name="LockedIcon";lockArt.layer=art.layer;
+        lockedIcon=lockArt.GetComponent<tk2dSprite>();
         var fit=gameObject.AddComponent<MenuContentFit>();fit.Camera=back.viewCamera!=null?back.viewCamera:Camera.main;
         GamePreferences.Changed+=Refresh;
         Refresh();
@@ -90,7 +93,8 @@ public sealed class OriginalVesselScreen : MonoBehaviour
         action.enabled=owned || AvatarUnlocks.Balance>=AvatarUnlocks.Price(id);
         tk2dSpriteCollectionData collection=AvatarManager.Instance.AllAvatars.Find(a=>a.ID==id).SpriteCollection;
         preview.SetSprite(collection,24);
-        preview.color=owned?Color.white:Color.black;
+        preview.color=owned?Color.white:Color.grey;
+        lockedIcon.gameObject.SetActive(!owned);
         float size=collection.spriteDefinitions[24].boundsData[1].x;
         preview.transform.localScale=Vector3.one*(110f/Mathf.Max(.01f,size));
     }

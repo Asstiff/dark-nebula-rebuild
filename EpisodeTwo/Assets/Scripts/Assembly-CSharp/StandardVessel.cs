@@ -561,7 +561,7 @@ public class StandardVessel : Vessel
 
 	public override void TriggerExtraLife()
 	{
-        GameHaptics.Play(HapticEvent.Pickup);
+        GameHaptics.Play(HapticEvent.CriticalPickup);
 		Vessel._lives++;
 		TextAttachedEntity objectForType = ObjectPool.instance.GetObjectForType<TextAttachedEntity>();
 		objectForType.SetText("1UP");

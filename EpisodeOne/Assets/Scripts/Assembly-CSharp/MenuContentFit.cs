@@ -8,11 +8,66 @@ public class MenuContentFit : MonoBehaviour
     public Camera Camera;
     readonly List<Transform> children=new List<Transform>();
     readonly List<Vector3> scales=new List<Vector3>(),positions=new List<Vector3>();
+    readonly List<DynamicFont> fonts=new List<DynamicFont>();
+    readonly List<System.Action> fontRefreshes=new List<System.Action>();
     bool initialized;
+    bool refreshingFont;
     float lastSize=-1f,lastAspect=-1f;
     Rect lastSafe;
     int settleUntil;
-    void OnEnable(){lastSize=-1f;settleUntil=Time.frameCount+15;}
+    void OnEnable()
+    {
+        lastSize=-1f;settleUntil=Time.frameCount+15;
+        if(initialized)
+        {
+            BindFonts();
+            foreach(DynamicFont font in fonts)
+                if(font!=null && font.transform.parent==transform)font.Refresh();
+        }
+    }
+    void OnDisable(){UnbindFonts();}
+    void OnDestroy(){UnbindFonts();}
+    void BindFonts()
+    {
+        UnbindFonts();
+        foreach(DynamicFont font in GetComponentsInChildren<DynamicFont>(true))
+        {
+            DynamicFont current=font;
+            System.Action refresh=()=>FontRefreshed(current);
+            fonts.Add(font);fontRefreshes.Add(refresh);font.FontRefreshed+=refresh;
+        }
+    }
+    void UnbindFonts()
+    {
+        for(int i=0;i<fonts.Count;i++)if(fonts[i]!=null)fonts[i].FontRefreshed-=fontRefreshes[i];
+        fonts.Clear();fontRefreshes.Clear();
+    }
+    void FontRefreshed(DynamicFont font)
+    {
+        if(refreshingFont)return;
+        // DynamicFont restores its own authored position when its text changes.
+        // Keep that new font offset as the base before fitting the panel again.
+        int index=children.IndexOf(font.transform);
+        if(index>=0)
+        {
+            Vector3 fittedScale=font.transform.localScale;
+            if(fittedScale!=scales[index])
+            {
+                // Font offsets are measured in its current local scale. Rebuild
+                // this direct label at its native scale before caching its base.
+                refreshingFont=true;
+                try
+                {
+                    font.transform.localScale=scales[index];
+                    font.Refresh();
+                    positions[index]=font.transform.localPosition;
+                }
+                finally{font.transform.localScale=fittedScale;refreshingFont=false;}
+            }
+            else positions[index]=font.transform.localPosition;
+        }
+        lastSize=-1f;settleUntil=Mathf.Max(settleUntil,Time.frameCount+1);
+    }
 
     bool IsControl(Renderer r)
     {
@@ -52,6 +107,7 @@ public class MenuContentFit : MonoBehaviour
                 children.Add(child);scales.Add(child.localScale);positions.Add(child.localPosition);
             }
             initialized=true;
+            BindFonts();
         }
         for(int i=0;i<children.Count;i++){children[i].localScale=scales[i];children[i].localPosition=positions[i];}
         Rect view=Camera.pixelRect;

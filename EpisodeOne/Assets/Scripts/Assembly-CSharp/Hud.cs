@@ -324,7 +324,6 @@ public class Hud : MonoBehaviour
 
 	public void AddOrb()
 	{
-        GameHaptics.Play(HapticEvent.Pickup);
 		lifeOrbScale = 2.2f;
 		UpdateOrbs();
 	}
@@ -400,7 +399,6 @@ public class Hud : MonoBehaviour
 
 	public void ShowShieldFound()
 	{
-        GameHaptics.Play(HapticEvent.Pickup);
 		ShowShieldUpMessage("SHIELD FOUND");
 	}
 

@@ -58,6 +58,8 @@ public class MainMenuScreen : MonoBehaviour
 
 	private void Start()
 	{
+		foreach (DynamicFont label in GetComponentsInChildren<DynamicFont>(true))
+			if (label.OriginalText == "SUBTITLE") label.SetLiteralText("Episode One");
 		DarkNebulaAdsManager.Instance.ShowAd("MainMenu").Wait((string obj) =>
 		{
 			StartProcedure();

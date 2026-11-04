@@ -126,6 +126,7 @@ public class SimpleButton : MonoBehaviour
 			size += Vector3.one * 7f;
 			boxCollider.size = size;
 		}
+        LegacyControlTextLayout.Bind(GetComponentInChildren<DynamicFont>(),GetComponent<Renderer>());
 	}
 
 	private void PlaySound(AudioClip source)

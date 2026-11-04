@@ -1,11 +1,12 @@
 using System;
 using UnityEngine;
 
-public enum HapticEvent { Damage, Jump, Pickup, Spawn, Finish, Score, Star }
+public enum HapticEvent { Damage, Jump, Pickup, Spawn, Finish, Score, Star, CriticalPickup }
 
 public static class GameHaptics
 {
     static float lastPickup = -10f;
+    static float lastCriticalPickup = -10f;
     static float lastScore = -10f;
 #if UNITY_ANDROID && !UNITY_EDITOR
     static AndroidJavaObject vibrator;
@@ -30,7 +31,15 @@ public static class GameHaptics
             if (kind == HapticEvent.Damage) Handheld.Vibrate();
             return;
         }
-        if (kind == HapticEvent.Pickup)
+        if (kind == HapticEvent.CriticalPickup)
+        {
+            // One orb can award both a free shard and the 100-orb 1UP.
+            // Give that collection one medium pulse, and keep nearby small
+            // pickup pulses from immediately replacing the important feedback.
+            if (Time.realtimeSinceStartup - lastCriticalPickup < .075f) return;
+            lastCriticalPickup = lastPickup = Time.realtimeSinceStartup;
+        }
+        else if (kind == HapticEvent.Pickup)
         {
             if (Time.realtimeSinceStartup - lastPickup < .075f) return;
             lastPickup = Time.realtimeSinceStartup;
@@ -45,6 +54,7 @@ public static class GameHaptics
         switch (kind)
         {
             case HapticEvent.Pickup: timing = new long[] { 0, 12 }; strength = new int[] { 0, 55 }; break;
+            case HapticEvent.CriticalPickup: timing = new long[] { 0, 32 }; strength = new int[] { 0, 125 }; break;
             case HapticEvent.Jump: timing = new long[] { 0, 28 }; strength = new int[] { 0, 145 }; break;
             case HapticEvent.Spawn: timing = new long[] { 0, 20, 40, 30 }; strength = new int[] { 0, 65, 0, 100 }; break;
             case HapticEvent.Finish: timing = new long[] { 0, 30, 55, 55 }; strength = new int[] { 0, 100, 0, 150 }; break;

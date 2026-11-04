@@ -45,6 +45,7 @@ public class Shield : Entity
 		{
 			if (World.vessel.TriggerGiveShield())
 			{
+                GameHaptics.Play(HapticEvent.Pickup);
 				Audio.Play("shieldup", sfx, World.vessel.transform);
 			}
 			Hide();

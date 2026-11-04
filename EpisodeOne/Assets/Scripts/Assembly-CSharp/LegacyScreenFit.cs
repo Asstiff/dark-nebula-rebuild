@@ -70,7 +70,9 @@ public static class LegacyScreenFit
         // image fills the height and its left/right edges fall outside the view.
         float height = camera.orthographicSize * 2f;
         float scale = Mathf.Max(height * camera.aspect / bounds.size.x, height / bounds.size.y);
-        image.localScale = Vector3.Scale(nativeScale, new Vector3(scale, scale, 1f));
+        // Some recovered backdrops are XZ planes rotated into the view. Scale
+        // all local axes equally so their artwork keeps the same proportions.
+        image.localScale = nativeScale * scale;
         Vector3 offset = camera.transform.position - backdrop.bounds.center;
         image.position += camera.transform.right * Vector3.Dot(offset, camera.transform.right)
             + camera.transform.up * Vector3.Dot(offset, camera.transform.up);

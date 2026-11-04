@@ -498,7 +498,7 @@ public class Vessel : Entity
 
 	public void TriggerGainHC()
 	{
-        GameHaptics.Play(HapticEvent.Pickup);
+        GameHaptics.Play(HapticEvent.CriticalPickup);
 		HardCurrencyManager.Instance.Earn(CustomBuildVariables<CustomBuildVars>.Instance.InGameHCValue);
 		Audio.Play("extralife", SfxExtraLife, _transform);
 	}

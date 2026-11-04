@@ -61,12 +61,14 @@ public class LifeOrb : Entity
 	{
 		if (!_isTaken && other.CompareTag("Player"))
 		{
-			if (World.vessel.TriggerLifeOrb(base.transform.position))
+			bool ordinaryOrb = World.vessel.TriggerLifeOrb(base.transform.position);
+			if (ordinaryOrb)
 			{
 				Audio.Play("lifeorb" + _audioIndex, Sfx, World.vessel.transform.position);
 				_audioIndex = (_audioIndex + 1) % 15;
 			}
             if(_containsShard) { _containsShard=false; ShardWallet.Collect(); }
+            else if(ordinaryOrb) GameHaptics.Play(HapticEvent.Pickup);
 			SpawnShockwave();
 			SpawnParticle();
 			DisableRenderer();

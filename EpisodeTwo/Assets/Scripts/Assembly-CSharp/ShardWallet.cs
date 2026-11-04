@@ -35,7 +35,7 @@ public static class ShardWallet
         int chance=PlayerPrefs.GetInt(ChanceKey,40);
         if(chance-1>10) PlayerPrefs.SetInt(ChanceKey,chance-1);
         Earn(1);
-        GameHaptics.Play(HapticEvent.Pickup);
+        GameHaptics.Play(HapticEvent.CriticalPickup);
         if(World.hud!=null) World.hud.ShowMessage(GameLocalization.Format("SHARD PRICE",1)+"  +1");
     }
 }
