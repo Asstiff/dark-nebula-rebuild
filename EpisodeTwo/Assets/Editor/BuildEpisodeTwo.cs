@@ -1,4 +1,4 @@
-#if UNITY_EDITOR && UNITY_ANDROID
+﻿#if UNITY_EDITOR && UNITY_ANDROID
 using System;
 using System.IO;
 using System.Linq;
@@ -8,7 +8,7 @@ using UnityEditor.Build.Reporting;
 using UnityEditor.Android;
 using UnityEngine;
 
-public static class CodexBuildEpisodeTwo
+public static class BuildEpisodeTwo
 {
     public static void Build()
     {
@@ -33,22 +33,22 @@ public static class CodexBuildEpisodeTwo
             UnityEditor.Android.AndroidExternalToolsSettings.ndkRootPath = ndk;
             UnityEditor.Android.AndroidExternalToolsSettings.jdkRootPath = jdk;
             PlayerSettings.productName = "Dark Nebula Episode Two";
-            PlayerSettings.bundleVersion = "0.1.12";
+            PlayerSettings.bundleVersion = "0.2.0";
             PlayerSettings.SplashScreen.show = false;
             PlayerSettings.SplashScreen.showUnityLogo = false;
             LauncherIconBuilder.SetIcons();
             PlayerSettings.SetApplicationIdentifier(NamedBuildTarget.Android, "com.darknebula.reference.tall");
             PlayerSettings.SetScriptingBackend(NamedBuildTarget.Android, ScriptingImplementation.IL2CPP);
             PlayerSettings.Android.targetArchitectures = AndroidArchitecture.ARM64;
-            PlayerSettings.Android.bundleVersionCode = 13;
+            PlayerSettings.Android.bundleVersionCode = 14;
             PlayerSettings.Android.minSdkVersion = AndroidSdkVersions.AndroidApiLevel26;
             PlayerSettings.Android.targetSdkVersion = AndroidSdkVersions.AndroidApiLevel35;
             var scenes = EditorBuildSettings.scenes.Where(x => x.enabled).Select(x => x.path).ToArray();
             var output = Path.GetFullPath(Path.Combine(Application.dataPath, "../../dark-nebula-2-test.apk"));
             if (exportProject) output = Path.GetFullPath(Path.Combine(Application.dataPath, "../../android-final-exports/episode2"));
-            Debug.Log("CODEX_BUILD scenes=" + scenes.Length + " output=" + output);
+            Debug.Log("BUILD scenes=" + scenes.Length + " output=" + output);
             var result = BuildPipeline.BuildPlayer(scenes, output, BuildTarget.Android, BuildOptions.None);
-            Debug.Log("CODEX_BUILD_RESULT " + result.summary.result + " errors=" + result.summary.totalErrors + " warnings=" + result.summary.totalWarnings);
+            Debug.Log("BUILD_RESULT " + result.summary.result + " errors=" + result.summary.totalErrors + " warnings=" + result.summary.totalWarnings);
             if (result.summary.result != BuildResult.Succeeded) throw new Exception("Android development build did not succeed");
         }
         finally
