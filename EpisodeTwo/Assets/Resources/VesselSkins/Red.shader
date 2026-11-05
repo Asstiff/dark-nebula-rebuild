@@ -4,7 +4,8 @@ Shader "Special Alpha/(1) Red" {
   Tags { "Queue"="Transparent" "IgnoreProjector"="True" "RenderType"="Transparent" }
   LOD 100
   Pass {
-   ZTest Always ZWrite Off Cull Off Blend SrcAlpha OneMinusSrcAlpha
+   // Use the recovered Episode Two player depth test for portal occlusion.
+   ZTest LEqual ZWrite Off Cull Off Blend SrcAlpha OneMinusSrcAlpha
    CGPROGRAM
    #pragma vertex vert
    #pragma fragment frag
