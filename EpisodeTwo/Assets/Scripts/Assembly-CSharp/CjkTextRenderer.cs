@@ -29,7 +29,7 @@ public sealed class CjkTextRenderer : MonoBehaviour
     TextAnchor lastAnchor;
     tk2dFontData lastFont;
     float lastSpacing, lastLineSpacing;
-    bool active, dirty = true, usesLiteralFont;
+    bool active, dirty = true, usesLiteralFont, usesLeaderboardFont;
     int glyphGeneration = -1;
     public bool UsesLiteralFont { get { return active && usesLiteralFont; } }
     public int GlyphGeneration { get { return glyphGeneration; } }
@@ -127,6 +127,7 @@ public sealed class CjkTextRenderer : MonoBehaviour
         if (rebuilt)
         {
             usesLiteralFont = literal;
+            usesLeaderboardFont = literal || label.font.name == "FontInputdata";
             Build(top, bottom, characterScale, spacing, lineSpacing);
             lastText = label.text; lastFont = label.font; lastAnchor = label.anchor;
             lastColor = top; lastColor2 = bottom; lastScale = label.scale; lastCharScale = characterScale;
@@ -148,7 +149,7 @@ public sealed class CjkTextRenderer : MonoBehaviour
         lastIsLiteral = label.IsLiteralText;
         active = true;
     }
-    CjkFontAtlas.Glyph Glyph(char c) { return usesLiteralFont ? CjkFontAtlas.GetLiteralGlyph(c) : CjkFontAtlas.GetGlyph(c); }
+    CjkFontAtlas.Glyph Glyph(char c) { return usesLiteralFont ? CjkFontAtlas.GetLiteralGlyph(c) : CjkFontAtlas.GetGlyph(c, usesLeaderboardFont); }
     void Build(Color top, Color bottom, Vector3 characterScale, float spacing, float lineSpacing)
     {
         if (translatedMesh == null) translatedMesh = new Mesh() { name = "Chinese label", hideFlags = HideFlags.DontSave };
@@ -168,7 +169,9 @@ public sealed class CjkTextRenderer : MonoBehaviour
         }
         if (referenceHeight < .001f) referenceHeight = label.font.lineHeight * .6f;
         float capHeight = referenceHeight * GameLocalization.ChineseTextScale;
-        float unit = capHeight / (CjkFontAtlas.CapTop - CjkFontAtlas.CapBottom);
+        float capTop = CjkFontAtlas.CapTopFor(usesLeaderboardFont, usesLiteralFont);
+        float capBottom = CjkFontAtlas.CapBottomFor(usesLeaderboardFont, usesLiteralFont);
+        float unit = capHeight / (capTop - capBottom);
         float referenceCenter = (referenceBottom + referenceHeight * .5f) * characterScale.y
             - (1f - characterScale.y) * referenceHeight * .1f;
         float cellHeight = label.font.lineHeight + lineSpacing;
@@ -204,7 +207,7 @@ public sealed class CjkTextRenderer : MonoBehaviour
                     float y0 = baseline + g.y0 * unit * characterScale.y, y1 = baseline + g.y1 * unit * characterScale.y;
                     vertices.Add(Vector3.Scale(new Vector3(x0, y0, 0), label.scale)); vertices.Add(Vector3.Scale(new Vector3(x0, y1, 0), label.scale)); vertices.Add(Vector3.Scale(new Vector3(x1, y1, 0), label.scale)); vertices.Add(Vector3.Scale(new Vector3(x1, y0, 0), label.scale));
                     uv.Add(g.BottomLeft); uv.Add(g.TopLeft); uv.Add(g.TopRight); uv.Add(g.BottomRight);
-                    float low = (g.y0 - CjkFontAtlas.CapBottom) / (CjkFontAtlas.CapTop - CjkFontAtlas.CapBottom), high = (g.y1 - CjkFontAtlas.CapBottom) / (CjkFontAtlas.CapTop - CjkFontAtlas.CapBottom);
+                    float low = (g.y0 - capBottom) / (capTop - capBottom), high = (g.y1 - capBottom) / (capTop - capBottom);
                     ramp.Add(new Vector2(low, 0)); ramp.Add(new Vector2(high, 0)); ramp.Add(new Vector2(high, 1)); ramp.Add(new Vector2(low, 1));
                     colors.Add(bottom); colors.Add(top); colors.Add(top); colors.Add(bottom);
                     triangles.Add(i); triangles.Add(i + 1); triangles.Add(i + 2); triangles.Add(i); triangles.Add(i + 2); triangles.Add(i + 3);

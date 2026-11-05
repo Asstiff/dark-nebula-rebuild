@@ -16,6 +16,17 @@ public class DynamicFont : MonoBehaviour
 
 	private TextMesh _textMesh;
 
+    private static Font leaderboardChineseFont;
+
+    private static Font ChineseFontFor(DynamicFontSettings.Entry entry)
+    {
+        // The leaderboard's Arial/ArialSmall family uses a normal sans face;
+        // BankGothic menu labels keep their accepted geometric Chinese face.
+        if (entry.Name == "Arial" || entry.Name == "ArialSmall")
+            return leaderboardChineseFont ?? (leaderboardChineseFont = Resources.Load<Font>("Fonts/NotoSansSC-Regular"));
+        return GameLocalization.ChineseFont;
+    }
+
 	public WrapType Wrapping;
 
 	public Action FontRefreshed;
@@ -328,7 +339,7 @@ public class DynamicFont : MonoBehaviour
 
     private static void AlignChineseText(TextMesh text, DynamicFontSettings.Entry entry, float scale)
     {
-        if (!Application.isPlaying || text.font != GameLocalization.ChineseFont || string.IsNullOrEmpty(text.text)) return;
+        if (!Application.isPlaying || text.font != ChineseFontFor(entry) || string.IsNullOrEmpty(text.text)) return;
         Renderer renderer = text.GetComponent<Renderer>();
         float chineseLow, chineseHigh;
         LocalInkY(text, out chineseLow, out chineseHigh);
@@ -483,9 +494,10 @@ public class DynamicFont : MonoBehaviour
 			}
 		}
         Font referenceFont = font;
-		if (Application.isPlaying && GameLocalization.ContainsChinese(pTextMesh.text) && GameLocalization.ChineseFont != null)
+        Font chineseFont = Application.isPlaying && GameLocalization.ContainsChinese(pTextMesh.text) ? ChineseFontFor(pEntry) : null;
+		if (chineseFont != null)
         {
-            font = GameLocalization.ChineseFont;
+            font = chineseFont;
             lineSpacing = 1.15f;
         }
         font.material.mainTexture.filterMode = filterMode;

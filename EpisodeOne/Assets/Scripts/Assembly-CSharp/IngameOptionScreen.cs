@@ -71,10 +71,11 @@ public class IngameOptionScreen : MonoBehaviour
     {
         if(IsInMainMenu)
         {
-            Position(FlipperSound,165); Position(FlipperMusic,112); Position(FlipperVibration,59);
-            Position(((OptionScreen)this).FlipperDifficulty,6);
-            Position(FlipperTimer,-47); Position(FlipperLanguage,-100);
-            Position(BtnCalibrateControls,-162); Position(BtnSelectVessel,-215); Position(BtnGoBack,-268);
+            // Leave room above each framed row for its label and center the complete list.
+            Position(FlipperSound,220); Position(FlipperMusic,156); Position(FlipperVibration,92);
+            Position(((OptionScreen)this).FlipperDifficulty,28);
+            Position(FlipperTimer,-36); Position(FlipperLanguage,-100);
+            Position(BtnCalibrateControls,-167); Position(BtnSelectVessel,-223); Position(BtnGoBack,-279);
         }
         else
         {

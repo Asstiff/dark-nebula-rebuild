@@ -21,6 +21,8 @@ public static class CjkFontAtlas
     [Serializable] sealed class Catalog { public float capTop, capBottom; public Glyph[] glyphs; public string[] styles; }
     static Catalog catalog;
     static Dictionary<int, Glyph> glyphs;
+    static Catalog leaderboardCatalog;
+    static Dictionary<int, Glyph> leaderboardGlyphs;
     static readonly Dictionary<string, Material> materials = new Dictionary<string, Material>();
     static readonly Dictionary<char, Glyph> literalGlyphs = new Dictionary<char, Glyph>();
     static Font literalFont;
@@ -33,7 +35,26 @@ public static class CjkFontAtlas
     public static bool LiteralReady { get { return literalFont != null && literalGlyphs.ContainsKey('?'); } }
     public static int LiteralGeneration { get { return literalGeneration; } }
     public static bool HasGlyph(char c) { Load(); return glyphs.ContainsKey(c); }
-    public static Glyph GetGlyph(char c) { Load(); Glyph glyph; return glyphs.TryGetValue(c, out glyph) ? glyph : glyphs['□']; }
+    public static Glyph GetGlyph(char c, bool leaderboard = false)
+    {
+        Load(); if (leaderboard) LoadLeaderboard();
+        Dictionary<int, Glyph> source = leaderboard ? leaderboardGlyphs : glyphs;
+        Glyph glyph; return source.TryGetValue(c, out glyph) ? glyph : source['□'];
+    }
+    public static float CapTopFor(bool leaderboard, bool literal)
+    {
+        Glyph cap;
+        if (literal && literalGlyphs.TryGetValue('中', out cap)) return cap.y1;
+        if (!leaderboard) return CapTop;
+        LoadLeaderboard(); return leaderboardCatalog.capTop;
+    }
+    public static float CapBottomFor(bool leaderboard, bool literal)
+    {
+        Glyph cap;
+        if (literal && literalGlyphs.TryGetValue('中', out cap)) return cap.y0;
+        if (!leaderboard) return CapBottom;
+        LoadLeaderboard(); return leaderboardCatalog.capBottom;
+    }
     static void Load()
     {
         if (catalog != null) return;
@@ -48,21 +69,36 @@ public static class CjkFontAtlas
             glyphs[glyph.code] = glyph;
         }
     }
+    static void LoadLeaderboard()
+    {
+        if (leaderboardCatalog != null) return;
+        leaderboardCatalog = JsonUtility.FromJson<Catalog>(Resources.Load<TextAsset>("Fonts/LeaderboardChineseAtlas").text);
+        leaderboardGlyphs = new Dictionary<int, Glyph>();
+        foreach (Glyph glyph in leaderboardCatalog.glyphs)
+        {
+            glyph.BottomLeft = new Vector2(glyph.u0, glyph.v0);
+            glyph.TopLeft = new Vector2(glyph.u0, glyph.v1);
+            glyph.TopRight = new Vector2(glyph.u1, glyph.v1);
+            glyph.BottomRight = new Vector2(glyph.u1, glyph.v0);
+            leaderboardGlyphs[glyph.code] = glyph;
+        }
+    }
     public static bool PrepareLiteral(string text)
     {
-        Load();
+        Load(); LoadLeaderboard();
         if (!literalDirty && text == literalText) return LiteralReady;
         if (literalFont == null)
         {
-            // Unity does not support cloning a dynamic Font. This dedicated TTF
-            // has identical outlines and its own internal font family/atlas.
-            literalFont = Resources.Load<Font>("Fonts/DarkNebulaNickname-Regular");
+            // FontInput is the leaderboard's plain bold sans family. Its CJK
+            // match has a separate atlas from the geometric menu translations.
+            literalFont = Resources.Load<Font>("Fonts/NotoSansSC-Bold");
             if (literalFont == null) return false;
             Font.textureRebuilt += LiteralTextureRebuilt;
         }
         // A rebuild can discard older requests. Request all visible names together.
         var requested = new SortedSet<char>();
         requested.Add('?');
+        requested.Add('中'); // Normalize names against this face's own cap box.
         foreach (char c in text)
             if (c != '\n' && c != '\r' && literalFont.HasCharacter(c)) requested.Add(c);
         var characters = new StringBuilder(requested.Count);
@@ -77,9 +113,9 @@ public static class CjkFontAtlas
             if (!literalFont.GetCharacterInfo(c, out info, LiteralRasterSize, FontStyle.Normal)) continue;
             Glyph baked;
             float advance = info.advance;
-            // Keep accepted ASCII advances and the fullwidth TTF's exact CJK cells.
-            if (glyphs.TryGetValue(c, out baked)) advance = baked.advance;
-            else if ((c >= 0x2e80 && c <= 0x9fff) || (c >= 0xff01 && c <= 0xff60)) advance = glyphs['中'].advance;
+            // Preserve the matched sans face's advances, including fullwidth CJK.
+            if (leaderboardGlyphs.TryGetValue(c, out baked)) advance = baked.advance;
+            else if ((c >= 0x2e80 && c <= 0x9fff) || (c >= 0xff01 && c <= 0xff60)) advance = leaderboardGlyphs['中'].advance;
             literalGlyphs[c] = new Glyph
             {
                 code = c, advance = advance,
@@ -100,7 +136,7 @@ public static class CjkFontAtlas
         Glyph glyph;
         if (literalGlyphs.TryGetValue(c, out glyph)) return glyph;
         if (literalGlyphs.TryGetValue('?', out glyph)) return glyph;
-        return GetGlyph(c);
+        return GetGlyph(c, true);
     }
     static void LiteralTextureRebuilt(Font changed)
     {
@@ -125,7 +161,8 @@ public static class CjkFontAtlas
         if (materials.TryGetValue(key, out material) && material != null) return material;
         Texture2D ramp = Resources.Load<Texture2D>("Fonts/ChineseTintRamps");
         material = new Material(Resources.Load<Shader>("ChineseText")) { name = (literal ? "Chinese player name / " : "Chinese text / ") + style };
-        material.mainTexture = literal && literalFont != null ? literalFont.material.mainTexture : Resources.Load<Texture2D>("Fonts/ChineseAtlas");
+        material.mainTexture = literal && literalFont != null ? literalFont.material.mainTexture
+            : Resources.Load<Texture2D>(style == "FontInputdata" ? "Fonts/LeaderboardChineseAtlas" : "Fonts/ChineseAtlas");
         int index = Array.IndexOf(catalog.styles, style);
         material.SetTexture("_TintRamp", index >= 0 ? ramp : Texture2D.whiteTexture);
         material.SetFloat("_StyleRow", index >= 0 ? 1f - (index + .5f) / ramp.height : .5f);
@@ -142,6 +179,7 @@ public static class CjkFontAtlas
         foreach (Material material in materials.Values) if (material != null) UnityEngine.Object.Destroy(material);
         // Resources owns the imported font; only generated materials are destroyed.
         materials.Clear(); literalGlyphs.Clear(); catalog = null; glyphs = null;
+        leaderboardCatalog = null; leaderboardGlyphs = null;
         literalFont = null; literalCharacters = null; literalText = null; literalDirty = true; literalGeneration++;
     }
 }

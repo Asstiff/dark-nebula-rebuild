@@ -27,7 +27,8 @@ public sealed class MenuBackdropExtension : MonoBehaviour
         }
         Shader shader = Resources.Load<Shader>("MenuEdgeExtension");
         if (source == null || shader == null) yield break;
-        material = new Material(shader) { name = "Dark menu surround" };
+        // The surround fades artwork; labels and controls must render above it.
+        material = new Material(shader) { name = "Dark menu surround", renderQueue = (int)UnityEngine.Rendering.RenderQueue.Transparent - 1 };
         originalMaterials = source.sharedMaterials;
         backdropMaterials = new Material[originalMaterials.Length];
         for (int i=0;i<backdropMaterials.Length;i++)

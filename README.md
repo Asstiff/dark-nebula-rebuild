@@ -20,7 +20,7 @@ A Unity 6 restoration of **Dark Nebula Episode One** and **Episode Two** for mod
 - [x] Optional level timer in both episodes, enabled by default.
 - [x] Vessel selection in both episodes with shard purchases and free in-level collection.
 - [x] English and Simplified Chinese with a bundled geometric Chinese font, adjusted glyph sizing, fullwidth character widths and centered labels.
-- [x] Chinese nickname input and leaderboard display.
+- [x] Chinese nickname input and leaderboard display with matching sans-serif fonts.
 - [x] High-quality audio decoding and positional stereo effects.
 - [x] Vibration modes: disabled, original and enhanced; enhanced by default, with distinct pickup strengths and level feedback.
 - [x] Background sensor calibration before each level starts.
